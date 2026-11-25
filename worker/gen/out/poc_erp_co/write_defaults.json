@@ -1,0 +1,8 @@
+{
+ "account.debit.note": {
+  "date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  }
+ }
+}

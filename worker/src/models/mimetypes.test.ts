@@ -1,0 +1,61 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { guessType } from "./mimetypes";
+
+// `mimetypes.guess_type(name)[0]` of the oracle's interpreter after `import odoo, odoo.init` (2026-11-07)
+const CASES: [string, string | null][] = [
+  ["x.txt", "text/plain"],
+  ["Q.CSV", "text/csv"],
+  ["a.tar.gz", "application/x-tar"],
+  ["a.gz", null],
+  ["a.tgz", "application/x-tar"],
+  ["b.svgz", "image/svg+xml"],
+  ["c.TGZ", "application/x-tar"],
+  [".bashrc", null],
+  ["..x", null],
+  ["a..b", "chemical/x-molconn-Z"],
+  ["noext", null],
+  ["dir.d/file", null],
+  ["https://example.com/doc.pdf?x=1", "application/pdf"],
+  ["http://h/a.PNG#f", "image/png"],
+  ["x:abc.txt", "text/plain"],
+  ["C:foo.txt", "text/plain"],
+  ["a.GZ", "application/gzip"],
+  ["a.docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
+  ["a.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],
+  ["a.ts", "text/vnd.trolltech.linguist"],
+  ["a.js", "text/javascript"],
+  ["a.mjs", "text/javascript"],
+  ["a.woff", "application/font-woff"],
+  ["a.svg", "image/svg+xml"],
+  ["a.webp", "image/webp"],
+  ["a.ttf", "application/x-font-ttf"],
+  ["a.eot", "application/vnd.ms-fontobject"],
+  ["a.heic", "image/heic"],
+  ["a.md", "text/markdown"],
+  ["a.json", "application/json"],
+  ["a.html", "text/html"],
+  ["a.xhtml", "application/xhtml+xml"],
+  ["a.xml", "application/xml"],
+  ["a.ics", "text/calendar"],
+  ["a.vcf", "text/vcard"],
+  ["a.odt", "application/vnd.oasis.opendocument.text"],
+  ["a.mp4", "video/mp4"],
+  ["a.weird", null],
+  ["a.Z", null],
+  ["a.tar.Z", "application/x-tar"],
+  ["a.bz2", null],
+  ["a.tar.xz", "application/x-tar"],
+  ["a.txz", "application/x-tar"],
+  ["a#b.txt", "text/plain"],
+  ["a?b.txt", "text/plain"],
+  ["/web/y", null],
+  ["ftp://x/y.zip", "application/zip"],
+  ["mailto:a@b.pdf", "application/pdf"],
+  ["a.pdf ", null],
+  ["a. pdf", null],
+];
+
+test("guess_type as the oracle's Python", () => {
+  for (const [name, want] of CASES) assert.equal(guessType(name), want, name);
+});

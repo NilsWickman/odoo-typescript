@@ -1,0 +1,20 @@
+{
+ "account.edi.xml.pint_sg": {},
+ "res.partner.bank": {
+  "active": {
+   "const": true
+  },
+  "allow_out_payment": {
+   "const": false
+  },
+  "l10n_us_bank_account_type": {
+   "const": "checking"
+  },
+  "proxy_type": {
+   "const": "none"
+  },
+  "sequence": {
+   "const": 10
+  }
+ }
+}

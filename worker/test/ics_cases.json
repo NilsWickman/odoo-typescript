@@ -1,0 +1,1264 @@
+[
+[
+{
+"uid": "20261109T132424Z - 42445@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-03-16 00:14:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "plan; \\back über-long-wordüber-long-wordüber-long-wordüber-long-word budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås budget plan;",
+"description": "räksmörgås plan; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx line\nbreak",
+"location": "plan; räksmörgås tab\there tab\there über-long-wordüber-long-wordüber-long-wordüber-long-word",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "days",
+"duration": 1,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "minutes",
+"duration": 2,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "hours",
+"duration": 30,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:",
+"MAILTO:mark.brown23@example.com",
+"MAILTO:a@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 42445@worker\r\nDTSTART:20270316T001400Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:a@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:räksmörgås plan\\; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx line\\nbreak\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:plan\\; räksmörgås tab\there tab\there über-long-wordüber-long-w\r\n ordüber-long-wordüber-long-word\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:plan\\; \\\\back über-long-wordüber-long-wordüber-long-wordüber-lo\r\n ng-word budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås budget plan\\;\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-P1D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT2M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P1DT6H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 48810@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-18 01:46:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "",
+"description": "tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx line\nbreak \\back emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word emoji😀 \\back naïve räksmörgås Q&A, räksmörgås plan; über-long-wordüber-long-wordüber-long-wordüber-long-word naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 \\back emoji😀 naïve über-long-wordüber-long-wordüber-long-wordüber-long-word plan; plan; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx line\nbreak Q&A, \\back Q&A, emoji😀 line\nbreak budget",
+"location": null,
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "hours",
+"duration": 1440,
+"description": "Odoo"
+},
+{
+"interval": "minutes",
+"duration": 30,
+"description": "Påminnelse, dag"
+}
+],
+"attendees": [],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 48810@worker\r\nDTSTART:20270218T014600Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx line\\nbreak \\\\back emoj\r\n i😀 über-long-wordüber-long-wordüber-long-wordüber-long-word emoji\r\n 😀 \\\\back naïve räksmörgås Q&A\\, räksmörgås plan\\; über-long-wor\r\n düber-long-wordüber-long-wordüber-long-word naïve xxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxx emoji😀 \\\\back emoji😀 naïve über-long-wordüber-long-wor\r\n düber-long-wordüber-long-word plan\\; plan\\; xxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xx line\\nbreak Q&A\\, \\\\back Q&A\\, emoji😀 line\\nbreak budget\r\nDTSTAMP:20261109T132425Z\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n aaaaaaaaaaaaaaaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-P60D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-PT30M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 35381@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-08-11 00:56:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "naïve tab\there über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there emoji😀 naïve line\nbreak tab\there \\back budget emoji😀",
+"description": "plan; emoji😀 budget räksmörgås naïve Q&A, räksmörgås line\nbreak line\nbreak emoji😀 plan; Q&A, emoji😀 line\nbreak xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve Q&A, line\nbreak xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve line\nbreak \\back tab\there line\nbreak räksmörgås Q&A, plan; Q&A, Q&A, räksmörgås tab\there räksmörgås budget emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A, naïve naïve budget",
+"location": "\\back über-long-wordüber-long-wordüber-long-wordüber-long-word über-long-wordüber-long-wordüber-long-wordüber-long-word \\back Q&A,",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 35381@worker\r\nDTSTART:20270811T005600Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:plan\\; emoji😀 budget räksmörgås naïve Q&A\\, räksmörgå\r\n s line\\nbreak line\\nbreak emoji😀 plan\\; Q&A\\, emoji😀 line\\nbreak xxx\r\n xxxxxxxxxxxxxxxxxxxxxxxxxxx naïve Q&A\\, line\\nbreak xxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxx naïve line\\nbreak \\\\back tab\there line\\nbreak räksmörgås Q&A\r\n \\, plan\\; Q&A\\, Q&A\\, räksmörgås tab\there räksmörgås budget emoji\r\n 😀 über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A\\, na\r\n ïve naïve budget\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:\\\\back über-long-wordüber-long-wordüber-long-wordüber-long-wor\r\n d über-long-wordüber-long-wordüber-long-wordüber-long-word \\\\back Q&A\\\r\n ,\r\nORGANIZER:MAILTO:c@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:naïve tab\there über-long-wordüber-long-wordüber-long-wordüber-\r\n long-word tab\there emoji😀 naïve line\\nbreak tab\there \\\\back budget emo\r\n ji😀\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 13570@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-08-16 00:22:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "räksmörgås",
+"description": "\\back über-long-wordüber-long-wordüber-long-wordüber-long-word budget plan; budget über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A,",
+"location": "über-long-wordüber-long-wordüber-long-wordüber-long-word budget plan;",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "days",
+"duration": 1440,
+"description": "Odoo"
+},
+{
+"interval": "hours",
+"duration": 90,
+"description": "Odoo"
+},
+{
+"interval": "hours",
+"duration": 0,
+"description": "Notification - 15 Minutes"
+}
+],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": {
+"value": "MAILTO:b@example.com",
+"cn": "Azure Interior, Brandon Freeman"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 13570@worker\r\nDTSTART:20270816T002200Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:\\\\back über-long-wordüber-long-wordüber-long-wordüber-long-\r\n word budget plan\\; budget über-long-wordüber-long-wordüber-long-wordüb\r\n er-long-word Q&A\\,\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:über-long-wordüber-long-wordüber-long-wordüber-long-word budge\r\n t plan\\;\r\nORGANIZER;CN=\"Azure Interior, Brandon Freeman\":MAILTO:b@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:räksmörgås\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-P1440D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-P3DT18H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 11257@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-03-11 05:57:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "emoji😀 Q&A, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget",
+"description": "\\back Q&A, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve tab\there plan; naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\back Q&A, \\back räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\back tab\there räksmörgås über-long-wordüber-long-wordüber-long-wordüber-long-word räksmörgås räksmörgås line\nbreak räksmörgås räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 \\back budget budget naïve emoji😀",
+"location": "über-long-wordüber-long-wordüber-long-wordüber-long-word \\back emoji😀 \\back \\back plan;",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "hours",
+"duration": 1,
+"description": "Påminnelse, dag"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:",
+"MAILTO:a@example.com"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 11257@worker\r\nDTSTART:20270311T055700Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:a@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:\\\\back Q&A\\, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget xxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxx naïve tab\there plan\\; naïve xxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxx \\\\back Q&A\\, \\\\back räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxx\r\n xxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\\\back tab\there\r\n  räksmörgås über-long-wordüber-long-wordüber-long-wordüber-long-wor\r\n d räksmörgås räksmörgås line\\nbreak räksmörgås räksmörgås xxxx\r\n xxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 \\\\back budget budget naïve emoji😀\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:über-long-wordüber-long-wordüber-long-wordüber-long-word \\\\bac\r\n k emoji😀 \\\\back \\\\back plan\\;\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:emoji😀 Q&A\\, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-PT1H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 50926@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-04-17 02:37:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "tab\there \\back plan; line\nbreak emoji😀 line\nbreak plan; Q&A, Q&A, Q&A, budget Q&A,",
+"description": "tab\there Q&A, über-long-wordüber-long-wordüber-long-wordüber-long-word über-long-wordüber-long-wordüber-long-wordüber-long-word emoji😀 tab\there \\back Q&A, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q&A, budget budget tab\there plan; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q&A, line\nbreak räksmörgås räksmörgås budget naïve räksmörgås naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås über-long-wordüber-long-wordüber-long-wordüber-long-word \\back naïve",
+"location": "budget \\back",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 1,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "minutes",
+"duration": 90,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "hours",
+"duration": 2,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:mark.brown23@example.com",
+"MAILTO:mark.brown23@example.com",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 50926@worker\r\nDTSTART:20270417T023700Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:tab\there Q&A\\, über-long-wordüber-long-wordüber-long-wordüb\r\n er-long-word über-long-wordüber-long-wordüber-long-wordüber-long-word \r\n emoji😀 tab\there \\\\back Q&A\\, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxx Q&A\\, budget budget tab\there plan\\; xxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxx Q&A\\, line\\nbreak räksmörgås räksmörgås budget naïve r\r\n äksmörgås naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås über-lon\r\n g-wordüber-long-wordüber-long-wordüber-long-word \\\\back naïve\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:budget \\\\back\r\nORGANIZER:MAILTO:c@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:tab\there \\\\back plan\\; line\\nbreak emoji😀 line\\nbreak plan\\; Q&A\r\n \\, Q&A\\, Q&A\\, budget Q&A\\,\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT1M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT1H30M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT2H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 81146@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-18 00:30:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 plan; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget räksmörgås räksmörgås naïve",
+"description": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget plan; emoji😀",
+"location": "über-long-wordüber-long-wordüber-long-wordüber-long-word xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås naïve emoji😀",
+"url": null,
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 90,
+"description": "Odoo"
+}
+],
+"attendees": [
+"MAILTO:mark.brown23@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:mark.brown23@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 81146@worker\r\nDTSTART:20270218T003000Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 xxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxx budget plan\\; emoji😀\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:über-long-wordüber-long-wordüber-long-wordüber-long-word xxxxx\r\n xxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås naïve emoji😀\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxx\r\n xxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 plan\\; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \r\n budget räksmörgås räksmörgås naïve\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT1H30M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 51427@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-08-15 01:52:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "line\nbreak plan; räksmörgås",
+"description": "Q&A, tab\there tab\there \\back Q&A, naïve Q&A,",
+"location": null,
+"url": "https://meet.example.com/aaaaaaaaaaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "days",
+"duration": 1440,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "days",
+"duration": 1440,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "minutes",
+"duration": 30,
+"description": "Odoo"
+}
+],
+"attendees": [
+"MAILTO:mark.brown23@example.com",
+"MAILTO:",
+"MAILTO:"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 51427@worker\r\nDTSTART:20270815T015200Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:Q&A\\, tab\there tab\there \\\\back Q&A\\, naïve Q&A\\,\r\nDTSTAMP:20261109T132425Z\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:line\\nbreak plan\\; räksmörgås\r\nURL:https://meet.example.com/aaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P1440D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-P1440D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT30M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 94653@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-06-10 05:45:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "emoji😀 budget line\nbreak \\back xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx über-long-wordüber-long-wordüber-long-wordüber-long-word naïve",
+"description": "plan; räksmörgås plan; plan;",
+"location": "Q&A,",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "hours",
+"duration": 1,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "minutes",
+"duration": 15,
+"description": "Notification - 15 Minutes"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 94653@worker\r\nDTSTART:20270610T054500Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:plan\\; räksmörgås plan\\; plan\\;\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:Q&A\\,\r\nORGANIZER:MAILTO:c@example.com\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:emoji😀 budget line\\nbreak \\\\back xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \r\n über-long-wordüber-long-wordüber-long-wordüber-long-word naïve\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-PT1H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT15M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 9491@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-05-10 01:26:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "über-long-wordüber-long-wordüber-long-wordüber-long-word",
+"description": null,
+"location": "emoji😀",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 1,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "minutes",
+"duration": 1440,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 9491@worker\r\nDTSTART:20270510T012600Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:emoji😀\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:über-long-wordüber-long-wordüber-long-wordüber-long-word\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n aaaaaaaaaaaaaaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT1M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P1D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 34327@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-01-12 03:29:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås naïve emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there Q&A, naïve \\back",
+"description": null,
+"location": null,
+"url": "https://meet.example.com/aaa",
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 30,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 34327@worker\r\nDTSTART:20270112T032900Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER:MAILTO:c@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås naïve emoji\r\n 😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there Q&A\\, naïve \\\\back\r\nURL:https://meet.example.com/aaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT30M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 66412@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-05-13 03:31:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "tab\there Q&A, line\nbreak",
+"description": null,
+"location": null,
+"url": null,
+"rrule": null,
+"alarms": [],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 66412@worker\r\nDTSTART:20270513T033100Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nSUMMARY:tab\there Q&A\\, line\\nbreak\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 11073@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-07-18 04:48:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "naïve budget emoji😀",
+"description": "emoji😀 budget naïve \\back \\back xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\back räksmörgås budget naïve räksmörgås \\back Q&A, budget \\back line\nbreak plan;",
+"location": "tab\there räksmörgås räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget",
+"url": "https://meet.example.com/aaaaaaaaaaaa",
+"rrule": null,
+"alarms": [
+{
+"interval": "minutes",
+"duration": 0,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "days",
+"duration": 15,
+"description": "Odoo"
+},
+{
+"interval": "minutes",
+"duration": 1,
+"description": "Notification - 15 Minutes"
+}
+],
+"attendees": [
+"MAILTO:mark.brown23@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 11073@worker\r\nDTSTART:20270718T044800Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:emoji😀 budget naïve \\\\back \\\\back xxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxx \\\\back räksmörgås budget naïve räksmörgås \\\\back Q&A\\, budget\r\n  \\\\back line\\nbreak plan\\;\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:tab\there räksmörgås räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n x budget\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nSUMMARY:naïve budget emoji😀\r\nURL:https://meet.example.com/aaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-P15D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT1M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 37247@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-03-10 08:50:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q&A, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx über-long-wordüber-long-wordüber-long-wordüber-long-word budget",
+"description": null,
+"location": "tab\there tab\there räksmörgås plan; budget budget",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": null,
+"alarms": [
+{
+"interval": "hours",
+"duration": 90,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "minutes",
+"duration": 0,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "hours",
+"duration": 15,
+"description": "Notification - 15 Minutes"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:a@example.com",
+"MAILTO:a@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 37247@worker\r\nDTSTART:20270310T085000Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:a@example.com\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:tab\there tab\there räksmörgås plan\\; budget budget\r\nORGANIZER:MAILTO:c@example.com\r\nSUMMARY:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q&A\\, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx über-long-wordüber-long-wordüber-long-w\r\n ordüber-long-word budget\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n a\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-P3DT18H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT15H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 33055@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-14 03:56:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "räksmörgås räksmörgås tab\there emoji😀 emoji😀 line\nbreak plan; emoji😀 tab\there naïve budget über-long-wordüber-long-wordüber-long-wordüber-long-word",
+"description": "plan; über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A, \\back naïve tab\there naïve über-long-wordüber-long-wordüber-long-wordüber-long-word über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A, budget emoji😀",
+"location": "tab\there plan; räksmörgås",
+"url": null,
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "hours",
+"duration": 30,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "days",
+"duration": 90,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 33055@worker\r\nDTSTART:20270214T035600Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:plan\\; über-long-wordüber-long-wordüber-long-wordüber-long-\r\n word Q&A\\, \\\\back naïve tab\there naïve über-long-wordüber-long-wordüb\r\n er-long-wordüber-long-word über-long-wordüber-long-wordüber-long-word\r\n über-long-word Q&A\\, budget emoji😀\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:tab\there plan\\; räksmörgås\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:räksmörgås räksmörgås tab\there emoji😀 emoji😀 line\\nbrea\r\n k plan\\; emoji😀 tab\there naïve budget über-long-wordüber-long-wordü\r\n ber-long-wordüber-long-word\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-P1DT6H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P90D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 37956@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-08-11 08:38:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "line\nbreak räksmörgås räksmörgås plan;",
+"description": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve \\back Q&A, über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve plan;",
+"location": null,
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [],
+"attendees": [
+"MAILTO:a@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 37956@worker\r\nDTSTART:20270811T083800Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve \\\\back Q&A\\, über-long-w\r\n ordüber-long-wordüber-long-wordüber-long-word tab\there xxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxx naïve plan\\;\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER:MAILTO:c@example.com\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:line\\nbreak räksmörgås räksmörgås plan\\;\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n aaaaaaaaaaaaaaaaa\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 89337@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-08-16 04:56:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "line\nbreak \\back",
+"description": "\\back budget \\back \\back line\nbreak plan; räksmörgås",
+"location": null,
+"url": null,
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "hours",
+"duration": 0,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "hours",
+"duration": 2,
+"description": "Notification - 15 Minutes"
+}
+],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 89337@worker\r\nDTSTART:20270816T045600Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:\\\\back budget \\\\back \\\\back line\\nbreak plan\\; räksmörgås\r\nDTSTAMP:20261109T132425Z\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:line\\nbreak \\\\back\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT2H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 36783@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-10 04:50:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "räksmörgås naïve",
+"description": "räksmörgås \\back line\nbreak budget tab\there line\nbreak xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås plan; budget line\nbreak emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A, tab\there naïve emoji😀 budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+"location": "line\nbreak \\back naïve naïve",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 1,
+"description": "Odoo"
+},
+{
+"interval": "hours",
+"duration": 90,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "days",
+"duration": 1,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 36783@worker\r\nDTSTART:20270210T045000Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:räksmörgås \\\\back line\\nbreak budget tab\there line\\nbreak xx\r\n xxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås \r\n plan\\; budget line\\nbreak emoji😀 über-long-wordüber-long-wordüber-lo\r\n ng-wordüber-long-word Q&A\\, tab\there naïve emoji😀 budget xxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxx\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:line\\nbreak \\\\back naïve naïve\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:räksmörgås naïve\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT1M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-P3DT18H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P1D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 65615@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-08-18 03:38:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "emoji😀 line\nbreak Q&A, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås",
+"description": "\\back xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx plan; \\back räksmörgås \\back naïve über-long-wordüber-long-wordüber-long-wordüber-long-word räksmörgås budget line\nbreak",
+"location": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås line\nbreak naïve \\back budget",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "days",
+"duration": 1440,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "days",
+"duration": 15,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": {
+"value": "MAILTO:b@example.com",
+"cn": "Azure Interior, Brandon Freeman"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 65615@worker\r\nDTSTART:20270818T033800Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:\\\\back xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx plan\\; \\\\back räksmörg\r\n ås \\\\back naïve über-long-wordüber-long-wordüber-long-wordüber-long-\r\n word räksmörgås budget line\\nbreak\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås line\\nbreak naïve \\\\\r\n back budget\r\nORGANIZER;CN=\"Azure Interior, Brandon Freeman\":MAILTO:b@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:emoji😀 line\\nbreak Q&A\\, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P1440D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P15D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 2858@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-03-10 06:55:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word emoji😀 budget plan; line\nbreak xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 emoji😀 räksmörgås plan; räksmörgås",
+"description": "tab\there plan; tab\there emoji😀 plan; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget budget Q&A, räksmörgås über-long-wordüber-long-wordüber-long-wordüber-long-word budget tab\there naïve Q&A, tab\there naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there line\nbreak plan; plan; plan; naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx über-long-wordüber-long-wordüber-long-wordüber-long-word räksmörgås line\nbreak naïve räksmörgås über-long-wordüber-long-wordüber-long-wordüber-long-word budget budget",
+"location": "naïve \\back tab\there räksmörgås",
+"url": null,
+"rrule": null,
+"alarms": [
+{
+"interval": "days",
+"duration": 30,
+"description": "Odoo"
+}
+],
+"attendees": [],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 2858@worker\r\nDTSTART:20270310T065500Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:tab\there plan\\; tab\there emoji😀 plan\\; xxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxx budget budget Q&A\\, räksmörgås über-long-wordüber-long-word\r\n über-long-wordüber-long-word budget tab\there naïve Q&A\\, tab\there naïv\r\n e xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there line\\nbreak plan\\; plan\\; plan\\;\r\n  naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx über-long-wordüber-long-wordüber\r\n -long-wordüber-long-word räksmörgås line\\nbreak naïve räksmörgås \r\n über-long-wordüber-long-wordüber-long-wordüber-long-word budget budget\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:naïve \\\\back tab\there räksmörgås\r\nSUMMARY:emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-w\r\n ord emoji😀 budget plan\\; line\\nbreak xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emo\r\n ji😀 emoji😀 räksmörgås plan\\; räksmörgås\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-P30D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 25443@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-08-16 01:26:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "tab\there line\nbreak \\back",
+"description": "\\back line\nbreak",
+"location": "räksmörgås budget naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": null,
+"alarms": [
+{
+"interval": "days",
+"duration": 1,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "days",
+"duration": 15,
+"description": "Odoo"
+}
+],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 25443@worker\r\nDTSTART:20270816T012600Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:\\\\back line\\nbreak\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:räksmörgås budget naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\nORGANIZER:MAILTO:c@example.com\r\nSUMMARY:tab\there line\\nbreak \\\\back\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n aaaaaaaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-P1D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-P15D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 79966@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-03-13 07:36:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "budget über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A, line\nbreak budget räksmörgås budget über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A, line\nbreak",
+"description": "Q&A, line\nbreak emoji😀",
+"location": null,
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 79966@worker\r\nDTSTART:20270313T073600Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:Q&A\\, line\\nbreak emoji😀\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:budget über-long-wordüber-long-wordüber-long-wordüber-long-word\r\n  Q&A\\, line\\nbreak budget räksmörgås budget über-long-wordüber-long-w\r\n ordüber-long-wordüber-long-word Q&A\\, line\\nbreak\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 43154@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-04-12 08:57:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "budget naïve tab\there line\nbreak \\back \\back emoji😀",
+"description": "",
+"location": "\\back",
+"url": null,
+"rrule": null,
+"alarms": [
+{
+"interval": "hours",
+"duration": 15,
+"description": "Odoo"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:a@example.com",
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 43154@worker\r\nDTSTART:20270412T085700Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:\\\\back\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nSUMMARY:budget naïve tab\there line\\nbreak \\\\back \\\\back emoji😀\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT15H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 48852@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-09-17 03:30:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "emoji😀 budget tab\there line\nbreak räksmörgås",
+"description": null,
+"location": null,
+"url": "https://meet.example.com/aaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:b@example.com",
+"cn": "Azure Interior, Brandon Freeman"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 48852@worker\r\nDTSTART:20270917T033000Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER;CN=\"Azure Interior, Brandon Freeman\":MAILTO:b@example.com\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:emoji😀 budget tab\there line\\nbreak räksmörgås\r\nURL:https://meet.example.com/aaaaa\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 25551@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-19 05:33:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "\\back über-long-wordüber-long-wordüber-long-wordüber-long-word budget naïve",
+"description": "naïve naïve budget über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there plan; budget räksmörgås plan; emoji😀 emoji😀 line\nbreak naïve line\nbreak emoji😀 Q&A, emoji😀 Q&A, budget naïve",
+"location": null,
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "hours",
+"duration": 2,
+"description": "Odoo"
+}
+],
+"attendees": [
+"MAILTO:",
+"MAILTO:a@example.com",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 25551@worker\r\nDTSTART:20270219T053300Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:naïve naïve budget über-long-wordüber-long-wordüber-long-w\r\n ordüber-long-word tab\there plan\\; budget räksmörgås plan\\; emoji😀 e\r\n moji😀 line\\nbreak naïve line\\nbreak emoji😀 Q&A\\, emoji😀 Q&A\\, bu\r\n dget naïve\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER:MAILTO:c@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:\\\\back über-long-wordüber-long-wordüber-long-wordüber-long-word\r\n  budget naïve\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT2H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 98682@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-03-13 06:14:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "budget emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\back Q&A, line\nbreak plan; plan; naïve",
+"description": "plan; line\nbreak emoji😀 emoji😀 Q&A, räksmörgås Q&A, line\nbreak emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+"location": null,
+"url": null,
+"rrule": null,
+"alarms": [
+{
+"interval": "hours",
+"duration": 15,
+"description": "Odoo"
+},
+{
+"interval": "hours",
+"duration": 15,
+"description": "Odoo"
+}
+],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 98682@worker\r\nDTSTART:20270313T061400Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:plan\\; line\\nbreak emoji😀 emoji😀 Q&A\\, räksmörgås Q&A\\\r\n , line\\nbreak emoji😀 über-long-wordüber-long-wordüber-long-wordüber\r\n -long-word tab\there räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nSUMMARY:budget emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxx \\\\back Q&A\\, line\\nbreak plan\\; plan\\; naïve\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT15H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT15H\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 24344@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-04-13 02:28:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "räksmörgås \\back plan; line\nbreak naïve räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås",
+"description": "tab\there emoji😀 budget plan; budget emoji😀",
+"location": null,
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [],
+"attendees": [
+"MAILTO:mark.brown23@example.com",
+"MAILTO:a@example.com"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 24344@worker\r\nDTSTART:20270413T022800Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:a@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:tab\there emoji😀 budget plan\\; budget emoji😀\r\nDTSTAMP:20261109T132425Z\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:räksmörgås \\\\back plan\\; line\\nbreak naïve räksmörgås xxxxxx\r\n xxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n aaaaaaaaaaaa\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 24847@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-04-11 05:42:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word",
+"description": "",
+"location": "über-long-wordüber-long-wordüber-long-wordüber-long-word \\back räksmörgås budget \\back",
+"url": null,
+"rrule": null,
+"alarms": [
+{
+"interval": "hours",
+"duration": 0,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:b@example.com",
+"cn": "Azure Interior, Brandon Freeman"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 24847@worker\r\nDTSTART:20270411T054200Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:über-long-wordüber-long-wordüber-long-wordüber-long-word \\\\bac\r\n k räksmörgås budget \\\\back\r\nORGANIZER;CN=\"Azure Interior, Brandon Freeman\":MAILTO:b@example.com\r\nSUMMARY:emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 53607@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-06-12 09:29:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "räksmörgås",
+"description": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 plan; line\nbreak plan; line\nbreak tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q&A, tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx plan; tab\there Q&A, line\nbreak naïve line\nbreak naïve tab\there naïve line\nbreak budget naïve über-long-wordüber-long-wordüber-long-wordüber-long-word \\back line\nbreak line\nbreak budget \\back tab\there räksmörgås",
+"location": "räksmörgås budget line\nbreak Q&A,",
+"url": null,
+"rrule": null,
+"alarms": [
+{
+"interval": "minutes",
+"duration": 15,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "days",
+"duration": 1,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "days",
+"duration": 90,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:a@example.com",
+"MAILTO:",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 53607@worker\r\nDTSTART:20270612T092900Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 plan\\; line\\nbreak pla\r\n n\\; line\\nbreak tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Q&A\\, tab\there xxx\r\n xxxxxxxxxxxxxxxxxxxxxxxxxxx plan\\; tab\there Q&A\\, line\\nbreak naïve line\\\r\n nbreak naïve tab\there naïve line\\nbreak budget naïve über-long-wordüb\r\n er-long-wordüber-long-wordüber-long-word \\\\back line\\nbreak line\\nbreak \r\n budget \\\\back tab\there räksmörgås\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:räksmörgås budget line\\nbreak Q&A\\,\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nSUMMARY:räksmörgås\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-PT15M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-P1D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P90D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 45605@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-05-12 08:20:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "plan;",
+"description": "naïve Q&A, budget emoji😀 \\back budget über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there line\nbreak plan; über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A,",
+"location": null,
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 2,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "hours",
+"duration": 1,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "days",
+"duration": 30,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:",
+"MAILTO:a@example.com",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 45605@worker\r\nDTSTART:20270512T082000Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:a@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:naïve Q&A\\, budget emoji😀 \\\\back budget über-long-wordübe\r\n r-long-wordüber-long-wordüber-long-word tab\there line\\nbreak plan\\; übe\r\n r-long-wordüber-long-wordüber-long-wordüber-long-word Q&A\\,\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:plan\\;\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT2M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT1H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P30D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 95011@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-04-10 08:58:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "budget tab\there \\back plan; line\nbreak über-long-wordüber-long-wordüber-long-wordüber-long-word emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there naïve",
+"description": "über-long-wordüber-long-wordüber-long-wordüber-long-word räksmörgås line\nbreak line\nbreak tab\there \\back emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 Q&A, budget budget über-long-wordüber-long-wordüber-long-wordüber-long-word emoji😀 emoji😀 räksmörgås emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word emoji😀",
+"location": null,
+"url": null,
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 95011@worker\r\nDTSTART:20270410T085800Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:über-long-wordüber-long-wordüber-long-wordüber-long-word r\r\n äksmörgås line\\nbreak line\\nbreak tab\there \\\\back emoji😀 xxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxx emoji😀 Q&A\\, budget budget über-long-wordüber-lon\r\n g-wordüber-long-wordüber-long-word emoji😀 emoji😀 räksmörgås emo\r\n ji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word emoji\r\n 😀\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:budget tab\there \\\\back plan\\; line\\nbreak über-long-wordüber-long\r\n -wordüber-long-wordüber-long-word emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xx tab\there naïve\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 46999@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-07-15 01:38:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there budget budget tab\there Q&A, plan; \\back",
+"description": "plan; budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx line\nbreak tab\there Q&A, budget plan; über-long-wordüber-long-wordüber-long-wordüber-long-word plan; räksmörgås Q&A, emoji😀 naïve Q&A, tab\there räksmörgås plan; \\back über-long-wordüber-long-wordüber-long-wordüber-long-word naïve Q&A, \\back über-long-wordüber-long-wordüber-long-wordüber-long-word naïve emoji😀 Q&A, naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx emoji😀 räksmörgås über-long-wordüber-long-wordüber-long-wordüber-long-word",
+"location": "räksmörgås \\back \\back budget räksmörgås",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaa",
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 15,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "days",
+"duration": 2,
+"description": "Odoo"
+}
+],
+"attendees": [],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 46999@worker\r\nDTSTART:20270715T013800Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:plan\\; budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx line\\nbreak tab\the\r\n re Q&A\\, budget plan\\; über-long-wordüber-long-wordüber-long-wordüber-\r\n long-word plan\\; räksmörgås Q&A\\, emoji😀 naïve Q&A\\, tab\there räks\r\n mörgås plan\\; \\\\back über-long-wordüber-long-wordüber-long-wordüber-\r\n long-word naïve Q&A\\, \\\\back über-long-wordüber-long-wordüber-long-wor\r\n düber-long-word naïve emoji😀 Q&A\\, naïve xxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxx emoji😀 räksmörgås über-long-wordüber-long-wordüber-long-word\r\n über-long-word\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:räksmörgås \\\\back \\\\back budget räksmörgås\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there budget budget tab\there Q&A\\\r\n , plan\\; \\\\back\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaa\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-PT15M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-P2D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 83403@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-06-17 08:43:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "plan; naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there line\nbreak \\back naïve line\nbreak \\back",
+"description": "\\back plan; emoji😀 räksmörgås Q&A, über-long-wordüber-long-wordüber-long-wordüber-long-word budget naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve naïve tab\there über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there \\back budget budget räksmörgås Q&A, naïve über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there line\nbreak",
+"location": "budget Q&A, emoji😀",
+"url": "https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+"rrule": null,
+"alarms": [],
+"attendees": [],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 83403@worker\r\nDTSTART:20270617T084300Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:\\\\back plan\\; emoji😀 räksmörgås Q&A\\, über-long-wordübe\r\n r-long-wordüber-long-wordüber-long-word budget naïve xxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxx naïve naïve tab\there über-long-wordüber-long-wordüber-lo\r\n ng-wordüber-long-word tab\there \\\\back budget budget räksmörgås Q&A\\, n\r\n aïve über-long-wordüber-long-wordüber-long-wordüber-long-word tab\ther\r\n e line\\nbreak\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:budget Q&A\\, emoji😀\r\nSUMMARY:plan\\; naïve xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there line\\nbreak \\\r\n \\back naïve line\\nbreak \\\\back\r\nURL:https://meet.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 74333@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-06-14 01:43:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås line\nbreak über-long-wordüber-long-wordüber-long-wordüber-long-word naïve",
+"description": "\\back über-long-wordüber-long-wordüber-long-wordüber-long-word emoji😀 Q&A, Q&A, budget räksmörgås Q&A, emoji😀 plan; plan; tab\there Q&A,",
+"location": null,
+"url": null,
+"rrule": "FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO",
+"alarms": [
+{
+"interval": "days",
+"duration": 0,
+"description": "Odoo"
+},
+{
+"interval": "minutes",
+"duration": 1440,
+"description": "Påminnelse, dag"
+}
+],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:mark.brown23@example.com",
+"MAILTO:mark.brown23@example.com",
+"MAILTO:a@example.com"
+],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 74333@worker\r\nDTSTART:20270614T014300Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nATTENDEE:MAILTO:a@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:\\\\back über-long-wordüber-long-wordüber-long-wordüber-long-\r\n word emoji😀 Q&A\\, Q&A\\, budget räksmörgås Q&A\\, emoji😀 plan\\; pla\r\n n\\; tab\there Q&A\\,\r\nDTSTAMP:20261109T132425Z\r\nRRULE:FREQ=WEEKLY;WKST=SU;COUNT=3;BYDAY=MO\r\nSUMMARY:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås line\\nbreak über-long\r\n -wordüber-long-wordüber-long-wordüber-long-word naïve\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:-P1D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 8064@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-09-10 06:21:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "Q&A, budget plan;",
+"description": "tab\there räksmörgås Q&A, line\nbreak räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx über-long-wordüber-long-wordüber-long-wordüber-long-word tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there tab\there line\nbreak über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve plan; naïve tab\there budget emoji😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget line\nbreak line\nbreak emoji😀 plan; tab\there emoji😀 Q&A, räksmörgås plan; naïve räksmörgås tab\there",
+"location": "naïve budget naïve",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 2,
+"description": "Odoo"
+},
+{
+"interval": "hours",
+"duration": 1440,
+"description": "Email - 3 Hours"
+},
+{
+"interval": "days",
+"duration": 90,
+"description": "Notification - 15 Minutes"
+}
+],
+"attendees": [
+"MAILTO:"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 8064@worker\r\nDTSTART:20270910T062100Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:tab\there räksmörgås Q&A\\, line\\nbreak räksmörgås xxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxxx über-long-wordüber-long-wordüber-long-wordüber-\r\n long-word tab\there xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there tab\there line\\n\r\n break über-long-wordüber-long-wordüber-long-wordüber-long-word Q&A\\, x\r\n xxxxxxxxxxxxxxxxxxxxxxxxxxxxx naïve plan\\; naïve tab\there budget emoji\r\n 😀 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget line\\nbreak line\\nbreak emoji\r\n 😀 plan\\; tab\there emoji😀 Q&A\\, räksmörgås plan\\; naïve räksmör\r\n gås tab\there\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:naïve budget naïve\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:Q&A\\, budget plan\\;\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT2M\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-P60D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-P90D\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 97501@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-04-12 05:22:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "\\back über-long-wordüber-long-wordüber-long-wordüber-long-word räksmörgås line\nbreak tab\there tab\there",
+"description": null,
+"location": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget budget line\nbreak",
+"url": null,
+"rrule": null,
+"alarms": [
+{
+"interval": "days",
+"duration": 30,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "minutes",
+"duration": 1,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [],
+"organizer": null
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 97501@worker\r\nDTSTART:20270412T052200Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx budget budget line\\nbreak\r\nSUMMARY:\\\\back über-long-wordüber-long-wordüber-long-wordüber-long-word\r\n  räksmörgås line\\nbreak tab\there tab\there\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-P30D\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT1M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 14666@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-19 02:32:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "budget budget",
+"description": "budget plan; budget plan; über-long-wordüber-long-wordüber-long-wordüber-long-word \\back räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx tab\there plan; line\nbreak plan; räksmörgås räksmörgås räksmörgås plan; budget budget tab\there plan; tab\there tab\there naïve emoji😀 plan; Q&A, plan; tab\there räksmörgås naïve \\back \\back line\nbreak naïve budget \\back naïve naïve budget \\back",
+"location": null,
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "hours",
+"duration": 90,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "hours",
+"duration": 0,
+"description": "Påminnelse, dag"
+},
+{
+"interval": "minutes",
+"duration": 2,
+"description": "Notification - 15 Minutes"
+}
+],
+"attendees": [
+"MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@example.com",
+"MAILTO:a@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 14666@worker\r\nDTSTART:20270219T023200Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxxxxxxxxxxxxxxxxxxxx@example.com\r\nATTENDEE:MAILTO:a@example.com\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:budget plan\\; budget plan\\; über-long-wordüber-long-wordüber\r\n -long-wordüber-long-word \\\\back räksmörgås xxxxxxxxxxxxxxxxxxxxxxxxxxx\r\n xxx tab\there plan\\; line\\nbreak plan\\; räksmörgås räksmörgås räksm\r\n örgås plan\\; budget budget tab\there plan\\; tab\there tab\there naïve emoj\r\n i😀 plan\\; Q&A\\, plan\\; tab\there räksmörgås naïve \\\\back \\\\back line\r\n \\nbreak naïve budget \\\\back naïve naïve budget \\\\back\r\nDTSTAMP:20261109T132425Z\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:budget budget\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-P3DT18H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Påminnelse\\, dag\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT2M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 93636@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-19 04:20:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås naïve budget budget",
+"description": "emoji😀 Q&A, emoji😀 über-long-wordüber-long-wordüber-long-wordüber-long-word \\back xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+"location": "naïve räksmörgås",
+"url": null,
+"rrule": null,
+"alarms": [
+{
+"interval": "days",
+"duration": 0,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "hours",
+"duration": 2,
+"description": "Notification - 15 Minutes"
+},
+{
+"interval": "minutes",
+"duration": 15,
+"description": "Odoo"
+}
+],
+"attendees": [],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 93636@worker\r\nDTSTART:20270219T042000Z\r\nDTEND:20271231T235900Z\r\nCREATED:20261109T132424Z\r\nDESCRIPTION:emoji😀 Q&A\\, emoji😀 über-long-wordüber-long-wordüber-l\r\n ong-wordüber-long-word \\\\back xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:naïve räksmörgås\r\nORGANIZER:MAILTO:c@example.com\r\nSUMMARY:budget xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx räksmörgås naïve budget b\r\n udget\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:PT0S\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Notification - 15 Minutes\r\nTRIGGER;related=START:-PT2H\r\nEND:VALARM\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Odoo\r\nTRIGGER;related=START:-PT15M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 51720@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-02-16 00:33:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "naïve naïve line\nbreak",
+"description": null,
+"location": "tab\there räksmörgås emoji😀 Q&A,",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [],
+"attendees": [
+"MAILTO:",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": {
+"value": "MAILTO:c@example.com",
+"cn": null
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 51720@worker\r\nDTSTART:20270216T003300Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:tab\there räksmörgås emoji😀 Q&A\\,\r\nORGANIZER:MAILTO:c@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:naïve naïve line\\nbreak\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+],
+[
+{
+"uid": "20261109T132424Z - 86782@worker",
+"created": "2026-11-09 13:24:24",
+"dtstamp": "2026-11-09 13:24:25",
+"dtstart": "2027-09-15 02:39:00",
+"dtend": "2027-12-31 23:59:00",
+"summary": "naïve über-long-wordüber-long-wordüber-long-wordüber-long-word räksmörgås Q&A, \\back emoji😀 tab\there",
+"description": null,
+"location": "naïve naïve",
+"url": null,
+"rrule": "FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959",
+"alarms": [
+{
+"interval": "minutes",
+"duration": 1,
+"description": "Email - 3 Hours"
+}
+],
+"attendees": [
+"MAILTO:",
+"MAILTO:mark.brown23@example.com"
+],
+"organizer": {
+"value": "MAILTO:admin@example.com",
+"cn": "Mitchell Admin"
+}
+},
+"BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PYVOBJECT//NONSGML Version 1//EN\r\nBEGIN:VEVENT\r\nUID:20261109T132424Z - 86782@worker\r\nDTSTART:20270915T023900Z\r\nDTEND:20271231T235900Z\r\nATTENDEE:MAILTO:\r\nATTENDEE:MAILTO:mark.brown23@example.com\r\nCREATED:20261109T132424Z\r\nDTSTAMP:20261109T132425Z\r\nLOCATION:naïve naïve\r\nORGANIZER;CN=Mitchell Admin:MAILTO:admin@example.com\r\nRRULE:FREQ=MONTHLY;INTERVAL=2;BYMONTHDAY=31;UNTIL=20271231T225959\r\nSUMMARY:naïve über-long-wordüber-long-wordüber-long-wordüber-long-word\r\n  räksmörgås Q&A\\, \\\\back emoji😀 tab\there\r\nBEGIN:VALARM\r\nACTION:AUDIO\r\nDESCRIPTION:Email - 3 Hours\r\nTRIGGER;related=START:-PT1M\r\nEND:VALARM\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n"
+]
+]

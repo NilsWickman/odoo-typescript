@@ -1,0 +1,34 @@
+{
+ "models": {
+  "lunch.alert": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "lunch.location": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "lunch.product": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "lunch.product.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "lunch.topping": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  }
+ }
+}

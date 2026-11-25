@@ -1,0 +1,32 @@
+{
+ "db": "dev_gen",
+ "models": {
+  "mail.activity.plan.template": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "responsible_id"
+   ]
+  },
+  "res.partner": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "res.users": {
+   "auto": false,
+   "domain": "res.users",
+   "has_company_id": true,
+   "has_company_ids": true,
+   "property": [],
+   "regular": []
+  }
+ },
+ "odoo_commit": "dd5d371863dd96f640e4a4b970d8437bb9861cba"
+}

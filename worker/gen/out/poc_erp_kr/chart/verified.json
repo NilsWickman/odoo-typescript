@@ -1,0 +1,10 @@
+{
+ "kr": {
+  "commit": "5446af0d",
+  "date": "2026-11-25",
+  "proof": "vagb_kr_parent",
+  "result": "results/evidence/poc_erp_kr-kr-vagb_kr_parent-20261125-015750.txt",
+  "sha256": "b29056f62a2e9a1fdfe190a3349ac7989f953bb26372c249d2d4e71c5e0351cf",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

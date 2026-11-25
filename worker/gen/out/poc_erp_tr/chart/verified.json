@@ -1,0 +1,10 @@
+{
+ "tr": {
+  "commit": "5446af0d",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_tr",
+  "result": "results/evidence/poc_erp_tr-tr-vagb_chart_tr-20261125-020457.txt",
+  "sha256": "02b14fa0b726557648a61fef843daabb6f2a45763cd25bff6343ecc5a8f325fc",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

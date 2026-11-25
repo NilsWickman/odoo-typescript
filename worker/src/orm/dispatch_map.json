@@ -1,0 +1,2573 @@
+{
+ "_doc": "The private methods the hand port implements that a module's compiled override can take over: compiler/dispatch.py (the generator and the coverage check) reads it, generates src/orm/dispatch_gen.ts (one handle per method, the only way the hand port calls callPrivate / hasPrivateOverride / privateOverridden) and checks it; compiler/oc/build.py reads it as it reads private_hooks.json and refuses a compiled override of a method whose entry has a problem. returns, above, kwargs, default_of: as private_hooks.json's _doc says. note: what the hand port's implementation is and where it refuses (the free text that private_hooks.json called `where`). sites: each use of the handle, by file, top-level symbol and kind (call: callPrivate with an inline hand implementation; invoke: the generated wrapper of `impl`; overridden / overriddenOn / quick: a guard that refuses, or a fast path, where an override is installed), with their count. inner: the named hand functions that implement it inside the dispatch: used anywhere else, they bypass it (allow: such a use, with the reason). impl: the TypeScript function implementing it (file, symbol, self: ids or model, params: the Odoo arguments after self it binds in order); its wrapper `invoke` is generated, and a direct call of it elsewhere is a bypass (compiler/dispatch.py rewrite turns one into a call of the wrapper). odoo: the baseline template's definitions of the method (on the model or a model it inherits) the hand port implements, with the sha256 of their source: a change refuses until the entry is read again and rehashed.",
+ "account.move._post": {
+  "returns": "self",
+  "above": {
+   "sale": "after super(): the reconciliation of payments from transactions; posting a move with transactions refuses (src/models/account_buttons.ts)",
+   "account_peppol": "after super(): the Peppol approval response; posting a move with a Peppol message refuses (src/models/account_move_ops.ts postDrafts)",
+   "stock_account": "after super(): `_set_value` of the COGS moves; posting with COGS lines refuses (src/models/account_move_ops.ts postDrafts)"
+  },
+  "note": "src/models/account_buttons.ts postMoves, src/models/account_move_ops.ts (reversals)",
+  "inner": [
+   "postMovesHand",
+   "postDrafts"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 6134,
+    "sha256": "7c21b3ec0f207365a2a9e2f6d852d71fc83f8812e4120dc70dc638b7c87acbb5"
+   },
+   {
+    "module": "account_peppol",
+    "model": "account.move",
+    "path": "odoo/addons/account_peppol/models/account_move.py",
+    "line": 165,
+    "sha256": "a67bd2f1ddbf94f945d3c1f9b44867acfe6949d82364d50643278b1b661a53c5"
+   },
+   {
+    "module": "sale",
+    "model": "account.move",
+    "path": "odoo/addons/sale/models/account_move.py",
+    "line": 161,
+    "sha256": "113c62ea62616474f0032e6632d8529c2a98476a0ff55569e789a4da49298e22"
+   },
+   {
+    "module": "stock_account",
+    "model": "account.move",
+    "path": "odoo/addons/stock_account/models/account_move.py",
+    "line": 36,
+    "sha256": "e33ab290be3a2006451b3515c073a9a74e6b8ebeb95a9666624572f5c2b39330"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_buttons.ts",
+    "in": "postMoves",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "reverseEntry",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "reverseInvoice",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._prepare_payments_widget_reconciled_info": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/invoicing_computes.ts invoice_payments_widget (each reconciled partial's entry)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 1570,
+    "sha256": "b2e5125d5ec829f9f826e5492d81255e6c4673486ec6a8a8568b8bc1f242f44f"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/invoicing_computes.ts",
+    "in": "defineComputes(account.move)",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_name_invoice_report": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/report_invoice.ts (the report templates' o._get_name_invoice_report())",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 8198,
+    "sha256": "56379defbebcd28416617eb83479a1ccdfdd161e66e340cc5a1aa5dfbf8f2c15"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/report_invoice.ts",
+    "in": "registerPyMethod(account.move)",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_last_sequence_domain": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/invoicing_computes.ts lastSequenceDomain (sequence_mixin.py:296 in `_get_last_sequence`: highest_name, name_placeholder, the next name at posting; the record may be new); an odoo.tools.SQL both ways (PrivateSql, compiler/runtime/private_bridge.ts)",
+  "inner": [
+   "lastSequenceCondition"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 4310,
+    "sha256": "467b3460d39c1dcbd7415be81881db1afa7dffd8761bb2fe40dda880df58f79d"
+   },
+   {
+    "module": "account",
+    "model": "sequence.mixin",
+    "path": "odoo/addons/account/models/sequence_mixin.py",
+    "line": 246,
+    "sha256": "7656579849e83b3a36b465e90fab77a182ff4bde701af955ed16b6e0b3ee4593"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/invoicing_computes.ts",
+    "in": "lastSequenceDomain",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_starting_sequence": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/invoicing_computes.ts startingSequence (sequence_mixin.py:465 in `_get_next_sequence_format`, when no previous name exists; the record may be new)",
+  "inner": [
+   "accountStartingSequence"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 4392,
+    "sha256": "ffac6a54cc0cd8ee23e8c786cf4ab7e9064a9aee1195e1d738e9f59cab42f198"
+   },
+   {
+    "module": "account",
+    "model": "sequence.mixin",
+    "path": "odoo/addons/account/models/sequence_mixin.py",
+    "line": 261,
+    "sha256": "4636a9b074bab23bff192cc925fafaff2ee6e099ce3a22d9bfb8d4f51ec219c3"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/invoicing_computes.ts",
+    "in": "startingSequence",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "res.users._set_password": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/res_users_password.ts changePassword (the inverse of the password written by change_password and change.password.own; the plaintext in the record cache, PrivateCache)",
+  "odoo": [
+   {
+    "module": "base",
+    "model": "res.users",
+    "path": "odoo/odoo/addons/base/models/res_users.py",
+    "line": 287,
+    "sha256": "9027b57ff397799fdaa9329449d6f94e54cd96c40111f15469a43260213c80e1"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/res_users_password.ts",
+    "in": "changePassword",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "purchase.order._merge_po_post_process": {
+  "returns": "value",
+  "above": {
+   "purchase_stock": "after super(): the references of the merged requests added to the oldest's; action_merge does it after the hook returns (src/models/purchase_buttons.ts mergeReferences), in Odoo's order"
+  },
+  "note": "src/models/purchase_buttons.ts action_merge (after the merged requests are cancelled; the hand port's implementation is purchase's, which does nothing)",
+  "odoo": [
+   {
+    "module": "purchase",
+    "model": "purchase.order",
+    "path": "odoo/addons/purchase/models/purchase_order.py",
+    "line": 976,
+    "sha256": "fce6ffeb93b2c12f2c116e46f571d5ba42fccda55238afcf4e417dd11e435ecb"
+   },
+   {
+    "module": "purchase_stock",
+    "model": "purchase.order",
+    "path": "odoo/addons/purchase_stock/models/purchase_order.py",
+    "line": 473,
+    "sha256": "935a47e8a29c058fbd4ad834f69b94e776b8fa533d3ef1cdd165de0a95d6d5e8"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/purchase_buttons.ts",
+    "in": "registerMethod",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "base.document.layout._default_report_footer": {
+  "returns": "value",
+  "above": {},
+  "default_of": "report_footer",
+  "note": "src/models/document_layout.ts registerDefaults report_footer (web's definition, a Markup to the compiled side)",
+  "odoo": [
+   {
+    "module": "web",
+    "model": "base.document.layout",
+    "path": "odoo/addons/web/models/base_document_layout.py",
+    "line": 28,
+    "sha256": "4cdab5ce063a5c0e79b7dfc8959898f44b2ead3e0c689b5a8450d4a8788bda5d"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/document_layout.ts",
+    "in": "registerDefaults(base.document.layout)",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "base.document.layout._default_company_details": {
+  "returns": "value",
+  "above": {},
+  "default_of": "company_details",
+  "note": "src/models/document_layout.ts registerDefaults company_details (web's definition, a Markup to the compiled side)",
+  "odoo": [
+   {
+    "module": "web",
+    "model": "base.document.layout",
+    "path": "odoo/addons/web/models/base_document_layout.py",
+    "line": 34,
+    "sha256": "ae860b629439ea035674a955bf3df8f31c6f1e47479da5f35b31627700315ae7"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/document_layout.ts",
+    "in": "registerDefaults(base.document.layout)",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._get_account_parent_xmlid": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/chart_template.ts accountParentId (`_get_account_parent_id`, chart_template.py:863-867: the utility and outstanding accounts of a chart's load; src/models/account_journal_create.ts the default account of a new bank, cash or credit journal); account's own returns None",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/models/chart_template.py",
+    "line": 860,
+    "sha256": "4b06a34cc1f961b1aad311f818d0898d6ca9dfea4d5a899316fb0e65c6c6ceae"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/chart_template.ts",
+    "in": "accountParentId",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "sale.order._prepare_invoice": {
+  "returns": "value",
+  "above": {
+   "sale_stock": "after super(): the delivery date (sale_stock sale_order.py:306-309); invoiceValues sets it after the hook returns, in Odoo's order"
+  },
+  "note": "src/models/sale_invoice.ts invoiceValues (sale's definition, for each order `_create_invoices` invoices)",
+  "inner": [
+   "saleInvoiceValues"
+  ],
+  "odoo": [
+   {
+    "module": "sale",
+    "model": "sale.order",
+    "path": "odoo/addons/sale/models/sale_order.py",
+    "line": 1836,
+    "sha256": "9a1e7b6374b694099d0f5c8081cd77db2aaf1ea5c2f05760cbb696058b1fd81e"
+   },
+   {
+    "module": "sale_stock",
+    "model": "sale.order",
+    "path": "odoo/addons/sale_stock/models/sale_order.py",
+    "line": 306,
+    "sha256": "dea6285190a1adc571725c4789c96467b7f2cbc4e8d46d6a47b7a4f8494c2f19"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/sale_invoice.ts",
+    "in": "invoiceValues",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "sale.order._get_invoice_grouping_keys": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/sale_invoice.ts createOrderInvoices (ungrouped: the keys Odoo sorts and merges the orders' invoices by; several invoices to merge refuse)",
+  "odoo": [
+   {
+    "module": "sale",
+    "model": "sale.order",
+    "path": "odoo/addons/sale/models/sale_order.py",
+    "line": 1934,
+    "sha256": "91bcc76b227290de69cbc2f1121ac95ac435460af889d38e7dc328a41101627c"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/sale_invoice.ts",
+    "in": "createOrderInvoices",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._post_load_data": {
+  "returns": "value",
+  "above": {
+   "l10n_be": "after super(): only for be_comp and be_asso (template_be.py:90-95), which refuse in postLoadDataOf"
+  },
+  "note": "src/models/chart_template.ts postLoadData (account's, postLoadDataOf; the override must pass on the load's template code and company)",
+  "inner": [
+   "postLoadDataOf"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/models/chart_template.py",
+    "line": 733,
+    "sha256": "1c264e733d70e08b11aa5ff7bdc6af741ecaf200469d75d12ffe721e23b1fb2f"
+   },
+   {
+    "module": "l10n_be",
+    "model": "account.chart.template",
+    "path": "odoo/addons/l10n_be/models/template_be.py",
+    "line": 90,
+    "sha256": "38dec0e9c98120ed2f185747432666e5266a46d3dcb90d1fca6cfdb982b164b0"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/chart_template.ts",
+    "in": "postLoadData",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._post_load_demo_data": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_demo.ts postLoadDemoData (account's, account/demo/account_demo.py:75-103, with l10n_us_account's after super() where it is installed: postLoadDemoDataOf; the override must pass on the load's template code); called once per demo company by installDemo (chart_template.py:274 `_install_demo`)",
+  "inner": [
+   "postLoadDemoDataOf"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/demo/account_demo.py",
+    "line": 75,
+    "sha256": "ecee198e06ba6e444c13e7942dca7b532ac136f1fd01d679f2c9e3e10a2eb653"
+   },
+   {
+    "module": "l10n_us_account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/l10n_us_account/demo/account_demo.py",
+    "line": 148,
+    "sha256": "d9e408ee02a1b480e978f2399f715ff8e9228e0af942d16f4722108e3935ea21"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_demo.ts",
+    "in": "postLoadDemoData",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._setup_utility_bank_accounts": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/chart_template.ts setupUtilityBankAccounts (account's, setupUtilityBankAccountsOf; the override must pass on the load's template code and company)",
+  "inner": [
+   "setupUtilityBankAccountsOf"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/models/chart_template.py",
+    "line": 917,
+    "sha256": "260d183dee9410750fbf185966564bb3f9d0a7e3c91ae37198e639dd98680e5d"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/chart_template.ts",
+    "in": "setupUtilityBankAccounts",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._deref_account_tags": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/chart_template.ts derefTaxTags (account's, derefTaxTagsOf, with the code the override passes; the tax data is a handle the override can only pass on)",
+  "inner": [
+   "derefTaxTagsOf"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/models/chart_template.py",
+    "line": 1308,
+    "sha256": "ce0cb67ec76f49e60c0c4c2c33aa9f8d36fa45d54f9ee8aff3a95aab2ee2e840"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/chart_template.ts",
+    "in": "derefTaxTags",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.journal._prepare_liquidity_account_vals": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_journal_create.ts createDefaultAccount (the default account of a new bank or cash journal)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.journal",
+    "path": "odoo/addons/account/models/account_journal.py",
+    "line": 920,
+    "sha256": "babacfcd91c1f8e1ba76c9fa9036d7badc46b635fcc82baee98b8a03433e60b1"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_journal_create.ts",
+    "in": "createDefaultAccount",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "purchase.order._must_delete_date_planned": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/purchase_flow.ts purchase.order onchange (purchase's `field_name == 'order_line'` as the hand, for each changed field until one holds)",
+  "odoo": [
+   {
+    "module": "purchase",
+    "model": "purchase.order",
+    "path": "odoo/addons/purchase/models/purchase_order.py",
+    "line": 485,
+    "sha256": "c50958c0d0f6a6b19792fc90ab7e15c39ac36cd9d8173eaf9cb93e42b581a122"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/purchase_flow.ts",
+    "in": "registerMethod(purchase.order)",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._get_accounts_data_values": {
+  "returns": "value",
+  "above": {
+   "l10n_us_account": "after super(): for a US fiscal country it sets the transfer account's name to self.env._('Funds in Transit'), the text account's gives (the chart loads in en_US, chart_template.py:208-214), so the values stay the same; for another country it does nothing (template_us.py:98-104)"
+  },
+  "note": "src/models/chart_template.ts setupUtilityBankAccountsOf (the utility accounts' values: account's as the hand, accountsDataValues; l10n_mx's cash difference accounts, l10n_us_account's transfer account name, l10n_ca's, l10n_ar's compiled around it; super()'s bank_prefix and code_digits bound by name)",
+  "inner": [
+   "accountsDataValues"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/models/chart_template.py",
+    "line": 869,
+    "sha256": "5d78ebd684aa7edc79896630c5110ff235069dc30f4c709531f23f03396e7248"
+   },
+   {
+    "module": "l10n_us_account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/l10n_us_account/models/template_us.py",
+    "line": 98,
+    "sha256": "e6510a3bf6adc6c0a5749a9d15b2a04d1c40ebb9947dfacf0aa714e8d1fc67b6"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/chart_template.ts",
+    "in": "setupUtilityBankAccountsOf",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "ir.http.session_info": {
+  "returns": "value",
+  "above": {},
+  "note": "src/session/info.ts sessionInfo (web's and the installed modules' session info as the hand, sessionInfoHand; allowed_companies a Map keyed by the company ids, int keys through the bridge; l10n_tr's compiled override around it)",
+  "inner": [
+   "sessionInfoHand"
+  ],
+  "allow": [
+   {
+    "file": "src/session/info.ts",
+    "in": "sessionInfo",
+    "symbol": "sessionInfoHand",
+    "why": "the fast path when no template has a compiled override (privateOverridden): callPrivate would run the hand port's all the same"
+   }
+  ],
+  "odoo": [
+   {
+    "module": "barcodes",
+    "model": "ir.http",
+    "path": "odoo/addons/barcodes/models/ir_http.py",
+    "line": 10,
+    "sha256": "d21c05dd058247f1ab0c16c818ffec5e7d7c1650cbc79694345d3cdf9385c9d4"
+   },
+   {
+    "module": "barcodes_gs1_nomenclature",
+    "model": "ir.http",
+    "path": "odoo/addons/barcodes_gs1_nomenclature/models/ir_http.py",
+    "line": 10,
+    "sha256": "b32b1e449e28fddd47b42a34f7cf5ea1124481196aceac0a143ac3f7e1f6ac7a"
+   },
+   {
+    "module": "base_setup",
+    "model": "ir.http",
+    "path": "odoo/addons/base_setup/models/ir_http.py",
+    "line": 9,
+    "sha256": "effdf69a98b50f607bed721f5d31a16ee1183d1106317c1176da9d8520fd33d3"
+   },
+   {
+    "module": "bus",
+    "model": "ir.http",
+    "path": "odoo/addons/bus/models/ir_http.py",
+    "line": 25,
+    "sha256": "9f151f202dd50756921d8f09340084fe3377285ed4c30c8d86ce7b5e985789b8"
+   },
+   {
+    "module": "mail",
+    "model": "ir.http",
+    "path": "odoo/addons/mail/models/ir_http.py",
+    "line": 11,
+    "sha256": "78c0b575d456ac51c736a5242a5b13aa634d578fb41fb707a3679c2a5d2b842a"
+   },
+   {
+    "module": "partner_autocomplete",
+    "model": "ir.http",
+    "path": "odoo/addons/partner_autocomplete/models/ir_http.py",
+    "line": 10,
+    "sha256": "78cc424586165931a83a3cedf4b53f521ae56b624ad770ae24a9e921cc9bae8e"
+   },
+   {
+    "module": "spreadsheet",
+    "model": "ir.http",
+    "path": "odoo/addons/spreadsheet/models/ir_http.py",
+    "line": 9,
+    "sha256": "0bdb91bc45b8420cb950cd1430d1564c5c499c83fd0c50a45ba331fed7660a53"
+   },
+   {
+    "module": "web",
+    "model": "ir.http",
+    "path": "odoo/addons/web/models/ir_http.py",
+    "line": 87,
+    "sha256": "c84eb783beeb38f83dd63fa6c3bb9e25ff19e59bf2b464d8c49f54445ea0652b"
+   },
+   {
+    "module": "web_tour",
+    "model": "ir.http",
+    "path": "odoo/addons/web_tour/models/ir_http.py",
+    "line": 7,
+    "sha256": "2ffcafa14b749e0c5cc2d7d3c599e990fd80a200f1b41b799eb1cfc59e6f4c9d"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/session/info.ts",
+    "in": "sessionInfo",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/session/info.ts",
+    "in": "sessionInfo",
+    "kind": "quick",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._get_bank_fees_reco_account": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/chart_template.ts postLoadDataOf (the bank fees reconciliation model's account; account's with l10n_be's as the hand, bankFeesRecoAccount)",
+  "inner": [
+   "bankFeesRecoAccount"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/models/chart_template.py",
+    "line": 809,
+    "sha256": "34fdacfc21a61985e956597db3cdeeb453534e4ec9228e1ae3f23c28865b1986"
+   },
+   {
+    "module": "l10n_be",
+    "model": "account.chart.template",
+    "path": "odoo/addons/l10n_be/models/template_be.py",
+    "line": 73,
+    "sha256": "023579b5f1915b80cc7e53eee726a552ad4cbafa6a1ac237e41ef878bfff29e7"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/chart_template.ts",
+    "in": "postLoadDataOf",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "product.product._prepare_sellers": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/purchase_flow.ts prepareSellers in selectSeller (`_get_filtered_supplier` and the sort as the hand; every caller gives Odoo's params: the purchase line's order and force_uom, the procurements' force_uom, False elsewhere; a new order refuses where an override runs)",
+  "odoo": [
+   {
+    "module": "product",
+    "model": "product.product",
+    "path": "odoo/addons/product/models/product_product.py",
+    "line": 1258,
+    "sha256": "eb6f3361edcd57f4e41a29de74c2277c34b06630b67214798b92f638b0c66fb8"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/purchase_flow.ts",
+    "in": "prepareSellers",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/purchase_flow.ts",
+    "in": "prepareSellers",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "purchase.order._prepare_grouped_data": {
+  "returns": "value",
+  "above": {
+   "purchase_stock": "after super(): appends the operation type to the tuple; the key is only compared for equality within one merge, so where in the tuple it sits does not change the groups"
+  },
+  "note": "src/models/purchase_buttons.ts action_merge (purchase's partner, currency, dropship address with purchase_stock's operation type as the hand; the key is the tuple returned)",
+  "odoo": [
+   {
+    "module": "purchase",
+    "model": "purchase.order",
+    "path": "odoo/addons/purchase/models/purchase_order.py",
+    "line": 979,
+    "sha256": "dfc5ee2fcc927b0e6f2f612805dd1c62916069d1f7d6448a60134a90ea643af0"
+   },
+   {
+    "module": "purchase_stock",
+    "model": "purchase.order",
+    "path": "odoo/addons/purchase_stock/models/purchase_order.py",
+    "line": 217,
+    "sha256": "0daaeaecec15b6c9b45a9ae96bae9b95a900709b377751a2d40eec9d5597f70c"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/purchase_buttons.ts",
+    "in": "registerMethod",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "stock.rule._make_po_get_domain": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/stock_procure.ts runBuy (purchase_stock's domain with project_purchase_stock's project_id as the hand; the procurements are grouped by the domain returned, and terms an override appends, `(field, '=', value)` on a stored column of purchase.order, go into the search; anything else refuses)",
+  "odoo": [
+   {
+    "module": "project_purchase_stock",
+    "model": "stock.rule",
+    "path": "odoo/addons/project_purchase_stock/models/stock_rule.py",
+    "line": 17,
+    "sha256": "d27e777c8a564702ff52127e5fb599fc5bc763e453a2a5b2ca4c20e9b3985fb8"
+   },
+   {
+    "module": "purchase_stock",
+    "model": "stock.rule",
+    "path": "odoo/addons/purchase_stock/models/stock_rule.py",
+    "line": 325,
+    "sha256": "f1b191b2b9a3944930c87cdcb418ce68312dd1fff56604d01775b2ab3bbe1a96"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/stock_procure.ts",
+    "in": "procurementValues",
+    "kind": "overridden",
+    "n": 1
+   },
+   {
+    "file": "src/models/stock_procure.ts",
+    "in": "runBuy",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "stock.rule._prepare_purchase_order": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/stock_procure.ts createOrder (purchase_stock's values with project_purchase_stock's as the hand; an override that changed the procurement values before super() refuses)",
+  "odoo": [
+   {
+    "module": "project_purchase_stock",
+    "model": "stock.rule",
+    "path": "odoo/addons/project_purchase_stock/models/stock_rule.py",
+    "line": 9,
+    "sha256": "6b31f645559a4afee4c540311a92ffc29d56a273a30fe5445c946ece31056f7d"
+   },
+   {
+    "module": "purchase_stock",
+    "model": "stock.rule",
+    "path": "odoo/addons/purchase_stock/models/stock_rule.py",
+    "line": 293,
+    "sha256": "2f64915cf4f4efd72b8931c7da7a762f216504cd59d565c70464ca101c576c05"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/stock_procure.ts",
+    "in": "createOrder",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/stock_procure.ts",
+    "in": "procurementValues",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "payment.provider._get_default_payment_method_codes": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/payment_flow.ts setupProvider (payment's `set()` as the hand, in `_activate_default_pms`, payment_provider.py:514-527)",
+  "odoo": [
+   {
+    "module": "payment",
+    "model": "payment.provider",
+    "path": "odoo/addons/payment/models/payment_provider.py",
+    "line": 529,
+    "sha256": "ec5a58633cb080987da994de02befd0e25708e55845c9c6d7ce1cd08c963c03a"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "activateDefaultPms",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.transaction._apply_updates": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/payment_flow.ts process (payment's, which does nothing, as the hand; a provider's override updates the transaction through the _set_* methods, in the method table for compiled code)",
+  "odoo": [
+   {
+    "module": "payment",
+    "model": "payment.transaction",
+    "path": "odoo/addons/payment/models/payment_transaction.py",
+    "line": 982,
+    "sha256": "0634a8ff8d63eabb7a8fb82ef53d8ceed86b503ecd29b9c267790ebfd8ca1114"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "processTransaction",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.transaction._extract_amount_data": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/payment_flow.ts validateAmount (payment's `{}` as the hand; None skips the amount check)",
+  "odoo": [
+   {
+    "module": "payment",
+    "model": "payment.transaction",
+    "path": "odoo/addons/payment/models/payment_transaction.py",
+    "line": 1051,
+    "sha256": "e5609fd6d8d1eb35053adb5af396d2ddbb4e93d62331648b7ec8cd4a67f9a9a0"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "processTransaction",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.line._copy_data_extend_business_fields": {
+  "returns": "value",
+  "above": {
+   "sale": "after super(): sets sale_line_ids on the same dict; a site's override sets other keys (l10n_cn's l10n_cn_balance_deduction_ids), so the order of the two in the MRO does not change the values",
+   "purchase": "after super(): sets purchase_line_id on the same dict; as sale's, independent of the other keys"
+  },
+  "note": "src/models/account_move_copy.ts copyData with include_business_fields (sale's order lines and purchase's line as the hand; the values dict changed in place, given back by the bridge); a reversal, which copies its lines in SQL (src/models/account_move_ops.ts), refuses where an override runs",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.line",
+    "path": "odoo/addons/account/models/account_move_line.py",
+    "line": 4118,
+    "sha256": "076a0a80942a81550483e5abcb2afe11a342a3ed0b9c410b5fc097b3020b3b03"
+   },
+   {
+    "module": "purchase",
+    "model": "account.move.line",
+    "path": "odoo/addons/purchase/models/account_invoice.py",
+    "line": 667,
+    "sha256": "bdb132476ba62c9e8820e1edaa3089e8aa433376d026cc57c32432dd36ef6659"
+   },
+   {
+    "module": "sale",
+    "model": "account.move.line",
+    "path": "odoo/addons/sale/models/account_move_line.py",
+    "line": 41,
+    "sha256": "817f8d52f32bf74150f718c8f6401897c8e5eca19113c07ec8dcf0448f29ec4d"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_copy.ts",
+    "in": "registerOverrides(account.move.line)",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "reverseInvoice",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._get_vat_required_valid": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/sale_computes.ts fiscalPositionFor (each auto-applied position requiring a VAT: account's has_vat as the hand)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "res.partner",
+    "path": "odoo/addons/account/models/partner.py",
+    "line": 932,
+    "sha256": "5f0e0ca4e412906eb23bf9be65b85a67d1928522433b40c9369ea5f14fad6d71"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/sale_computes.ts",
+    "in": "fiscalPositionFor",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._create_contact_parent_company": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/res_partner_write.ts create (`_create_parent_from_name` of a contact created with parent_name: base's create as the hand)",
+  "odoo": [
+   {
+    "module": "base",
+    "model": "res.partner",
+    "path": "odoo/odoo/addons/base/models/res_partner.py",
+    "line": 1131,
+    "sha256": "0077fe8920e05aeef6e5cd3dfd0a0406c9c71799f096aa33a46dd082a77d2584"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/res_partner_write.ts",
+    "in": "createParentFromName",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner.bank._get_available_qr_methods": {
+  "returns": "value",
+  "above": {
+   "account_qr_code_sepa": "after super(): appends sct_qr of sequence 20 (res_bank.py:77-80), which the hand port includes; the list is then sorted by sequence and no other method has 20, so its place in the MRO does not change the result"
+  },
+  "note": "src/models/account_computes.ts qrMethods (the qr_code_method selection of res.partner and account.move, get_available_qr_methods_in_sequence)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "res.partner.bank",
+    "path": "odoo/addons/account/models/res_partner_bank.py",
+    "line": 278,
+    "sha256": "38f4a2b498ebe07f99122c0c5d9851289459575a452f004f7c679bbb2317ef20"
+   },
+   {
+    "module": "account_qr_code_sepa",
+    "model": "res.partner.bank",
+    "path": "odoo/addons/account_qr_code_sepa/models/res_bank.py",
+    "line": 77,
+    "sha256": "c367b911037e43e0b458cbd29b003db5c2b0f291b5aab9c82acb19874885e033"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_computes.ts",
+    "in": "qrMethods",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "purchase.order.line._prepare_account_move_line": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/purchase_bill.ts lineValues (the bill lines of action_create_invoice; purchase's and purchase_stock's as the hand)",
+  "inner": [
+   "lineValuesOf"
+  ],
+  "odoo": [
+   {
+    "module": "purchase",
+    "model": "purchase.order.line",
+    "path": "odoo/addons/purchase/models/purchase_order_line.py",
+    "line": 777,
+    "sha256": "b11fbdc3e52366cdac579ffc3a3f308720bd50c5464dc825db25cc49c10238a5"
+   },
+   {
+    "module": "purchase_stock",
+    "model": "purchase.order.line",
+    "path": "odoo/addons/purchase_stock/models/purchase_order_line.py",
+    "line": 355,
+    "sha256": "ed3460563c2f3eedb7ebbc60ea07bf7f6be6cca132c9644790a2b730e653b27a"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/purchase_bill.ts",
+    "in": "lineValues",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "stock.move._get_value_from_extra": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/stock_validate.ts inValue (stock_account _get_value_data of a done incoming move, its add_extra_value step: the move's value when it is validated)",
+  "odoo": [
+   {
+    "module": "stock_account",
+    "model": "stock.move",
+    "path": "odoo/addons/stock_account/models/stock_move.py",
+    "line": 618,
+    "sha256": "dc264a1bf5c4fe877e98533e8c8fc7ac795600242827b6f5ef6edae70913580c"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/stock_validate.ts",
+    "in": "inValue",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._get_all_additional_identifiers_metadata": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/res_partner_erp_write.ts allIdentifiersMetadata (base _get_all_identifiers_metadata of the hand port: the preferred routing and legal identifiers, the UBL scheme validation, the invoice report's identifiers); the forms' available_additional_identifiers_metadata refuses with a localization (res_partner_write.ts, partner_form.ts) and the identifiers' validation (cleanAdditionalIdentifiers) refuses every key it does not port",
+  "odoo": [
+   {
+    "module": "base",
+    "model": "res.partner",
+    "path": "odoo/odoo/addons/base/models/res_partner.py",
+    "line": 1728,
+    "sha256": "a833798c7289e367943f12727e19a16b6f2cfc8cbbf7388ed7c20952b5369e8e"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/res_partner_erp_write.ts",
+    "in": "allIdentifiersMetadata",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._reverse_moves": {
+  "returns": "value",
+  "above": {
+   "sale": "sale account_move.py:102-111 adds campaign_id, medium_id and source_id of each move to its default values, which the hand port's reversal keeps from the source row: the same values whatever the order, and disjoint from what the new modules set"
+  },
+  "note": "src/models/account_move_ops.ts reverseMovesHook (account's as the hand, account_move.py:5891-5930, for the wizard's reversals; the default values an override adds are the reversal's values, one it changes refuses)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 5891,
+    "sha256": "bd2b80155b306f9597811a89143a254ed85623e94ed7e7c9a462c1d616112258"
+   },
+   {
+    "module": "sale",
+    "model": "account.move",
+    "path": "odoo/addons/sale/models/account_move.py",
+    "line": 102,
+    "sha256": "d6774462d1edea3f81addb341c39d1bda4d535259a6fa3c672f959ebcb8e3f83"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "reverseMovesHook",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._get_ubl_cii_formats_info": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/partner_all_fields.ts ublCiiFormatsInfo (account_edi_ubl_cii's dict as the hand, res_partner.py:261-275: is_ubl_format's formats)",
+  "odoo": [
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "res.partner",
+    "path": "odoo/addons/account_edi_ubl_cii/models/res_partner.py",
+    "line": 261,
+    "sha256": "bd220d6fed2ea7aa6ae41088c021f9b49e62f2df36107f79c8f29f2867e45b21"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/partner_all_fields.ts",
+    "in": "ublCiiFormatsInfo",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_import_file_type": {
+  "returns": "value",
+  "above": {},
+  "note": "src/mail/move_import.ts refuseWidenedImport (account's and account_edi_ubl_cii's as the hand, account_document_import_mixin.py:441-445 and account_edi_ubl_cii account_move.py:214-242, inlined in moveDecoderFile and src/models/ubl_tree.ts bis3Tree): an override sends a file to another decoder (l10n_ro_edi: CIUS-RO), so every file on an invoice refuses where one is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.document.import.mixin",
+    "path": "odoo/addons/account/models/account_document_import_mixin.py",
+    "line": 442,
+    "sha256": "58ed7bee6e418d9bd836f82d0efa0f0e7cf7e06607db9d9b4fcc9a6988031a43"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move.py",
+    "line": 214,
+    "sha256": "66a90574eed16e8a6351b01f0b45a41b5403ac5460912c48e75cec8ab0975374"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/mail/move_import.ts",
+    "in": "refuseWidenedImport",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "res.company._check_phonenumbers_import": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/company_create.ts account_peppol_phone_number (account_peppol's as the hand, res_company.py:106-109: it raises only without the phonenumbers library, which is installed)",
+  "odoo": [
+   {
+    "module": "account_peppol",
+    "model": "res.company",
+    "path": "odoo/addons/account_peppol/models/res_company.py",
+    "line": 107,
+    "sha256": "c4c132a49eca8643aee27df6d073ce89ae5c124f15789c3018c31229b9a1ea8d"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/company_create.ts",
+    "in": "registerRecordCompute(res.company)",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._get_default_invoice_edi_format": {
+  "returns": "value",
+  "above": {},
+  "kwargs": [
+   "sending_methods"
+  ],
+  "note": "src/models/account_move_send.ts ediFormat (account's with account_peppol's as the hand, account_move_send.py:45-47 and account_peppol account_move_send.py:194-199: the partner's format, Peppol's refused; the wizard's invoice_edi_format, alerts, attachments_not_supported and send; any format refuses after it)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 45,
+    "sha256": "7a3e722eae899bc12f0049d7879229147e578ea3304de6ae52de811ae822b67c"
+   },
+   {
+    "module": "account_peppol",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_peppol/models/account_move_send.py",
+    "line": 194,
+    "sha256": "65095f1e0cd004d24a53a6577f3c7a8b5b26334e3c82fe5d02c5738e2c9c6fbc"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "ediFormat",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._is_applicable_to_company": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts applicableToCompany (account's with account_peppol's as the hand, account_move_send.py:388-390 and account_peppol :214-219: the wizard's sending_method_checkboxes keep the methods applicable to the company)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 388,
+    "sha256": "9575fe27f0c4d71728cb7c38b8f8a1938f32ce9d17ba6f111f18d9674bbb5db3"
+   },
+   {
+    "module": "account_peppol",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_peppol/models/account_move_send.py",
+    "line": 214,
+    "sha256": "d912d142feab4ae84e9273963f4ee43c2c196fbf69cc7aa731355237127c41e8"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "applicableToCompany",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._is_applicable_to_move": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts applicableToMove and src/models/account_move_send_mail.ts sendMails (account's as the hand, account_move_send.py:392-397): Odoo passes the send settings as its keywords (wizard :146 `_get_default_sending_settings`, :506 move_data), which the hand port does not build, so both refuse where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 393,
+    "sha256": "5b5d2ab6e4bb98b9a95805603fc5c328afd476725214011fc94e157597bab8c9"
+   },
+   {
+    "module": "account_peppol",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_peppol/models/account_move_send.py",
+    "line": 221,
+    "sha256": "da1e28071cbb69c2d3f543ab8ca25f5f7278fa42a46ce7733a1a22281a595a43"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "applicableToMove",
+    "kind": "overridden",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_move_send_mail.ts",
+    "in": "sendMails",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._call_web_service_after_invoice_pdf_render": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts action_send_and_print (account's and account_peppol's as the hand, account_move_send.py:712-715 and account_peppol :264-...: nothing without a Peppol sending, which refuses): its argument is Odoo's whole invoices_data, which the hand port does not build, so the send refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 712,
+    "sha256": "0e61255a9b0d470280f88ff089cf43b810b43547f20d09f339481bfcc7add08c"
+   },
+   {
+    "module": "account_peppol",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_peppol/models/account_move_send.py",
+    "line": 264,
+    "sha256": "e2eeed63257448274e2fa95ba13bd788b24758eaca87c438336d9f7458df57ca"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "registerMethod",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._get_suggested_invoice_edi_format": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/partner_erp.ts suggestedEdiFormat (account's False as the hand, partner.py:760-763): res.partner invoice_edi_format of a saved and of a new partner, and its inverse (src/models/res_partner_erp_write.ts), which refuses against a suggested format",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "res.partner",
+    "path": "odoo/addons/account/models/partner.py",
+    "line": 760,
+    "sha256": "d46a79ca4342a4aa0f4b7e2e310ae767d625f23d4ffd4908fbc7aed0658e3bc3"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/partner_erp.ts",
+    "in": "suggestedEdiFormat",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._get_alerts": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts the wizard's alerts compute (account's, account_edi_ubl_cii's and account_peppol's as the hand, handAlerts: none, or refused), with moves_data as `_compute_alerts` builds it (wizard :107-117: sending_methods, invoice_edi_format, extra_edis, mail_partner_ids); a module's alerts are the field's value",
+  "inner": [
+   "handAlerts"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 112,
+    "sha256": "48946ac8703f3daed7e89166c4c6cdea0cac2892ebdccc55ffb8dfe838e7b741"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move_send.py",
+    "line": 34,
+    "sha256": "89498d208374c69748bdaed0515822fefc253cee355846483802bb3afb47996a"
+   },
+   {
+    "module": "account_peppol",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_peppol/models/account_move_send.py",
+    "line": 88,
+    "sha256": "9eb139b269cab908111659f7d98fdb9e27f325fd97e81adc5bba0092a5e40830"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "defineComputes",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._get_all_extra_edis": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts the wizard's extra_edi_checkboxes (account's {} as the hand, account_move_send.py:31-36): a module's entries carry an `is_applicable` function to call on the move, which the hand port cannot run, so the compute refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 32,
+    "sha256": "2e0acec3c8886c8a239919a03819f544a372c6b19070452903e32233a4021c9c"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "defineComputes",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._hook_invoice_document_before_pdf_report_render": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts action_send_and_print (account's no-op with account_edi_ubl_cii's, whose EDI format refuses before, as the hand, account_move_send.py:400-405): its argument is Odoo's whole invoice_data, which the hand port does not build, so the send refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 400,
+    "sha256": "be587b2c6673e947f83e7c027f0a63e2742630656f3f867a223396e08a7cc320"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move_send.py",
+    "line": 124,
+    "sha256": "bb6e530bcbeab8c83896e076497f96e510a6da30a8465008581d365f5759e073"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "registerMethod",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._get_preferred_routing_identifier_vals": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/res_partner_erp_write.ts preferredRouting (account_edi_ubl_cii's as the hand, res_partner.py:234-254, with force_recompute=True): res.partner routing_scheme and routing_endpoint (:149-154) of a saved and of a new partner",
+  "inner": [
+   "handPreferredRouting"
+  ],
+  "odoo": [
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "res.partner",
+    "path": "odoo/addons/account_edi_ubl_cii/models/res_partner.py",
+    "line": 234,
+    "sha256": "e9dde8b5489a74cd61497e22a546481d10dbadbb7182dd417f4e94714966770c"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/res_partner_erp_write.ts",
+    "in": "preferredRouting",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/res_partner_erp_write.ts",
+    "in": "preferredRoutingIdentifier",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.provider._setup_provider": {
+  "returns": "value",
+  "above": {},
+  "kwargs": [
+   "custom_mode"
+  ],
+  "note": "src/models/payment_flow.ts setupProvider (payment's and account_payment's `_setup_provider` as the hand, payment_provider.py:1148-1170 and account_payment payment_provider.py:160-175)",
+  "inner": [
+   "setupProviderHand"
+  ],
+  "odoo": [
+   {
+    "module": "account_payment",
+    "model": "payment.provider",
+    "path": "odoo/addons/account_payment/models/payment_provider.py",
+    "line": 160,
+    "sha256": "02fcc4c178ff6a6f4b8290b586111de9c682fb0dacfdc1676906e36e7895a42f"
+   },
+   {
+    "module": "payment",
+    "model": "payment.provider",
+    "path": "odoo/addons/payment/models/payment_provider.py",
+    "line": 1148,
+    "sha256": "656fb29b2a94cc0519586008c95e2ac754d1def45f112d4cc38453b6fd76f507"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "setupProvider",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.provider._get_provider_domain": {
+  "returns": "value",
+  "above": {},
+  "kwargs": [
+   "custom_mode"
+  ],
+  "note": "src/models/payment_flow.ts providerDomain (payment's `[('code', '=', provider_code)]` as the hand, payment_provider.py:1192-1200)",
+  "odoo": [
+   {
+    "module": "payment",
+    "model": "payment.provider",
+    "path": "odoo/addons/payment/models/payment_provider.py",
+    "line": 1192,
+    "sha256": "2d7fb0841b57ce54886bcec7ee5c54064d111aafc9ba2a9399dfedaa6801e51a"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "providerDomain",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.provider._get_code": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/payment_flow.ts providerCode (payment's `self.code` as the hand, payment_provider.py:1245-1254: the template payment.form and account_payment's `_ensure_payment_method_line`)",
+  "odoo": [
+   {
+    "module": "payment",
+    "model": "payment.provider",
+    "path": "odoo/addons/payment/models/payment_provider.py",
+    "line": 1245,
+    "sha256": "aa6346b3f7703eeb69d3db126975cd6ca134a174facd247c97c8afe3323ccd10"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "providerCode",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.transaction._get_sent_message": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/payment_flow.ts logMessageOnLinkedDocuments (payment's message as the hand, payment_transaction.py:1445-1470: html; a str is escaped)",
+  "odoo": [
+   {
+    "module": "payment",
+    "model": "payment.transaction",
+    "path": "odoo/addons/payment/models/payment_transaction.py",
+    "line": 1445,
+    "sha256": "380d1109b7f0260f55a57eab57ca5f6eb01884e20f4e3b009ebfe74992a4cab4"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "logMessageOnLinkedDocuments",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.transaction._should_create_payment": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/payment_flow.ts shouldCreatePayment (account_payment's as the hand, payment_transaction.py:124-138; the template payment.payment_status and the post-processing)",
+  "inner": [
+   "shouldCreatePaymentHand"
+  ],
+  "odoo": [
+   {
+    "module": "account_payment",
+    "model": "payment.transaction",
+    "path": "odoo/addons/account_payment/models/payment_transaction.py",
+    "line": 124,
+    "sha256": "dad4b2863b4d81e3515c266073edff9cd1d8045c62aee099296c1eb8ab05269c"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "shouldCreatePayment",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.transaction._get_specific_rendering_values": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/payment_flow.ts processingValues (payment's `{}` as the hand, payment_transaction.py:670-683: the values the provider's redirect form is rendered with)",
+  "odoo": [
+   {
+    "module": "payment",
+    "model": "payment.transaction",
+    "path": "odoo/addons/payment/models/payment_transaction.py",
+    "line": 670,
+    "sha256": "c2d92ee72eb3a1c318fd3e81adcc19dbbe4a8a2fbfed16d12e275437c4aebaa8"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "processingValues",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "payment.provider._find_available_providers": {
+  "returns": "value",
+  "above": {},
+  "kwargs": [
+   "currency_id",
+   "force_tokenization",
+   "is_express_checkout",
+   "is_validation",
+   "report",
+   "is_invoice"
+  ],
+  "note": "src/models/payment_flow.ts availableProviders (payment's and account_payment's as the hand, payment_provider.py:671-802 and account_payment payment_provider.py:132-155: the invoice portal's payment form). The report, a dict keyed by records, holds the hand's entries before the call (the bridge gives a compiled super() copies, so they could not come back from it) and is refilled with the override's; an override that reads the report before its super() would see them early (account_payment_custom reads and writes it after). The route's query parameters and account_payment_custom's controller is_invoice=True are its keywords (src/controllers/portal_invoice.ts)",
+  "odoo": [
+   {
+    "module": "account_payment",
+    "model": "payment.provider",
+    "path": "odoo/addons/account_payment/models/payment_provider.py",
+    "line": 132,
+    "sha256": "5114ef83da63a374e010d0bd90b36c3425b9aae83436198e2dc71bea50b80201"
+   },
+   {
+    "module": "payment",
+    "model": "payment.provider",
+    "path": "odoo/addons/payment/models/payment_provider.py",
+    "line": 671,
+    "sha256": "cc51ac0b5a378dfe2e1496ed447397d8c1e66fa7451b1b94f001293297c02c9b"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/payment_flow.ts",
+    "in": "availableProviders",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._call_web_service_before_invoice_pdf_render": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts action_send_and_print (account's no-op as the hand, account_move_send.py:706-710): its argument is Odoo's whole invoices_data, which the hand port does not build, so the send refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 706,
+    "sha256": "4d719154b090e27ea9f671d9e50523bbee3d4581e0fd10d56bad5f71b6786bf7"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "registerMethod",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.chart.template._load": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/chart_load.ts tryLoadingHooked (account's `_load` as the hand, chart_template.py:184-261, src/models/chart_template.ts tryLoading with try_loading's checks): the chart loads of a new company and of the try_loading data function; outside the loader's files, so the verified templates stay verified",
+  "inner": [
+   "tryLoading"
+  ],
+  "allow": [
+   {
+    "file": "src/models/chart_load.ts",
+    "in": "tryLoadingHooked",
+    "symbol": "tryLoading",
+    "why": "try_loading returns before `_load` without a company or a code, and raises for syscohada/syscebnl (chart_template.py try_loading): Odoo does not call `_load` there either"
+   }
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.chart.template",
+    "path": "odoo/addons/account/models/chart_template.py",
+    "line": 184,
+    "sha256": "511c47e4b95a794c04bcc4a1a32a0751ef7efec116371daf91122e3497d4144f"
+   },
+   {
+    "module": "l10n_be",
+    "model": "account.chart.template",
+    "path": "odoo/addons/l10n_be/models/template_be.py",
+    "line": 79,
+    "sha256": "dcc7f31f67eeadce895da6acfc7f1227f314b21c72ddfb75aaca7c80b6ad1be0"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/chart_load.ts",
+    "in": "tryLoadingHooked",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.reversal._prepare_default_reversal": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_ops.ts reversalDefaults (account's as the hand, account_move_reversal.py:97-114): the values an override adds become the reversal's (with `_reverse_moves`'), one it changes refuses",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.reversal",
+    "path": "odoo/addons/account/wizard/account_move_reversal.py",
+    "line": 97,
+    "sha256": "6ae99cbb9ca8c5f41dfd7f284c49ea77dda8848b2f39c097e0a5ef6047124ff5"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "reversalDefaults",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_invoice_currency_rate_date": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/invoicing_computes.ts invoiceRateDate (account's `invoice_date or context_today` as the hand, account_move.py:1160-1162) in expected_currency_rate, saved or new; the redated invoice (account_move_create.ts redateTerms) and the date set at posting (account_buttons.ts) refuse in a foreign currency where an override is installed",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 1160,
+    "sha256": "4fa482c7877e3483c8537aeb6f7315c2d70f05a458e4d7ba8c74227a80025e84"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_buttons.ts",
+    "in": "postMovesHand",
+    "kind": "overridden",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_move_create.ts",
+    "in": "redateTerms",
+    "kind": "overridden",
+    "n": 1
+   },
+   {
+    "file": "src/models/invoicing_computes.ts",
+    "in": "invoiceRateDate",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._inverse_delivery_date": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_create.ts the delivery_date inverse (account's `pass` as the hand, account_move.py:2675-2676)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 2675,
+    "sha256": "d232d56110e47385d0b5bf9ff7465a3b6dbecdb173aae91ff0b2fdd5275bbb28"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_create.ts",
+    "in": "registerOverrides(account.move)",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_edi_decoder": {
+  "returns": "value",
+  "above": {},
+  "note": "src/mail/move_import.ts refuseWidenedImport (account_edi_ubl_cii's as the hand, account_move.py:307-324: the BIS 3 decoder of src/models/ubl_import.ts): every file on an invoice refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.document.import.mixin",
+    "path": "odoo/addons/account/models/account_document_import_mixin.py",
+    "line": 361,
+    "sha256": "f4ad79d8f53bfd51de201b470b0a57bbdd96b50591b92501be5b908893d55aa0"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move.py",
+    "line": 307,
+    "sha256": "bbff99c1903478caf2ba428293ce190b9de420fa9d4f95bcf623cbc831a50eb7"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/mail/move_import.ts",
+    "in": "refuseWidenedImport",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._display_attachments_widget": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts the wizard's display_attachments_widget (account's `'email' in sending_methods` with account_edi_ubl_cii's as the hand, account_move_send.py:380-381; no EDI format here), with sending_methods + extra_edis as wizard :155-161 passes them",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 380,
+    "sha256": "3c02ec2c2d83dd943844af5d0e473098a7d7960cb2e22342eab12adc169d0ba8"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move_send.py",
+    "line": 99,
+    "sha256": "0c42e4e0dd8d1d2f476260db9322e66463e3d64b6ff13c0916ffeea9883c53bc"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "defineComputes",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._get_invoice_extra_attachments": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts attachmentsWidget (account's `move.invoice_pdf_report_id` as the hand, account_move_send.py:291-292): another attachment than the PDF refuses; the invoice mail (account_move_send_mail.ts checkSendMail) refuses where a compiled override is installed",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 291,
+    "sha256": "b72d849f47b35181ccbce93ff63800e7023e897428c2a0b36b3925cabc051f9d"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move_send.py",
+    "line": 79,
+    "sha256": "b6fdc81ad3fec8bb552278f93fbb9db411d1c6b82b058ce1d6ee6b8f63a0d5b8"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "attachmentsWidget",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_move_send_mail.ts",
+    "in": "checkSendMail",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._hook_invoice_document_after_pdf_report_render": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts action_send_and_print (account's as the hand): its argument is Odoo's whole invoice_data, which the hand port does not build, so the send refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 457,
+    "sha256": "560261c282db9e83e018add210845be94c45d35c265c72597d0717578b91f902"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move_send.py",
+    "line": 158,
+    "sha256": "2f91c92287948cb9e2bbc9ada313e732eb4921eae2765ca83edb31e9367ec231"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "registerMethod",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._link_invoice_documents": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts action_send_and_print (account's as the hand, account_move_send.py:466-485, inlined: the PDF's attachment, the main attachment, is_move_sent): its argument is Odoo's whole invoices_data, so the send refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 466,
+    "sha256": "e2048b96373c7df8f1f229ab2b4cbeab46abf1171647501d324b22a09fdc851d"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move_send.py",
+    "line": 302,
+    "sha256": "194826764c71a64b8c821134dc1b5c9e0e58ec647e5ed95d3bf5c742f9cfe555"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "registerMethod",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._check_draftable": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_ops.ts buttonDraft (account's as the hand, account_move.py:7041-7059: an exchange difference entry, a locked entry)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 7041,
+    "sha256": "40c8056e0e366c774729d9f33675e84cb370e3cc866160cc53167b43682c5523"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "buttonDraft",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._detach_attachments": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_ops.ts detachAttachments at the end of buttonDraft (account's as the hand, account_move.py:6989-7012: a file to detach refuses)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 6989,
+    "sha256": "1806b2db6e8009f1efb0aa70b551b97ddce7a8c3fd9a2ee72dd1cfc0a5ee42b1"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "detachAttachments",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._should_detach_attachments": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_ops.ts detachAttachments (account's `is_sale_document()` as the hand, account_move.py:6986-6987)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 6986,
+    "sha256": "c4d03badbe74d52ed8cd8f67299fc081cb6fb98142de660ffa0bde518f8eb68e"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "detachAttachments",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_fields_to_detach": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_ops.ts detachAttachments (account's ['invoice_pdf_report_file'] as the hand, account_move.py:6979-6984)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 6979,
+    "sha256": "01925a8e87965497dae6fcc85f4361910315d3c0b5f97a11f1eb375bf34806b2"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move.py",
+    "line": 47,
+    "sha256": "682e8e9a482ae7de223517d3f87fa86a62c6fdf878dd50d3b14e2ea24e23761e"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_ops.ts",
+    "in": "detachAttachments",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_xml_tree": {
+  "returns": "value",
+  "above": {},
+  "note": "src/mail/move_import.ts refuseWidenedImport (account's as the hand, account_document_import_mixin.py:468-488, inlined in moveDecoderFile): an override reads more files as XML (l10n_it_edi: signed .p7m), so every file on an invoice refuses where one is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.document.import.mixin",
+    "path": "odoo/addons/account/models/account_document_import_mixin.py",
+    "line": 472,
+    "sha256": "225db50bdd618a63b3c3e97ac35c0eec9a63712c4590f8b29514e03ad11b30aa"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/mail/move_import.ts",
+    "in": "refuseWidenedImport",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._unwrap_attachment": {
+  "returns": "value",
+  "above": {},
+  "note": "src/mail/move_import.ts refuseWidenedImport (account's as the hand, account_document_import_mixin.py:500-528, inlined in moveDecoderFile): every file on an invoice refuses where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.document.import.mixin",
+    "path": "odoo/addons/account/models/account_document_import_mixin.py",
+    "line": 500,
+    "sha256": "12b0d31667a2fc13fb07822a96a6fdea9bf7367051b155adae285c17a1dfe7f1"
+   },
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.move",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_move.py",
+    "line": 244,
+    "sha256": "4f753ae4c4ffad36e33357838e5cd8fa7fc3f4a08d08f2faf114142c9b74dbdf"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/mail/move_import.ts",
+    "in": "refuseWidenedImport",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._message_set_main_attachment_id": {
+  "returns": "value",
+  "above": {},
+  "note": "src/mail/attachment.ts (the upload, register_as_main_attachment) and src/mail/move_import.ts messagePostAfterHook (mail's with account's as the hand, mail_thread_main_attachment.py:22-47, account_move.py:7678-7683): refused where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move",
+    "path": "odoo/addons/account/models/account_move.py",
+    "line": 7678,
+    "sha256": "57c6d3b3c9396e9eb368d873fdd2afef3f8b8e202770d40d0b85b66831e8e200"
+   },
+   {
+    "module": "mail",
+    "model": "mail.thread.main.attachment",
+    "path": "odoo/addons/mail/models/mail_thread_main_attachment.py",
+    "line": 22,
+    "sha256": "bc5fb451bd87639dfa65b0f2009e8a51ba5dfdc3c0dcd25fff75cc1c9475d10e"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/mail/attachment.ts",
+    "in": "attachmentUpload",
+    "kind": "overriddenOn",
+    "n": 1
+   },
+   {
+    "file": "src/mail/attachment.ts",
+    "in": "registerMethod(ir.attachment)",
+    "kind": "overriddenOn",
+    "n": 1
+   },
+   {
+    "file": "src/mail/move_import.ts",
+    "in": "messagePostAfterHook",
+    "kind": "overriddenOn",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._create_parent_from_name": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/res_partner_write.ts createParentFromName after create (base's as the hand, res_partner.py:1110-1129, with `_create_contact_parent_company` as its own hook): the company of a contact's parent_name",
+  "inner": [
+   "createParentFromName"
+  ],
+  "odoo": [
+   {
+    "module": "base",
+    "model": "res.partner",
+    "path": "odoo/odoo/addons/base/models/res_partner.py",
+    "line": 1110,
+    "sha256": "917ab1b3e18a4753dd9dab68f9d6caae4380dbe19f77acd5e2d8717498d103be"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/res_partner_write.ts",
+    "in": "registerOverrides",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.edi.xml.ubl_bis3._import_ubl_invoice_add_narration": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/ubl_import.ts the BIS 3 import's narration (account_edi_ubl.py:2249-2257 as the hand, called at :3067): refused where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "account.edi.ubl",
+    "path": "odoo/addons/account_edi_ubl_cii/models/account_edi_ubl.py",
+    "line": 2249,
+    "sha256": "14a466363c4ad2eb9115871efb04d1449ef074f460cd1f49229bf4c6b06b6df1"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/ubl_import.ts",
+    "in": "importBis3",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.move.send.wizard._get_default_sending_methods": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_move_send.ts defaultSendingMethods (account's and account_peppol's as the hand, account_move_send.py:26-29, account_peppol :17-28): the wizard's preferred methods",
+  "inner": [
+   "handDefaultSendingMethods"
+  ],
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.move.send",
+    "path": "odoo/addons/account/models/account_move_send.py",
+    "line": 27,
+    "sha256": "2ac6151b15d6c1d8b5394aa1e9c2c352b446df3a72556173a55585b1034a920b"
+   },
+   {
+    "module": "account_peppol",
+    "model": "account.move.send",
+    "path": "odoo/addons/account_peppol/models/account_move_send.py",
+    "line": 18,
+    "sha256": "223be5a10ac01d7b2e6cdc8a2e66fee07dde3b7113778dd760af46c1d87814fb"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_send.ts",
+    "in": "defaultSendingMethods",
+    "kind": "call",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._get_view": {
+  "returns": "value",
+  "above": {},
+  "note": "src/web/get_views.ts loadView (the models' own `_get_view` inlined there): a module's override changes the arch, so the view refuses where one is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "base",
+    "model": "base",
+    "path": "odoo/odoo/addons/base/models/ir_ui_view.py",
+    "line": 3037,
+    "sha256": "2396a34b209d6e159e5beda3e6c806dfd1a64eba41aa94f3445550fa92fe0a6c"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/web/get_views.ts",
+    "in": "loadView",
+    "kind": "overriddenOn",
+    "n": 1
+   }
+  ]
+ },
+ "account.move._track_execute": {
+  "returns": "value",
+  "above": {},
+  "note": "src/mail/tracking.ts trackPrepare and trackRecordPrepare (mail's as the hand, mail_track_mixin.py:133-198, mail_thread.py:550-566): a module's override takes Odoo's tracking structures, which the port does not build, so a tracked write refuses where one is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "mail",
+    "model": "mail.thread",
+    "path": "odoo/addons/mail/models/mail_thread.py",
+    "line": 550,
+    "sha256": "ff497bad97a45c0ae1f7e21f31bc93f57c7bb9c9f509a453dedd0cea5b1243e4"
+   },
+   {
+    "module": "mail",
+    "model": "mail.track.mixin",
+    "path": "odoo/addons/mail/models/mail_track_mixin.py",
+    "line": 117,
+    "sha256": "472844a319354eae919940ba9770709865d4e7457482e7ad004a010a646fdd0a"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/mail/tracking.ts",
+    "in": "trackPrepare",
+    "kind": "overriddenOn",
+    "n": 1
+   },
+   {
+    "file": "src/mail/tracking.ts",
+    "in": "trackRecordPrepare",
+    "kind": "overriddenOn",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._get_peppol_verification_state": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_buttons.ts checkPeppolPartnerEndpoint (account_peppol's as the hand, res_partner.py:262-280, inlined): refused where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account_peppol",
+    "model": "res.partner",
+    "path": "odoo/addons/account_peppol/models/res_partner.py",
+    "line": 262,
+    "sha256": "386f7b6ad734b39248f6c52bd21cc0e1e44d4e782de1cf47459396ef214b2a25"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_buttons.ts",
+    "in": "checkPeppolPartnerEndpoint",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._get_suggested_peppol_edi_format": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_buttons.ts checkPeppolPartnerEndpoint (account_edi_ubl_cii's as the hand, res_partner.py:309-316 `_get_peppol_edi_format`, inlined): refused where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account_edi_ubl_cii",
+    "model": "res.partner",
+    "path": "odoo/addons/account_edi_ubl_cii/models/res_partner.py",
+    "line": 309,
+    "sha256": "120a7c3672e7867e34c05d03de3281567e1000634f0a68a1384417776bd3a0c7"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_buttons.ts",
+    "in": "checkPeppolPartnerEndpoint",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._log_verification_state_update": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/account_buttons.ts checkPeppolPartnerEndpoint (account_peppol's as the hand, res_partner.py:253-258, inlined): refused where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "account_peppol",
+    "model": "res.partner",
+    "path": "odoo/addons/account_peppol/models/res_partner.py",
+    "line": 253,
+    "sha256": "3962a414021d94b684449fee3e1fc5aa01ddfb7c78cdd173890da9abde920e7e"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_buttons.ts",
+    "in": "checkPeppolPartnerEndpoint",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "res.partner._validate_identifier": {
+  "returns": "value",
+  "above": {},
+  "note": "src/models/res_partner_write.ts refuseIdentifierOverride (base's as the hand, res_partner.py:1545-1586, inlined in the identifier cleaning, deduction, check and src/models/res_partner_erp_write.ts validateByScheme): refused where a compiled override is installed (hasPrivateOverride)",
+  "odoo": [
+   {
+    "module": "base",
+    "model": "res.partner",
+    "path": "odoo/odoo/addons/base/models/res_partner.py",
+    "line": 1545,
+    "sha256": "a85133aeeefe07e518ac4db0164c8949b7ea22791632ae050c9093227bc39e1f"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/res_partner_write.ts",
+    "in": "refuseIdentifierOverride",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "mail.activity.type._get_model_info_by_xmlid": {
+  "returns": "value",
+  "above": {},
+  "note": "src/orm/override_status.ts modelInfoByXmlidHand (mail's master activity types, mail_activity_type.py:163-176): the write and ondelete guards of mail.activity.type refuse where a master type's model would change or a type with unlink False would be deleted",
+  "impl": {
+   "file": "src/orm/override_status.ts",
+   "symbol": "modelInfoByXmlidHand",
+   "self": "model",
+   "params": []
+  },
+  "odoo": [
+   {
+    "module": "mail",
+    "model": "mail.activity.type",
+    "path": "odoo/addons/mail/models/mail_activity_type.py",
+    "line": 163,
+    "sha256": "012f61611cb1017f1561ac4bfd9d402e348899fee34848214164edd6f15ef370"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/orm/override_status.ts",
+    "in": "modelInfoByXmlid",
+    "kind": "invoke",
+    "n": 1
+   }
+  ]
+ },
+ "account.tax._prepare_base_line_for_taxes_computation": {
+  "returns": "value",
+  "above": {},
+  "kwargs": [
+   "price_unit",
+   "quantity",
+   "discount",
+   "rate",
+   "sign",
+   "special_mode",
+   "special_type",
+   "name",
+   "tax_ids",
+   "partner_id",
+   "currency_id",
+   "document_tax_mode",
+   "product_id",
+   "product_uom_id",
+   "is_refund"
+  ],
+  "note": "src/models/account_tax_hooks.ts prepareBaseLine: the hand port's base line is the JS engine's (account_tax_engine.js, the mirror of the method); its Odoo dict (odooBaseLine) has the records as PrivateRecords and the values Odoo loads from the record. The keys a compiled override adds go into the base line's grouping keys (syncInvoice); an override changing or removing one of the dict's keys refuses. Where the hand port only computes totals (orders, invoice summaries, a product's tax string: checkBaseLine) the added keys are not read; in an early payment discount (account_epd.ts) an override refuses.",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.tax",
+    "path": "odoo/addons/account/models/account_tax.py",
+    "line": 1572,
+    "sha256": "fd8687a63217c47bdfc12aa2e68152461e5206810630ba9df1ef7254780945a7"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "addedGroupingFields",
+    "kind": "overridden",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "checkBaseLine",
+    "kind": "overridden",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "prepareBaseLine",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "refuseTaxEngineOverride",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.tax._prepare_base_line_grouping_key": {
+  "returns": "value",
+  "above": {},
+  "note": "the base line's grouping key in syncInvoice (each tax repartition of each base line, account_tax.py:2512) and the fields whose write syncs the tax lines (_sync_tax_lines' fake base line, account_integrity.ts: a write of a field an override adds refuses on a draft invoice line)",
+  "impl": {
+   "file": "src/models/account_tax_hooks.ts",
+   "symbol": "baseLineGroupingKeyHand",
+   "self": "model",
+   "params": [
+    "base_line"
+   ]
+  },
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.tax",
+    "path": "odoo/addons/account/models/account_tax.py",
+    "line": 2317,
+    "sha256": "258f8e17961267a0db447c2cfb32bac7febaae79e327cc38f152ae1cb6717ccd"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_create.ts",
+    "in": "taxRepartitionData",
+    "kind": "invoke",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "addedGroupingFields",
+    "kind": "invoke",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "addedGroupingFields",
+    "kind": "overridden",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "refuseTaxEngineOverride",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.tax._prepare_base_line_tax_repartition_grouping_key": {
+  "returns": "value",
+  "above": {
+   "l10n_us_account": "its definition only sets `__keep_zero_line` from the tax (account_tax.py:88-98) after super(), and no Community module reads or sets that key but account, l10n_us_account and l10n_ar_withholding: the hand implementation applies it below the compiled block (baseLineTaxRepGroupingKeyHand), which gives the same dict as in Odoo's order; a kept zero tax line refuses (syncInvoice)"
+  },
+  "note": "syncInvoice taxRepartitionData: the key of each tax repartition of each base line; the created tax line takes the keys a compiled override added, and an override changing one of account's keys refuses (the created line has the hand port's values)",
+  "impl": {
+   "file": "src/models/account_tax_hooks.ts",
+   "symbol": "baseLineTaxRepGroupingKeyHand",
+   "self": "model",
+   "params": [
+    "base_line",
+    "base_line_grouping_key",
+    "tax_data",
+    "tax_rep_data"
+   ]
+  },
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.tax",
+    "path": "odoo/addons/account/models/account_tax.py",
+    "line": 2335,
+    "sha256": "a11d9564c5f42d2f43ee1d2301dfe6e7824525ff9f19f81a8d91e39f9641b7a4"
+   },
+   {
+    "module": "l10n_us_account",
+    "model": "account.tax",
+    "path": "odoo/addons/l10n_us_account/models/account_tax.py",
+    "line": 88,
+    "sha256": "0a909e3cafda543b83c29d03b2361b14c676175f95bc8b54237087af57dc2f17"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_create.ts",
+    "in": "taxRepartitionData",
+    "kind": "invoke",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "refuseTaxEngineOverride",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.tax._prepare_tax_line_for_taxes_computation": {
+  "returns": "value",
+  "above": {},
+  "kwargs": [
+   "sign"
+  ],
+  "note": "src/models/account_tax_hooks.ts prepareTaxLine: an existing tax line of a draft invoice (syncInvoice's resync) as Odoo's dict; only its grouping key (_prepare_tax_line_repartition_grouping_key) is read, as in _prepare_tax_lines",
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.tax",
+    "path": "odoo/addons/account/models/account_tax.py",
+    "line": 1679,
+    "sha256": "f2e6242c8608382c0d35497f80152724fff43318d82a8d4809e663877e21a02f"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "prepareTaxLine",
+    "kind": "call",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "refuseTaxEngineOverride",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ },
+ "account.tax._prepare_tax_line_repartition_grouping_key": {
+  "returns": "value",
+  "above": {},
+  "note": "syncInvoice: the key of an existing tax line, matched against the needed keys (account_tax.py:3157-3164)",
+  "impl": {
+   "file": "src/models/account_tax_hooks.ts",
+   "symbol": "taxLineRepGroupingKeyHand",
+   "self": "model",
+   "params": [
+    "tax_line"
+   ]
+  },
+  "odoo": [
+   {
+    "module": "account",
+    "model": "account.tax",
+    "path": "odoo/addons/account/models/account_tax.py",
+    "line": 2367,
+    "sha256": "794b91d70ab9c0064b2049ae836d243dda9661fb05f1d18f03ed1b75168af1d2"
+   }
+  ],
+  "sites": [
+   {
+    "file": "src/models/account_move_create.ts",
+    "in": "syncInvoice",
+    "kind": "invoke",
+    "n": 1
+   },
+   {
+    "file": "src/models/account_tax_hooks.ts",
+    "in": "refuseTaxEngineOverride",
+    "kind": "overridden",
+    "n": 1
+   }
+  ]
+ }
+}

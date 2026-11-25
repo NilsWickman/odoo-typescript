@@ -1,0 +1,9 @@
+{
+ "purchase.alternative.create": {
+  "copy_products": {
+   "const": true
+  }
+ },
+ "purchase.alternative.warning": {},
+ "purchase.order.group": {}
+}

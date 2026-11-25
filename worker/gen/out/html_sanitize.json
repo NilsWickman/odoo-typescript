@@ -1,0 +1,24 @@
+{
+ "default": {
+  "sanitize": true,
+  "sanitize_attributes": true,
+  "sanitize_conditional_comments": true,
+  "sanitize_form": true,
+  "sanitize_output_method": "html",
+  "sanitize_style": false,
+  "sanitize_tags": true,
+  "strip_classes": false,
+  "strip_style": false
+ },
+ "email_outgoing": {
+  "sanitize": true,
+  "sanitize_attributes": false,
+  "sanitize_conditional_comments": false,
+  "sanitize_form": true,
+  "sanitize_output_method": "xml",
+  "sanitize_style": false,
+  "sanitize_tags": false,
+  "strip_classes": false,
+  "strip_style": false
+ }
+}

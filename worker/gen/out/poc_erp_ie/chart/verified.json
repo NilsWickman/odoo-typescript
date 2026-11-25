@@ -1,0 +1,10 @@
+{
+ "ie": {
+  "commit": "5446af0d",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_ie",
+  "result": "results/evidence/poc_erp_ie-ie-vagb_chart_ie-20261125-015631.txt",
+  "sha256": "65c863913faaa4859529a9cb76b92486bc6fdb0d7bb9473027add7e3754d4367",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

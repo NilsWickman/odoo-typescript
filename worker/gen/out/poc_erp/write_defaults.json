@@ -1,0 +1,3772 @@
+{
+"_unknown": {},
+"account.account": {
+"active": {
+"const": true
+},
+"company_ids": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/account_account.py:121"
+},
+"display_mapping_tab": {
+"expr": "len(self.env.user.company_ids) > 1",
+"src": "odoo/addons/account/models/account_account.py:155"
+},
+"non_trade": {
+"const": false
+}
+},
+"account.account.tag": {
+"active": {
+"const": true
+},
+"applicability": {
+"const": "accounts"
+}
+},
+"account.accrued.orders.wizard": {
+"company_id": {
+"callable": "odoo.addons.account.wizard.accrued_orders.AccountAccruedOrdersWizard._get_default_company",
+"src": "odoo/addons/account/wizard/accrued_orders.py:21"
+},
+"date": {
+"callable": "odoo.addons.account.wizard.accrued_orders.AccountAccruedOrdersWizard._get_default_date",
+"src": "odoo/addons/account/wizard/accrued_orders.py:27"
+}
+},
+"account.analytic.account": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/analytic/models/analytic_account.py:64"
+}
+},
+"account.analytic.applicability": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/analytic/models/analytic_plan.py:431"
+}
+},
+"account.analytic.distribution.model": {
+"analytic_precision": {
+"expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+"src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/analytic/models/analytic_distribution_model.py:35"
+},
+"sequence": {
+"const": 10
+}
+},
+"account.analytic.line": {
+"amount": {
+"const": 0.0
+},
+"analytic_precision": {
+"expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+"src": "odoo/addons/analytic/models/analytic_line.py:237"
+},
+"category": {
+"const": "other"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/analytic/models/analytic_line.py:212"
+},
+"date": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+},
+"unit_amount": {
+"const": 0.0
+},
+"user_id": {
+"expr": "self.env.context.get('user_id', self.env.user.id)",
+"src": "odoo/addons/analytic/models/analytic_line.py:203"
+}
+},
+"account.analytic.plan": {
+"color": {
+"callable": "odoo.addons.analytic.models.analytic_plan.AccountAnalyticPlan._default_color",
+"src": "odoo/addons/analytic/models/analytic_plan.py:18"
+},
+"sequence": {
+"const": 10
+}
+},
+"account.automatic.entry.wizard": {
+"date": {
+"expr": "fields.Date.context_today(self)",
+"src": "odoo/addons/account/wizard/account_automatic_entry_wizard.py:24"
+}
+},
+"account.autopost.bills.wizard": {},
+"account.bank.statement": {
+"is_statement_posted": {
+"const": true
+}
+},
+"account.bank.statement.line": {
+"sequence": {
+"const": 1
+}
+},
+"account.cash.rounding": {
+"active": {
+"const": true
+},
+"rounding": {
+"const": 1.0
+},
+"rounding_method": {
+"const": "HALF-UP"
+},
+"sequence": {
+"const": 10
+},
+"strategy": {
+"const": "add_invoice_line"
+}
+},
+"account.chart.template": {},
+"account.code.mapping": {},
+"account.document.import.mixin": {},
+"account.edi.cii": {},
+"account.edi.common": {},
+"account.edi.ubl": {},
+"account.edi.ubl_cen_en16931": {},
+"account.edi.ubl_pint": {},
+"account.edi.ubl_pint_eu": {},
+"account.edi.xml.cii": {},
+"account.edi.xml.ubl_20": {},
+"account.edi.xml.ubl_21": {},
+"account.edi.xml.ubl_a_nz": {},
+"account.edi.xml.ubl_bis3": {},
+"account.edi.xml.ubl_de": {},
+"account.edi.xml.ubl_efff": {},
+"account.edi.xml.ubl_nl": {},
+"account.edi.xml.ubl_sg": {},
+"account.financial.year.op": {},
+"account.fiscal.position": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/partner.py:47"
+}
+},
+"account.fiscal.position.account": {},
+"account.full.reconcile": {},
+"account.incoterms": {
+"active": {
+"const": true
+}
+},
+"account.invoice.report": {},
+"account.journal": {
+"active": {
+"const": true
+},
+"bank_statements_source": {
+"const": "undefined"
+},
+"color": {
+"const": 0
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/account_journal.py:164"
+},
+"invoice_reference_model": {
+"callable": "odoo.addons.account.models.account_journal.AccountJournal._default_invoice_reference_model",
+"src": "odoo/addons/account/models/account_journal.py:60"
+},
+"invoice_reference_type": {
+"const": "invoice"
+},
+"is_peppol_journal": {
+"const": false
+},
+"sequence": {
+"const": 10
+},
+"show_on_dashboard": {
+"const": true
+}
+},
+"account.journal.group": {
+"sequence": {
+"const": 10
+}
+},
+"account.lock_exception": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/account_lock_exception.py:34"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/account/models/account_lock_exception.py:40"
+}
+},
+"account.merge.wizard": {
+"is_group_by_name": {
+"const": false
+}
+},
+"account.merge.wizard.line": {},
+"account.move": {
+"auto_post": {
+"const": "no"
+},
+"inventory_closing": {
+"const": false
+},
+"move_type": {
+"const": "entry"
+},
+"review_state": {
+"const": "no_review"
+},
+"state": {
+"const": "draft"
+}
+},
+"account.move.line": {
+"analytic_precision": {
+"expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+"src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+},
+"deductible_percentage": {
+"const": 1.0
+},
+"discount": {
+"const": 0.0
+}
+},
+"account.move.reversal": {
+"date": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+}
+},
+"account.move.send": {},
+"account.move.send.batch.wizard": {},
+"account.move.send.wizard": {},
+"account.partial.reconcile": {},
+"account.payment": {
+"date": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+},
+"partner_type": {
+"const": "customer"
+},
+"payment_type": {
+"const": "inbound"
+},
+"state": {
+"const": "draft"
+}
+},
+"account.payment.method": {},
+"account.payment.method.line": {
+"sequence": {
+"const": 10
+}
+},
+"account.payment.register": {
+"payment_date": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+},
+"writeoff_label": {
+"const": "Write-Off"
+}
+},
+"account.payment.term": {
+"active": {
+"const": true
+},
+"discount_days": {
+"const": 10
+},
+"discount_percentage": {
+"const": 2.0
+},
+"display_on_invoice": {
+"const": true
+},
+"example_amount": {
+"const": 1000
+},
+"example_date": {
+"callable": "odoo.addons.account.models.account_payment_term.AccountPaymentTerm._default_example_date",
+"src": "odoo/addons/account/models/account_payment_term.py:18"
+},
+"line_ids": {
+"callable": "odoo.addons.account.models.account_payment_term.AccountPaymentTerm._default_line_ids",
+"src": "odoo/addons/account/models/account_payment_term.py:15"
+},
+"sequence": {
+"const": 10
+}
+},
+"account.payment.term.line": {
+"days_next_month": {
+"const": "10"
+},
+"delay_type": {
+"const": "days_after"
+},
+"value": {
+"const": "percent"
+}
+},
+"account.peppol.clarification": {},
+"account.peppol.rejection.wizard": {
+"reason_ids": {
+"expr": "self.env.ref('account_peppol.peppol_clarification_reason_unr', raise_if_not_found=False)",
+"src": "odoo/addons/account_peppol/wizard/peppol_rejection_wizard.py:16"
+}
+},
+"account.peppol.response": {},
+"account.reconcile.model": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/account_reconcile_model.py:107"
+},
+"matching_order": {
+"const": "old_first"
+},
+"payment_tolerance": {
+"const": 0.0
+},
+"payment_tolerance_type": {
+"const": "percentage"
+},
+"rule_type": {
+"const": "reco_model"
+},
+"sequence": {
+"const": 10
+}
+},
+"account.reconcile.model.line": {
+"amount_string": {
+"const": "100"
+},
+"amount_type": {
+"const": "percentage"
+},
+"analytic_precision": {
+"expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+"src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+},
+"sequence": {
+"const": 10
+}
+},
+"account.report": {
+"active_fallback": {
+"const": true
+},
+"load_more_limit": {
+"const": 500
+}
+},
+"account.report.column": {
+"figure_type": {
+"const": "monetary"
+}
+},
+"account.report.expression": {
+"date_scope": {
+"const": "strict_range"
+},
+"green_on_positive": {
+"const": true
+}
+},
+"account.report.external.value": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/account_report.py:1076"
+}
+},
+"account.report.line": {},
+"account.resequence.wizard": {
+"ordering": {
+"const": "keep"
+}
+},
+"account.root": {},
+"account.secure.entries.wizard": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/wizard/account_secure_entries_wizard.py:20"
+}
+},
+"account.setup.bank.manual.config": {
+"new_journal_name": {
+"expr": "self.linked_journal_id.name",
+"src": "odoo/addons/account/wizard/setup_wizards.py:102"
+},
+"num_journals_without_account_bank": {
+"expr": "self._number_unlinked_journal('bank')",
+"src": "odoo/addons/account/wizard/setup_wizards.py:108"
+},
+"num_journals_without_account_credit": {
+"expr": "self._number_unlinked_journal('credit')",
+"src": "odoo/addons/account/wizard/setup_wizards.py:109"
+}
+},
+"account.stock.valuation.report": {},
+"account.tax": {
+"active": {
+"const": true
+},
+"amount": {
+"const": 0.0
+},
+"amount_type": {
+"const": "percent"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/account_tax.py:111"
+},
+"include_base_amount": {
+"const": false
+},
+"is_base_affected": {
+"const": true
+},
+"sequence": {
+"const": 1
+},
+"tax_exigibility": {
+"const": "on_invoice"
+},
+"type_tax_use": {
+"const": "sale"
+}
+},
+"account.tax.group": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account/models/account_tax.py:34"
+},
+"sequence": {
+"const": 10
+}
+},
+"account.tax.repartition.line": {
+"factor_percent": {
+"const": 100
+},
+"repartition_type": {
+"const": "tax"
+},
+"sequence": {
+"const": 1
+}
+},
+"account_edi_proxy_client.user": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account_edi_proxy_client/models/account_edi_proxy_user.py:39"
+}
+},
+"analytic.mixin": {
+"analytic_precision": {
+"expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+"src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+}
+},
+"analytic.plan.fields.mixin": {},
+"auth.passkey.key": {
+"sign_count": {
+"const": 0
+}
+},
+"auth.passkey.key.create": {},
+"auth.totp.rate.limit.log": {},
+"auth_totp.device": {},
+"auth_totp.wizard": {},
+"avatar.mixin": {},
+"barcode.nomenclature": {
+"gs1_separator_fnc1": {
+"const": "(Alt029|#|\\x1D)"
+},
+"upc_ean_conv": {
+"const": "always"
+}
+},
+"barcode.rule": {
+"alias": {
+"const": "0"
+},
+"encoding": {
+"callable": "odoo.addons.barcodes_gs1_nomenclature.models.barcode_rule.BarcodeRule._default_encoding",
+"src": "odoo/addons/barcodes_gs1_nomenclature/models/barcode_rule.py:10"
+},
+"pattern": {
+"const": ".*"
+},
+"type": {
+"const": "product"
+}
+},
+"base": {},
+"base.document.layout": {
+"company_details": {
+"callable": "odoo.addons.web.models.base_document_layout.BaseDocumentLayout._default_company_details",
+"src": "odoo/addons/web/models/base_document_layout.py:33"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/web/models/base_document_layout.py:39"
+},
+"report_footer": {
+"callable": "odoo.addons.web.models.base_document_layout.BaseDocumentLayout._default_report_footer",
+"src": "odoo/addons/web/models/base_document_layout.py:27"
+}
+},
+"base.enable.profiling.wizard": {},
+"base.import.module": {
+"state": {
+"const": "init"
+}
+},
+"base.language.export": {
+"domain": {
+"const": "[]"
+},
+"export_type": {
+"const": "module"
+},
+"format": {
+"const": "po"
+},
+"lang": {
+"const": "__new__"
+},
+"state": {
+"const": "choose"
+}
+},
+"base.language.import": {
+"overwrite": {
+"const": true
+}
+},
+"base.language.install": {
+"lang_ids": {
+"callable": "odoo.addons.base.wizard.base_language_install.BaseLanguageInstall._default_lang_ids",
+"src": "odoo/odoo/addons/base/wizard/base_language_install.py:10"
+},
+"overwrite": {
+"const": true
+}
+},
+"base.module.install.request": {
+"qweb_template_xmlid": {
+"const": "base_install_request.mail_installation_request_template"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/base_install_request/wizard/base_module_install_request.py:19"
+}
+},
+"base.module.install.review": {},
+"base.module.uninstall": {},
+"base.module.update": {
+"state": {
+"const": "init"
+}
+},
+"base.module.upgrade": {
+"module_info": {
+"callable": "odoo.addons.base.wizard.base_module_upgrade.BaseModuleUpgrade._default_module_info",
+"src": "odoo/odoo/addons/base/wizard/base_module_upgrade.py:17"
+}
+},
+"base.partner.merge.automatic.wizard": {
+"state": {
+"const": "option"
+}
+},
+"base.partner.merge.line": {},
+"base_import.import": {},
+"base_import.mapping": {},
+"bill.to.po.wizard": {},
+"bus.bus": {},
+"bus.listener.mixin": {},
+"bus.sync.mixin": {},
+"calendar.alarm": {
+"alarm_type": {
+"const": "email"
+},
+"duration": {
+"const": 1
+},
+"interval": {
+"const": "hours"
+},
+"notify_responsible": {
+"const": false
+}
+},
+"calendar.alarm_manager": {},
+"calendar.attendee": {
+"access_token": {
+"callable": "odoo.addons.calendar.models.calendar_attendee.CalendarAttendee._default_access_token",
+"src": "odoo/addons/calendar/models/calendar_attendee.py:21"
+},
+"state": {
+"const": "needsAction"
+}
+},
+"calendar.calendar": {
+"calendar_default_privacy": {
+"expr": "self.env['ir.config_parameter'].sudo().get_str('calendar.default_privacy', 'private')",
+"src": "odoo/addons/calendar/models/calendar_calendar.py:30"
+},
+"calendar_user_ids": {
+"expr": "self._default_calendar_user_ids()",
+"src": "odoo/addons/calendar/models/calendar_calendar.py:35"
+}
+},
+"calendar.event": {
+"access_token": {
+"expr": "str(uuid.uuid4())",
+"src": "odoo/addons/calendar/models/calendar_event.py:189"
+},
+"active": {
+"const": true
+},
+"allday": {
+"const": false
+},
+"follow_recurrence": {
+"const": false
+},
+"partner_ids": {
+"callable": "odoo.addons.calendar.models.calendar_event.CalendarEvent._default_partners",
+"src": "odoo/addons/calendar/models/calendar_event.py:138"
+},
+"recurrence_update": {
+"const": "self_only"
+},
+"show_as": {
+"const": "busy"
+},
+"start": {
+"callable": "odoo.addons.calendar.models.calendar_event.CalendarEvent._default_start",
+"src": "odoo/addons/calendar/models/calendar_event.py:147"
+},
+"stop": {
+"callable": "odoo.addons.calendar.models.calendar_event.CalendarEvent._default_stop",
+"src": "odoo/addons/calendar/models/calendar_event.py:152"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/calendar/models/calendar_event.py:183"
+}
+},
+"calendar.event.archive.or.unlink.wizard": {
+"block_mail": {
+"const": false
+},
+"recurrence_choice": {
+"const": "self_only"
+},
+"requested_action": {
+"const": "archive"
+}
+},
+"calendar.event.multi.archive.or.unlink.wizard": {
+"block_mail": {
+"const": false
+},
+"requested_action": {
+"const": "archive"
+}
+},
+"calendar.event.type": {
+"color": {
+"callable": "odoo.addons.calendar.models.calendar_event_type.CalendarEventType._default_color",
+"src": "odoo/addons/calendar/models/calendar_event_type.py:13"
+}
+},
+"calendar.filters": {
+"active": {
+"const": true
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/calendar/models/calendar_filter.py:13"
+}
+},
+"calendar.recurrence": {
+"count": {
+"const": 1
+},
+"day": {
+"const": 1
+},
+"end_type": {
+"const": "forever"
+},
+"event_tz": {
+"expr": "self.env.context.get('tz') or self.env.user.tz",
+"src": "odoo/addons/calendar/models/calendar_recurrence.py:104"
+},
+"interval": {
+"const": 1
+},
+"month_by": {
+"const": "date"
+},
+"rrule_type": {
+"const": "weekly"
+}
+},
+"calendar.user": {
+"filter_color": {
+"callable": "odoo.addons.calendar.models.calendar_user.CalendarUser._get_default_color",
+"src": "odoo/addons/calendar/models/calendar_user.py:11"
+},
+"is_filter_active": {
+"const": true
+},
+"is_filter_checked": {
+"const": true
+}
+},
+"certificate.certificate": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/certificate/models/certificate.py:96"
+}
+},
+"certificate.key": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/certificate/models/key.py:63"
+},
+"name": {
+"const": "New key"
+}
+},
+"change.password.own": {},
+"change.password.user": {
+"new_passwd": {
+"const": ""
+}
+},
+"change.password.wizard": {
+"user_ids": {
+"callable": "odoo.addons.base.models.res_users.ChangePasswordWizard._default_user_ids",
+"src": "odoo/odoo/addons/base/models/res_users.py:1539"
+}
+},
+"clearing.label": {},
+"confirm.stock.sms": {},
+"crm.activity.report": {},
+"crm.iap.lead.helpers": {},
+"crm.iap.lead.industry": {},
+"crm.iap.lead.industry.division": {},
+"crm.iap.lead.mining.request": {
+"company_size_max": {
+"const": 100
+},
+"company_size_min": {
+"const": 1
+},
+"country_ids": {
+"callable": "odoo.addons.crm_iap_mine.models.crm_iap_lead_mining_request.CrmIapLeadMiningRequest._default_country_ids",
+"src": "odoo/addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:31"
+},
+"filter_on_size": {
+"const": false
+},
+"lead_number": {
+"const": 3
+},
+"lead_type": {
+"callable": "odoo.addons.crm_iap_mine.models.crm_iap_lead_mining_request.CrmIapLeadMiningRequest._default_lead_type",
+"src": "odoo/addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:25"
+},
+"name": {
+"expr": "_('New')",
+"src": "odoo/addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:34"
+},
+"state": {
+"const": "draft"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:50"
+}
+},
+"crm.iap.lead.role": {},
+"crm.iap.lead.seniority": {},
+"crm.lead": {
+"active": {
+"const": true
+},
+"color": {
+"const": 0
+},
+"expected_revenue": {
+"const": 0.0
+},
+"message_bounce": {
+"const": 0
+},
+"priority": {
+"const": "0"
+},
+"recurring_revenue": {
+"const": 0.0
+},
+"type": {
+"expr": "'lead' if self.env.user.has_group('crm.group_use_lead') else 'opportunity'",
+"src": "odoo/addons/crm/models/crm_lead.py:128"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/crm/models/crm_lead.py:108"
+}
+},
+"crm.lead.lost": {},
+"crm.lead.pls.update": {
+"pls_fields": {
+"callable": "odoo.addons.crm.wizard.crm_lead_pls_update.CrmLeadPlsUpdate._get_default_pls_fields",
+"src": "odoo/addons/crm/wizard/crm_lead_pls_update.py:15"
+},
+"pls_start_date": {
+"callable": "odoo.addons.crm.wizard.crm_lead_pls_update.CrmLeadPlsUpdate._get_default_pls_start_date",
+"src": "odoo/addons/crm/wizard/crm_lead_pls_update.py:11"
+}
+},
+"crm.lead.scoring.frequency": {},
+"crm.lead.scoring.frequency.field": {
+"color": {
+"callable": "odoo.addons.crm.models.crm_lead_scoring_frequency.CrmLeadScoringFrequencyField._get_default_color",
+"src": "odoo/addons/crm/models/crm_lead_scoring_frequency.py:22"
+}
+},
+"crm.lead2opportunity.partner.mass": {
+"lead_tomerge_ids": {
+"expr": "self.env.context.get('active_ids', [])",
+"src": "odoo/addons/crm/wizard/crm_lead_to_opportunity_mass.py:21"
+},
+"name": {
+"const": "convert"
+}
+},
+"crm.lost.reason": {
+"active": {
+"const": true
+}
+},
+"crm.merge.opportunity": {},
+"crm.quotation.partner": {},
+"crm.recurring.plan": {
+"active": {
+"const": true
+},
+"sequence": {
+"const": 10
+}
+},
+"crm.stage": {
+"rotting_threshold_days": {
+"const": 0
+},
+"sequence": {
+"const": 1
+}
+},
+"crm.tag": {
+"color": {
+"callable": "odoo.addons.sales_team.models.crm_tag.CrmTag._get_default_color",
+"src": "odoo/addons/sales_team/models/crm_tag.py:12"
+}
+},
+"crm.team": {
+"active": {
+"const": true
+},
+"color": {
+"callable": "odoo.addons.sales_team.models.crm_team.CrmTeam._get_default_color",
+"src": "odoo/addons/sales_team/models/crm_team.py:16"
+},
+"favorite_user_ids": {
+"callable": "odoo.addons.sales_team.models.crm_team.CrmTeam._get_default_favorite_user_ids",
+"src": "odoo/addons/sales_team/models/crm_team.py:83"
+},
+"sequence": {
+"const": 10
+},
+"use_opportunities": {
+"const": true
+}
+},
+"crm.team.member": {
+"active": {
+"const": true
+},
+"assignment_max": {
+"const": 30000
+},
+"crm_team_id": {
+"const": false
+}
+},
+"customer.product.reference": {},
+"decimal.precision": {
+"digits": {
+"const": 2
+}
+},
+"digest.digest": {
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/addons/digest/models/digest.py:38"
+},
+"periodicity": {
+"const": "daily"
+},
+"state": {
+"const": "activated"
+}
+},
+"digest.test": {
+"user_ids": {
+"expr": "self.env.user",
+"src": "odoo/addons/digest/wizard/digest_test.py:12"
+}
+},
+"digest.tip": {
+"group_id": {
+"expr": "self.env.ref('base.group_user')",
+"src": "odoo/addons/digest/models/digest_tip.py:22"
+},
+"sequence": {
+"const": 1
+}
+},
+"discuss.call.history": {},
+"discuss.category": {
+"sequence": {
+"callable": "odoo.addons.mail.models.discuss.discuss_category.DiscussCategory._default_sequence",
+"src": "odoo/addons/mail/models/discuss/discuss_category.py:14"
+}
+},
+"discuss.channel": {
+"active": {
+"const": true
+},
+"channel_type": {
+"const": "channel"
+},
+"last_interest_dt": {
+"expr": "fields.Datetime.now() - timedelta(seconds=1)",
+"src": "odoo/addons/mail/models/discuss/discuss_channel.py:150"
+},
+"uuid": {
+"callable": "odoo.addons.mail.models.discuss.discuss_channel.DiscussChannel._generate_random_token",
+"src": "odoo/addons/mail/models/discuss/discuss_channel.py:95"
+}
+},
+"discuss.channel.last.interest.update": {},
+"discuss.channel.member": {
+"last_interest_dt": {
+"expr": "fields.Datetime.now() - timedelta(seconds=1)",
+"src": "odoo/addons/mail/models/discuss/discuss_channel_member.py:66"
+},
+"new_message_separator": {
+"const": 0
+}
+},
+"discuss.channel.rtc.session": {},
+"discuss.gif.favorite": {},
+"discuss.voice.metadata": {},
+"fetchmail.server": {
+"active": {
+"const": true
+},
+"attach": {
+"const": true
+},
+"priority": {
+"const": 5
+},
+"script": {
+"const": "/mail/static/scripts/odoo-mailgate.py"
+},
+"server_type": {
+"const": "imap"
+},
+"state": {
+"const": "draft"
+}
+},
+"format.address.mixin": {},
+"format.vat.label.mixin": {},
+"google.gmail.mixin": {
+"active": {
+"const": true
+}
+},
+"html.field.history.mixin": {},
+"html_editor.converter.test": {},
+"html_editor.converter.test.sub": {},
+"iap.account": {
+"account_token": {
+"expr": "uuid.uuid4().hex",
+"src": "odoo/addons/iap/models/iap_account.py:35"
+},
+"service_locked": {
+"const": false
+},
+"warning_threshold": {
+"const": 1.0
+}
+},
+"iap.autocomplete.api": {},
+"iap.enrich.api": {},
+"iap.service": {},
+"iap.service.pack": {},
+"image.mixin": {},
+"ir.access": {
+"active": {
+"const": true
+}
+},
+"ir.actions.act_url": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"target": {
+"const": "new"
+},
+"type": {
+"const": "ir.actions.act_url"
+}
+},
+"ir.actions.act_window": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"cache": {
+"const": true
+},
+"context": {
+"const": {}
+},
+"limit": {
+"const": 80
+},
+"mobile_view_mode": {
+"const": "kanban"
+},
+"target": {
+"const": "current"
+},
+"type": {
+"const": "ir.actions.act_window"
+},
+"view_mode": {
+"const": "list,form"
+}
+},
+"ir.actions.act_window.view": {},
+"ir.actions.act_window_close": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"type": {
+"const": "ir.actions.act_window_close"
+}
+},
+"ir.actions.actions": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+}
+},
+"ir.actions.client": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"context": {
+"const": "{}"
+},
+"target": {
+"const": "current"
+},
+"type": {
+"const": "ir.actions.client"
+}
+},
+"ir.actions.report": {
+"binding_type": {
+"const": "report"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"report_type": {
+"const": "qweb-pdf"
+},
+"type": {
+"const": "ir.actions.report"
+}
+},
+"ir.actions.server": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"evaluation_type": {
+"const": "value"
+},
+"sequence": {
+"const": 5
+},
+"subtype_ids": {
+"expr": "self.env.ref('mail.mt_comment').ids",
+"src": "odoo/addons/mail/models/ir_actions_server.py:63"
+},
+"type": {
+"const": "ir.actions.server"
+},
+"update_boolean_value": {
+"const": "true"
+},
+"update_m2m_operation": {
+"const": "add"
+},
+"update_path": {
+"callable": "odoo.addons.base.models.ir_actions.IrActionsServer._default_update_path",
+"src": "odoo/odoo/addons/base/models/ir_actions.py:572"
+},
+"usage": {
+"const": "ir_actions_server"
+}
+},
+"ir.actions.server.history": {},
+"ir.actions.todo": {
+"sequence": {
+"const": 10
+},
+"state": {
+"const": "open"
+}
+},
+"ir.asset": {
+"active": {
+"const": true
+},
+"directive": {
+"const": "append"
+},
+"sequence": {
+"const": 16
+}
+},
+"ir.attachment": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/odoo/addons/base/models/ir_attachment.py:596"
+},
+"type": {
+"const": "binary"
+}
+},
+"ir.autovacuum": {},
+"ir.binary": {},
+"ir.config_parameter": {},
+"ir.cron": {
+"active": {
+"const": true
+},
+"failure_count": {
+"const": 0
+},
+"interval_number": {
+"const": 1
+},
+"interval_type": {
+"const": "months"
+},
+"nextcall": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"priority": {
+"const": 5
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/odoo/addons/base/models/ir_cron.py:112"
+}
+},
+"ir.cron.progress": {
+"done": {
+"const": 0
+},
+"remaining": {
+"const": 0
+},
+"timed_out_counter": {
+"const": 0
+}
+},
+"ir.cron.trigger": {},
+"ir.default": {},
+"ir.demo": {},
+"ir.demo_failure": {},
+"ir.demo_failure.wizard": {},
+"ir.embedded.actions": {
+"context": {
+"const": "{}"
+},
+"domain": {
+"const": "[]"
+}
+},
+"ir.exports": {},
+"ir.exports.line": {
+"sequence": {
+"const": 10
+}
+},
+"ir.fields.converter": {},
+"ir.filters": {
+"active": {
+"const": true
+},
+"context": {
+"const": "{}"
+},
+"domain": {
+"const": "[]"
+},
+"sort": {
+"const": "[]"
+}
+},
+"ir.http": {},
+"ir.logging": {},
+"ir.mail_server": {
+"active": {
+"const": true
+},
+"sequence": {
+"const": 10
+},
+"smtp_authentication": {
+"const": "login"
+},
+"smtp_encryption": {
+"const": "none"
+},
+"smtp_port": {
+"const": 25
+}
+},
+"ir.model": {
+"field_id": {
+"callable": "odoo.addons.base.models.ir_model.IrModel._default_field_id",
+"src": "odoo/odoo/addons/base/models/ir_model.py:233"
+},
+"is_mail_activity": {
+"const": false
+},
+"is_mail_blacklist": {
+"const": false
+},
+"is_mail_thread": {
+"const": false
+},
+"is_mail_thread_sms": {
+"const": false
+},
+"model": {
+"const": "x_"
+},
+"order": {
+"const": "id"
+},
+"state": {
+"const": "manual"
+}
+},
+"ir.model.constraint": {},
+"ir.model.data": {
+"module": {
+"const": ""
+},
+"noupdate": {
+"const": false
+}
+},
+"ir.model.fields": {
+"domain": {
+"const": "[]"
+},
+"field_description": {
+"const": ""
+},
+"name": {
+"const": "x_"
+},
+"on_delete": {
+"const": "set null"
+},
+"sanitize": {
+"const": true
+},
+"sanitize_attributes": {
+"const": true
+},
+"sanitize_form": {
+"const": true
+},
+"sanitize_overridable": {
+"const": false
+},
+"sanitize_style": {
+"const": false
+},
+"sanitize_tags": {
+"const": true
+},
+"selectable": {
+"const": true
+},
+"state": {
+"const": "manual"
+},
+"store": {
+"const": true
+},
+"strip_classes": {
+"const": false
+},
+"strip_style": {
+"const": false
+}
+},
+"ir.model.fields.selection": {
+"sequence": {
+"const": 1000
+}
+},
+"ir.model.inherit": {},
+"ir.model.relation": {},
+"ir.module.category": {
+"visible": {
+"const": true
+}
+},
+"ir.module.module": {
+"demo": {
+"const": false
+},
+"license": {
+"const": "LGPL-3"
+},
+"module_type": {
+"const": "official"
+},
+"sequence": {
+"const": 100
+},
+"state": {
+"const": "uninstallable"
+},
+"test_data": {
+"const": false
+},
+"to_buy": {
+"const": false
+}
+},
+"ir.module.module.dependency": {
+"auto_install_required": {
+"const": true
+}
+},
+"ir.module.module.exclusion": {},
+"ir.profile": {},
+"ir.profile.query": {},
+"ir.qweb": {},
+"ir.qweb.field": {},
+"ir.qweb.field.barcode": {},
+"ir.qweb.field.contact": {},
+"ir.qweb.field.date": {},
+"ir.qweb.field.datetime": {},
+"ir.qweb.field.duration": {},
+"ir.qweb.field.float": {},
+"ir.qweb.field.float_time": {},
+"ir.qweb.field.html": {},
+"ir.qweb.field.image": {},
+"ir.qweb.field.image_url": {},
+"ir.qweb.field.integer": {},
+"ir.qweb.field.many2many": {},
+"ir.qweb.field.many2one": {},
+"ir.qweb.field.monetary": {},
+"ir.qweb.field.one2many": {},
+"ir.qweb.field.qweb": {},
+"ir.qweb.field.relative": {},
+"ir.qweb.field.selection": {},
+"ir.qweb.field.text": {},
+"ir.qweb.field.time": {},
+"ir.sequence": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/odoo/addons/base/models/ir_sequence.py:150"
+},
+"implementation": {
+"const": "standard"
+},
+"number_increment": {
+"const": 1
+},
+"number_next": {
+"const": 1
+},
+"padding": {
+"const": 0
+}
+},
+"ir.sequence.date_range": {
+"number_next": {
+"const": 1
+}
+},
+"ir.ui.menu": {
+"active": {
+"const": true
+},
+"sequence": {
+"const": 10
+}
+},
+"ir.ui.view": {
+"active": {
+"const": true
+},
+"customize_show": {
+"const": false
+},
+"mode": {
+"const": "primary"
+},
+"priority": {
+"const": 16
+}
+},
+"ir.ui.view.custom": {},
+"ir.websocket": {},
+"kpi.provider": {},
+"l10n_us.res.county": {},
+"lot.label.layout": {
+"custom_quantity": {
+"const": 1
+},
+"label_quantity": {
+"const": "lots"
+},
+"print_format": {
+"const": "4x12"
+}
+},
+"mail.activity": {
+"active": {
+"const": true
+},
+"activity_type_id": {
+"callable": "odoo.addons.mail.models.mail_activity.MailActivity._default_activity_type",
+"src": "odoo/addons/mail/models/mail_activity.py:43"
+},
+"technical_usage": {
+"const": "none"
+}
+},
+"mail.activity.mixin": {},
+"mail.activity.plan": {
+"active": {
+"const": true
+}
+},
+"mail.activity.plan.template": {
+"activity_type_id": {
+"expr": "self.env.ref('mail.mail_activity_data_todo')",
+"src": "odoo/addons/mail/models/mail_activity_plan_template.py:24"
+},
+"delay_count": {
+"const": 0
+},
+"delay_from": {
+"const": "before_plan_date"
+},
+"delay_unit": {
+"const": "days"
+},
+"responsible_type": {
+"const": "on_demand"
+},
+"sequence": {
+"const": 10
+}
+},
+"mail.activity.schedule": {
+"plan_on_demand_user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/mail/wizard/mail_activity_schedule.py:63"
+}
+},
+"mail.activity.schedule.line": {},
+"mail.activity.todo.create": {
+"date_deadline": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/project_todo/wizard/mail_activity_todo_create.py:12"
+}
+},
+"mail.activity.type": {
+"active": {
+"const": true
+},
+"category": {
+"const": "default"
+},
+"delay_count": {
+"const": 0
+},
+"delay_from": {
+"const": "previous_activity"
+},
+"delay_unit": {
+"const": "days"
+},
+"kpi_provider_visibility": {
+"const": "own"
+},
+"res_model_change": {
+"const": false
+},
+"sequence": {
+"const": 10
+}
+},
+"mail.alias": {
+"alias_contact": {
+"const": "everyone"
+},
+"alias_defaults": {
+"const": "{}"
+},
+"alias_domain_id": {
+"expr": "self.env.company.alias_domain_id",
+"src": "odoo/addons/mail/models/mail_alias.py:45"
+},
+"alias_incoming_local": {
+"const": false
+}
+},
+"mail.alias.domain": {
+"bounce_alias": {
+"const": "bounce"
+},
+"catchall_alias": {
+"const": "catchall"
+},
+"default_from": {
+"const": "notifications"
+},
+"sequence": {
+"const": 10
+}
+},
+"mail.alias.mixin": {},
+"mail.alias.mixin.optional": {},
+"mail.blacklist": {
+"active": {
+"const": true
+}
+},
+"mail.blacklist.remove": {},
+"mail.bot": {},
+"mail.call.artifact": {
+"end_ms": {
+"const": 0
+},
+"start_ms": {
+"const": 0
+}
+},
+"mail.canned.response": {},
+"mail.compose.message": {
+"composition_mode": {
+"const": "comment"
+},
+"email_notification_allow_header": {
+"const": true
+},
+"message_type": {
+"const": "comment"
+},
+"use_exclusion_list": {
+"const": true
+}
+},
+"mail.composer.mixin": {},
+"mail.followers": {},
+"mail.followers.edit": {
+"notify": {
+"const": false
+},
+"operation": {
+"const": "add"
+}
+},
+"mail.gateway.allowed": {},
+"mail.guest": {
+"access_token": {
+"expr": "str(uuid.uuid4())",
+"src": "odoo/addons/mail/models/discuss/mail_guest.py:31"
+}
+},
+"mail.ice.server": {
+"server_type": {
+"const": "stun"
+}
+},
+"mail.link.preview": {},
+"mail.mail": {
+"message_type": {
+"const": "email_outgoing"
+},
+"state": {
+"const": "outgoing"
+}
+},
+"mail.message": {
+"body": {
+"const": ""
+},
+"date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"email_add_signature": {
+"const": true
+},
+"message_type": {
+"const": "comment"
+}
+},
+"mail.message.link.preview": {},
+"mail.message.reaction": {},
+"mail.message.schedule": {},
+"mail.message.subtype": {
+"default": {
+"const": true
+},
+"sequence": {
+"const": 1
+}
+},
+"mail.message.translation": {},
+"mail.notification": {
+"notification_status": {
+"const": "ready"
+},
+"notification_type": {
+"const": "inbox"
+}
+},
+"mail.poll": {},
+"mail.poll.option": {},
+"mail.poll.vote": {},
+"mail.presence": {
+"last_poll": {
+"expr": "fields.Datetime.now()",
+"src": "odoo/addons/mail/models/mail_presence.py:29"
+},
+"last_presence": {
+"expr": "fields.Datetime.now()",
+"src": "odoo/addons/mail/models/mail_presence.py:30"
+},
+"status": {
+"const": "offline"
+}
+},
+"mail.push": {},
+"mail.push.device": {
+"partner_id": {
+"expr": "self.env.user.partner_id",
+"src": "odoo/addons/mail/models/mail_push_device.py:19"
+}
+},
+"mail.render.mixin": {},
+"mail.scheduled.message": {
+"is_note": {
+"const": false
+},
+"send_method": {
+"const": "email"
+}
+},
+"mail.template": {
+"active": {
+"const": true
+},
+"auto_delete": {
+"const": true
+},
+"email_layout_force_footer": {
+"const": false
+},
+"email_layout_force_header": {
+"const": false
+},
+"use_default_to": {
+"const": true
+}
+},
+"mail.template.preview": {
+"lang": {
+"expr": "self.env.user.lang",
+"src": "odoo/addons/mail/wizard/mail_template_preview.py:42"
+}
+},
+"mail.template.reset": {},
+"mail.thread": {},
+"mail.thread.blacklist": {
+"message_bounce": {
+"const": 0
+}
+},
+"mail.thread.main.attachment": {},
+"mail.thread.phone": {},
+"mail.thread.subject.suggested": {},
+"mail.track.mixin": {},
+"mail.tracking.duration.mixin": {},
+"microsoft.outlook.mixin": {
+"active": {
+"const": true
+}
+},
+"mysubscription.mysubscription": {},
+"onboarding.onboarding": {
+"sequence": {
+"const": 10
+},
+"text_completed": {
+"expr": "self.env._('Nice work! Your configuration is done.')",
+"src": "odoo/addons/onboarding/models/onboarding_onboarding.py:19"
+}
+},
+"onboarding.onboarding.step": {
+"button_text": {
+"expr": "self.env._(\"Let's do it\")",
+"src": "odoo/addons/onboarding/models/onboarding_onboarding_step.py:20"
+},
+"done_icon": {
+"const": "star"
+},
+"done_text": {
+"expr": "self.env._('Step Completed!')",
+"src": "odoo/addons/onboarding/models/onboarding_onboarding_step.py:24"
+},
+"is_per_company": {
+"const": true
+},
+"sequence": {
+"const": 10
+},
+"step_image_alt": {
+"const": "Onboarding Step Image"
+}
+},
+"onboarding.progress": {},
+"onboarding.progress.step": {
+"step_state": {
+"const": "not_done"
+}
+},
+"payment.capture.wizard": {
+"transaction_ids": {
+"expr": "self.env.context.get(\"active_ids\")",
+"src": "odoo/addons/payment/wizards/payment_capture_wizard.py:14"
+}
+},
+"payment.data": {},
+"payment.link.wizard": {},
+"payment.method": {
+"sequence": {
+"const": 1000
+},
+"support_manual_capture": {
+"const": "none"
+},
+"support_refund": {
+"const": "none"
+}
+},
+"payment.provider": {
+"active": {
+"const": true
+},
+"auth_msg": {
+"expr": "self.env._(\"Your payment has been authorized.\")",
+"src": "odoo/addons/payment/models/payment_provider.py:197"
+},
+"cancel_msg": {
+"expr": "self.env._(\"Your payment has been cancelled.\")",
+"src": "odoo/addons/payment/models/payment_provider.py:209"
+},
+"code": {
+"const": "none"
+},
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/addons/payment/models/payment_provider.py:133"
+},
+"done_msg": {
+"expr": "self.env._(\"Your payment has been processed.\")",
+"src": "odoo/addons/payment/models/payment_provider.py:203"
+},
+"pending_msg": {
+"expr": "self.env._( \"Your payment has been processed but is waiting for approval.\" )",
+"src": "odoo/addons/payment/models/payment_provider.py:189"
+},
+"sequence": {
+"const": 1000
+},
+"so_reference_type": {
+"const": "so_name"
+}
+},
+"payment.refund.wizard": {
+"payment_id": {
+"expr": "self.env.context.get('active_id')",
+"src": "odoo/addons/account_payment/wizards/payment_refund_wizard.py:15"
+}
+},
+"payment.token": {
+"active": {
+"const": true
+}
+},
+"payment.transaction": {
+"last_state_change": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"state": {
+"const": "draft"
+}
+},
+"peppol.registration": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/account_peppol/wizard/peppol_registration.py:29"
+}
+},
+"phone.blacklist": {
+"active": {
+"const": true
+}
+},
+"phone.blacklist.remove": {},
+"picking.label.type": {
+"label_type": {
+"const": "products"
+}
+},
+"portal.entry": {
+"category": {
+"const": "common_category"
+},
+"is_config_card": {
+"const": false
+},
+"sequence": {
+"const": "999"
+},
+"show_in_portal": {
+"const": true
+}
+},
+"portal.mixin": {},
+"portal.share": {},
+"portal.wizard": {
+"partner_ids": {
+"callable": "odoo.addons.portal.wizard.portal_wizard.PortalWizard._default_partner_ids",
+"src": "odoo/addons/portal/wizard/portal_wizard.py:24"
+}
+},
+"portal.wizard.user": {
+"email_state": {
+"const": "ok"
+}
+},
+"privacy.log": {
+"date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/privacy_lookup/models/privacy_log.py:18"
+}
+},
+"privacy.lookup.wizard": {},
+"privacy.lookup.wizard.line": {
+"execution_details": {
+"const": ""
+}
+},
+"product.attribute": {
+"active": {
+"const": true
+},
+"create_variant": {
+"const": "always"
+},
+"display_type": {
+"const": "radio"
+},
+"sequence": {
+"const": 20
+}
+},
+"product.attribute.custom.value": {},
+"product.attribute.value": {
+"active": {
+"const": true
+},
+"color": {
+"callable": "odoo.addons.product.models.product_attribute_value.ProductAttributeValue._get_default_color",
+"src": "odoo/addons/product/models/product_attribute_value.py:16"
+}
+},
+"product.base.unit": {},
+"product.catalog.line.mixin": {},
+"product.catalog.mixin": {},
+"product.category": {
+"packaging_reserve_method": {
+"const": "partial"
+},
+"property_cost_method": {
+"expr": "self.env.company.cost_method",
+"src": "odoo/addons/account/models/product.py:59"
+}
+},
+"product.combo": {
+"sequence": {
+"const": 10
+}
+},
+"product.combo.item": {
+"extra_price": {
+"const": 0.0
+}
+},
+"product.document": {
+"active": {
+"const": true
+},
+"attached_on_sale": {
+"const": "hidden"
+},
+"sequence": {
+"const": 10
+}
+},
+"product.label.layout": {
+"barcode_format": {
+"const": "barcode"
+},
+"custom_quantity": {
+"const": 1
+},
+"extra_html": {
+"const": ""
+},
+"move_quantity": {
+"const": "custom"
+},
+"print_format": {
+"const": "2x7"
+},
+"with_price": {
+"const": true
+},
+"zpl_preview": {
+"callable": "odoo.addons.product.wizard.product_label_layout.ProductLabelLayout._get_zpl_label_placeholder",
+"src": "odoo/addons/product/wizard/product_label_layout.py:12"
+},
+"zpl_template": {
+"const": "normal"
+}
+},
+"product.pricelist": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/product/models/product_pricelist.py:44"
+},
+"currency_id": {
+"callable": "odoo.addons.product.models.product_pricelist.ProductPricelist._default_currency_id",
+"src": "odoo/addons/product/models/product_pricelist.py:17"
+},
+"sequence": {
+"const": 16
+}
+},
+"product.pricelist.item": {
+"base": {
+"const": "list_price"
+},
+"compute_price": {
+"const": "fixed"
+},
+"min_quantity": {
+"const": 0
+},
+"price_discount": {
+"const": 0
+},
+"pricelist_id": {
+"callable": "odoo.addons.product.models.product_pricelist_item.ProductPricelistItem._default_pricelist_id",
+"src": "odoo/addons/product/models/product_pricelist_item.py:15"
+}
+},
+"product.product": {
+"active": {
+"const": true
+},
+"base_unit_count": {
+"const": 1
+}
+},
+"product.removal": {},
+"product.replenish": {
+"product_has_variants": {
+"const": false
+},
+"quantity": {
+"const": 1
+}
+},
+"product.supplierinfo": {
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/addons/product/models/product_supplierinfo.py:36"
+},
+"currency_id": {
+"expr": "self.env.company.currency_id.id",
+"src": "odoo/addons/product/models/product_supplierinfo.py:39"
+},
+"delay": {
+"const": 1
+},
+"min_qty": {
+"const": 1.0
+},
+"price": {
+"const": 0.0
+},
+"sequence": {
+"const": 1
+}
+},
+"product.tag": {
+"color": {
+"const": "#3C3C3C"
+},
+"product_product_ids": {
+"callable": "odoo.addons.product.models.product_tag.ProductTag._get_default_variant_id",
+"src": "odoo/addons/product/models/product_tag.py:15"
+},
+"product_template_ids": {
+"callable": "odoo.addons.product.models.product_tag.ProductTag._get_default_template_id",
+"src": "odoo/addons/product/models/product_tag.py:12"
+},
+"sequence": {
+"const": 10
+},
+"visible_to_customers": {
+"const": true
+}
+},
+"product.template": {
+"active": {
+"const": true
+},
+"base_unit_count": {
+"const": 0
+},
+"has_available_route_ids": {
+"expr": "self.env['stock.route'].search_count([('product_selectable', '=', True)])",
+"src": "odoo/addons/stock/models/product.py:869"
+},
+"is_storable": {
+"const": false
+},
+"list_price": {
+"const": 1.0
+},
+"lot_sequence_id": {
+"expr": "self.env.ref('stock.sequence_production_lots', raise_if_not_found=False)",
+"src": "odoo/addons/stock/models/product.py:851"
+},
+"purchase_ok": {
+"const": true
+},
+"reinvoice_policy": {
+"const": "no"
+},
+"responsible_id": {
+"expr": "self._default_responsible_id()",
+"src": "odoo/addons/stock/models/product.py:825"
+},
+"sale_delay": {
+"const": 0
+},
+"sale_ok": {
+"const": true
+},
+"sequence": {
+"const": 1
+},
+"service_tracking": {
+"const": "no"
+},
+"supplier_taxes_id": {
+"expr": "self.env.companies.account_purchase_tax_id or self.env.companies.root_id.sudo().account_purchase_tax_id",
+"src": "odoo/addons/account/models/product.py:90"
+},
+"taxes_id": {
+"expr": "self.env.companies.account_sale_tax_id or self.env.companies.root_id.sudo().account_sale_tax_id",
+"src": "odoo/addons/account/models/product.py:83"
+},
+"type": {
+"const": "consu"
+},
+"uom_id": {
+"callable": "odoo.addons.product.models.product_template.ProductTemplate._default_uom_id",
+"src": "odoo/odoo/orm/cache.py:35"
+}
+},
+"product.template.attribute.line": {
+"active": {
+"const": true
+},
+"sequence": {
+"const": 10
+}
+},
+"product.template.attribute.value": {
+"color": {
+"callable": "odoo.addons.product.models.product_template_attribute_value.ProductTemplateAttributeValue._get_default_color",
+"src": "odoo/addons/product/models/product_template_attribute_value.py:19"
+},
+"price_extra": {
+"const": 0.0
+},
+"ptav_active": {
+"const": true
+}
+},
+"product.uom": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/product/models/product_uom.py:16"
+}
+},
+"product.value": {
+"date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"new_value": {
+"const": 0.0
+},
+"old_value": {
+"const": 0.0
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/stock_account/models/product_value.py:34"
+}
+},
+"project.collaborator": {
+"access_mode": {
+"const": "view"
+}
+},
+"project.milestone": {
+"is_reached": {
+"const": false
+},
+"project_id": {
+"callable": "odoo.addons.project.models.project_milestone.ProjectMilestone._get_default_project_id",
+"src": "odoo/addons/project/models/project_milestone.py:18"
+},
+"sale_line_id": {
+"callable": "odoo.addons.sale_project.models.project_milestone.ProjectMilestone._default_sale_line_id",
+"src": "odoo/addons/sale_project/models/project_milestone.py:10"
+},
+"sequence": {
+"const": 10
+}
+},
+"project.project": {
+"active": {
+"const": true
+},
+"date_last_stage_update": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"label_tasks": {
+"expr": "self.env._('Tasks')",
+"src": "odoo/addons/project/models/project_project.py:121"
+},
+"last_update_status": {
+"const": "to_define"
+},
+"privacy_visibility": {
+"const": "portal"
+},
+"sequence": {
+"const": 10
+},
+"stage_id": {
+"callable": "odoo.addons.project.models.project_project.ProjectProject._default_stage_id",
+"src": "odoo/addons/project/models/project_project.py:65"
+},
+"type_ids": {
+"expr": "self._default_type_ids()",
+"src": "odoo/addons/project/models/project_project.py:127"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/project/models/project_project.py:133"
+}
+},
+"project.project.stage": {
+"active": {
+"const": true
+},
+"rotting_threshold_days": {
+"const": 0
+},
+"sequence": {
+"const": 50
+}
+},
+"project.project.stage.delete.wizard": {},
+"project.role": {
+"active": {
+"const": true
+},
+"color": {
+"callable": "odoo.addons.project.models.project_role.ProjectRole._get_default_color",
+"src": "odoo/addons/project/models/project_role.py:10"
+}
+},
+"project.share.collaborator.wizard": {
+"access_mode": {
+"const": "view"
+},
+"send_invitation": {
+"const": true
+}
+},
+"project.share.wizard": {},
+"project.tags": {
+"color": {
+"callable": "odoo.addons.project.models.project_tags.ProjectTags._get_default_color",
+"src": "odoo/addons/project/models/project_tags.py:16"
+}
+},
+"project.task": {
+"active": {
+"const": true
+},
+"company_id": {
+"callable": "odoo.addons.project.models.project_task.ProjectTask._default_company_id",
+"src": "odoo/addons/project/models/project_task.py:133"
+},
+"priority": {
+"const": "0"
+},
+"repeat_interval": {
+"const": 1
+},
+"repeat_type": {
+"const": "forever"
+},
+"repeat_unit": {
+"const": "week"
+},
+"sequence": {
+"const": 10
+},
+"stage_id": {
+"callable": "odoo.addons.project.models.project_task.ProjectTask._get_default_stage_id",
+"src": "odoo/addons/project/models/project_task.py:122"
+},
+"state": {
+"const": "01_in_progress"
+},
+"user_ids": {
+"callable": "odoo.addons.project.models.project_task.ProjectTask._default_user_ids",
+"src": "odoo/addons/project/models/project_task.py:129"
+}
+},
+"project.task.burndown.chart.report": {},
+"project.task.recurrence": {
+"repeat_interval": {
+"const": 1
+},
+"repeat_type": {
+"const": "forever"
+},
+"repeat_unit": {
+"const": "week"
+}
+},
+"project.task.stage.personal": {},
+"project.task.stage.report": {},
+"project.task.type": {
+"active": {
+"const": true
+},
+"auto_validation_state": {
+"const": false
+},
+"project_ids": {
+"expr": "self._get_default_project_ids()",
+"src": "odoo/addons/project/models/project_task_type.py:27"
+},
+"rating_status": {
+"const": "stage"
+},
+"rating_status_period": {
+"const": "monthly"
+},
+"rotting_threshold_days": {
+"const": 0
+},
+"sequence": {
+"const": 1
+},
+"user_id": {
+"callable": "odoo.addons.project.models.project_task_type.ProjectTaskType._default_user_id",
+"src": "odoo/addons/project/models/project_task_type.py:20"
+}
+},
+"project.task.type.delete.wizard": {},
+"project.template.create.wizard": {
+"customer_action": {
+"const": "create"
+},
+"role_to_users_ids": {
+"callable": "odoo.addons.project.wizard.project_template_create_wizard.ProjectTemplateCreateWizard._default_role_to_users_ids",
+"src": "odoo/addons/project/wizard/project_template_create_wizard.py:9"
+},
+"template_id": {
+"expr": "self.env.context.get('template_id')",
+"src": "odoo/addons/project/wizard/project_template_create_wizard.py:21"
+}
+},
+"project.template.role.to.users.map": {},
+"project.update": {
+"date": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/project/models/project_update.py:55"
+}
+},
+"properties.base.definition": {},
+"properties.base.definition.mixin": {},
+"publisher_warranty.contract": {},
+"purchase.bill.line.match": {},
+"purchase.bill.union": {},
+"purchase.edi.xml.ubl_bis3": {},
+"purchase.order": {
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/addons/purchase/models/purchase_order.py:177"
+},
+"date_order": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"invoice_count": {
+"const": 0
+},
+"invoice_status": {
+"const": "no"
+},
+"locked": {
+"const": false
+},
+"name": {
+"expr": "_('New')",
+"src": "odoo/addons/purchase/models/purchase_order.py:80"
+},
+"picking_type_id": {
+"callable": "odoo.addons.purchase_stock.models.purchase_order.PurchaseOrder._default_picking_type",
+"src": "odoo/addons/purchase_stock/models/purchase_order.py:16"
+},
+"priority": {
+"const": "0"
+},
+"state": {
+"const": "draft"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/purchase/models/purchase_order.py:176"
+}
+},
+"purchase.order.line": {
+"analytic_precision": {
+"expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+"src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+},
+"display_type": {
+"const": false
+},
+"propagate_cancel": {
+"const": true
+},
+"sequence": {
+"const": 10
+}
+},
+"purchase.report": {},
+"quotation.document": {
+"active": {
+"const": true
+},
+"add_by_default": {
+"const": false
+},
+"document_type": {
+"const": "header"
+},
+"sequence": {
+"const": 10
+}
+},
+"rating.mixin": {},
+"rating.parent.mixin": {},
+"rating.rating": {
+"access_token": {
+"callable": "odoo.addons.rating.models.rating.RatingRating._default_access_token",
+"src": "odoo/addons/rating/models/rating.py:17"
+},
+"rating": {
+"const": 0
+}
+},
+"report.account.report_hash_integrity": {},
+"report.account.report_invoice": {},
+"report.account.report_invoice_with_payments": {},
+"report.base.report_irmodulereference": {},
+"report.layout": {
+"sequence": {
+"const": 50
+}
+},
+"report.paperformat": {
+"css_margins": {
+"const": false
+},
+"dpi": {
+"const": 90
+},
+"format": {
+"const": "A4"
+},
+"header_line": {
+"const": false
+},
+"header_spacing": {
+"const": 35
+},
+"margin_bottom": {
+"const": 20
+},
+"margin_left": {
+"const": 7
+},
+"margin_right": {
+"const": 7
+},
+"margin_top": {
+"const": 40
+},
+"orientation": {
+"const": "Landscape"
+},
+"page_height": {
+"const": false
+},
+"page_width": {
+"const": false
+}
+},
+"report.product.label.base": {},
+"report.product.report_pricelist": {},
+"report.product.report_product_label_dymo": {},
+"report.product.report_product_label_pdf": {},
+"report.product.report_product_label_zpl": {},
+"report.project.task.user": {},
+"report.stock.quantity": {},
+"report.stock.report_stock_rule": {},
+"res.city": {},
+"res.company": {
+"account_opening_date": {
+"expr": "fields.Date.today()",
+"src": "odoo/addons/account/models/company.py:177"
+},
+"account_peppol_proxy_state": {
+"const": "not_registered"
+},
+"account_price_include": {
+"const": "tax_excluded"
+},
+"active": {
+"const": true
+},
+"alias_domain_id": {
+"expr": "self._default_alias_domain_id()",
+"src": "odoo/addons/mail/models/res_company.py:15"
+},
+"annual_inventory_day": {
+"const": 31
+},
+"annual_inventory_month": {
+"const": "12"
+},
+"autopost_bills": {
+"const": true
+},
+"cost_method": {
+"const": "standard"
+},
+"currency_id": {
+"expr": "self._default_currency_id()",
+"src": "odoo/odoo/addons/base/models/res_company.py:109"
+},
+"display_invoice_tax_company_currency": {
+"const": true
+},
+"email_primary_color": {
+"const": "#FFFFFF"
+},
+"email_secondary_color": {
+"const": "#875A7B"
+},
+"expects_chart_of_accounts": {
+"const": true
+},
+"fiscalyear_last_day": {
+"const": 31
+},
+"fiscalyear_last_month": {
+"const": "12"
+},
+"font": {
+"const": "Lato"
+},
+"horizon_days": {
+"const": 365
+},
+"inventory_period": {
+"const": "manual"
+},
+"inventory_valuation": {
+"const": "periodic"
+},
+"logo": {
+"callable": "odoo.addons.base.models.res_company.ResCompany._get_logo",
+"src": "odoo/odoo/addons/base/models/res_company.py:73"
+},
+"nomenclature_id": {
+"callable": "odoo.addons.barcodes.models.res_company.ResCompany._get_default_nomenclature",
+"src": "odoo/addons/barcodes/models/res_company.py:9"
+},
+"paperformat_id": {
+"expr": "self.env.ref('base.paperformat_euro', raise_if_not_found=False)",
+"src": "odoo/odoo/addons/base/models/res_company.py:130"
+},
+"pay_later_label": {
+"const": "Confirm"
+},
+"pay_now_label": {
+"const": "Pay now"
+},
+"picking_policy": {
+"const": "direct"
+},
+"po_double_validation": {
+"const": "one_step"
+},
+"po_double_validation_amount": {
+"const": 5000
+},
+"po_lock": {
+"const": "edit"
+},
+"portal_confirmation_sign": {
+"const": true
+},
+"prepayment_percent": {
+"const": 1.0
+},
+"quick_edit_mode": {
+"const": "out_and_in_invoices"
+},
+"quotation_validity_days": {
+"const": 30
+},
+"report_tables_id": {
+"const": "light"
+},
+"return_validity_days": {
+"const": 14
+},
+"sale_invoice_policy": {
+"const": "order"
+},
+"security_lead": {
+"const": 0
+},
+"sequence": {
+"const": 10
+},
+"stock_confirmation_type": {
+"const": "sms"
+},
+"stock_mail_confirmation_template_id": {
+"callable": "odoo.addons.stock.models.res_company.ResCompany._default_confirmation_mail_template",
+"src": "odoo/addons/stock/models/res_company.py:10"
+},
+"stock_move_email_validation": {
+"const": false
+},
+"stock_sms_confirmation_template_id": {
+"callable": "odoo.addons.stock_sms.models.res_company.ResCompany._default_confirmation_sms_picking_template",
+"src": "odoo/addons/stock_sms/models/res_company.py:10"
+},
+"tax_calculation_rounding_method": {
+"const": "round_globally"
+},
+"terms_type": {
+"const": "plain"
+}
+},
+"res.config": {},
+"res.config.settings": {
+"auth_signup_uninvited": {
+"const": "b2c"
+},
+"chart_template": {
+"expr": "self.env.company._chart_template_selection()",
+"src": "odoo/addons/account/models/res_config_settings.py:38"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/base_setup/models/res_config_settings.py:12"
+},
+"group_send_reminder": {
+"const": true
+},
+"lead_enrich_auto": {
+"const": "auto"
+},
+"lock_confirmed_po": {
+"expr": "self.env.company.po_lock == 'lock'",
+"src": "odoo/addons/purchase/models/res_config_settings.py:10"
+},
+"po_order_approval": {
+"expr": "self.env.company.po_double_validation == 'two_step'",
+"src": "odoo/addons/purchase/models/res_config_settings.py:12"
+},
+"product_volume_volume_in_cubic_feet": {
+"const": "0"
+},
+"product_weight_in_lbs": {
+"const": "0"
+}
+},
+"res.country": {
+"address_format": {
+"const": "%(street)s\n%(street2)s\n%(city)s %(state_code)s %(zip)s\n%(country_name)s"
+},
+"name_position": {
+"const": "before"
+},
+"state_required": {
+"const": false
+},
+"zip_applicability": {
+"const": "required"
+}
+},
+"res.country.group": {},
+"res.country.state": {},
+"res.currency": {
+"active": {
+"const": true
+},
+"fiscal_country_codes": {
+"callable": "odoo.addons.account.models.res_currency.ResCurrency._get_fiscal_country_codes",
+"src": "odoo/addons/account/models/res_currency.py:14"
+},
+"position": {
+"const": "after"
+},
+"rounding": {
+"const": 0.01
+}
+},
+"res.currency.rate": {
+"company_id": {
+"expr": "self.env.company.root_id",
+"src": "odoo/odoo/addons/base/models/res_currency.py:427"
+},
+"name": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+}
+},
+"res.currency.rate.consolidation.mixin": {},
+"res.device": {},
+"res.device.log": {},
+"res.groups": {},
+"res.groups.privilege": {
+"placeholder": {
+"expr": "self.env._('No')",
+"src": "odoo/odoo/addons/base/models/res_groups_privilege.py:11"
+},
+"sequence": {
+"const": 100
+}
+},
+"res.lang": {
+"date_format": {
+"const": "%m/%d/%Y"
+},
+"decimal_point": {
+"const": "."
+},
+"direction": {
+"const": "ltr"
+},
+"grouping": {
+"const": "[3,0]"
+},
+"thousands_sep": {
+"const": ","
+},
+"time_format": {
+"const": "%H:%M:%S"
+},
+"week_start": {
+"const": "7"
+}
+},
+"res.partner": {
+"active": {
+"const": true
+},
+"autopost_bills": {
+"const": "ask"
+},
+"calendar_last_notif_ack": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"category_id": {
+"callable": "odoo.addons.base.models.res_partner.ResPartner._default_category",
+"src": "odoo/odoo/addons/base/models/res_partner.py:281"
+},
+"color": {
+"const": 0
+},
+"customer_rank": {
+"const": 0
+},
+"display_invoice_edi_format": {
+"expr": "len(self._fields['invoice_edi_format']._description_selection(self.env))",
+"src": "odoo/addons/account/models/partner.py:637"
+},
+"group_on": {
+"const": "default"
+},
+"group_rfq": {
+"const": "default"
+},
+"is_company": {
+"const": false
+},
+"message_bounce": {
+"const": 0
+},
+"suggest_based_on": {
+"const": "30_days"
+},
+"suggest_days": {
+"const": 7
+},
+"suggest_percent": {
+"const": 100
+},
+"supplier_rank": {
+"const": 0
+},
+"type": {
+"const": "contact"
+},
+"tz": {
+"expr": "self.env.context.get('tz')",
+"src": "odoo/odoo/addons/base/models/res_partner.py:308"
+}
+},
+"res.partner.bank": {
+"active": {
+"const": true
+},
+"allow_out_payment": {
+"const": false
+},
+"l10n_us_bank_account_type": {
+"const": "checking"
+},
+"sequence": {
+"const": 10
+}
+},
+"res.partner.category": {
+"active": {
+"const": true
+},
+"color": {
+"callable": "odoo.addons.base.models.res_partner.ResPartnerCategory._get_default_color",
+"src": "odoo/odoo/addons/base/models/res_partner.py:233"
+}
+},
+"res.partner.industry": {
+"active": {
+"const": true
+}
+},
+"res.role": {
+"active": {
+"const": true
+}
+},
+"res.session": {},
+"res.users": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/odoo/addons/base/models/res_users.py:236"
+},
+"company_ids": {
+"expr": "self.env.company.ids",
+"src": "odoo/odoo/addons/base/models/res_users.py:239"
+},
+"group_ids": {
+"expr": "self._default_groups()",
+"src": "odoo/odoo/addons/base/models/res_users.py:251"
+},
+"notification_type": {
+"const": "email"
+},
+"outgoing_mail_server_type": {
+"const": "default"
+},
+"view_group_hierarchy": {
+"callable": "odoo.addons.base.models.res_users.ResUsers._default_view_group_hierarchy",
+"src": "odoo/odoo/addons/base/models/res_users.py:260"
+}
+},
+"res.users.apikeys": {},
+"res.users.apikeys.description": {
+"duration": {
+"callable": "odoo.addons.base.models.res_users.ResUsersApikeysDescription._default_duration",
+"src": "odoo/odoo/addons/base/models/res_users.py:1862"
+},
+"scope": {
+"const": "rpc"
+}
+},
+"res.users.apikeys.show": {},
+"res.users.deletion": {
+"state": {
+"const": "todo"
+}
+},
+"res.users.identitycheck": {
+"auth_method": {
+"expr": "self._get_default_auth_method()",
+"src": "odoo/odoo/addons/base/models/res_users.py:1500"
+}
+},
+"res.users.log": {},
+"res.users.settings": {
+"calendar_show_activities": {
+"const": true
+}
+},
+"res.users.settings.embedded.action": {},
+"res.users.settings.volumes": {
+"volume": {
+"const": 0.5
+}
+},
+"reset.view.arch.wizard": {
+"reset_mode": {
+"const": "soft"
+}
+},
+"resource.calendar": {
+"active": {
+"const": true
+},
+"calendar_type": {
+"const": "fixed"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/resource/models/resource_calendar.py:54"
+},
+"reference_calendar_id": {
+"expr": "self.env.company.resource_calendar_id",
+"src": "odoo/addons/resource/models/resource_calendar.py:92"
+}
+},
+"resource.calendar.attendance": {
+"hour_from": {
+"const": 0
+},
+"hour_to": {
+"const": 0
+},
+"recurrency_count": {
+"const": 1
+},
+"recurrency_end_type": {
+"const": "forever"
+},
+"recurrency_interval": {
+"const": 1
+},
+"recurrency_type": {
+"const": "weeks"
+},
+"sequence": {
+"const": 10
+}
+},
+"resource.calendar.leaves": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/resource/models/resource_calendar_leaves.py:36"
+},
+"count_as": {
+"const": "absence"
+}
+},
+"resource.mixin": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/resource/models/resource_mixin.py:19"
+},
+"resource_calendar_id": {
+"expr": "self.env.company.resource_calendar_id",
+"src": "odoo/addons/resource/models/resource_mixin.py:23"
+}
+},
+"resource.resource": {
+"active": {
+"const": true
+},
+"calendar_id": {
+"expr": "self.env.company.resource_calendar_id",
+"src": "odoo/addons/resource/models/resource_resource.py:54"
+},
+"color": {
+"callable": "odoo.addons.resource.models.resource_resource.ResourceResource._default_color",
+"src": "odoo/addons/resource/models/resource_resource.py:31"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/resource/models/resource_resource.py:38"
+},
+"resource_type": {
+"const": "user"
+},
+"time_efficiency": {
+"const": 100
+},
+"tz": {
+"expr": "self.env.context.get('tz') or self.env.user.tz or 'UTC'",
+"src": "odoo/addons/resource/models/resource_resource.py:64"
+}
+},
+"return.reason": {
+"sequence": {
+"const": 10
+}
+},
+"sale.advance.payment.inv": {
+"advance_payment_method": {
+"const": "delivered"
+},
+"consolidated_billing": {
+"const": true
+},
+"deduct_down_payments": {
+"const": true
+},
+"sale_order_ids": {
+"expr": "self.env.context.get(\"active_ids\")",
+"src": "odoo/addons/sale/wizard/sale_make_invoice_advance.py:28"
+}
+},
+"sale.edi.xml.ubl_bis3": {},
+"sale.mass.cancel.orders": {
+"sale_order_ids": {
+"expr": "self.env.context.get(\"active_ids\")",
+"src": "odoo/addons/sale/wizard/mass_cancel_orders.py:13"
+}
+},
+"sale.order": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/sale/models/sale_order.py:74"
+},
+"date_order": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"locked": {
+"const": false
+},
+"name": {
+"expr": "self.env._(\"New\")",
+"src": "odoo/addons/sale/models/sale_order.py:70"
+},
+"picking_policy": {
+"expr": "self.env.company.picking_policy",
+"src": "odoo/addons/sale_stock/models/sale_order.py:21"
+},
+"quotation_document_ids": {
+"callable": "odoo.addons.sale_pdf_quote_builder.models.sale_order.SaleOrder._default_quotation_document_ids",
+"src": "odoo/addons/sale_pdf_quote_builder/models/sale_order.py:11"
+},
+"state": {
+"const": "draft"
+}
+},
+"sale.order.discount": {
+"discount_type": {
+"const": "sol_discount"
+},
+"sale_order_id": {
+"expr": "self.env.context.get(\"active_id\")",
+"src": "odoo/addons/sale/wizard/sale_order_discount.py:14"
+}
+},
+"sale.order.line": {
+"analytic_precision": {
+"expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+"src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+},
+"collapse_composition": {
+"const": false
+},
+"collapse_prices": {
+"const": false
+},
+"display_type": {
+"const": false
+},
+"is_optional": {
+"const": false
+},
+"product_uom_qty": {
+"const": 1.0
+},
+"qty_delivered": {
+"const": 0.0
+},
+"sequence": {
+"const": 10
+}
+},
+"sale.order.template": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/sale_management/models/sale_order_template.py:18"
+},
+"sequence": {
+"const": 10
+},
+"share_template": {
+"const": true
+},
+"template_type": {
+"const": "quotation"
+}
+},
+"sale.order.template.line": {
+"display_type": {
+"const": false
+},
+"is_optional": {
+"const": false
+},
+"product_uom_qty": {
+"const": 1
+},
+"sequence": {
+"const": 10
+}
+},
+"sale.pdf.form.field": {},
+"sale.report": {},
+"sequence.mixin": {},
+"server.action.history.wizard": {
+"revision": {
+"callable": "odoo.addons.base.models.ir_actions.ServerActionHistoryWizard._default_revision",
+"src": "odoo/odoo/addons/base/models/ir_actions.py:448"
+}
+},
+"sms.account.code": {},
+"sms.account.phone": {},
+"sms.account.sender": {},
+"sms.composer": {
+"mass_force_send": {
+"const": false
+},
+"mass_keep_log": {
+"const": true
+},
+"use_exclusion_list": {
+"const": true
+}
+},
+"sms.sms": {
+"state": {
+"const": "outgoing"
+},
+"to_delete": {
+"const": false
+},
+"uuid": {
+"expr": "uuid4().hex",
+"src": "odoo/addons/sms/models/sms_sms.py:41"
+}
+},
+"sms.template": {},
+"sms.template.preview": {},
+"sms.template.reset": {},
+"sms.tracker": {},
+"spreadsheet.dashboard": {
+"group_ids": {
+"expr": "self.env.ref('base.group_user')",
+"src": "odoo/addons/spreadsheet_dashboard/models/spreadsheet_dashboard.py:19"
+},
+"is_published": {
+"const": true
+},
+"spreadsheet_binary_data": {
+"expr": "BinaryBytes(self._empty_spreadsheet_data_bin())",
+"src": "odoo/addons/spreadsheet/models/spreadsheet_mixin.py:27"
+}
+},
+"spreadsheet.dashboard.favorite.filters": {
+"active": {
+"const": true
+}
+},
+"spreadsheet.dashboard.group": {},
+"spreadsheet.dashboard.share": {
+"access_token": {
+"expr": "str(uuid.uuid4())",
+"src": "odoo/addons/spreadsheet_dashboard/models/spreadsheet_dashboard_share.py:18"
+},
+"active": {
+"const": true
+},
+"spreadsheet_binary_data": {
+"expr": "BinaryBytes(self._empty_spreadsheet_data_bin())",
+"src": "odoo/addons/spreadsheet/models/spreadsheet_mixin.py:27"
+}
+},
+"spreadsheet.mixin": {
+"spreadsheet_binary_data": {
+"expr": "BinaryBytes(self._empty_spreadsheet_data_bin())",
+"src": "odoo/addons/spreadsheet/models/spreadsheet_mixin.py:27"
+}
+},
+"stock.add.to.wave": {
+"mode": {
+"const": "existing"
+}
+},
+"stock.allocation.report": {},
+"stock.avco.report": {},
+"stock.backorder.confirmation": {},
+"stock.backorder.confirmation.line": {},
+"stock.forecasted_product_product": {},
+"stock.forecasted_product_template": {},
+"stock.inventory.adjustment.name": {
+"counting_date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"inventory_adjustment_name": {
+"const": "Physical Inventory"
+}
+},
+"stock.inventory.conflict": {},
+"stock.inventory.warning": {},
+"stock.location": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_location.py:63"
+},
+"cyclic_inventory_frequency": {
+"const": 0
+},
+"usage": {
+"const": "internal"
+}
+},
+"stock.location.label.layout": {},
+"stock.lot": {},
+"stock.move": {
+"additional": {
+"const": false
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_move.py:38"
+},
+"date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"picked": {
+"const": false
+},
+"priority": {
+"const": "0"
+},
+"procure_method": {
+"const": "make_to_stock"
+},
+"product_uom_qty": {
+"const": 0
+},
+"propagate_cancel": {
+"const": true
+},
+"sequence": {
+"const": 10
+},
+"state": {
+"const": "draft"
+},
+"to_refund": {
+"const": true
+}
+},
+"stock.move.line": {},
+"stock.orderpoint.snooze": {
+"predefined_date": {
+"const": "day"
+}
+},
+"stock.orderpoint.suggest": {
+"based_on": {
+"const": "one_month"
+},
+"percent_factor": {
+"const": 100
+}
+},
+"stock.package": {
+"pack_date": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+}
+},
+"stock.package.destination": {},
+"stock.package.history": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_package_history.py:11"
+}
+},
+"stock.package.label.layout": {},
+"stock.package.type": {
+"length_uom_name": {
+"callable": "odoo.addons.stock.models.stock_package_type.StockPackageType._get_default_length_uom",
+"src": "odoo/addons/stock/models/stock_package_type.py:12"
+},
+"package_use": {
+"const": "disposable"
+},
+"sequence": {
+"const": 1
+},
+"weight_uom_name": {
+"callable": "odoo.addons.stock.models.stock_package_type.StockPackageType._get_default_weight_uom",
+"src": "odoo/addons/stock/models/stock_package_type.py:15"
+}
+},
+"stock.picking": {
+"has_deadline_issue": {
+"const": false
+},
+"is_locked": {
+"const": true
+},
+"name": {
+"const": "/"
+},
+"picking_type_id": {
+"callable": "odoo.addons.stock.models.stock_picking.StockPicking._default_picking_type_id",
+"src": "odoo/addons/stock/models/stock_picking.py:26"
+},
+"priority": {
+"const": "0"
+},
+"scheduled_date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"show_return": {
+"const": true
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/stock/models/stock_picking.py:120"
+}
+},
+"stock.picking.batch": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_picking_batch.py:26"
+},
+"name": {
+"expr": "_('New')",
+"src": "odoo/addons/stock/models/stock_picking_batch.py:19"
+},
+"priority": {
+"const": "0"
+},
+"state": {
+"const": "draft"
+}
+},
+"stock.picking.to.batch": {
+"mode": {
+"const": "new"
+}
+},
+"stock.picking.type": {
+"active": {
+"const": true
+},
+"batch_auto_confirm": {
+"const": true
+},
+"code": {
+"const": "incoming"
+},
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/addons/stock/models/stock_picking_type.py:192"
+},
+"create_backorder": {
+"const": "ask"
+},
+"lot_label_format": {
+"const": "4x12_lots"
+},
+"move_type": {
+"expr": "self.env.company.picking_policy",
+"src": "odoo/addons/stock/models/stock_picking_type.py:220"
+},
+"package_label_to_print": {
+"const": "pdf"
+},
+"product_label_format": {
+"const": "barcode_2x7_price"
+},
+"reservation_method": {
+"const": "at_confirm"
+},
+"set_package_type": {
+"const": false
+},
+"show_entire_packs": {
+"const": false
+},
+"use_create_lots": {
+"const": true
+},
+"use_existing_lots": {
+"const": true
+},
+"wave_date_granularity": {
+"const": "day"
+}
+},
+"stock.picking.type.label.layout": {},
+"stock.put.in.pack": {},
+"stock.putaway.rule": {
+"active": {
+"const": true
+},
+"category_id": {
+"callable": "odoo.addons.stock.models.product_strategy.StockPutawayRule._default_category_id",
+"src": "odoo/addons/stock/models/product_strategy.py:22"
+},
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/addons/stock/models/product_strategy.py:62"
+},
+"location_in_id": {
+"callable": "odoo.addons.stock.models.product_strategy.StockPutawayRule._default_location_id",
+"src": "odoo/addons/stock/models/product_strategy.py:26"
+},
+"product_id": {
+"callable": "odoo.addons.stock.models.product_strategy.StockPutawayRule._default_product_id",
+"src": "odoo/addons/stock/models/product_strategy.py:34"
+},
+"sublocation": {
+"const": "no"
+}
+},
+"stock.quant": {
+"in_date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"reserved_quantity": {
+"const": 0.0
+}
+},
+"stock.quant.relocate": {},
+"stock.reference": {},
+"stock.replenish.mixin": {},
+"stock.replenishment.info": {
+"based_on": {
+"const": "one_month"
+},
+"percent_factor": {
+"const": 100
+}
+},
+"stock.replenishment.option": {},
+"stock.request.count": {
+"inventory_date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+}
+},
+"stock.route": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_location.py:531"
+},
+"product_selectable": {
+"const": true
+},
+"sequence": {
+"const": 0
+}
+},
+"stock.rule": {
+"action": {
+"const": "pull"
+},
+"active": {
+"const": true
+},
+"auto": {
+"const": "manual"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_rule.py:69"
+},
+"delay": {
+"const": 0
+},
+"location_dest_from_rule": {
+"const": false
+},
+"procure_method": {
+"const": "make_to_stock"
+},
+"propagate_cancel": {
+"const": false
+},
+"propagate_carrier": {
+"const": false
+},
+"sequence": {
+"const": 20
+}
+},
+"stock.rules.report": {
+"product_has_variants": {
+"const": false
+}
+},
+"stock.scrap.reason.tag": {
+"color": {
+"const": 3947580
+},
+"sequence": {
+"const": 10
+}
+},
+"stock.storage.category": {
+"allow_new_product": {
+"const": "mixed"
+}
+},
+"stock.storage.category.capacity": {},
+"stock.traceability.report": {},
+"stock.warehouse": {
+"active": {
+"const": true
+},
+"buy_to_resupply": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_warehouse.py:38"
+},
+"delivery_steps": {
+"const": "ship_only"
+},
+"name": {
+"callable": "odoo.addons.stock.models.stock_warehouse.StockWarehouse._default_name",
+"src": "odoo/addons/stock/models/stock_warehouse.py:31"
+},
+"partner_id": {
+"expr": "self.env.company.partner_id",
+"src": "odoo/addons/stock/models/stock_warehouse.py:41"
+},
+"reception_steps": {
+"const": "one_step"
+},
+"sequence": {
+"const": 10
+}
+},
+"stock.warehouse.orderpoint": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/stock/models/stock_orderpoint.py:95"
+},
+"daily_demand": {
+"const": 0.0
+},
+"min_max_based_on": {
+"const": "one_month"
+},
+"min_max_based_on_factor": {
+"const": 100
+},
+"name": {
+"expr": "self.env['ir.sequence'].next_by_code('stock.orderpoint')",
+"src": "odoo/addons/stock/models/stock_orderpoint.py:31"
+},
+"product_max_qty": {
+"const": 0.0
+},
+"product_min_qty": {
+"const": 0.0
+},
+"trigger": {
+"const": "auto"
+}
+},
+"stock.warn.insufficient.qty": {},
+"stock.warn.insufficient.qty.scrap": {},
+"stock.zero.demand.confirmation": {},
+"task.share.wizard": {
+"task_id": {
+"expr": "self.env.context.get('active_id')",
+"src": "odoo/addons/project/wizard/project_task_share_wizard.py:9"
+}
+},
+"template.reset.mixin": {},
+"uom.uom": {
+"active": {
+"const": true
+},
+"relative_factor": {
+"const": 1.0
+}
+},
+"update.product.attribute.value": {},
+"utm.campaign": {
+"active": {
+"const": true
+},
+"is_auto_campaign": {
+"const": false
+},
+"stage_id": {
+"expr": "self.env['utm.stage'].search([], limit=1)",
+"src": "odoo/addons/utm/models/utm_campaign.py:22"
+},
+"user_id": {
+"expr": "self.env.uid",
+"src": "odoo/addons/utm/models/utm_campaign.py:19"
+}
+},
+"utm.medium": {
+"active": {
+"const": true
+}
+},
+"utm.mixin": {},
+"utm.source": {},
+"utm.stage": {
+"sequence": {
+"const": 1
+}
+},
+"utm.tag": {
+"color": {
+"expr": "self._default_color()",
+"src": "odoo/addons/utm/models/utm_tag.py:21"
+}
+},
+"validate.account.move": {},
+"vendor.delay.report": {},
+"web_tour.tour": {
+"active": {
+"const": true
+},
+"rainbow_man_message": {
+"const": "<b>Good job!</b> You went through all steps of this tour."
+},
+"sequence": {
+"const": 1000
+},
+"url": {
+"const": "/odoo"
+}
+},
+"web_tour.tour.step": {
+"tooltip_position": {
+"const": "bottom"
+}
+},
+"website": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/odoo/addons/base/models/website.py:43"
+},
+"sequence": {
+"const": 10
+}
+},
+"wizard.ir.model.menu.create": {}
+}

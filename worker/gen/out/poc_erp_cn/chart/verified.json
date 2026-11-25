@@ -1,0 +1,18 @@
+{
+ "cn": {
+  "commit": "6c5e2170",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_cn",
+  "result": "results/evidence/poc_erp_cn-cn+cn_large_bis-vagb_chart_cn-20261125-014133.txt",
+  "sha256": "aa19125d1d8b718361b65e693a9e40b76ff4a0e0cdead1a3144c290cbb0b455b",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ },
+ "cn_large_bis": {
+  "commit": "6c5e2170",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_cn",
+  "result": "results/evidence/poc_erp_cn-cn+cn_large_bis-vagb_chart_cn-20261125-014133.txt",
+  "sha256": "aa19125d1d8b718361b65e693a9e40b76ff4a0e0cdead1a3144c290cbb0b455b",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

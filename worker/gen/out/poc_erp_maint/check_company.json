@@ -1,0 +1,44 @@
+{
+ "models": {
+  "maintenance.equipment": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "maintenance_team_id",
+    "partner_id"
+   ]
+  },
+  "maintenance.mixin": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "maintenance_team_id"
+   ]
+  },
+  "maintenance.request": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "equipment_id",
+    "maintenance_team_id"
+   ]
+  },
+  "maintenance.team": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  }
+ }
+}

@@ -1,0 +1,1122 @@
+{
+ "models": {
+  "account.account": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.account.models.account_account"
+   ]
+  },
+  "account.account.tag": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.analytic.account": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.analytic.line": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.analytic.plan": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.cash.rounding": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.fiscal.position": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.incoterms": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.journal": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.account.models.account_journal",
+    "copy_data:odoo.addons.mail.models.mail_alias_mixin_optional"
+   ]
+  },
+  "account.journal.group": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.lock_exception": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.account.models.account_lock_exception"
+   ]
+  },
+  "account.move": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.account.models.account_move",
+    "copy_data:odoo.addons.stock_account.models.account_move",
+    "copy_data:odoo.addons.account.models.account_move"
+   ]
+  },
+  "account.move.line": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.account.models.account_move_line"
+   ]
+  },
+  "account.payment": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.account.models.account_payment"
+   ]
+  },
+  "account.payment.method": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.payment.method.line": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.payment.term": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.peppol.clarification": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.reconcile.model": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.report": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy:odoo.addons.account.models.account_report"
+   ]
+  },
+  "account.report.column": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.report.external.value": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.tax": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "account.tax.group": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "auth.passkey.key": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "auth.passkey.key.create": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "auth_totp.device": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "barcode.nomenclature": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "barcode.rule": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "base.language.export": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "base.language.import": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "calendar.alarm": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "calendar.attendee": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.calendar.models.calendar_attendee"
+   ]
+  },
+  "calendar.calendar": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "calendar.event": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.calendar.models.calendar_event"
+   ]
+  },
+  "calendar.event.type": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "calendar.user": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "certificate.certificate": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "certificate.key": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "clearing.label": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.iap.lead.industry": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.iap.lead.industry.division": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.iap.lead.role": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.iap.lead.seniority": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.lead": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.crm.models.crm_lead"
+   ]
+  },
+  "crm.lost.reason": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.recurring.plan": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.stage": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.tag": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "crm.team": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.mail.models.mail_alias_mixin_optional"
+   ]
+  },
+  "decimal.precision": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "digest.digest": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "digest.tip": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "discuss.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "discuss.channel": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fetchmail.server": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "html_editor.converter.test.sub": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "iap.account": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "iap.service": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "iap.service.pack": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.access": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.act_url": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.act_window": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.act_window_close": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.actions": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.client": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.report": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.server": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.actions.todo": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.asset": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.attachment": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.base.models.ir_attachment"
+   ]
+  },
+  "ir.cron": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.embedded.actions": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.exports": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.exports.line": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.filters": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.base.models.ir_filters"
+   ]
+  },
+  "ir.logging": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.mail_server": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.model": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.model.constraint": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.model.data": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.base.models.ir_model"
+   ]
+  },
+  "ir.model.fields": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.model.fields.selection": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.model.relation": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.module.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.module.module": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.module.module.dependency": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.module.module.exclusion": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.profile": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.sequence": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "ir.ui.menu": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy:odoo.addons.base.models.ir_ui_menu"
+   ]
+  },
+  "ir.ui.view": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.base.models.ir_ui_view"
+   ]
+  },
+  "l10n_us.res.county": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "mail.activity.plan": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "mail.activity.type": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "mail.alias.mixin": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.mail.models.mail_alias_mixin_optional"
+   ]
+  },
+  "mail.alias.mixin.optional": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.mail.models.mail_alias_mixin_optional"
+   ]
+  },
+  "mail.canned.response": {
+   "callable_copy_fields": [
+    "source"
+   ],
+   "methods": []
+  },
+  "mail.guest": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "mail.message.subtype": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "mail.template": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy:odoo.addons.mail.models.mail_template"
+   ]
+  },
+  "onboarding.onboarding": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "payment.provider": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.payment.models.payment_provider",
+    "copy_data:odoo.addons.payment.models.payment_provider"
+   ]
+  },
+  "portal.entry": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "privacy.lookup.wizard": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.attribute": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.attribute.value": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.base.unit": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.combo": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.document": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.product.models.product_document"
+   ]
+  },
+  "product.pricelist": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.product": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy:odoo.addons.product.models.product_product"
+   ]
+  },
+  "product.removal": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.tag": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "product.template": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy:odoo.addons.stock.models.product",
+    "copy:odoo.addons.product.models.product_template"
+   ]
+  },
+  "project.milestone": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.project.models.project_milestone"
+   ]
+  },
+  "project.project": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.project.models.project_project",
+    "copy_data:odoo.addons.project.models.project_project",
+    "copy_data:odoo.addons.mail.models.mail_alias_mixin_optional"
+   ]
+  },
+  "project.project.stage": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "project.role": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "project.tags": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "project.task": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.project.models.project_task",
+    "copy_data:odoo.addons.project.models.project_task"
+   ]
+  },
+  "project.task.stage.report": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "project.task.type": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "project.template.create.wizard": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "project.update": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "purchase.bill.union": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "purchase.order": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.purchase.models.purchase_order"
+   ]
+  },
+  "report.layout": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "report.paperformat": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "report.project.task.user": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.city": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.company": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.base.models.res_company"
+   ]
+  },
+  "res.config.settings": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.base.models.res_config"
+   ]
+  },
+  "res.country": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.country.group": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.country.state": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.currency": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.groups": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.groups.privilege": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.lang": {
+   "callable_copy_fields": [
+    "code",
+    "name",
+    "url_code"
+   ],
+   "methods": []
+  },
+  "res.partner": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.partner.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.partner.industry": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.role": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.users": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.auth_signup.models.res_users",
+    "copy_data:odoo.addons.base.models.res_users"
+   ]
+  },
+  "res.users.apikeys": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "res.users.apikeys.description": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "resource.calendar": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "resource.calendar.leaves": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "resource.mixin": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.resource.models.resource_mixin"
+   ]
+  },
+  "resource.resource": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "return.reason": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "sale.order": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.sale.models.sale_order"
+   ]
+  },
+  "sale.order.line": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy_data:odoo.addons.sale_project.models.sale_order_line"
+   ]
+  },
+  "sale.order.template": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "sale.pdf.form.field": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "sale.report": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "sms.template": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "spreadsheet.dashboard": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "spreadsheet.dashboard.favorite.filters": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "spreadsheet.dashboard.group": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "spreadsheet.dashboard.share": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.location": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.lot": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.stock.models.stock_lot"
+   ]
+  },
+  "stock.package.type": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.picking.type": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.stock.models.stock_picking_type"
+   ]
+  },
+  "stock.quant": {
+   "callable_copy_fields": [],
+   "methods": [
+    "copy:odoo.addons.stock.models.stock_quant"
+   ]
+  },
+  "stock.reference": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.route": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.rule": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.scrap.reason.tag": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.storage.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "stock.warehouse": {
+   "callable_copy_fields": [
+    "code",
+    "name"
+   ],
+   "methods": []
+  },
+  "uom.uom": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "utm.stage": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "utm.tag": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "web_tour.tour": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "website": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "wizard.ir.model.menu.create": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  }
+ }
+}

@@ -1,0 +1,342 @@
+{
+ "hash": "d92e5b00ff9eaf5f7dd02b6d546ed75c095afcf9",
+ "lang": "en_US",
+ "lang_parameters": {
+  "code": "en_US",
+  "date_format": "%m/%d/%Y",
+  "decimal_point": ".",
+  "direction": "ltr",
+  "grouping": "[3,0]",
+  "name": "English (US)",
+  "thousands_sep": ",",
+  "time_format": "%I:%M:%S %p",
+  "week_start": 7
+ },
+ "modules": {
+  "account": {
+   "messages": []
+  },
+  "account_edi_proxy_client": {
+   "messages": []
+  },
+  "account_edi_ubl_cii": {
+   "messages": []
+  },
+  "account_payment": {
+   "messages": []
+  },
+  "account_peppol": {
+   "messages": []
+  },
+  "account_qr_code_sepa": {
+   "messages": []
+  },
+  "analytic": {
+   "messages": []
+  },
+  "api_doc": {
+   "messages": []
+  },
+  "auth_passkey": {
+   "messages": []
+  },
+  "auth_passkey_portal": {
+   "messages": []
+  },
+  "auth_signup": {
+   "messages": []
+  },
+  "auth_totp": {
+   "messages": []
+  },
+  "auth_totp_mail": {
+   "messages": []
+  },
+  "auth_totp_portal": {
+   "messages": []
+  },
+  "barcodes": {
+   "messages": []
+  },
+  "barcodes_gs1_nomenclature": {
+   "messages": []
+  },
+  "base": {
+   "messages": []
+  },
+  "base_address_extended": {
+   "messages": []
+  },
+  "base_import": {
+   "messages": []
+  },
+  "base_import_module": {
+   "messages": []
+  },
+  "base_install_request": {
+   "messages": []
+  },
+  "base_report_wkhtmltox": {
+   "messages": []
+  },
+  "base_setup": {
+   "messages": []
+  },
+  "bus": {
+   "messages": []
+  },
+  "calendar": {
+   "messages": []
+  },
+  "calendar_sms": {
+   "messages": []
+  },
+  "certificate": {
+   "messages": []
+  },
+  "contacts": {
+   "messages": []
+  },
+  "crm": {
+   "messages": []
+  },
+  "crm_iap_enrich": {
+   "messages": []
+  },
+  "crm_iap_mine": {
+   "messages": []
+  },
+  "crm_mail_plugin": {
+   "messages": []
+  },
+  "crm_sale_project": {
+   "messages": []
+  },
+  "crm_sms": {
+   "messages": []
+  },
+  "digest": {
+   "messages": []
+  },
+  "google_gmail": {
+   "messages": []
+  },
+  "html_editor": {
+   "messages": []
+  },
+  "http_routing": {
+   "messages": []
+  },
+  "iap": {
+   "messages": []
+  },
+  "iap_crm": {
+   "messages": []
+  },
+  "iap_mail": {
+   "messages": []
+  },
+  "l10n_be": {
+   "messages": []
+  },
+  "l10n_us": {
+   "messages": []
+  },
+  "l10n_us_account": {
+   "messages": []
+  },
+  "mail": {
+   "messages": []
+  },
+  "mail_bot": {
+   "messages": []
+  },
+  "mail_plugin": {
+   "messages": []
+  },
+  "microsoft_outlook": {
+   "messages": []
+  },
+  "mysubscription": {
+   "messages": []
+  },
+  "onboarding": {
+   "messages": []
+  },
+  "partner_autocomplete": {
+   "messages": []
+  },
+  "payment": {
+   "messages": []
+  },
+  "phone_validation": {
+   "messages": []
+  },
+  "portal": {
+   "messages": []
+  },
+  "portal_discuss": {
+   "messages": []
+  },
+  "portal_rating": {
+   "messages": []
+  },
+  "privacy_lookup": {
+   "messages": []
+  },
+  "product": {
+   "messages": []
+  },
+  "project": {
+   "messages": []
+  },
+  "project_account": {
+   "messages": []
+  },
+  "project_mail_plugin": {
+   "messages": []
+  },
+  "project_purchase": {
+   "messages": []
+  },
+  "project_purchase_stock": {
+   "messages": []
+  },
+  "project_sms": {
+   "messages": []
+  },
+  "project_stock": {
+   "messages": []
+  },
+  "project_stock_account": {
+   "messages": []
+  },
+  "project_todo": {
+   "messages": []
+  },
+  "purchase": {
+   "messages": []
+  },
+  "purchase_edi_ubl_bis3": {
+   "messages": []
+  },
+  "purchase_stock": {
+   "messages": []
+  },
+  "rating": {
+   "messages": []
+  },
+  "resource": {
+   "messages": []
+  },
+  "resource_mail": {
+   "messages": []
+  },
+  "rpc": {
+   "messages": []
+  },
+  "sale": {
+   "messages": []
+  },
+  "sale_crm": {
+   "messages": []
+  },
+  "sale_edi_ubl": {
+   "messages": []
+  },
+  "sale_management": {
+   "messages": []
+  },
+  "sale_margin": {
+   "messages": []
+  },
+  "sale_pdf_quote_builder": {
+   "messages": []
+  },
+  "sale_project": {
+   "messages": []
+  },
+  "sale_project_margin": {
+   "messages": []
+  },
+  "sale_project_stock": {
+   "messages": []
+  },
+  "sale_project_stock_account": {
+   "messages": []
+  },
+  "sale_purchase": {
+   "messages": []
+  },
+  "sale_purchase_project": {
+   "messages": []
+  },
+  "sale_purchase_stock": {
+   "messages": []
+  },
+  "sale_service": {
+   "messages": []
+  },
+  "sale_sms": {
+   "messages": []
+  },
+  "sale_stock": {
+   "messages": []
+  },
+  "sale_stock_margin": {
+   "messages": []
+  },
+  "sales_team": {
+   "messages": []
+  },
+  "sms": {
+   "messages": []
+  },
+  "spreadsheet": {
+   "messages": []
+  },
+  "spreadsheet_account": {
+   "messages": []
+  },
+  "spreadsheet_dashboard": {
+   "messages": []
+  },
+  "spreadsheet_dashboard_account": {
+   "messages": []
+  },
+  "spreadsheet_dashboard_sale": {
+   "messages": []
+  },
+  "spreadsheet_dashboard_stock_account": {
+   "messages": []
+  },
+  "stock": {
+   "messages": []
+  },
+  "stock_account": {
+   "messages": []
+  },
+  "stock_sms": {
+   "messages": []
+  },
+  "uom": {
+   "messages": []
+  },
+  "utm": {
+   "messages": []
+  },
+  "web": {
+   "messages": []
+  },
+  "web_hierarchy": {
+   "messages": []
+  },
+  "web_tour": {
+   "messages": []
+  },
+  "web_unsplash": {
+   "messages": []
+  }
+ },
+ "multi_lang": true
+}

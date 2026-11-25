@@ -1,0 +1,21 @@
+{
+ "payment.token": [
+  "id",
+  "display_name",
+  "provider_id",
+  "provider_code",
+  "company_id",
+  "payment_method_id",
+  "payment_method_code",
+  "payment_details",
+  "partner_id",
+  "provider_ref",
+  "transaction_ids",
+  "active",
+  "create_uid",
+  "create_date",
+  "write_uid",
+  "write_date",
+  "demo_simulated_state"
+ ]
+}

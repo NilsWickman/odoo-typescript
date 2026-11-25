@@ -1,0 +1,10 @@
+{
+ "zm": {
+  "commit": "5446af0d",
+  "date": "2026-11-25",
+  "proof": "vagb_zm_install",
+  "result": "results/evidence/poc_erp_zm-zm-vagb_zm_install-20261125-020745.txt",
+  "sha256": "74dddc1d055537fd7053ed34a7f1abbae33af51b2660645b5ce61e56536c83d9",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

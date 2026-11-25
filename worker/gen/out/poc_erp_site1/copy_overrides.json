@@ -1,0 +1,36 @@
+{
+ "models": {
+  "maintenance.equipment": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "maintenance.equipment.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "maintenance.stage": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "maintenance.team": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": [
+    "copy_data:odoo.addons.mail.models.mail_alias_mixin_optional"
+   ]
+  },
+  "res.partner.title": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  }
+ }
+}

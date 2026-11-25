@@ -1,0 +1,10 @@
+{
+ "at": {
+  "commit": "e743e115",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_at",
+  "result": "results/evidence/poc_erp_at-at-vagb_chart_at-20261125-012322.txt",
+  "sha256": "9516269fde1fd5bc89691349897ce4e290bd4945b21dff9021b7e74a46b61877",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

@@ -1,0 +1,315 @@
+{
+ "lunch.alert": {
+  "active": {
+   "const": true
+  },
+  "fri": {
+   "const": true
+  },
+  "mode": {
+   "const": "alert"
+  },
+  "mon": {
+   "const": true
+  },
+  "notification_time": {
+   "const": 10.0
+  },
+  "recipients": {
+   "const": "everyone"
+  },
+  "sat": {
+   "const": true
+  },
+  "sun": {
+   "const": true
+  },
+  "thu": {
+   "const": true
+  },
+  "tue": {
+   "const": true
+  },
+  "tz": {
+   "expr": "self.env.user.tz or 'UTC'",
+   "src": "odoo/addons/lunch/models/lunch_alert.py:38"
+  },
+  "wed": {
+   "const": true
+  }
+ },
+ "lunch.cashmove": {
+  "currency_id": {
+   "expr": "self.env.company.currency_id",
+   "src": "odoo/addons/lunch/models/lunch_cashmove.py:14"
+  },
+  "date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  },
+  "user_id": {
+   "expr": "self.env.uid",
+   "src": "odoo/addons/lunch/models/lunch_cashmove.py:16"
+  }
+ },
+ "lunch.cashmove.report": {},
+ "lunch.location": {
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/lunch/models/lunch_location.py:13"
+  }
+ },
+ "lunch.order": {
+  "active": {
+   "const": true
+  },
+  "company_id": {
+   "expr": "self.env.company.id",
+   "src": "odoo/addons/lunch/models/lunch_order.py:42"
+  },
+  "date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  },
+  "lunch_location_id": {
+   "expr": "self.env.user.last_lunch_location_id",
+   "src": "odoo/addons/lunch/models/lunch_order.py:31"
+  },
+  "notified": {
+   "const": false
+  },
+  "quantity": {
+   "const": 1
+  },
+  "state": {
+   "const": "new"
+  },
+  "user_id": {
+   "expr": "self.env.uid",
+   "src": "odoo/addons/lunch/models/lunch_order.py:30"
+  }
+ },
+ "lunch.product": {
+  "active": {
+   "const": true
+  }
+ },
+ "lunch.product.category": {
+  "active": {
+   "const": true
+  },
+  "image_1920": {
+   "callable": "odoo.addons.lunch.models.lunch_product_category.LunchProductCategory._default_image",
+   "src": "odoo/addons/lunch/models/lunch_product_category.py:13"
+  }
+ },
+ "lunch.supplier": {
+  "active": {
+   "const": true
+  },
+  "automatic_email_time": {
+   "const": 12.0
+  },
+  "delivery": {
+   "const": "no_delivery"
+  },
+  "fri": {
+   "const": true
+  },
+  "mon": {
+   "const": true
+  },
+  "responsible_id": {
+   "expr": "self.env.user",
+   "src": "odoo/addons/lunch/models/lunch_supplier.py:42"
+  },
+  "send_by": {
+   "const": "phone"
+  },
+  "thu": {
+   "const": true
+  },
+  "topping_label_1": {
+   "const": "Extras"
+  },
+  "topping_label_2": {
+   "const": "Beverages"
+  },
+  "topping_label_3": {
+   "const": "Extra Label 3"
+  },
+  "topping_quantity_1": {
+   "const": "0_more"
+  },
+  "topping_quantity_2": {
+   "const": "0_more"
+  },
+  "topping_quantity_3": {
+   "const": "0_more"
+  },
+  "tue": {
+   "const": true
+  },
+  "tz": {
+   "expr": "self.env.user.tz or 'UTC'",
+   "src": "odoo/addons/lunch/models/lunch_supplier.py:67"
+  },
+  "wed": {
+   "const": true
+  }
+ },
+ "lunch.topping": {
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/lunch/models/lunch_topping.py:14"
+  },
+  "topping_category": {
+   "const": 1
+  }
+ },
+ "res.company": {
+  "account_opening_date": {
+   "expr": "fields.Date.today()",
+   "src": "odoo/addons/account/models/company.py:177"
+  },
+  "account_peppol_proxy_state": {
+   "const": "not_registered"
+  },
+  "account_price_include": {
+   "const": "tax_excluded"
+  },
+  "active": {
+   "const": true
+  },
+  "alias_domain_id": {
+   "expr": "self._default_alias_domain_id()",
+   "src": "odoo/addons/mail/models/res_company.py:15"
+  },
+  "annual_inventory_day": {
+   "const": 31
+  },
+  "annual_inventory_month": {
+   "const": "12"
+  },
+  "autopost_bills": {
+   "const": true
+  },
+  "cost_method": {
+   "const": "standard"
+  },
+  "currency_id": {
+   "expr": "self._default_currency_id()",
+   "src": "odoo/odoo/addons/base/models/res_company.py:109"
+  },
+  "display_invoice_tax_company_currency": {
+   "const": true
+  },
+  "email_primary_color": {
+   "const": "#FFFFFF"
+  },
+  "email_secondary_color": {
+   "const": "#875A7B"
+  },
+  "expects_chart_of_accounts": {
+   "const": true
+  },
+  "fiscalyear_last_day": {
+   "const": 31
+  },
+  "fiscalyear_last_month": {
+   "const": "12"
+  },
+  "font": {
+   "const": "Lato"
+  },
+  "horizon_days": {
+   "const": 365
+  },
+  "inventory_period": {
+   "const": "manual"
+  },
+  "inventory_valuation": {
+   "const": "periodic"
+  },
+  "logo": {
+   "callable": "odoo.addons.base.models.res_company.ResCompany._get_logo",
+   "src": "odoo/odoo/addons/base/models/res_company.py:73"
+  },
+  "lunch_notify_message": {
+   "const": "Your lunch has been delivered.\nEnjoy your meal!"
+  },
+  "nomenclature_id": {
+   "callable": "odoo.addons.barcodes.models.res_company.ResCompany._get_default_nomenclature",
+   "src": "odoo/addons/barcodes/models/res_company.py:9"
+  },
+  "paperformat_id": {
+   "expr": "self.env.ref('base.paperformat_euro', raise_if_not_found=False)",
+   "src": "odoo/odoo/addons/base/models/res_company.py:130"
+  },
+  "pay_later_label": {
+   "const": "Confirm"
+  },
+  "pay_now_label": {
+   "const": "Pay now"
+  },
+  "picking_policy": {
+   "const": "direct"
+  },
+  "po_double_validation": {
+   "const": "one_step"
+  },
+  "po_double_validation_amount": {
+   "const": 5000
+  },
+  "po_lock": {
+   "const": "edit"
+  },
+  "portal_confirmation_sign": {
+   "const": true
+  },
+  "prepayment_percent": {
+   "const": 1.0
+  },
+  "quick_edit_mode": {
+   "const": "out_and_in_invoices"
+  },
+  "quotation_validity_days": {
+   "const": 30
+  },
+  "report_tables_id": {
+   "const": "light"
+  },
+  "return_validity_days": {
+   "const": 14
+  },
+  "sale_invoice_policy": {
+   "const": "order"
+  },
+  "security_lead": {
+   "const": 0
+  },
+  "sequence": {
+   "const": 10
+  },
+  "stock_confirmation_type": {
+   "const": "sms"
+  },
+  "stock_mail_confirmation_template_id": {
+   "callable": "odoo.addons.stock.models.res_company.ResCompany._default_confirmation_mail_template",
+   "src": "odoo/addons/stock/models/res_company.py:10"
+  },
+  "stock_move_email_validation": {
+   "const": false
+  },
+  "stock_sms_confirmation_template_id": {
+   "callable": "odoo.addons.stock_sms.models.res_company.ResCompany._default_confirmation_sms_picking_template",
+   "src": "odoo/addons/stock_sms/models/res_company.py:10"
+  },
+  "tax_calculation_rounding_method": {
+   "const": "round_globally"
+  },
+  "terms_type": {
+   "const": "plain"
+  }
+ }
+}

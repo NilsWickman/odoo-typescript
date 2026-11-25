@@ -1,0 +1,10 @@
+{
+ "kr": {
+  "commit": "b7017835",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_krs",
+  "result": "results/evidence/poc_erp_krs-kr-vagb_chart_krs-20261125-023836.txt",
+  "sha256": "44c8589f967bab50e55376e1da1113851862e7e59c1684a8bd0a63a80fbceece",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

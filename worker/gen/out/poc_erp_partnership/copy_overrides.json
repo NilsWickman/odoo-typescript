@@ -1,0 +1,10 @@
+{
+ "models": {
+  "res.partner.grade": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  }
+ }
+}

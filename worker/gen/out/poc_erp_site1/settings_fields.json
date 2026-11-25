@@ -1,0 +1,3015 @@
+{
+ "data": {
+  "mercado_pago_countries": [
+   "AR",
+   "BR",
+   "CL",
+   "CO",
+   "MX",
+   "PE",
+   "UY"
+  ],
+  "peppol_list": [
+   "AD",
+   "AL",
+   "AT",
+   "AX",
+   "BA",
+   "BE",
+   "BG",
+   "BL",
+   "CH",
+   "CY",
+   "CZ",
+   "DE",
+   "DK",
+   "EE",
+   "ES",
+   "FI",
+   "FR",
+   "GB",
+   "GF",
+   "GP",
+   "GR",
+   "HR",
+   "HU",
+   "IE",
+   "IS",
+   "IT",
+   "LI",
+   "LT",
+   "LU",
+   "LV",
+   "MC",
+   "ME",
+   "MF",
+   "MK",
+   "MQ",
+   "MT",
+   "NC",
+   "NL",
+   "NO",
+   "PF",
+   "PL",
+   "PM",
+   "PT",
+   "RE",
+   "RO",
+   "RS",
+   "SE",
+   "SI",
+   "SK",
+   "SM",
+   "TF",
+   "TR",
+   "VA",
+   "WF",
+   "YT"
+  ],
+  "stripe_countries": [
+   "AE",
+   "AT",
+   "AU",
+   "BE",
+   "BG",
+   "BR",
+   "CA",
+   "CH",
+   "CY",
+   "CZ",
+   "DE",
+   "DK",
+   "EE",
+   "ES",
+   "FI",
+   "FR",
+   "GB",
+   "GF",
+   "GI",
+   "GP",
+   "GR",
+   "HK",
+   "HR",
+   "HU",
+   "ID",
+   "IE",
+   "IT",
+   "JP",
+   "LI",
+   "LT",
+   "LU",
+   "LV",
+   "MF",
+   "MQ",
+   "MT",
+   "MX",
+   "MY",
+   "NL",
+   "NO",
+   "NZ",
+   "PH",
+   "PL",
+   "PT",
+   "RE",
+   "RO",
+   "SE",
+   "SG",
+   "SI",
+   "SK",
+   "TH",
+   "US",
+   "YT"
+  ]
+ },
+ "fields": {
+  "account_cash_basis_base_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_cash_basis_base_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_default_credit_limit": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "float"
+  },
+  "account_discount_expense_allocation_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_discount_expense_allocation_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_discount_income_allocation_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_discount_income_allocation_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_fiscal_country_id": {
+   "comodel": "res.country",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_is_token_out_of_sync": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_journal_early_pay_discount_gain_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_journal_early_pay_discount_gain_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_journal_early_pay_discount_loss_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_journal_early_pay_discount_loss_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_journal_suspense_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_journal_suspense_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_peppol_contact_email": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "account_peppol_edi_identification": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "account_peppol_edi_mode": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "account_peppol_edi_user": {
+   "comodel": "account_edi_proxy_client.user",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_peppol_migration_key": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "account_peppol_phone_number": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "account_peppol_proxy_state": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "account_peppol_purchase_journal_id": {
+   "comodel": "account.journal",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "account_price_include": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "account_storno": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "account_use_credit_limit": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "active_user_count": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "alias_domain_id": {
+   "comodel": "mail.alias.domain",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "allow_spontaneous_returns": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "annual_inventory_day": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "annual_inventory_month": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "auth_signup_reset_password": {
+   "comodel": null,
+   "config_parameter": "auth_signup.reset_password",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "auth_signup_template_user_id": {
+   "comodel": "res.users",
+   "config_parameter": "base.template_portal_user_id",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "many2one"
+  },
+  "auth_signup_uninvited": {
+   "comodel": null,
+   "config_parameter": "auth_signup.invitation_scope",
+   "default": {
+    "const": "b2c"
+   },
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "selection"
+  },
+  "auth_totp_enforce": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "auth_totp_policy": {
+   "comodel": null,
+   "config_parameter": "auth_totp.policy",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "selection"
+  },
+  "autopost_bills": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "barcode_separator": {
+   "comodel": null,
+   "config_parameter": "stock.barcode_separator",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "cash_rounding_loss_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "cash_rounding_profit_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "chart_template": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": "callable",
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "company_count": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "company_country_code": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "company_country_group_codes": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "json"
+  },
+  "company_currency_id": {
+   "comodel": "res.currency",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "company_id": {
+   "comodel": "res.company",
+   "config_parameter": null,
+   "default": "callable",
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "company_informations": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "text"
+  },
+  "company_name": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "country_code": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "create_date": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "datetime"
+  },
+  "create_uid": {
+   "comodel": "res.users",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "crm_auto_assignment_action": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "crm_auto_assignment_interval_number": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "crm_auto_assignment_interval_type": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "crm_auto_assignment_run_datetime": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "datetime"
+  },
+  "crm_use_auto_assignment": {
+   "comodel": null,
+   "config_parameter": "crm.lead.auto.assignment",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "currency_exchange_journal_id": {
+   "comodel": "account.journal",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "currency_id": {
+   "comodel": "res.currency",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "days_to_purchase": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "digest_emails": {
+   "comodel": null,
+   "config_parameter": "digest.default_digest_emails",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "digest_id": {
+   "comodel": "digest.digest",
+   "config_parameter": "digest.default_digest_id",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "many2one"
+  },
+  "display_account_storno": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "display_invoice_amount_total_words": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "display_invoice_tax_company_currency": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "display_name": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "display_product_images_on_so": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "document_sequence_editable": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "downpayment_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "downpayment_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "email_primary_color": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "email_secondary_color": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "expense_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "expense_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "expense_currency_exchange_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "expense_currency_exchange_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "external_email_server_default": {
+   "comodel": null,
+   "config_parameter": "base_setup.default_external_email_server",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "external_report_layout_id": {
+   "comodel": "ir.ui.view",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "fail_counter": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "force_restrictive_audit_trail": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "google_gmail_client_identifier": {
+   "comodel": null,
+   "config_parameter": "google_gmail_client_id",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "google_gmail_client_secret": {
+   "comodel": null,
+   "config_parameter": "google_gmail_client_secret",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "google_translate_api_key": {
+   "comodel": null,
+   "config_parameter": "mail.google_translate_api_key",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "group_analytic_accounting": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "analytic.group_analytic_accounting",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_auto_done_setting": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "sale.group_auto_done_setting",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_cash_rounding": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "account.group_cash_rounding",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_discount_per_so_line": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "sale.group_discount_per_so_line",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_lot_on_delivery_slip": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user",
+    "base.group_portal"
+   ],
+   "implied_group": "stock.group_lot_on_delivery_slip",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_lot_on_invoice": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock_account.group_lot_on_invoice",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_multi_currency": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "base.group_multi_currency",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_product_pricelist": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "product.group_product_pricelist",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_product_variant": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "product.group_product_variant",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_proforma_sales": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "sale.group_proforma_sales",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_project_stages": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "project.group_project_stages",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_sale_delivery_address": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "account.group_delivery_invoice_address",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_send_reminder": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": {
+    "const": true
+   },
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "purchase.group_send_reminder",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_services_and_material": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "sale.group_services_and_material",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_show_uom_price": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "product.group_show_uom_price",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_adv_location": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_adv_location",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_lot_print_gs1": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_stock_lot_print_gs1",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_multi_locations": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_stock_multi_locations",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_picking_batch": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_stock_picking_batch",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_production_lot": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user",
+    "base.group_portal"
+   ],
+   "implied_group": "stock.group_production_lot",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_sign_delivery": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_stock_sign_delivery",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_tracking_lot": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_tracking_lot",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_stock_tracking_owner": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_tracking_owner",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_uom": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "uom.group_uom",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_use_lead": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "crm.group_use_lead",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_use_recurring_revenues": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "crm.group_use_recurring_revenues",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_warning_purchase": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "purchase.group_warning_purchase",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_warning_sale": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "sale.group_warning_sale",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "group_warning_stock": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": [
+    "base.group_user"
+   ],
+   "implied_group": "stock.group_warning_stock",
+   "kind": "group",
+   "type": "boolean"
+  },
+  "has_accounting_entries": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "has_chart_of_accounts": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "horizon_days": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "id": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "income_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "income_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "income_currency_exchange_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "income_currency_exchange_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "incoterm_id": {
+   "comodel": "account.incoterms",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "installed_provider_id": {
+   "comodel": "payment.provider",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "invoice_mail_template_id": {
+   "comodel": "mail.template",
+   "config_parameter": "sale.default_invoice_email_template",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "many2one"
+  },
+  "invoice_terms": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "html"
+  },
+  "invoice_terms_html": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "html"
+  },
+  "is_account_peppol_eligible": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "is_installed_sale": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "is_membership_multi": {
+   "comodel": null,
+   "config_parameter": "sales_team.membership_multi",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "is_root_company": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "language_count": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "lead_enrich_auto": {
+   "comodel": null,
+   "config_parameter": "crm.iap.lead.enrich.setting",
+   "default": {
+    "const": "auto"
+   },
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "selection"
+  },
+  "lead_mining_in_pipeline": {
+   "comodel": null,
+   "config_parameter": "crm.lead_mining_in_pipeline",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "link_qr_code": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "lock_confirmed_po": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": "callable",
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "microsoft_outlook_client_identifier": {
+   "comodel": null,
+   "config_parameter": "microsoft_outlook_client_id",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "microsoft_outlook_client_secret": {
+   "comodel": null,
+   "config_parameter": "microsoft_outlook_client_secret",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "module_account_3way_match": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_accountant": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_avatax": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_bank_statement_extract": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_bank_statement_import_qif": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_batch_payment": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_budget": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_check_printing": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_extract": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_inter_company_rules": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_intrastat": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_invoice_extract": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_iso20022": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_loan_extract": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_payment": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_peppol": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_account_sepa_direct_debit": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_auth_ldap": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_auth_oauth": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_base_geolocalize": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_base_import": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_crm_iap_enrich": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_crm_iap_mine": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_currency_rate_live": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_delivery": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_google_address_autocomplete": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_google_calendar": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_google_gmail": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_google_recaptcha": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_hr_timesheet": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_l10n_eu_account_vies": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_l10n_us_direct_deposit": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_loyalty": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_maintenance_worksheet": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_microsoft_calendar": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_microsoft_outlook": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_partner_autocomplete": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_partnership": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_product_barcodelookup": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_product_email_template": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_product_expiry": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_product_margin": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_purchase_alternative": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_purchase_product_matrix": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_purchase_requisition": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_quality_control": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_quality_control_worksheet": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sale_amazon": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sale_commission": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sale_gelato": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sale_loyalty": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sale_pdf_quote_builder": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sale_product_matrix": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sale_shopee": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_sms": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_snailmail_account": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_stock_barcode": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_stock_barcode_barcodelookup": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_stock_dropshipping": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_stock_fleet": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_stock_landed_costs": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_stock_sms": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_voip": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_web_unsplash": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_website_cf_turnstile": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_website_crm_iap_reveal": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "module_website_partnership": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "module",
+   "type": "boolean"
+  },
+  "onboarding_payment_module": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "partner_autocomplete_insufficient_credit": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "pay_invoices_online": {
+   "comodel": null,
+   "config_parameter": "account_payment.enable_portal_payment",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "peppol_external_provider": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "peppol_parent_company_name": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "peppol_participation_role": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "peppol_purchase_journal_required": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "peppol_use_parent_company": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "picking_policy": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "po_double_validation": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "po_double_validation_amount": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "monetary"
+  },
+  "po_lock": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "po_order_approval": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": "callable",
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "portal_allow_api_keys": {
+   "comodel": null,
+   "config_parameter": "portal.allow_api_keys",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "portal_confirmation_pay": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "portal_confirmation_sign": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "predictive_lead_scoring_field_labels": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "predictive_lead_scoring_fields": {
+   "comodel": "crm.lead.scoring.frequency.field",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2many"
+  },
+  "predictive_lead_scoring_fields_str": {
+   "comodel": null,
+   "config_parameter": "crm.pls_fields",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "predictive_lead_scoring_start_date": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "date"
+  },
+  "predictive_lead_scoring_start_date_str": {
+   "comodel": null,
+   "config_parameter": "crm.pls_start_date",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "prepayment_percent": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "float"
+  },
+  "preview_ready": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "product_volume_volume_in_cubic_feet": {
+   "comodel": null,
+   "config_parameter": "product.volume_in_cubic_feet",
+   "default": {
+    "const": "0"
+   },
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "selection"
+  },
+  "product_weight_in_lbs": {
+   "comodel": null,
+   "config_parameter": "product.weight_in_lbs",
+   "default": {
+    "const": "0"
+   },
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "selection"
+  },
+  "profiling_enabled_until": {
+   "comodel": null,
+   "config_parameter": "base.profiling_enabled_until",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "datetime"
+  },
+  "purchase_tax_id": {
+   "comodel": "account.tax",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "qr_code": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "quick_edit_mode": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "quick_edit_mode_enabled": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "quotation_validity_days": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "replenish_on_order": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "report_footer": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "html"
+  },
+  "restrict_template_rendering": {
+   "comodel": null,
+   "config_parameter": "mail.restrict.template.rendering",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "restrictive_audit_trail": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "return_validity_days": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "routing_endpoint": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "char"
+  },
+  "routing_scheme": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "sale_automatic_invoice": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "sale_invoice_policy": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "sale_order_mandatory_product": {
+   "comodel": null,
+   "config_parameter": "sale.mandatory_product",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "sale_tax_id": {
+   "comodel": "account.tax",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "security_lead": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "integer"
+  },
+  "set_to_review_documents": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "sfu_client_source": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "text"
+  },
+  "sfu_server_key": {
+   "comodel": null,
+   "config_parameter": "mail.sfu_server_key",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "sfu_server_url": {
+   "comodel": null,
+   "config_parameter": "mail.sfu_server_url",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "show_effect": {
+   "comodel": null,
+   "config_parameter": "base_setup.show_effect",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "show_sale_receipts": {
+   "comodel": null,
+   "config_parameter": "account.show_sale_receipts",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "show_sol_numbers": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "stock_confirmation_type": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "stock_move_email_validation": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "stock_sms_confirmation_template_id": {
+   "comodel": "sms.template",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "stock_text_confirmation": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "tax_calculation_rounding_method": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "tax_cash_basis_journal_id": {
+   "comodel": "account.journal",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "tax_exigibility": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "tenor_api_key": {
+   "comodel": null,
+   "config_parameter": "discuss.klipy_api_key",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "terms_type": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "selection"
+  },
+  "transfer_account_active": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "transfer_account_id": {
+   "comodel": "account.account",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  },
+  "twilio_account_sid": {
+   "comodel": null,
+   "config_parameter": "mail.twilio_account_sid",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "twilio_account_token": {
+   "comodel": null,
+   "config_parameter": "mail.twilio_account_token",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "unsplash_access_key": {
+   "comodel": null,
+   "config_parameter": "unsplash.access_key",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "unsplash_app_id": {
+   "comodel": null,
+   "config_parameter": "unsplash.app_id",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "use_call_server": {
+   "comodel": null,
+   "config_parameter": "mail.use_call_server",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "use_custom_sfu_client": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "use_google_translate_api": {
+   "comodel": null,
+   "config_parameter": "mail.use_google_translate_api",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "use_invoice_terms": {
+   "comodel": null,
+   "config_parameter": "account.use_invoice_terms",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "use_security_lead": {
+   "comodel": null,
+   "config_parameter": "sale_stock.use_security_lead",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "use_sfu_server": {
+   "comodel": null,
+   "config_parameter": "mail.use_sfu_server",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "use_tenor_api": {
+   "comodel": null,
+   "config_parameter": "discuss.use_klipy_api",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "use_twilio_rtc_servers": {
+   "comodel": null,
+   "config_parameter": "mail.use_twilio_rtc_servers",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "boolean"
+  },
+  "vat_check_vies": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "vat_disabled": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "vat_disabled_available": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "boolean"
+  },
+  "web_app_name": {
+   "comodel": null,
+   "config_parameter": "web.web_app_name",
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "config",
+   "type": "char"
+  },
+  "write_date": {
+   "comodel": null,
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "datetime"
+  },
+  "write_uid": {
+   "comodel": "res.users",
+   "config_parameter": null,
+   "default": null,
+   "default_model": null,
+   "group": null,
+   "implied_group": null,
+   "kind": "other",
+   "type": "many2one"
+  }
+ },
+ "overrides": {
+  "default_get": [],
+  "get_values": [
+   "auth_totp_mail",
+   "crm_iap_enrich",
+   "mail",
+   "purchase_stock"
+  ]
+ }
+}

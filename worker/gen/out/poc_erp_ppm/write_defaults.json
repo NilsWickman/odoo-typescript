@@ -1,0 +1,42 @@
+{
+ "purchase.order": {
+  "company_id": {
+   "expr": "self.env.company.id",
+   "src": "odoo/addons/purchase/models/purchase_order.py:177"
+  },
+  "date_order": {
+   "callable": "odoo.orm.fields_temporal.Datetime.now",
+   "src": "odoo/odoo/orm/fields_temporal.py:211"
+  },
+  "grid_update": {
+   "const": false
+  },
+  "invoice_count": {
+   "const": 0
+  },
+  "invoice_status": {
+   "const": "no"
+  },
+  "locked": {
+   "const": false
+  },
+  "name": {
+   "expr": "_('New')",
+   "src": "odoo/addons/purchase/models/purchase_order.py:80"
+  },
+  "picking_type_id": {
+   "callable": "odoo.addons.purchase_stock.models.purchase_order.PurchaseOrder._default_picking_type",
+   "src": "odoo/addons/purchase_stock/models/purchase_order.py:16"
+  },
+  "priority": {
+   "const": "0"
+  },
+  "state": {
+   "const": "draft"
+  },
+  "user_id": {
+   "expr": "self.env.user",
+   "src": "odoo/addons/purchase/models/purchase_order.py:176"
+  }
+ }
+}

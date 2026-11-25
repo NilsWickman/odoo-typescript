@@ -1,0 +1,156 @@
+{
+  "model": "res.partner",
+  "method": "web_read",
+  "args": [
+    [
+      16
+    ]
+  ],
+  "kwargs": {
+    "context": {
+      "lang": "en_US",
+      "tz": "Europe/Brussels",
+      "uid": 2,
+      "allowed_company_ids": [
+        1
+      ],
+      "default_is_company": true
+    },
+    "specification": {
+      "same_vat_partner_id": {
+        "fields": {
+          "display_name": {}
+        },
+        "context": {
+          "show_address": false,
+          "show_identifier": false
+        }
+      },
+      "vat_label": {},
+      "image_1920": {},
+      "avatar_128": {},
+      "name": {},
+      "parent_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "is_blacklisted": {},
+      "email": {},
+      "phone_blacklisted": {},
+      "phone_sanitized": {},
+      "phone_formatted": {},
+      "phone": {},
+      "type_address_label": {},
+      "street": {},
+      "street2": {},
+      "country_enforce_cities": {},
+      "city_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "city": {},
+      "state_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "zip": {},
+      "country_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "vat": {},
+      "additional_identifiers": {},
+      "function": {},
+      "website": {},
+      "lang": {},
+      "category_id": {
+        "fields": {
+          "display_name": {},
+          "color": {}
+        }
+      },
+      "properties": {},
+      "child_ids": {
+        "fields": {
+          "color": {},
+          "type": {},
+          "is_company": {},
+          "image_128": {},
+          "name": {},
+          "email": {},
+          "phone": {},
+          "function": {},
+          "city": {},
+          "country_id": {
+            "fields": {
+              "display_name": {}
+            }
+          },
+          "avatar_128": {},
+          "write_date": {},
+          "parent_id": {
+            "fields": {}
+          },
+          "image_1920": {},
+          "phone_sanitized": {},
+          "phone_formatted": {},
+          "type_address_label": {},
+          "street": {},
+          "street2": {},
+          "country_enforce_cities": {},
+          "city_id": {
+            "fields": {}
+          },
+          "state_id": {
+            "fields": {}
+          },
+          "zip": {},
+          "company_id": {
+            "fields": {}
+          },
+          "comment": {},
+          "lang": {},
+          "user_ids": {}
+        },
+        "context": {
+          "default_type": "contact"
+        },
+        "limit": 40
+      },
+      "user_id": {
+        "fields": {
+          "write_date": {},
+          "display_name": {}
+        }
+      },
+      "ref": {},
+      "company_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "industry_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "comment": {},
+      "active": {},
+      "type": {},
+      "user_ids": {},
+      "active_lang_count": {},
+      "properties_base_definition_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "write_date": {},
+      "available_additional_identifiers_metadata": {},
+      "display_name": {}
+    }
+  }
+}

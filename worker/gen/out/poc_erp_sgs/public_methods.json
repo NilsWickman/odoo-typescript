@@ -1,0 +1,10 @@
+{
+ "models": {
+  "account.edi.xml.pint_sg": [
+   "add_invoice_line_optional_nodes",
+   "add_invoice_optional_nodes",
+   "format_float",
+   "module_installed"
+  ]
+ }
+}

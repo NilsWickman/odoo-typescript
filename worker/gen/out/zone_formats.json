@@ -1,0 +1,14 @@
+{
+ "babel_version": "2.10.3",
+ "locales": {
+  "en_US": {
+   "gmt": "GMT%s"
+  },
+  "fr_FR": {
+   "gmt": "UTC%s"
+  },
+  "sv_SE": {
+   "gmt": "GMT%s"
+  }
+ }
+}

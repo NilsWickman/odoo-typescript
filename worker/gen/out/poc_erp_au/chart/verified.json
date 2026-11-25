@@ -1,0 +1,10 @@
+{
+ "au": {
+  "commit": "6c5e2170",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_au",
+  "result": "results/evidence/poc_erp_au-au-vagb_chart_au-20261125-013408.txt",
+  "sha256": "b948f066eaa80b93ad0a2a2fbee03437eaa1936d1461cf2d507e914ecb0114db",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

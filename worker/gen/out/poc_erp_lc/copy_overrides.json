@@ -1,0 +1,10 @@
+{
+ "models": {
+  "stock.landed.cost.lines": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  }
+ }
+}

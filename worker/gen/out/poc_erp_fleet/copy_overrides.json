@@ -1,0 +1,52 @@
+{
+ "models": {
+  "fleet.service.type": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fleet.vehicle.cost.report": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fleet.vehicle.log.contract": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fleet.vehicle.model": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fleet.vehicle.model.brand": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fleet.vehicle.model.category": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fleet.vehicle.state": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  },
+  "fleet.vehicle.tag": {
+   "callable_copy_fields": [
+    "name"
+   ],
+   "methods": []
+  }
+ }
+}

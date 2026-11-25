@@ -1,0 +1,10 @@
+{
+ "lu": {
+  "commit": "5446af0d",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_lu",
+  "result": "results/evidence/poc_erp_lu-lu-vagb_chart_lu-20261125-020201.txt",
+  "sha256": "afd9eb37c6e21b308451ed29744707ac436b7a1f184fee8719f168fdee8d9d96",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

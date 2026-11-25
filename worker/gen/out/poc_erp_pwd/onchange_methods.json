@@ -1,0 +1,2986 @@
+{
+ "_source": "worker/gen/onchange_methods.py",
+ "models": {
+  "account.account": {
+   "fields": {
+    "account_type": [
+     "_onchange_account_type"
+    ],
+    "code": [
+     "_onchange_code"
+    ],
+    "name": [
+     "_onchange_name"
+    ]
+   },
+   "methods": {
+    "_onchange_account_type": {
+     "fields": [
+      "account_type"
+     ],
+     "source": "addons/account/models/account_account.py:880"
+    },
+    "_onchange_code": {
+     "fields": [
+      "code"
+     ],
+     "source": "addons/account/models/account_account.py:905"
+    },
+    "_onchange_name": {
+     "fields": [
+      "name"
+     ],
+     "source": "addons/account/models/account_account.py:890"
+    }
+   }
+  },
+  "account.analytic.line": {
+   "fields": {
+    "currency_id": [
+     "on_change_unit_amount"
+    ],
+    "product_id": [
+     "on_change_unit_amount"
+    ],
+    "product_uom_id": [
+     "on_change_unit_amount"
+    ],
+    "unit_amount": [
+     "on_change_unit_amount"
+    ]
+   },
+   "methods": {
+    "on_change_unit_amount": {
+     "fields": [
+      "product_id",
+      "product_uom_id",
+      "unit_amount",
+      "currency_id"
+     ],
+     "source": "addons/account/models/account_analytic_line.py:138"
+    }
+   }
+  },
+  "account.analytic.plan": {
+   "fields": {
+    "parent_id": [
+     "_onchange_parent_id"
+    ]
+   },
+   "methods": {
+    "_onchange_parent_id": {
+     "fields": [
+      "parent_id"
+     ],
+     "source": "addons/analytic/models/analytic_plan.py:182"
+    }
+   }
+  },
+  "account.fiscal.position": {
+   "fields": {
+    "country_group_id": [
+     "_onchange_country_group_id"
+    ],
+    "country_id": [
+     "_onchange_country_id",
+     "_onchange_foreign_vat"
+    ],
+    "foreign_vat": [
+     "_onchange_foreign_vat"
+    ]
+   },
+   "methods": {
+    "_onchange_country_group_id": {
+     "fields": [
+      "country_group_id"
+     ],
+     "source": "addons/account/models/partner.py:187"
+    },
+    "_onchange_country_id": {
+     "fields": [
+      "country_id"
+     ],
+     "source": "addons/account/models/partner.py:180"
+    },
+    "_onchange_foreign_vat": {
+     "fields": [
+      "country_id",
+      "foreign_vat"
+     ],
+     "source": "addons/account/models/partner.py:148"
+    }
+   }
+  },
+  "account.journal": {
+   "fields": {
+    "incoming_einvoice_notification_email": [
+     "_onchange_incoming_einvoice_notification_email"
+    ],
+    "type": [
+     "_onchange_type"
+    ]
+   },
+   "methods": {
+    "_onchange_incoming_einvoice_notification_email": {
+     "fields": [
+      "incoming_einvoice_notification_email"
+     ],
+     "source": "addons/account/models/account_journal.py:711"
+    },
+    "_onchange_type": {
+     "fields": [
+      "type"
+     ],
+     "source": "addons/account/models/account_journal.py:541"
+    }
+   }
+  },
+  "account.move": {
+   "fields": {
+    "company_id": [
+     "_inverse_company_id",
+     "_onchange_partner_id",
+     "_quick_edit_mode_suggest_invoice_date"
+    ],
+    "currency_id": [
+     "_inverse_currency_id"
+    ],
+    "date": [
+     "_onchange_date"
+    ],
+    "document_tax_mode": [
+     "_onchange_document_tax_mode"
+    ],
+    "fiscal_position_id": [
+     "_onchange_fpos_id_show_update_fpos"
+    ],
+    "highest_name": [
+     "_onchange_name_warning"
+    ],
+    "invoice_cash_rounding_id": [
+     "_onchange_ineffective_cash_rounding"
+    ],
+    "invoice_line_ids": [
+     "_onchange_quick_edit_line_ids"
+    ],
+    "invoice_payment_term_id": [
+     "_inverse_invoice_payment_term_id"
+    ],
+    "invoice_vendor_bill_id": [
+     "_onchange_invoice_vendor_bill"
+    ],
+    "journal_id": [
+     "_inverse_journal_id",
+     "_onchange_journal_id",
+     "_quick_edit_mode_suggest_invoice_date"
+    ],
+    "move_type": [
+     "<change_default>"
+    ],
+    "name": [
+     "_onchange_name_warning"
+    ],
+    "partner_id": [
+     "_inverse_partner_id",
+     "_onchange_partner_id",
+     "_onchange_quick_edit_total_amount",
+     "<change_default>"
+    ],
+    "payment_reference": [
+     "_inverse_payment_reference"
+    ],
+    "purchase_id": [
+     "_onchange_purchase_auto_complete"
+    ],
+    "purchase_vendor_bill_id": [
+     "_onchange_purchase_auto_complete"
+    ],
+    "quick_edit_mode": [
+     "_quick_edit_mode_suggest_invoice_date"
+    ],
+    "quick_edit_total_amount": [
+     "_onchange_quick_edit_total_amount"
+    ],
+    "tax_totals": [
+     "_onchange_ineffective_cash_rounding"
+    ]
+   },
+   "methods": {
+    "_inverse_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/account/models/account_move.py:2737"
+    },
+    "_inverse_currency_id": {
+     "fields": [
+      "currency_id"
+     ],
+     "source": "addons/account/models/account_move.py:2748"
+    },
+    "_inverse_invoice_payment_term_id": {
+     "fields": [
+      "invoice_payment_term_id"
+     ],
+     "source": "addons/account/models/account_move.py:2772"
+    },
+    "_inverse_journal_id": {
+     "fields": [
+      "journal_id"
+     ],
+     "source": "addons/account/models/account_move.py:2755"
+    },
+    "_inverse_partner_id": {
+     "fields": [
+      "partner_id"
+     ],
+     "source": "addons/account/models/account_move.py:2728"
+    },
+    "_inverse_payment_reference": {
+     "fields": [
+      "payment_reference"
+     ],
+     "source": "addons/account/models/account_move.py:2766"
+    },
+    "_onchange_date": {
+     "fields": [
+      "date"
+     ],
+     "source": "addons/account/models/account_move.py:2788"
+    },
+    "_onchange_document_tax_mode": {
+     "fields": [
+      "document_tax_mode"
+     ],
+     "source": "addons/account/models/account_move.py:2898"
+    },
+    "_onchange_fpos_id_show_update_fpos": {
+     "fields": [
+      "fiscal_position_id"
+     ],
+     "source": "addons/account/models/account_move.py:2808"
+    },
+    "_onchange_ineffective_cash_rounding": {
+     "fields": [
+      "invoice_cash_rounding_id",
+      "tax_totals"
+     ],
+     "source": "addons/account/models/account_move.py:2907"
+    },
+    "_onchange_invoice_vendor_bill": {
+     "fields": [
+      "invoice_vendor_bill_id"
+     ],
+     "source": "addons/account/models/account_move.py:2793"
+    },
+    "_onchange_journal_id": {
+     "fields": [
+      "journal_id"
+     ],
+     "source": "addons/account/models/account_move.py:2892"
+    },
+    "_onchange_name_warning": {
+     "fields": [
+      "name",
+      "highest_name"
+     ],
+     "source": "addons/account/models/account_move.py:2824"
+    },
+    "_onchange_partner_id": {
+     "fields": [
+      "partner_id",
+      "company_id"
+     ],
+     "source": "addons/purchase/models/account_invoice.py:121"
+    },
+    "_onchange_purchase_auto_complete": {
+     "fields": [
+      "purchase_vendor_bill_id",
+      "purchase_id"
+     ],
+     "source": "addons/purchase/models/account_invoice.py:39"
+    },
+    "_onchange_quick_edit_line_ids": {
+     "fields": [
+      "invoice_line_ids"
+     ],
+     "source": "addons/account/models/account_move.py:4664"
+    },
+    "_onchange_quick_edit_total_amount": {
+     "fields": [
+      "quick_edit_total_amount",
+      "partner_id"
+     ],
+     "source": "addons/account/models/account_move.py:4641"
+    },
+    "_quick_edit_mode_suggest_invoice_date": {
+     "fields": [
+      "quick_edit_mode",
+      "journal_id",
+      "company_id"
+     ],
+     "source": "addons/account/models/account_move.py:4626"
+    }
+   },
+   "onchange_override": [
+    "account"
+   ]
+  },
+  "account.move.line": {
+   "fields": {
+    "account_id": [
+     "_inverse_account_id"
+    ],
+    "amount_currency": [
+     "_inverse_amount_currency"
+    ],
+    "credit": [
+     "_inverse_credit"
+    ],
+    "currency_id": [
+     "_inverse_amount_currency"
+    ],
+    "debit": [
+     "_inverse_debit"
+    ],
+    "partner_id": [
+     "_inverse_partner_id"
+    ],
+    "product_id": [
+     "_inverse_product_id"
+    ]
+   },
+   "methods": {
+    "_inverse_account_id": {
+     "fields": [
+      "account_id"
+     ],
+     "source": "addons/account/models/account_move_line.py:1814"
+    },
+    "_inverse_amount_currency": {
+     "fields": [
+      "amount_currency",
+      "currency_id"
+     ],
+     "source": "addons/account/models/account_move_line.py:1767"
+    },
+    "_inverse_credit": {
+     "fields": [
+      "credit"
+     ],
+     "source": "addons/account/models/account_move_line.py:1787"
+    },
+    "_inverse_debit": {
+     "fields": [
+      "debit"
+     ],
+     "source": "addons/account/models/account_move_line.py:1779"
+    },
+    "_inverse_partner_id": {
+     "fields": [
+      "partner_id"
+     ],
+     "source": "addons/account/models/account_move_line.py:1753"
+    },
+    "_inverse_product_id": {
+     "fields": [
+      "product_id"
+     ],
+     "source": "addons/account/models/account_move_line.py:1759"
+    }
+   }
+  },
+  "account.payment": {
+   "fields": {
+    "journal_id": [
+     "_onchange_set_payment_token_id"
+    ],
+    "partner_id": [
+     "_onchange_set_payment_token_id"
+    ],
+    "payment_method_line_id": [
+     "_onchange_set_payment_token_id"
+    ]
+   },
+   "methods": {
+    "_onchange_set_payment_token_id": {
+     "fields": [
+      "partner_id",
+      "payment_method_line_id",
+      "journal_id"
+     ],
+     "source": "addons/account_payment/models/account_payment.py:116"
+    }
+   }
+  },
+  "account.payment.register": {
+   "fields": {
+    "amount": [
+     "_onchange_amount"
+    ],
+    "currency_id": [
+     "_onchange_currency_id"
+    ],
+    "payment_date": [
+     "_onchange_payment_date"
+    ]
+   },
+   "methods": {
+    "_onchange_amount": {
+     "fields": [
+      "amount"
+     ],
+     "source": "addons/account/wizard/account_payment_register.py:735"
+    },
+    "_onchange_currency_id": {
+     "fields": [
+      "currency_id"
+     ],
+     "source": "addons/account/wizard/account_payment_register.py:752"
+    },
+    "_onchange_payment_date": {
+     "fields": [
+      "payment_date"
+     ],
+     "source": "addons/account/wizard/account_payment_register.py:765"
+    }
+   }
+  },
+  "account.reconcile.model.line": {
+   "fields": {
+    "amount_type": [
+     "_onchange_amount_type"
+    ]
+   },
+   "methods": {
+    "_onchange_amount_type": {
+     "fields": [
+      "amount_type"
+     ],
+     "source": "addons/account/models/account_reconcile_model.py:61"
+    }
+   }
+  },
+  "account.report": {
+   "fields": {
+    "active": [
+     "_inverse_active"
+    ],
+    "availability_condition": [
+     "_onchange_availability_condition"
+    ]
+   },
+   "methods": {
+    "_inverse_active": {
+     "fields": [
+      "active"
+     ],
+     "source": "addons/account/models/account_report.py:386"
+    },
+    "_onchange_availability_condition": {
+     "fields": [
+      "availability_condition"
+     ],
+     "source": "addons/account/models/account_report.py:299"
+    }
+   }
+  },
+  "account.report.expression": {
+   "fields": {
+    "engine": [
+     "_set_figure_type_for_reference_engine"
+    ],
+    "model_id": [
+     "_inverse_model_id"
+    ]
+   },
+   "methods": {
+    "_inverse_model_id": {
+     "fields": [
+      "model_id"
+     ],
+     "source": "addons/account/models/account_report.py:779"
+    },
+    "_set_figure_type_for_reference_engine": {
+     "fields": [
+      "engine"
+     ],
+     "source": "addons/account/models/account_report.py:785"
+    }
+   }
+  },
+  "account.report.line": {
+   "fields": {
+    "user_groupby": [
+     "_onchange_user_groupby"
+    ]
+   },
+   "methods": {
+    "_onchange_user_groupby": {
+     "fields": [
+      "user_groupby"
+     ],
+     "source": "addons/account/models/account_report.py:514"
+    }
+   }
+  },
+  "account.setup.bank.manual.config": {
+   "fields": {
+    "account_number": [
+     "_onchange_account_number"
+    ],
+    "linked_journal_id": [
+     "_onchange_new_journal_related_data"
+    ]
+   },
+   "methods": {
+    "_onchange_account_number": {
+     "fields": [
+      "account_number"
+     ],
+     "source": "addons/account/wizard/setup_wizards.py:119"
+    },
+    "_onchange_new_journal_related_data": {
+     "fields": [
+      "linked_journal_id"
+     ],
+     "source": "addons/account/wizard/setup_wizards.py:136"
+    }
+   }
+  },
+  "account.tax": {
+   "fields": {
+    "amount_type": [
+     "onchange_amount_type"
+    ],
+    "l10n_us_jurisdiction_type": [
+     "_onchange_l10n_us_jurisdiction"
+    ],
+    "l10n_us_state_id": [
+     "_onchange_l10n_us_jurisdiction"
+    ],
+    "price_include": [
+     "onchange_price_include"
+    ],
+    "ubl_cii_requires_exemption_reason": [
+     "_onchange_ubl_cii_tax_category_code"
+    ]
+   },
+   "methods": {
+    "_onchange_l10n_us_jurisdiction": {
+     "fields": [
+      "l10n_us_jurisdiction_type",
+      "l10n_us_state_id"
+     ],
+     "source": "addons/l10n_us_account/models/account_tax.py:62"
+    },
+    "_onchange_ubl_cii_tax_category_code": {
+     "fields": [
+      "ubl_cii_requires_exemption_reason"
+     ],
+     "source": "addons/account_edi_ubl_cii/models/account_tax.py:128"
+    },
+    "onchange_amount_type": {
+     "fields": [
+      "amount_type"
+     ],
+     "source": "addons/account/models/account_tax.py:671"
+    },
+    "onchange_price_include": {
+     "fields": [
+      "price_include"
+     ],
+     "source": "addons/account/models/account_tax.py:678"
+    }
+   }
+  },
+  "account.tax.repartition.line": {
+   "fields": {
+    "repartition_type": [
+     "_onchange_repartition_type"
+    ]
+   },
+   "methods": {
+    "_onchange_repartition_type": {
+     "fields": [
+      "repartition_type"
+     ],
+     "source": "addons/account/models/account_tax.py:5239"
+    }
+   }
+  },
+  "base.document.layout": {
+   "fields": {
+    "company_id": [
+     "_onchange_company_id"
+    ],
+    "custom_colors": [
+     "_onchange_custom_colors"
+    ],
+    "logo": [
+     "_onchange_logo"
+    ],
+    "report_layout_id": [
+     "_onchange_report_layout_id"
+    ]
+   },
+   "methods": {
+    "_onchange_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/account/wizard/base_document_layout.py:179"
+    },
+    "_onchange_custom_colors": {
+     "fields": [
+      "custom_colors"
+     ],
+     "source": "addons/web/models/base_document_layout.py:144"
+    },
+    "_onchange_logo": {
+     "fields": [
+      "logo"
+     ],
+     "source": "addons/web/models/base_document_layout.py:156"
+    },
+    "_onchange_report_layout_id": {
+     "fields": [
+      "report_layout_id"
+     ],
+     "source": "addons/web/models/base_document_layout.py:151"
+    }
+   }
+  },
+  "calendar.alarm": {
+   "fields": {
+    "alarm_type": [
+     "_onchange_duration_interval"
+    ],
+    "duration": [
+     "_onchange_duration_interval"
+    ],
+    "interval": [
+     "_onchange_duration_interval"
+    ],
+    "notify_responsible": [
+     "_onchange_duration_interval"
+    ]
+   },
+   "methods": {
+    "_onchange_duration_interval": {
+     "fields": [
+      "duration",
+      "interval",
+      "alarm_type",
+      "notify_responsible"
+     ],
+     "source": "addons/calendar/models/calendar_alarm.py:67"
+    }
+   }
+  },
+  "calendar.event": {
+   "fields": {
+    "allday": [
+     "_onchange_allday"
+    ],
+    "name": [
+     "_onchange_name_extract_time"
+    ],
+    "start_date": [
+     "_onchange_date"
+    ],
+    "stop_date": [
+     "_onchange_date"
+    ]
+   },
+   "methods": {
+    "_onchange_allday": {
+     "fields": [
+      "allday"
+     ],
+     "source": "addons/calendar/models/calendar_event.py:337"
+    },
+    "_onchange_date": {
+     "fields": [
+      "start_date",
+      "stop_date"
+     ],
+     "source": "addons/calendar/models/calendar_event.py:553"
+    },
+    "_onchange_name_extract_time": {
+     "fields": [
+      "name"
+     ],
+     "source": "addons/calendar/models/calendar_event.py:753"
+    }
+   }
+  },
+  "crm.iap.lead.mining.request": {
+   "fields": {
+    "available_state_ids": [
+     "_onchange_available_state_ids"
+    ],
+    "company_size_max": [
+     "_onchange_company_size_max"
+    ],
+    "company_size_min": [
+     "_onchange_company_size_min"
+    ],
+    "country_ids": [
+     "_onchange_country_ids"
+    ],
+    "lead_number": [
+     "_onchange_lead_number"
+    ]
+   },
+   "methods": {
+    "_onchange_available_state_ids": {
+     "fields": [
+      "available_state_ids"
+     ],
+     "source": "addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:127"
+    },
+    "_onchange_company_size_max": {
+     "fields": [
+      "company_size_max"
+     ],
+     "source": "addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:151"
+    },
+    "_onchange_company_size_min": {
+     "fields": [
+      "company_size_min"
+     ],
+     "source": "addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:144"
+    },
+    "_onchange_country_ids": {
+     "fields": [
+      "country_ids"
+     ],
+     "source": "addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:140"
+    },
+    "_onchange_lead_number": {
+     "fields": [
+      "lead_number"
+     ],
+     "source": "addons/crm_iap_mine/models/crm_iap_lead_mining_request.py:133"
+    }
+   }
+  },
+  "crm.lead": {
+   "fields": {
+    "zip": [
+     "<change_default>"
+    ]
+   },
+   "methods": {}
+  },
+  "crm.lead2opportunity.partner.mass": {
+   "fields": {
+    "duplicated_lead_ids": [
+     "_onchange_duplicated_lead_ids"
+    ]
+   },
+   "methods": {
+    "_onchange_duplicated_lead_ids": {
+     "fields": [
+      "duplicated_lead_ids"
+     ],
+     "source": "addons/crm/wizard/crm_lead_to_opportunity_mass.py:66"
+    }
+   }
+  },
+  "crm.stage": {
+   "fields": {
+    "is_won": [
+     "_onchange_is_won"
+    ]
+   },
+   "methods": {
+    "_onchange_is_won": {
+     "fields": [
+      "is_won"
+     ],
+     "source": "addons/crm/models/crm_stage.py:57"
+    }
+   }
+  },
+  "crm.team": {
+   "fields": {
+    "use_leads": [
+     "_onchange_use_leads_opportunities"
+    ],
+    "use_opportunities": [
+     "_onchange_use_leads_opportunities"
+    ]
+   },
+   "methods": {
+    "_onchange_use_leads_opportunities": {
+     "fields": [
+      "use_leads",
+      "use_opportunities"
+     ],
+     "source": "addons/crm/models/crm_team.py:101"
+    }
+   }
+  },
+  "crm.team.member": {
+   "fields": {
+    "assignment_rules": [
+     "_onchange_assignment_rules"
+    ]
+   },
+   "methods": {
+    "_onchange_assignment_rules": {
+     "fields": [
+      "assignment_rules"
+     ],
+     "source": "addons/crm/models/crm_team_member.py:48"
+    }
+   }
+  },
+  "decimal.precision": {
+   "fields": {
+    "digits": [
+     "_onchange_digits_warning"
+    ]
+   },
+   "methods": {
+    "_onchange_digits_warning": {
+     "fields": [
+      "digits"
+     ],
+     "source": "odoo/addons/base/models/decimal_precision.py:30"
+    }
+   }
+  },
+  "digest.digest": {
+   "fields": {
+    "periodicity": [
+     "_onchange_periodicity"
+    ]
+   },
+   "methods": {
+    "_onchange_periodicity": {
+     "fields": [
+      "periodicity"
+     ],
+     "source": "addons/digest/models/digest.py:100"
+    }
+   }
+  },
+  "fetchmail.server": {
+   "fields": {
+    "server_type": [
+     "onchange_server_type"
+    ]
+   },
+   "methods": {
+    "onchange_server_type": {
+     "fields": [
+      "server_type"
+     ],
+     "source": "addons/microsoft_outlook/models/fetchmail_server.py:32"
+    }
+   }
+  },
+  "ir.access": {
+   "fields": {
+    "for_create": [
+     "_inverse_for_operations"
+    ],
+    "for_read": [
+     "_inverse_for_operations"
+    ],
+    "for_unlink": [
+     "_inverse_for_operations"
+    ],
+    "for_write": [
+     "_inverse_for_operations"
+    ]
+   },
+   "methods": {
+    "_inverse_for_operations": {
+     "fields": [
+      "for_create",
+      "for_read",
+      "for_write",
+      "for_unlink"
+     ],
+     "source": "odoo/addons/base/models/ir_access.py:169"
+    }
+   }
+  },
+  "ir.actions.report": {
+   "fields": {
+    "model_id": [
+     "_onchange_model_id"
+    ],
+    "name": [
+     "_onchange_name"
+    ]
+   },
+   "methods": {
+    "_onchange_model_id": {
+     "fields": [
+      "model_id"
+     ],
+     "source": "odoo/addons/base/models/ir_actions_report.py:87"
+    },
+    "_onchange_name": {
+     "fields": [
+      "name"
+     ],
+     "source": "odoo/addons/base/models/ir_actions_report.py:92"
+    }
+   }
+  },
+  "ir.actions.server": {
+   "fields": {
+    "activity_plan_id": [
+     "_onchange_activity_plan_id"
+    ],
+    "activity_type_id": [
+     "_onchange_activity_type_id"
+    ],
+    "crud_model_id": [
+     "_set_crud_model_id"
+    ],
+    "evaluation_type": [
+     "<change_default>"
+    ],
+    "name": [
+     "_onchange_name"
+    ],
+    "property_selection": [
+     "_set_property_selection"
+    ],
+    "resource_ref": [
+     "_set_resource_ref"
+    ],
+    "selection_value": [
+     "_set_selection_value"
+    ]
+   },
+   "methods": {
+    "_onchange_activity_plan_id": {
+     "fields": [
+      "activity_plan_id"
+     ],
+     "source": "addons/mail/models/ir_actions_server.py:227"
+    },
+    "_onchange_activity_type_id": {
+     "fields": [
+      "activity_type_id"
+     ],
+     "source": "addons/mail/models/ir_actions_server.py:240"
+    },
+    "_onchange_name": {
+     "fields": [
+      "name"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:835"
+    },
+    "_set_crud_model_id": {
+     "fields": [
+      "crud_model_id"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1298"
+    },
+    "_set_property_selection": {
+     "fields": [
+      "property_selection"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1319"
+    },
+    "_set_resource_ref": {
+     "fields": [
+      "resource_ref"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1307"
+    },
+    "_set_selection_value": {
+     "fields": [
+      "selection_value"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1313"
+    }
+   }
+  },
+  "ir.attachment": {
+   "fields": {
+    "company_id": [
+     "<change_default>"
+    ],
+    "type": [
+     "<change_default>"
+    ]
+   },
+   "methods": {}
+  },
+  "ir.mail_server": {
+   "fields": {
+    "smtp_authentication": [
+     "_on_change_smtp_user_gmail",
+     "_on_change_smtp_user_outlook",
+     "_onchange_smtp_authentication_gmail",
+     "_onchange_smtp_authentication_outlook"
+    ],
+    "smtp_encryption": [
+     "_onchange_encryption"
+    ],
+    "smtp_user": [
+     "_on_change_smtp_user_gmail",
+     "_on_change_smtp_user_outlook"
+    ]
+   },
+   "methods": {
+    "_on_change_smtp_user_gmail": {
+     "fields": [
+      "smtp_user",
+      "smtp_authentication"
+     ],
+     "source": "addons/google_gmail/models/ir_mail_server.py:46"
+    },
+    "_on_change_smtp_user_outlook": {
+     "fields": [
+      "smtp_user",
+      "smtp_authentication"
+     ],
+     "source": "addons/microsoft_outlook/models/ir_mail_server.py:68"
+    },
+    "_onchange_encryption": {
+     "fields": [
+      "smtp_encryption"
+     ],
+     "source": "addons/microsoft_outlook/models/ir_mail_server.py:49"
+    },
+    "_onchange_smtp_authentication_gmail": {
+     "fields": [
+      "smtp_authentication"
+     ],
+     "source": "addons/google_gmail/models/ir_mail_server.py:35"
+    },
+    "_onchange_smtp_authentication_outlook": {
+     "fields": [
+      "smtp_authentication"
+     ],
+     "source": "addons/microsoft_outlook/models/ir_mail_server.py:57"
+    }
+   }
+  },
+  "ir.model.fields": {
+   "fields": {
+    "company_dependent": [
+     "_onchange_index"
+    ],
+    "compute": [
+     "_onchange_compute"
+    ],
+    "model_id": [
+     "_onchange_ttype"
+    ],
+    "related": [
+     "_onchange_related"
+    ],
+    "relation": [
+     "_onchange_relation",
+     "_onchange_ttype"
+    ],
+    "relation_table": [
+     "_onchange_relation_table"
+    ],
+    "store": [
+     "_onchange_index"
+    ],
+    "translate": [
+     "_onchange_index"
+    ],
+    "ttype": [
+     "_onchange_index",
+     "_onchange_ttype"
+    ]
+   },
+   "methods": {
+    "_onchange_compute": {
+     "fields": [
+      "compute"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:884"
+    },
+    "_onchange_index": {
+     "fields": [
+      "store",
+      "ttype",
+      "translate",
+      "company_dependent"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:721"
+    },
+    "_onchange_related": {
+     "fields": [
+      "related"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:830"
+    },
+    "_onchange_relation": {
+     "fields": [
+      "relation"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:841"
+    },
+    "_onchange_relation_table": {
+     "fields": [
+      "relation_table"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:951"
+    },
+    "_onchange_ttype": {
+     "fields": [
+      "ttype",
+      "model_id",
+      "relation"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:939"
+    }
+   }
+  },
+  "ir.sequence": {
+   "fields": {
+    "prefix": [
+     "_onchange_prefix_suffix_ascii"
+    ],
+    "suffix": [
+     "_onchange_prefix_suffix_ascii"
+    ]
+   },
+   "methods": {
+    "_onchange_prefix_suffix_ascii": {
+     "fields": [
+      "prefix",
+      "suffix"
+     ],
+     "source": "odoo/addons/base/models/ir_sequence.py:154"
+    }
+   }
+  },
+  "mail.activity.schedule": {
+   "fields": {
+    "activity_type_id": [
+     "_onchange_activity_type_id",
+     "_onchange_activity_user_id"
+    ],
+    "activity_user_id": [
+     "_onchange_activity_user_id"
+    ],
+    "plan_id": [
+     "_onchange_plan_id"
+    ]
+   },
+   "methods": {
+    "_onchange_activity_type_id": {
+     "fields": [
+      "activity_type_id"
+     ],
+     "source": "addons/mail/wizard/mail_activity_schedule.py:265"
+    },
+    "_onchange_activity_user_id": {
+     "fields": [
+      "activity_user_id",
+      "activity_type_id"
+     ],
+     "source": "addons/mail/wizard/mail_activity_schedule.py:510"
+    },
+    "_onchange_plan_id": {
+     "fields": [
+      "plan_id"
+     ],
+     "source": "addons/mail/wizard/mail_activity_schedule.py:193"
+    }
+   }
+  },
+  "mail.activity.type": {
+   "fields": {
+    "res_model": [
+     "_onchange_res_model"
+    ]
+   },
+   "methods": {
+    "_onchange_res_model": {
+     "fields": [
+      "res_model"
+     ],
+     "source": "addons/mail/models/mail_activity_type.py:89"
+    }
+   }
+  },
+  "mail.template": {
+   "fields": {
+    "model": [
+     "_onchange_model"
+    ]
+   },
+   "methods": {
+    "_onchange_model": {
+     "fields": [
+      "model"
+     ],
+     "source": "addons/mail/models/mail_template.py:193"
+    }
+   }
+  },
+  "payment.method": {
+   "fields": {
+    "active": [
+     "_onchange_warn_before_disabling_tokens"
+    ],
+    "support_tokenization": [
+     "_onchange_warn_before_disabling_tokens"
+    ]
+   },
+   "methods": {
+    "_onchange_warn_before_disabling_tokens": {
+     "fields": [
+      "active",
+      "support_tokenization"
+     ],
+     "source": "addons/payment/models/payment_method.py:139"
+    }
+   }
+  },
+  "payment.provider": {
+   "fields": {
+    "company_id": [
+     "_onchange_company_block_if_existing_transactions"
+    ],
+    "is_live": [
+     "_onchange_is_live_toggle_is_published",
+     "_onchange_is_live_warn_before_disabling_tokens"
+    ]
+   },
+   "methods": {
+    "_onchange_company_block_if_existing_transactions": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/payment/models/payment_provider.py:410"
+    },
+    "_onchange_is_live_toggle_is_published": {
+     "fields": [
+      "is_live"
+     ],
+     "source": "addons/payment/models/payment_provider.py:383"
+    },
+    "_onchange_is_live_warn_before_disabling_tokens": {
+     "fields": [
+      "is_live"
+     ],
+     "source": "addons/payment/models/payment_provider.py:391"
+    }
+   }
+  },
+  "peppol.registration": {
+   "fields": {
+    "peppol_endpoint": [
+     "_onchange_peppol_endpoint"
+    ],
+    "phone_number": [
+     "_onchange_phone_number"
+    ]
+   },
+   "methods": {
+    "_onchange_peppol_endpoint": {
+     "fields": [
+      "peppol_endpoint"
+     ],
+     "source": "addons/account_peppol/wizard/peppol_registration.py:136"
+    },
+    "_onchange_phone_number": {
+     "fields": [
+      "phone_number"
+     ],
+     "source": "addons/account_peppol/wizard/peppol_registration.py:142"
+    }
+   }
+  },
+  "privacy.lookup.wizard.line": {
+   "fields": {
+    "is_active": [
+     "_onchange_is_active"
+    ]
+   },
+   "methods": {
+    "_onchange_is_active": {
+     "fields": [
+      "is_active"
+     ],
+     "source": "addons/privacy_lookup/wizard/privacy_lookup_wizard.py:290"
+    }
+   }
+  },
+  "product.attribute": {
+   "fields": {
+    "display_type": [
+     "_onchange_display_type"
+    ]
+   },
+   "methods": {
+    "_onchange_display_type": {
+     "fields": [
+      "display_type"
+     ],
+     "source": "addons/product/models/product_attribute.py:101"
+    }
+   }
+  },
+  "product.document": {
+   "fields": {
+    "url": [
+     "_onchange_url"
+    ]
+   },
+   "methods": {
+    "_onchange_url": {
+     "fields": [
+      "url"
+     ],
+     "source": "addons/product/models/product_document.py:40"
+    }
+   }
+  },
+  "product.pricelist.item": {
+   "fields": {
+    "base_pricelist_id": [
+     "_onchange_base_pricelist_id"
+    ],
+    "categ_id": [
+     "_onchange_categ_id"
+    ],
+    "compute_price": [
+     "_onchange_compute_price"
+    ],
+    "date_end": [
+     "_onchange_validity_period"
+    ],
+    "date_start": [
+     "_onchange_validity_period"
+    ],
+    "price_markup": [
+     "_onchange_price_markup"
+    ],
+    "price_round": [
+     "_onchange_price_round"
+    ],
+    "product_id": [
+     "_onchange_product_id"
+    ],
+    "product_tmpl_id": [
+     "_onchange_product_tmpl_id"
+    ]
+   },
+   "methods": {
+    "_onchange_base_pricelist_id": {
+     "fields": [
+      "base_pricelist_id"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:411"
+    },
+    "_onchange_categ_id": {
+     "fields": [
+      "categ_id"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:447"
+    },
+    "_onchange_compute_price": {
+     "fields": [
+      "compute_price"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:416"
+    },
+    "_onchange_price_markup": {
+     "fields": [
+      "price_markup"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:453"
+    },
+    "_onchange_price_round": {
+     "fields": [
+      "price_round"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:458"
+    },
+    "_onchange_product_id": {
+     "fields": [
+      "product_id"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:435"
+    },
+    "_onchange_product_tmpl_id": {
+     "fields": [
+      "product_tmpl_id"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:440"
+    },
+    "_onchange_validity_period": {
+     "fields": [
+      "date_start",
+      "date_end"
+     ],
+     "source": "addons/product/models/product_pricelist_item.py:463"
+    }
+   }
+  },
+  "product.product": {
+   "fields": {
+    "default_code": [
+     "_onchange_default_code"
+    ],
+    "service_tracking": [
+     "_onchange_service_tracking"
+    ],
+    "standard_price": [
+     "_onchange_standard_price"
+    ],
+    "store_by": [
+     "_onchange_tracking"
+    ],
+    "tracking": [
+     "_onchange_tracking"
+    ],
+    "type": [
+     "_onchange_type"
+    ],
+    "uom_id": [
+     "_onchange_uom_id"
+    ]
+   },
+   "methods": {
+    "_onchange_default_code": {
+     "fields": [
+      "default_code"
+     ],
+     "source": "addons/product/models/product_product.py:586"
+    },
+    "_onchange_service_tracking": {
+     "fields": [
+      "service_tracking"
+     ],
+     "source": "addons/sale_project/models/product_product.py:9"
+    },
+    "_onchange_standard_price": {
+     "fields": [
+      "standard_price"
+     ],
+     "source": "addons/product/models/product_product.py:581"
+    },
+    "_onchange_tracking": {
+     "fields": [
+      "tracking",
+      "store_by"
+     ],
+     "source": "addons/stock/models/product.py:546"
+    },
+    "_onchange_type": {
+     "fields": [
+      "type"
+     ],
+     "source": "addons/sale/models/product_product.py:87"
+    },
+    "_onchange_uom_id": {
+     "fields": [
+      "uom_id"
+     ],
+     "source": "addons/product/models/product_product.py:604"
+    }
+   }
+  },
+  "product.replenish": {
+   "fields": {
+    "product_id": [
+     "_onchange_product_id"
+    ],
+    "route_id": [
+     "_onchange_route_id"
+    ],
+    "warehouse_id": [
+     "_onchange_product_id"
+    ]
+   },
+   "methods": {
+    "_onchange_product_id": {
+     "fields": [
+      "product_id",
+      "warehouse_id"
+     ],
+     "source": "addons/stock/wizard/product_replenish.py:31"
+    },
+    "_onchange_route_id": {
+     "fields": [
+      "route_id"
+     ],
+     "source": "addons/purchase_stock/wizard/product_replenish.py:30"
+    }
+   }
+  },
+  "product.supplierinfo": {
+   "fields": {
+    "partner_id": [
+     "_onchange_partner_id"
+    ],
+    "product_tmpl_id": [
+     "_onchange_product_tmpl_id"
+    ]
+   },
+   "methods": {
+    "_onchange_partner_id": {
+     "fields": [
+      "partner_id"
+     ],
+     "source": "addons/purchase/models/product.py:279"
+    },
+    "_onchange_product_tmpl_id": {
+     "fields": [
+      "product_tmpl_id"
+     ],
+     "source": "addons/product/models/product_supplierinfo.py:89"
+    }
+   }
+  },
+  "product.template": {
+   "fields": {
+    "default_code": [
+     "_onchange_default_code"
+    ],
+    "purchase_ok": [
+     "_onchange_buy_route"
+    ],
+    "route_ids": [
+     "_onchange_buy_route"
+    ],
+    "service_policy": [
+     "_inverse_service_policy"
+    ],
+    "service_tracking": [
+     "_onchange_service_tracking"
+    ],
+    "standard_price": [
+     "_onchange_standard_price"
+    ],
+    "store_by": [
+     "_onchange_tracking"
+    ],
+    "tracking": [
+     "_onchange_tracking"
+    ],
+    "type": [
+     "_onchange_type"
+    ],
+    "uom_id": [
+     "_onchange_uom_id"
+    ]
+   },
+   "methods": {
+    "_inverse_service_policy": {
+     "fields": [
+      "service_policy"
+     ],
+     "source": "addons/sale_project/models/product_template.py:109"
+    },
+    "_onchange_buy_route": {
+     "fields": [
+      "route_ids",
+      "purchase_ok"
+     ],
+     "source": "addons/purchase_stock/models/product.py:16"
+    },
+    "_onchange_default_code": {
+     "fields": [
+      "default_code"
+     ],
+     "source": "addons/product/models/product_template.py:631"
+    },
+    "_onchange_service_tracking": {
+     "fields": [
+      "service_tracking"
+     ],
+     "source": "addons/sale_project/models/product_template.py:129"
+    },
+    "_onchange_standard_price": {
+     "fields": [
+      "standard_price"
+     ],
+     "source": "addons/product/models/product_template.py:626"
+    },
+    "_onchange_tracking": {
+     "fields": [
+      "tracking",
+      "store_by"
+     ],
+     "source": "addons/stock/models/product.py:1037"
+    },
+    "_onchange_type": {
+     "fields": [
+      "type"
+     ],
+     "source": "addons/sale/models/product_template.py:192"
+    },
+    "_onchange_uom_id": {
+     "fields": [
+      "uom_id"
+     ],
+     "source": "addons/product/models/product_template.py:686"
+    }
+   }
+  },
+  "product.template.attribute.line": {
+   "fields": {
+    "attribute_id": [
+     "_onchange_attribute_id"
+    ]
+   },
+   "methods": {
+    "_onchange_attribute_id": {
+     "fields": [
+      "attribute_id"
+     ],
+     "source": "addons/product/models/product_template_attribute_line.py:49"
+    }
+   }
+  },
+  "project.project": {
+   "fields": {
+    "company_id": [
+     "_onchange_company_id"
+    ],
+    "partner_id": [
+     "_onchange_partner_id"
+    ],
+    "reinvoiced_sale_order_id": [
+     "_onchange_reinvoiced_sale_order_id"
+    ],
+    "sale_line_id": [
+     "_onchange_sale_line_id"
+    ]
+   },
+   "methods": {
+    "_onchange_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/project/models/project_project.py:220"
+    },
+    "_onchange_partner_id": {
+     "fields": [
+      "partner_id"
+     ],
+     "source": "addons/sale_project/models/project_project.py:74"
+    },
+    "_onchange_reinvoiced_sale_order_id": {
+     "fields": [
+      "reinvoiced_sale_order_id"
+     ],
+     "source": "addons/sale_project/models/project_project.py:217"
+    },
+    "_onchange_sale_line_id": {
+     "fields": [
+      "sale_line_id"
+     ],
+     "source": "addons/sale_project/models/project_project.py:225"
+    }
+   }
+  },
+  "project.task": {
+   "fields": {
+    "company_id": [
+     "_onchange_task_company"
+    ],
+    "project_id": [
+     "_onchange_project_id",
+     "<change_default>"
+    ],
+    "sale_line_id": [
+     "_onchange_partner_id"
+    ]
+   },
+   "methods": {
+    "_onchange_partner_id": {
+     "fields": [
+      "sale_line_id"
+     ],
+     "source": "addons/sale_project/models/project_task.py:233"
+    },
+    "_onchange_project_id": {
+     "fields": [
+      "project_id"
+     ],
+     "source": "addons/project/models/project_task.py:440"
+    },
+    "_onchange_task_company": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/project/models/project_task.py:690"
+    }
+   }
+  },
+  "project.task.type": {
+   "fields": {
+    "project_ids": [
+     "_onchange_project_ids"
+    ]
+   },
+   "methods": {
+    "_onchange_project_ids": {
+     "fields": [
+      "project_ids"
+     ],
+     "source": "addons/sale_project/models/project_task_type.py:14"
+    }
+   }
+  },
+  "purchase.bill.line.match": {
+   "fields": {
+    "product_uom_price": [
+     "_inverse_product_uom_price"
+    ],
+    "product_uom_qty": [
+     "_inverse_product_uom_qty"
+    ]
+   },
+   "methods": {
+    "_inverse_product_uom_price": {
+     "fields": [
+      "product_uom_price"
+     ],
+     "source": "addons/purchase/models/purchase_bill_line_match.py:43"
+    },
+    "_inverse_product_uom_qty": {
+     "fields": [
+      "product_uom_qty"
+     ],
+     "source": "addons/purchase/models/purchase_bill_line_match.py:51"
+    }
+   }
+  },
+  "purchase.order": {
+   "fields": {
+    "company_id": [
+     "_compute_tax_id",
+     "_onchange_company_id",
+     "onchange_partner_id"
+    ],
+    "date_planned": [
+     "onchange_date_planned"
+    ],
+    "date_promised": [
+     "_onchange_date_promised"
+    ],
+    "fiscal_position_id": [
+     "_compute_tax_id"
+    ],
+    "partner_id": [
+     "onchange_partner_id",
+     "<change_default>"
+    ]
+   },
+   "methods": {
+    "_compute_tax_id": {
+     "fields": [
+      "fiscal_position_id",
+      "company_id"
+     ],
+     "source": "addons/purchase/models/purchase_order.py:529"
+    },
+    "_onchange_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/purchase_stock/models/purchase_order.py:94"
+    },
+    "_onchange_date_promised": {
+     "fields": [
+      "date_promised"
+     ],
+     "source": "addons/purchase_stock/models/purchase_order.py:89"
+    },
+    "onchange_date_planned": {
+     "fields": [
+      "date_planned"
+     ],
+     "source": "addons/purchase/models/purchase_order.py:431"
+    },
+    "onchange_partner_id": {
+     "fields": [
+      "partner_id",
+      "company_id"
+     ],
+     "source": "addons/purchase/models/purchase_order.py:505"
+    }
+   },
+   "onchange_override": [
+    "purchase_stock",
+    "purchase"
+   ]
+  },
+  "purchase.order.line": {
+   "fields": {
+    "product_id": [
+     "onchange_product_id",
+     "<change_default>"
+    ],
+    "qty_received": [
+     "_inverse_qty_received"
+    ]
+   },
+   "methods": {
+    "_inverse_qty_received": {
+     "fields": [
+      "qty_received"
+     ],
+     "source": "addons/purchase/models/purchase_order_line.py:326"
+    },
+    "onchange_product_id": {
+     "fields": [
+      "product_id"
+     ],
+     "source": "addons/purchase/models/purchase_order_line.py:506"
+    }
+   }
+  },
+  "res.company": {
+   "fields": {
+    "country_id": [
+     "_onchange_country_id"
+    ],
+    "parent_id": [
+     "_onchange_parent_id"
+    ],
+    "state_id": [
+     "_onchange_state"
+    ]
+   },
+   "methods": {
+    "_onchange_country_id": {
+     "fields": [
+      "country_id"
+     ],
+     "source": "odoo/addons/base/models/res_company.py:252"
+    },
+    "_onchange_parent_id": {
+     "fields": [
+      "parent_id"
+     ],
+     "source": "odoo/addons/base/models/res_company.py:257"
+    },
+    "_onchange_state": {
+     "fields": [
+      "state_id"
+     ],
+     "source": "odoo/addons/base/models/res_company.py:247"
+    }
+   }
+  },
+  "res.config.settings": {
+   "fields": {
+    "auth_totp_enforce": [
+     "_onchange_auth_totp_enforce"
+    ],
+    "crm_auto_assignment_interval_number": [
+     "_onchange_crm_auto_assignment_run_datetime"
+    ],
+    "crm_auto_assignment_interval_type": [
+     "_onchange_crm_auto_assignment_run_datetime"
+    ],
+    "group_analytic_accounting": [
+     "onchange_analytic_accounting"
+    ],
+    "group_product_pricelist": [
+     "_onchange_group_sale_pricelist"
+    ],
+    "group_product_variant": [
+     "_onchange_group_product_variant",
+     "_onchange_group_product_variant_purchase"
+    ],
+    "group_stock_adv_location": [
+     "onchange_adv_location"
+    ],
+    "group_stock_multi_locations": [
+     "_onchange_group_stock_multi_locations"
+    ],
+    "group_stock_picking_batch": [
+     "_onchange_group_stock_picking_batch"
+    ],
+    "group_stock_production_lot": [
+     "_onchange_group_stock_production_lot"
+    ],
+    "minlength": [
+     "_on_change_mins"
+    ],
+    "module_account_budget": [
+     "onchange_module_account_budget"
+    ],
+    "module_product_barcodelookup": [
+     "onchange_module_product_barcodelookup"
+    ],
+    "module_purchase_product_matrix": [
+     "_onchange_module_purchase_product_matrix"
+    ],
+    "module_stock_barcode_barcodelookup": [
+     "onchange_module_stock_barcode_barcodelookup"
+    ],
+    "module_stock_fleet": [
+     "_onchange_module_stock_fleet"
+    ],
+    "portal_confirmation_pay": [
+     "_onchange_portal_confirmation_pay"
+    ],
+    "prepayment_percent": [
+     "_onchange_prepayment_percent"
+    ],
+    "quotation_validity_days": [
+     "_onchange_quotation_validity_days"
+    ],
+    "sale_invoice_policy": [
+     "_onchange_sale_invoice_policy"
+    ],
+    "stock_confirmation_type": [
+     "_onchange_stock_confirmation_fields"
+    ],
+    "stock_text_confirmation": [
+     "_onchange_stock_confirmation_fields"
+    ],
+    "tax_exigibility": [
+     "_onchange_tax_exigibility"
+    ],
+    "use_security_lead": [
+     "_onchange_use_security_lead"
+    ]
+   },
+   "methods": {
+    "_on_change_mins": {
+     "fields": [
+      "minlength"
+     ],
+     "source": "addons/auth_password_policy/models/res_config_settings.py:11"
+    },
+    "_onchange_auth_totp_enforce": {
+     "fields": [
+      "auth_totp_enforce"
+     ],
+     "source": "addons/auth_totp_mail/models/res_config_settings.py:20"
+    },
+    "_onchange_crm_auto_assignment_run_datetime": {
+     "fields": [
+      "crm_auto_assignment_interval_type",
+      "crm_auto_assignment_interval_number"
+     ],
+     "source": "addons/crm/models/res_config_settings.py:71"
+    },
+    "_onchange_group_product_variant": {
+     "fields": [
+      "group_product_variant"
+     ],
+     "source": "addons/sale/wizard/res_config_settings.py:88"
+    },
+    "_onchange_group_product_variant_purchase": {
+     "fields": [
+      "group_product_variant"
+     ],
+     "source": "addons/purchase/models/res_config_settings.py:25"
+    },
+    "_onchange_group_sale_pricelist": {
+     "fields": [
+      "group_product_pricelist"
+     ],
+     "source": "addons/product/models/res_config_settings.py:25"
+    },
+    "_onchange_group_stock_multi_locations": {
+     "fields": [
+      "group_stock_multi_locations"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:62"
+    },
+    "_onchange_group_stock_picking_batch": {
+     "fields": [
+      "group_stock_picking_batch"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:67"
+    },
+    "_onchange_group_stock_production_lot": {
+     "fields": [
+      "group_stock_production_lot"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:72"
+    },
+    "_onchange_module_purchase_product_matrix": {
+     "fields": [
+      "module_purchase_product_matrix"
+     ],
+     "source": "addons/purchase/models/res_config_settings.py:31"
+    },
+    "_onchange_module_stock_fleet": {
+     "fields": [
+      "module_stock_fleet"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:93"
+    },
+    "_onchange_portal_confirmation_pay": {
+     "fields": [
+      "portal_confirmation_pay"
+     ],
+     "source": "addons/sale/wizard/res_config_settings.py:94"
+    },
+    "_onchange_prepayment_percent": {
+     "fields": [
+      "prepayment_percent"
+     ],
+     "source": "addons/sale/wizard/res_config_settings.py:98"
+    },
+    "_onchange_quotation_validity_days": {
+     "fields": [
+      "quotation_validity_days"
+     ],
+     "source": "addons/sale/wizard/res_config_settings.py:103"
+    },
+    "_onchange_sale_invoice_policy": {
+     "fields": [
+      "sale_invoice_policy"
+     ],
+     "source": "addons/sale/wizard/res_config_settings.py:118"
+    },
+    "_onchange_stock_confirmation_fields": {
+     "fields": [
+      "stock_confirmation_type",
+      "stock_text_confirmation"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:78"
+    },
+    "_onchange_tax_exigibility": {
+     "fields": [
+      "tax_exigibility"
+     ],
+     "source": "addons/account/models/res_config_settings.py:295"
+    },
+    "_onchange_use_security_lead": {
+     "fields": [
+      "use_security_lead"
+     ],
+     "source": "addons/sale_stock/models/res_config_settings.py:20"
+    },
+    "onchange_adv_location": {
+     "fields": [
+      "group_stock_adv_location"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:98"
+    },
+    "onchange_analytic_accounting": {
+     "fields": [
+      "group_analytic_accounting"
+     ],
+     "source": "addons/account/models/res_config_settings.py:285"
+    },
+    "onchange_module_account_budget": {
+     "fields": [
+      "module_account_budget"
+     ],
+     "source": "addons/account/models/res_config_settings.py:290"
+    },
+    "onchange_module_product_barcodelookup": {
+     "fields": [
+      "module_product_barcodelookup"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:83"
+    },
+    "onchange_module_stock_barcode_barcodelookup": {
+     "fields": [
+      "module_stock_barcode_barcodelookup"
+     ],
+     "source": "addons/stock/models/res_config_settings.py:88"
+    }
+   }
+  },
+  "res.currency.rate": {
+   "fields": {
+    "company_rate": [
+     "_inverse_company_rate",
+     "_onchange_rate_warning"
+    ],
+    "inverse_company_rate": [
+     "_inverse_inverse_company_rate"
+    ]
+   },
+   "methods": {
+    "_inverse_company_rate": {
+     "fields": [
+      "company_rate"
+     ],
+     "source": "odoo/addons/base/models/res_currency.py:491"
+    },
+    "_inverse_inverse_company_rate": {
+     "fields": [
+      "inverse_company_rate"
+     ],
+     "source": "odoo/addons/base/models/res_currency.py:511"
+    },
+    "_onchange_rate_warning": {
+     "fields": [
+      "company_rate"
+     ],
+     "source": "odoo/addons/base/models/res_currency.py:518"
+    }
+   }
+  },
+  "res.lang": {
+   "fields": {
+    "date_format": [
+     "_onchange_format"
+    ],
+    "time_format": [
+     "_onchange_format"
+    ]
+   },
+   "methods": {
+    "_onchange_format": {
+     "fields": [
+      "time_format",
+      "date_format"
+     ],
+     "source": "odoo/addons/base/models/res_lang.py:170"
+    }
+   }
+  },
+  "res.partner": {
+   "fields": {
+    "city_id": [
+     "_onchange_city_id"
+    ],
+    "company_id": [
+     "_onchange_company_id"
+    ],
+    "country_id": [
+     "_onchange_country_id",
+     "_onchange_vat"
+    ],
+    "invoice_edi_format": [
+     "_onchange_verify_peppol_status"
+    ],
+    "parent_id": [
+     "_onchange_company_id",
+     "onchange_parent_id"
+    ],
+    "routing_identifier": [
+     "_onchange_verify_peppol_status"
+    ],
+    "state_id": [
+     "_onchange_state"
+    ],
+    "vat": [
+     "_onchange_vat"
+    ],
+    "zip": [
+     "<change_default>"
+    ]
+   },
+   "methods": {
+    "_onchange_city_id": {
+     "fields": [
+      "city_id"
+     ],
+     "source": "addons/base_address_extended/models/res_partner.py:47"
+    },
+    "_onchange_company_id": {
+     "fields": [
+      "parent_id",
+      "company_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:649"
+    },
+    "_onchange_country_id": {
+     "fields": [
+      "country_id"
+     ],
+     "source": "addons/base_address_extended/models/res_partner.py:60"
+    },
+    "_onchange_state": {
+     "fields": [
+      "state_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:644"
+    },
+    "_onchange_vat": {
+     "fields": [
+      "vat",
+      "country_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:1387"
+    },
+    "_onchange_verify_peppol_status": {
+     "fields": [
+      "invoice_edi_format",
+      "routing_identifier"
+     ],
+     "source": "addons/account_peppol/models/res_partner.py:42"
+    },
+    "onchange_parent_id": {
+     "fields": [
+      "parent_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:624"
+    }
+   }
+  },
+  "res.partner.bank": {
+   "fields": {
+    "country_id": [
+     "_onchange_country_id"
+    ],
+    "state_id": [
+     "_onchange_state_id"
+    ]
+   },
+   "methods": {
+    "_onchange_country_id": {
+     "fields": [
+      "country_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner_bank.py:200"
+    },
+    "_onchange_state_id": {
+     "fields": [
+      "state_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner_bank.py:205"
+    }
+   }
+  },
+  "res.users": {
+   "fields": {
+    "login": [
+     "on_change_login"
+    ],
+    "out_of_office_from": [
+     "_onchange_out_of_office_from"
+    ],
+    "parent_id": [
+     "onchange_parent_id"
+    ],
+    "role": [
+     "_onchange_role"
+    ]
+   },
+   "methods": {
+    "_onchange_out_of_office_from": {
+     "fields": [
+      "out_of_office_from"
+     ],
+     "source": "addons/mail/models/res_users.py:182"
+    },
+    "_onchange_role": {
+     "fields": [
+      "role"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:447"
+    },
+    "on_change_login": {
+     "fields": [
+      "login"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:586"
+    },
+    "onchange_parent_id": {
+     "fields": [
+      "parent_id"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:591"
+    }
+   }
+  },
+  "res.users.apikeys.description": {
+   "fields": {
+    "expiration_date": [
+     "_onchange_expiration_date"
+    ]
+   },
+   "methods": {
+    "_onchange_expiration_date": {
+     "fields": [
+      "expiration_date"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:1903"
+    }
+   }
+  },
+  "resource.calendar.attendance": {
+   "fields": {
+    "duration_hours": [
+     "_onchange_duration_hours"
+    ],
+    "hour_from": [
+     "_onchange_hour_from"
+    ],
+    "hour_to": [
+     "_onchange_hour_to"
+    ]
+   },
+   "methods": {
+    "_onchange_duration_hours": {
+     "fields": [
+      "duration_hours"
+     ],
+     "source": "addons/resource/models/resource_calendar_attendance.py:290"
+    },
+    "_onchange_hour_from": {
+     "fields": [
+      "hour_from"
+     ],
+     "source": "addons/resource/models/resource_calendar_attendance.py:272"
+    },
+    "_onchange_hour_to": {
+     "fields": [
+      "hour_to"
+     ],
+     "source": "addons/resource/models/resource_calendar_attendance.py:278"
+    }
+   }
+  },
+  "resource.resource": {
+   "fields": {
+    "company_id": [
+     "_onchange_company_id"
+    ],
+    "user_id": [
+     "_onchange_user_id"
+    ]
+   },
+   "methods": {
+    "_onchange_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/resource/models/resource_resource.py:100"
+    },
+    "_onchange_user_id": {
+     "fields": [
+      "user_id"
+     ],
+     "source": "addons/resource/models/resource_resource.py:109"
+    }
+   }
+  },
+  "sale.advance.payment.inv": {
+   "fields": {
+    "advance_payment_method": [
+     "_onchange_advance_payment_method"
+    ]
+   },
+   "methods": {
+    "_onchange_advance_payment_method": {
+     "fields": [
+      "advance_payment_method"
+     ],
+     "source": "addons/sale/wizard/sale_make_invoice_advance.py:127"
+    }
+   }
+  },
+  "sale.order": {
+   "fields": {
+    "commitment_date": [
+     "_onchange_commitment_date"
+    ],
+    "company_id": [
+     "_onchange_company_id",
+     "_onchange_company_id_warning"
+    ],
+    "expected_date": [
+     "_onchange_commitment_date"
+    ],
+    "fiscal_position_id": [
+     "_onchange_fpos_id_recompute_taxes"
+    ],
+    "order_line": [
+     "_onchange_order_line"
+    ],
+    "partner_id": [
+     "_onchange_partner_id",
+     "<change_default>"
+    ],
+    "partner_shipping_id": [
+     "_onchange_partner_shipping_id"
+    ],
+    "prepayment_amount": [
+     "_onchange_prepayment_amount"
+    ],
+    "pricelist_id": [
+     "_onchange_pricelist_id_recompute_prices"
+    ],
+    "sale_order_template_id": [
+     "_onchange_sale_order_template_id"
+    ],
+    "team_id": [
+     "<change_default>"
+    ]
+   },
+   "methods": {
+    "_onchange_commitment_date": {
+     "fields": [
+      "commitment_date",
+      "expected_date"
+     ],
+     "source": "addons/sale/models/sale_order.py:1303"
+    },
+    "_onchange_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/sale/models/sale_order.py:1337"
+    },
+    "_onchange_company_id_warning": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/sale/models/sale_order.py:1321"
+    },
+    "_onchange_fpos_id_recompute_taxes": {
+     "fields": [
+      "fiscal_position_id"
+     ],
+     "source": "addons/sale/models/sale_order.py:1350"
+    },
+    "_onchange_order_line": {
+     "fields": [
+      "order_line"
+     ],
+     "source": "addons/sale/models/sale_order.py:1368"
+    },
+    "_onchange_partner_id": {
+     "fields": [
+      "partner_id"
+     ],
+     "source": "addons/sale_management/models/sale_order.py:90"
+    },
+    "_onchange_partner_shipping_id": {
+     "fields": [
+      "partner_shipping_id"
+     ],
+     "source": "addons/sale_stock/models/sale_order.py:220"
+    },
+    "_onchange_prepayment_amount": {
+     "fields": [
+      "prepayment_amount"
+     ],
+     "source": "addons/sale/models/sale_order.py:1363"
+    },
+    "_onchange_pricelist_id_recompute_prices": {
+     "fields": [
+      "pricelist_id"
+     ],
+     "source": "addons/sale/models/sale_order.py:1355"
+    },
+    "_onchange_sale_order_template_id": {
+     "fields": [
+      "sale_order_template_id"
+     ],
+     "source": "addons/sale_pdf_quote_builder/models/sale_order.py:72"
+    }
+   },
+   "onchange_override": [
+    "sale"
+   ]
+  },
+  "sale.order.line": {
+   "fields": {
+    "label": [
+     "_onchange_label"
+    ],
+    "margin": [
+     "_onchange_margin"
+    ],
+    "margin_percent": [
+     "_onchange_margin_percent"
+    ],
+    "product_id": [
+     "_onchange_product",
+     "_onchange_product_id",
+     "<change_default>"
+    ],
+    "product_template_id": [
+     "_onchange_product",
+     "_onchange_product_template_id"
+    ],
+    "product_uom_qty": [
+     "_onchange_service_product_uom_qty"
+    ],
+    "qty_delivered_percent": [
+     "_onchange_qty_delivered_percent"
+    ]
+   },
+   "methods": {
+    "_onchange_label": {
+     "fields": [
+      "label"
+     ],
+     "source": "addons/sale/models/sale_order_line.py:1775"
+    },
+    "_onchange_margin": {
+     "fields": [
+      "margin"
+     ],
+     "source": "addons/sale_margin/models/sale_order_line.py:73"
+    },
+    "_onchange_margin_percent": {
+     "fields": [
+      "margin_percent"
+     ],
+     "source": "addons/sale_margin/models/sale_order_line.py:87"
+    },
+    "_onchange_product": {
+     "fields": [
+      "product_id",
+      "product_template_id"
+     ],
+     "source": "addons/sale_pdf_quote_builder/models/sale_order_line.py:29"
+    },
+    "_onchange_product_id": {
+     "fields": [
+      "product_id"
+     ],
+     "source": "addons/sale/models/sale_order_line.py:1760"
+    },
+    "_onchange_product_template_id": {
+     "fields": [
+      "product_template_id"
+     ],
+     "source": "addons/sale/models/sale_order_line.py:1768"
+    },
+    "_onchange_qty_delivered_percent": {
+     "fields": [
+      "qty_delivered_percent"
+     ],
+     "source": "addons/sale/models/sale_order_line.py:1155"
+    },
+    "_onchange_service_product_uom_qty": {
+     "fields": [
+      "product_uom_qty"
+     ],
+     "source": "addons/sale_purchase/models/sale_order_line.py:25"
+    }
+   },
+   "onchange_override": [
+    "sale"
+   ]
+  },
+  "spreadsheet.dashboard": {
+   "fields": {
+    "spreadsheet_binary_data": [
+     "_onchange_data_"
+    ]
+   },
+   "methods": {
+    "_onchange_data_": {
+     "fields": [
+      "spreadsheet_binary_data"
+     ],
+     "source": "addons/spreadsheet/models/spreadsheet_mixin.py:95"
+    }
+   }
+  },
+  "spreadsheet.dashboard.share": {
+   "fields": {
+    "spreadsheet_binary_data": [
+     "_onchange_data_"
+    ]
+   },
+   "methods": {
+    "_onchange_data_": {
+     "fields": [
+      "spreadsheet_binary_data"
+     ],
+     "source": "addons/spreadsheet/models/spreadsheet_mixin.py:95"
+    }
+   }
+  },
+  "spreadsheet.mixin": {
+   "fields": {
+    "spreadsheet_binary_data": [
+     "_onchange_data_"
+    ]
+   },
+   "methods": {
+    "_onchange_data_": {
+     "fields": [
+      "spreadsheet_binary_data"
+     ],
+     "source": "addons/spreadsheet/models/spreadsheet_mixin.py:95"
+    }
+   }
+  },
+  "stock.move": {
+   "fields": {
+    "lot_ids": [
+     "_onchange_lot_ids"
+    ]
+   },
+   "methods": {
+    "_onchange_lot_ids": {
+     "fields": [
+      "lot_ids"
+     ],
+     "source": "addons/stock/models/stock_move.py:1521"
+    }
+   }
+  },
+  "stock.move.line": {
+   "fields": {
+    "lot_id": [
+     "_onchange_serial_number"
+    ],
+    "lot_name": [
+     "_onchange_serial_number"
+    ],
+    "product_id": [
+     "_onchange_product_id",
+     "_onchange_putaway_location"
+    ],
+    "quant_id": [
+     "_onchange_quant_id"
+    ],
+    "quantity": [
+     "_onchange_putaway_location",
+     "_onchange_quantity"
+    ],
+    "result_package_id": [
+     "_onchange_putaway_location"
+    ],
+    "uom_id": [
+     "_onchange_product_id",
+     "_onchange_putaway_location",
+     "_onchange_quantity"
+    ]
+   },
+   "methods": {
+    "_onchange_product_id": {
+     "fields": [
+      "product_id",
+      "uom_id"
+     ],
+     "source": "addons/stock/models/stock_move_line.py:190"
+    },
+    "_onchange_putaway_location": {
+     "fields": [
+      "result_package_id",
+      "product_id",
+      "uom_id",
+      "quantity"
+     ],
+     "source": "addons/stock/models/stock_move_line.py:256"
+    },
+    "_onchange_quant_id": {
+     "fields": [
+      "quant_id"
+     ],
+     "source": "addons/stock/models/stock_move_line.py:195"
+    },
+    "_onchange_quantity": {
+     "fields": [
+      "quantity",
+      "uom_id"
+     ],
+     "source": "addons/stock/models/stock_move_line.py:245"
+    },
+    "_onchange_serial_number": {
+     "fields": [
+      "lot_name",
+      "lot_id"
+     ],
+     "source": "addons/stock/models/stock_move_line.py:200"
+    }
+   }
+  },
+  "stock.orderpoint.snooze": {
+   "fields": {
+    "predefined_date": [
+     "_onchange_predefined_date"
+    ]
+   },
+   "methods": {
+    "_onchange_predefined_date": {
+     "fields": [
+      "predefined_date"
+     ],
+     "source": "addons/stock/wizard/stock_orderpoint_snooze.py:21"
+    }
+   }
+  },
+  "stock.picking": {
+   "fields": {
+    "location_id": [
+     "_onchange_location_id"
+    ],
+    "partner_id": [
+     "_onchange_picking_type"
+    ],
+    "picking_type_id": [
+     "_onchange_picking_type"
+    ]
+   },
+   "methods": {
+    "_onchange_location_id": {
+     "fields": [
+      "location_id"
+     ],
+     "source": "addons/stock/models/stock_picking.py:639"
+    },
+    "_onchange_picking_type": {
+     "fields": [
+      "picking_type_id",
+      "partner_id"
+     ],
+     "source": "addons/stock/models/stock_picking.py:630"
+    }
+   }
+  },
+  "stock.picking.batch": {
+   "fields": {
+    "scheduled_date": [
+     "onchange_scheduled_date"
+    ]
+   },
+   "methods": {
+    "onchange_scheduled_date": {
+     "fields": [
+      "scheduled_date"
+     ],
+     "source": "addons/stock/models/stock_picking_batch.py:174"
+    }
+   }
+  },
+  "stock.picking.type": {
+   "fields": {
+    "code": [
+     "_onchange_picking_code"
+    ],
+    "sequence_code": [
+     "_onchange_sequence_code"
+    ]
+   },
+   "methods": {
+    "_onchange_picking_code": {
+     "fields": [
+      "code"
+     ],
+     "source": "addons/stock/models/stock_picking_type.py:493"
+    },
+    "_onchange_sequence_code": {
+     "fields": [
+      "sequence_code"
+     ],
+     "source": "addons/stock/models/stock_picking_type.py:542"
+    }
+   }
+  },
+  "stock.putaway.rule": {
+   "fields": {
+    "location_in_id": [
+     "_onchange_location_in"
+    ],
+    "location_out_id": [
+     "_onchange_sublocation"
+    ],
+    "storage_category_id": [
+     "_onchange_sublocation"
+    ],
+    "sublocation": [
+     "_onchange_sublocation"
+    ]
+   },
+   "methods": {
+    "_onchange_location_in": {
+     "fields": [
+      "location_in_id"
+     ],
+     "source": "addons/stock/models/product_strategy.py:96"
+    },
+    "_onchange_sublocation": {
+     "fields": [
+      "sublocation",
+      "location_out_id",
+      "storage_category_id"
+     ],
+     "source": "addons/stock/models/product_strategy.py:81"
+    }
+   }
+  },
+  "stock.quant": {
+   "fields": {
+    "company_id": [
+     "_onchange_product_id"
+    ],
+    "inventory_quantity": [
+     "_onchange_inventory_quantity"
+    ],
+    "location_id": [
+     "_onchange_location_or_product_id"
+    ],
+    "lot_id": [
+     "_onchange_location_or_product_id",
+     "_onchange_serial_number"
+    ],
+    "owner_id": [
+     "_onchange_location_or_product_id"
+    ],
+    "package_id": [
+     "_onchange_location_or_product_id"
+    ],
+    "product_id": [
+     "_onchange_location_or_product_id",
+     "_onchange_product_id"
+    ]
+   },
+   "methods": {
+    "_onchange_inventory_quantity": {
+     "fields": [
+      "inventory_quantity"
+     ],
+     "source": "addons/stock/models/stock_quant.py:991"
+    },
+    "_onchange_location_or_product_id": {
+     "fields": [
+      "location_id",
+      "product_id",
+      "lot_id",
+      "package_id",
+      "owner_id"
+     ],
+     "source": "addons/stock/models/stock_quant.py:966"
+    },
+    "_onchange_product_id": {
+     "fields": [
+      "product_id",
+      "company_id"
+     ],
+     "source": "addons/stock/models/stock_quant.py:1012"
+    },
+    "_onchange_serial_number": {
+     "fields": [
+      "lot_id"
+     ],
+     "source": "addons/stock/models/stock_quant.py:1003"
+    }
+   }
+  },
+  "stock.replenishment.info": {
+   "fields": {
+    "daily_demand": [
+     "_onchange_daily_demand"
+    ],
+    "min_coverage": [
+     "_onchange_min_coverage"
+    ],
+    "replenish_frequency": [
+     "_onchange_replenish_frequency"
+    ]
+   },
+   "methods": {
+    "_onchange_daily_demand": {
+     "fields": [
+      "daily_demand"
+     ],
+     "source": "addons/stock/wizard/stock_replenishment_info.py:122"
+    },
+    "_onchange_min_coverage": {
+     "fields": [
+      "min_coverage"
+     ],
+     "source": "addons/stock/wizard/stock_replenishment_info.py:132"
+    },
+    "_onchange_replenish_frequency": {
+     "fields": [
+      "replenish_frequency"
+     ],
+     "source": "addons/stock/wizard/stock_replenishment_info.py:141"
+    }
+   }
+  },
+  "stock.rule": {
+   "fields": {
+    "action": [
+     "_onchange_action"
+    ],
+    "company_id": [
+     "_onchange_route"
+    ],
+    "picking_type_id": [
+     "_onchange_picking_type"
+    ],
+    "route_id": [
+     "_onchange_route"
+    ]
+   },
+   "methods": {
+    "_onchange_action": {
+     "fields": [
+      "action"
+     ],
+     "source": "addons/purchase_stock/models/stock_rule.py:40"
+    },
+    "_onchange_picking_type": {
+     "fields": [
+      "picking_type_id"
+     ],
+     "source": "addons/stock/models/stock_rule.py:126"
+    },
+    "_onchange_route": {
+     "fields": [
+      "route_id",
+      "company_id"
+     ],
+     "source": "addons/stock/models/stock_rule.py:135"
+    }
+   }
+  },
+  "stock.warehouse": {
+   "fields": {
+    "company_id": [
+     "_onchange_company_id"
+    ]
+   },
+   "methods": {
+    "_onchange_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/stock/models/stock_warehouse.py:100"
+    }
+   }
+  },
+  "stock.warehouse.orderpoint": {
+   "fields": {
+    "product_id": [
+     "_onchange_product_id"
+    ]
+   },
+   "methods": {
+    "_onchange_product_id": {
+     "fields": [
+      "product_id"
+     ],
+     "source": "addons/stock/models/stock_orderpoint.py:325"
+    }
+   }
+  },
+  "uom.uom": {
+   "fields": {
+    "relative_factor": [
+     "_onchange_critical_fields"
+    ]
+   },
+   "methods": {
+    "_onchange_critical_fields": {
+     "fields": [
+      "relative_factor"
+     ],
+     "source": "addons/uom/models/uom_uom.py:71"
+    }
+   }
+  }
+ }
+}

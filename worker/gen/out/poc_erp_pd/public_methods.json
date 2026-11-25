@@ -1,0 +1,19 @@
+{
+ "models": {
+  "payment.transaction": [
+   "action_capture",
+   "action_confirm",
+   "action_demo_set_canceled",
+   "action_demo_set_done",
+   "action_demo_set_error",
+   "action_post_process",
+   "action_refund",
+   "action_view_child_transactions",
+   "action_view_invoices",
+   "action_view_payment_data",
+   "action_view_refunds",
+   "action_view_sales_orders",
+   "action_void"
+  ]
+ }
+}

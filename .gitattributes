@@ -1,0 +1,2 @@
+# the Worker bundles these byte for byte (src/gen_models.ts): never a text conversion, never a text diff
+worker/gen/out/**/models.pack binary

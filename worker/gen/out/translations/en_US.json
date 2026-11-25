@@ -1,0 +1,111 @@
+{
+ "hash": "4b248ed4c5f1e34a5a4f9cdeb190de39625c0257",
+ "lang": "en_US",
+ "lang_parameters": {
+  "code": "en_US",
+  "date_format": "%m/%d/%Y",
+  "decimal_point": ".",
+  "direction": "ltr",
+  "grouping": "[3,0]",
+  "name": "English (US)",
+  "thousands_sep": ",",
+  "time_format": "%I:%M:%S %p",
+  "week_start": 7
+ },
+ "modules": {
+  "api_doc": {
+   "messages": []
+  },
+  "auth_passkey": {
+   "messages": []
+  },
+  "auth_signup": {
+   "messages": []
+  },
+  "auth_totp": {
+   "messages": []
+  },
+  "auth_totp_mail": {
+   "messages": []
+  },
+  "base": {
+   "messages": []
+  },
+  "base_address_extended": {
+   "messages": []
+  },
+  "base_import": {
+   "messages": []
+  },
+  "base_import_module": {
+   "messages": []
+  },
+  "base_install_request": {
+   "messages": []
+  },
+  "base_report_wkhtmltox": {
+   "messages": []
+  },
+  "base_setup": {
+   "messages": []
+  },
+  "bus": {
+   "messages": []
+  },
+  "contacts": {
+   "messages": []
+  },
+  "google_gmail": {
+   "messages": []
+  },
+  "html_editor": {
+   "messages": []
+  },
+  "iap": {
+   "messages": []
+  },
+  "iap_mail": {
+   "messages": []
+  },
+  "mail": {
+   "messages": []
+  },
+  "mail_bot": {
+   "messages": []
+  },
+  "microsoft_outlook": {
+   "messages": []
+  },
+  "mysubscription": {
+   "messages": []
+  },
+  "partner_autocomplete": {
+   "messages": []
+  },
+  "phone_validation": {
+   "messages": []
+  },
+  "privacy_lookup": {
+   "messages": []
+  },
+  "rpc": {
+   "messages": []
+  },
+  "sms": {
+   "messages": []
+  },
+  "web": {
+   "messages": []
+  },
+  "web_hierarchy": {
+   "messages": []
+  },
+  "web_tour": {
+   "messages": []
+  },
+  "web_unsplash": {
+   "messages": []
+  }
+ },
+ "multi_lang": true
+}

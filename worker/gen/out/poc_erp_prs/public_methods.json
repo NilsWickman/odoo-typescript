@@ -1,0 +1,39 @@
+{
+ "models": {
+  "purchase.requisition": [
+   "action_cancel",
+   "action_confirm",
+   "action_done",
+   "action_draft",
+   "action_reschedule_my_next_customdate",
+   "action_reschedule_my_next_nextweek",
+   "action_reschedule_my_next_today",
+   "action_reschedule_my_next_tomorrow",
+   "activity_feedback",
+   "activity_reschedule",
+   "activity_schedule",
+   "activity_search",
+   "activity_send_mail",
+   "activity_unlink",
+   "message_change_thread",
+   "message_get_followers",
+   "message_mail_with_source",
+   "message_new",
+   "message_notify",
+   "message_parse",
+   "message_post",
+   "message_post_with_source",
+   "message_process",
+   "message_route",
+   "message_subscribe",
+   "message_unsubscribe",
+   "message_update",
+   "message_update_siblings_subscription",
+   "notify_cancel_by_type",
+   "rating_apply",
+   "rating_send_request",
+   "set_message_pin"
+  ],
+  "purchase.requisition.line": []
+ }
+}

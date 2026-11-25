@@ -1,0 +1,66 @@
+[
+[
+"<div><strong>Organized by</strong><br>Mitchell Admin<br><a href=\"mailto:admin@example.com\">admin@example.com</a><br><a href=\"tel:+1%20555-555-5555\">+1 555-555-5555</a><br><br><strong>Contact Details</strong><br>Marc Demo<br><a href=\"mailto:mark.brown23@example.com\">mark.brown23@example.com</a><br><a href=\"tel:(441)-695-2334\">(441)-695-2334</a></div>",
+"*Organized by*\nMitchell Admin\nadmin@example.com [1]\n+1 555-555-5555 [2]\n*Contact Details*\nMarc Demo\nmark.brown23@example.com [3]\n(441)-695-2334 [4]\n\n[1] mailto:admin@example.com\n[2] tel:+1%20555-555-5555\n[3] mailto:mark.brown23@example.com\n[4] tel:(441)-695-2334"
+],
+[
+"<div><p>Agenda: budget, plans; Q&amp;A</p><p>Bring <strong>numbers</strong> and <a href=\"https://example.com/sheet\">the sheet</a>.</p><br><strong>Organized by</strong><br>Mitchell Admin<br><a href=\"mailto:admin@example.com\">admin@example.com</a><br><a href=\"tel:+1%20555-555-5555\">+1 555-555-5555</a></div>",
+"Agenda: budget, plans; Q&A\nBring *numbers* and the sheet [1] .\n*Organized by*\nMitchell Admin\nadmin@example.com [2]\n+1 555-555-5555 [3]\n\n[1] https://example.com/sheet\n[2] mailto:admin@example.com\n[3] tel:+1%20555-555-5555"
+],
+[
+"<p>Hello</p>",
+"Hello"
+],
+[
+"<p>a</p><p>b</p><p></p><p>c</p>",
+"a\nb\nc"
+],
+[
+"<p>plain text with &lt;angle&gt; &amp; ampersand</p>",
+"plain text with <angle> & ampersand"
+],
+[
+"<p>x <em>emph</em> <b>bold</b> <i>it</i></p><h1>Title</h1><h2>Sub</h2><h3>Small</h3>",
+"x /emph/ *bold* it\n**Title****Sub***Small*"
+],
+[
+"<ul><li>one</li><li>two <a href=\"https://a.example/x?y=1&amp;z=2\">link</a></li></ul>",
+"one two link [1]\n\n[1] https://a.example/x?y=1&z=2"
+],
+[
+"<p><img src=\"/web/image/12/photo.png?unique=1\" alt=\"x\"> and <img src=\"data:image/png;base64,AAAA\"> <img src=\"https://x.example/pic\"></p>",
+"photo [1] and Image [2]  Image [3]\n\n\n[1] /web/image/12/photo.png?unique=1\n[2] data:image/png;base64,AAAA\n[3] https://x.example/pic"
+],
+[
+"<p><a href=\"https://x.example\"><strong>bold link</strong> tail</a> after</p>",
+"None [1]*bold link* tail after\n\n\n[1] https://x.example"
+],
+[
+"<p>nbsp:&nbsp;here&nbsp;&nbsp;two</p>",
+"nbsp: here  two"
+],
+[
+"<table><tr><td>a</td><td>b</td></tr><tr><td>c</td></tr></table>",
+"a b\nc"
+],
+[
+"<div>line1<br>line2<br>line3</div><div>  spaced   out  </div>",
+"line1\nline2\nline3  spaced  out"
+],
+[
+"<p>Hello</p><p><br></p><p><br></p><p>World</p>",
+"Hello\n\n\nWorld"
+],
+[
+"<p>Ünïcödé — “quotes” and emoji 😀</p>",
+"Ünïcödé — “quotes” and emoji 😀"
+],
+[
+"<p><a href=\"\">empty href</a> <a>no href</a></p>",
+"empty href  no href"
+],
+[
+"<div><p>Agenda:</p><ul><li>budget</li><li>plans</li></ul></div>",
+"Agenda:\nbudget plans"
+]
+]

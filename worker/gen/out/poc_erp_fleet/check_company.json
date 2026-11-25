@@ -1,0 +1,24 @@
+{
+ "models": {
+  "fleet.vehicle": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "future_driver_id"
+   ]
+  },
+  "fleet.vehicle.log.contract": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "vehicle_id"
+   ]
+  }
+ }
+}

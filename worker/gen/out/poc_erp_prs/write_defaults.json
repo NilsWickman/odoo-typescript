@@ -1,0 +1,44 @@
+{
+ "purchase.requisition": {
+  "active": {
+   "const": true
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/purchase_requisition/models/purchase_requisition.py:30"
+  },
+  "name": {
+   "expr": "_('New')",
+   "src": "odoo/addons/purchase_requisition/models/purchase_requisition.py:16"
+  },
+  "picking_type_id": {
+   "callable": "odoo.addons.purchase_requisition_stock.models.purchase_requisition.PurchaseRequisition._default_picking_type_id",
+   "src": "odoo/addons/purchase_requisition_stock/models/purchase_requisition.py:10"
+  },
+  "requisition_type": {
+   "const": "blanket_order"
+  },
+  "state": {
+   "const": "draft"
+  },
+  "user_id": {
+   "expr": "self.env.user",
+   "src": "odoo/addons/purchase_requisition/models/purchase_requisition.py:28"
+  }
+ },
+ "purchase.requisition.line": {
+  "analytic_precision": {
+   "expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+   "src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+  },
+  "display_type": {
+   "const": false
+  },
+  "price_unit": {
+   "const": 0.0
+  },
+  "sequence": {
+   "const": 10
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "account.move.line": {
+  "analytic_precision": {
+   "expr": "self.env['decimal.precision'].precision_get(\"Percentage Analytic\")",
+   "src": "odoo/addons/analytic/models/analytic_mixin.py:25"
+  },
+  "deductible_percentage": {
+   "const": 1.0
+  },
+  "discount": {
+   "const": 0.0
+  },
+  "l10n_cn_output_vat_offset_account_id": {
+   "expr": "self.env.company.l10n_cn_output_vat_offset_account_id",
+   "src": "odoo/addons/l10n_cn/models/account_move_line.py:13"
+  }
+ },
+ "l10n_cn.balance.deduction": {}
+}

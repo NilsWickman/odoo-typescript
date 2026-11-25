@@ -1,0 +1,28 @@
+{
+ "base.document.layout": {
+  "company_details": {
+   "callable": "odoo.addons.l10n_din5008.models.base_document_layout.BaseDocumentLayout._default_company_details",
+   "src": "odoo/addons/l10n_din5008/models/base_document_layout.py:21"
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/web/models/base_document_layout.py:39"
+  },
+  "l10n_din5008_delivery_date": {
+   "expr": "fields.Date.context_today(self) + relativedelta(day=7)",
+   "src": "odoo/addons/l10n_din5008/models/base_document_layout.py:41"
+  },
+  "l10n_din5008_due_date": {
+   "expr": "fields.Date.context_today(self) + relativedelta(day=7)",
+   "src": "odoo/addons/l10n_din5008/models/base_document_layout.py:40"
+  },
+  "l10n_din5008_invoice_date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  },
+  "report_footer": {
+   "callable": "odoo.addons.l10n_din5008.models.base_document_layout.BaseDocumentLayout._default_report_footer",
+   "src": "odoo/addons/l10n_din5008/models/base_document_layout.py:11"
+  }
+ }
+}

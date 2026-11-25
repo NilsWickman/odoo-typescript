@@ -1,0 +1,52 @@
+// Public Odoo-TS demo & Runbot Worker: isolated from `odoo-ts` (`odoo_db` behind Access).
+// Deployed via `./deploy-demo.sh`, which generates the `odoo-ts-1..N` custom domains from DEMO_SLOTS
+// (default 20) and attaches the `PG_NET` Workers VPC binding to the VPS Postgres tunnel.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "odoo-ts-demo",
+  "main": "src/index.ts",
+  "rules": [{ "type": "Data", "globs": ["**/gen/out/models.pack", "**/gen/out/poc_erp/models.pack"], "fallthrough": true }],
+  "minify": true,
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "upload_source_maps": false,
+  "limits": { "cpu_ms": 30000 },
+  "workers_dev": false,
+  "placement": { "region": "gcp:europe-north1" },
+  "vars": {
+    "SLOTS": "{}",
+    "DEMO_MODE": "1",
+    "DEMO_BASE_DOMAIN": "example.com",
+    "DEMO_LAUNCHER_HOST": "odoo-ts-demo.example.com",
+    "DEMO_RUNBOT_HOST": "odoo-ts-runbot.example.com",
+    "DEMO_SLOT_PREFIX": "odoo-ts-",
+    "DEMO_SLOTS": "50",
+    "DEMO_IDLE_MS": "60000",
+    "DEMO_RUNBOT_RESET_MS": "600000",
+    "DEMO_TEMPLATE_DB": "demo_template",
+    "DEMO_DB_OWNER": "odoo_demo",
+    "FILES_DB_NAME": "odoo_demo_files",
+    "TEMPLATE_FILES_DB_KEY": "demo_template",
+    "PG_TUNNEL": "1",
+    "PROXY_MODE": "0",
+    "APPS_INSTALLABLE_DBS": "^demo_",
+    "PDF_ENGINE_DBS": "^demo_"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "SESSION", "class_name": "SessionStore" },
+      { "name": "BUS", "class_name": "BusDispatcher" },
+      { "name": "FILESTORE_DO", "class_name": "FilestoreObject" },
+      { "name": "DEMO_POOL", "class_name": "DemoPool" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["SessionStore", "BusDispatcher", "FilestoreObject", "DemoPool"] }
+  ],
+  "version_metadata": { "binding": "CF_VERSION_METADATA" },
+  "assets": { "directory": "./assets", "binding": "ASSETS", "run_worker_first": true },
+  // 1-minute safety-net cron for DemoPool timers alongside Durable Object alarms
+  "triggers": { "crons": ["*/1 * * * *"] },
+  "browser": { "binding": "BROWSER" }
+}

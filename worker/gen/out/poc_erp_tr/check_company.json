@@ -1,0 +1,22 @@
+{
+ "models": {
+  "account.journal": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "default_account_id",
+    "suspense_account_id",
+    "non_deductible_account_id",
+    "inbound_payment_method_line_ids",
+    "outbound_payment_method_line_ids",
+    "profit_account_id",
+    "loss_account_id",
+    "bank_account_id",
+    "l10n_tr_default_sales_return_account_id"
+   ]
+  }
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "fleet.service.type": {
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/fleet/models/fleet_service_type.py:20"
+  }
+ },
+ "fleet.vehicle": {
+  "acquisition_date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  },
+  "active": {
+   "const": true
+  },
+  "co2_emission_unit": {
+   "const": "g/km"
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/fleet/models/fleet_vehicle.py:56"
+  },
+  "contract_date_start": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  },
+  "odometer_unit": {
+   "const": "kilometers"
+  },
+  "power_unit": {
+   "const": "power"
+  },
+  "range_unit": {
+   "const": "km"
+  },
+  "state_id": {
+   "callable": "odoo.addons.fleet.models.fleet_vehicle.FleetVehicle._get_default_state",
+   "src": "odoo/addons/fleet/models/fleet_vehicle.py:30"
+  },
+  "trailer_hook": {
+   "const": false
+  }
+ },
+ "fleet.vehicle.assignation.log": {},
+ "fleet.vehicle.cost.report": {},
+ "fleet.vehicle.log.contract": {
+  "active": {
+   "const": true
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/fleet/models/fleet_vehicle_log_contract.py:24"
+  },
+  "cost_frequency": {
+   "const": "monthly"
+  },
+  "expiration_date": {
+   "expr": "",
+   "src": "odoo/addons/fleet/models/fleet_vehicle_log_contract.py:37"
+  },
+  "start_date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  },
+  "state": {
+   "const": "futur"
+  },
+  "user_id": {
+   "expr": "self.env['fleet.vehicle'].browse(self.env.context.get('active_id')).manager_id",
+   "src": "odoo/addons/fleet/models/fleet_vehicle_log_contract.py:31"
+  }
+ },
+ "fleet.vehicle.log.services": {
+  "active": {
+   "const": true
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/fleet/models/fleet_vehicle_log_services.py:29"
+  },
+  "date_from": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  },
+  "service_type_id": {
+   "expr": "self.env.ref('fleet.type_service_service_7', raise_if_not_found=False)",
+   "src": "odoo/addons/fleet/models/fleet_vehicle_log_services.py:37"
+  },
+  "state": {
+   "const": "new"
+  }
+ },
+ "fleet.vehicle.model": {
+  "active": {
+   "const": true
+  },
+  "default_fuel_type": {
+   "const": "electric"
+  },
+  "electric_assistance": {
+   "const": false
+  },
+  "power_unit": {
+   "const": "power"
+  },
+  "range_unit": {
+   "const": "km"
+  },
+  "vehicle_type": {
+   "const": "car"
+  }
+ },
+ "fleet.vehicle.model.brand": {
+  "active": {
+   "const": true
+  }
+ },
+ "fleet.vehicle.model.category": {},
+ "fleet.vehicle.odometer": {
+  "date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  }
+ },
+ "fleet.vehicle.odometer.report": {},
+ "fleet.vehicle.send.mail": {
+  "author_id": {
+   "expr": "self.env.user.partner_id.id",
+   "src": "odoo/addons/fleet/wizard/fleet_vehicle_send_mail.py:12"
+  }
+ },
+ "fleet.vehicle.state": {},
+ "fleet.vehicle.tag": {},
+ "res.config.settings": {
+  "auth_signup_uninvited": {
+   "const": "b2c"
+  },
+  "chart_template": {
+   "expr": "self.env.company._chart_template_selection()",
+   "src": "odoo/addons/account/models/res_config_settings.py:38"
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/base_setup/models/res_config_settings.py:12"
+  },
+  "delay_alert_contract": {
+   "const": 30
+  },
+  "group_send_reminder": {
+   "const": true
+  },
+  "lead_enrich_auto": {
+   "const": "auto"
+  },
+  "lock_confirmed_po": {
+   "expr": "self.env.company.po_lock == 'lock'",
+   "src": "odoo/addons/purchase/models/res_config_settings.py:10"
+  },
+  "po_order_approval": {
+   "expr": "self.env.company.po_double_validation == 'two_step'",
+   "src": "odoo/addons/purchase/models/res_config_settings.py:12"
+  },
+  "product_volume_volume_in_cubic_feet": {
+   "const": "0"
+  },
+  "product_weight_in_lbs": {
+   "const": "0"
+  }
+ }
+}

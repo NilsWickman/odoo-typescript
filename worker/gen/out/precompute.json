@@ -1,0 +1,114 @@
+{
+ "db": "dev_gen",
+ "models": {
+  "discuss.channel": {
+   "fields": [
+    "member_indices"
+   ],
+   "groups": [],
+   "sudo": [
+    "member_indices"
+   ]
+  },
+  "mail.activity": {
+   "fields": [
+    "res_model",
+    "summary",
+    "note",
+    "date_deadline",
+    "user_id",
+    "role_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "res_model",
+    "summary",
+    "note",
+    "date_deadline",
+    "user_id",
+    "role_id"
+   ]
+  },
+  "mail.activity.plan": {
+   "fields": [
+    "res_model_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "res_model_id"
+   ]
+  },
+  "mail.activity.schedule": {
+   "fields": [
+    "res_model_id",
+    "res_ids"
+   ],
+   "groups": [],
+   "sudo": [
+    "res_model_id",
+    "res_ids"
+   ]
+  },
+  "mail.compose.message": {
+   "fields": [
+    "lang"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "mail.composer.mixin": {
+   "fields": [
+    "lang"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "properties.base.definition.mixin": {
+   "fields": [
+    "properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "res.partner": {
+   "fields": [
+    "properties",
+    "user_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "user_id"
+   ]
+  },
+  "res.partner.bank": {
+   "fields": [
+    "country_id",
+    "clearing_label_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "country_id",
+    "clearing_label_id"
+   ]
+  },
+  "res.users": {
+   "fields": [
+    "properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "sms.composer": {
+   "fields": [
+    "composition_mode",
+    "body"
+   ],
+   "groups": [],
+   "sudo": [
+    "composition_mode",
+    "body"
+   ]
+  }
+ },
+ "odoo_commit": "dd5d371863dd96f640e4a4b970d8437bb9861cba"
+}

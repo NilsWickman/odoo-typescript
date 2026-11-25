@@ -1,0 +1,15 @@
+{
+ "models": {
+  "purchase.requisition": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "vendor_id",
+    "user_id"
+   ]
+  }
+ }
+}

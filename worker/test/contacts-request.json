@@ -1,0 +1,81 @@
+{
+  "model": "res.partner",
+  "method": "web_search_read",
+  "args": [],
+  "kwargs": {
+    "specification": {
+      "create_date": {},
+      "avatar_128": {},
+      "display_name": {},
+      "vat": {},
+      "email": {},
+      "phone_sanitized": {},
+      "phone_formatted": {},
+      "phone": {},
+      "user_id": {
+        "fields": {
+          "write_date": {},
+          "display_name": {}
+        }
+      },
+      "activity_ids": {
+        "fields": {}
+      },
+      "street": {},
+      "city": {},
+      "state_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "country_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "application_statistics": {},
+      "category_id": {
+        "fields": {
+          "display_name": {},
+          "color": {}
+        }
+      },
+      "company_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "properties": {},
+      "properties_base_definition_id": {
+        "fields": {
+          "display_name": {}
+        }
+      },
+      "write_date": {},
+      "activity_exception_decoration": {},
+      "activity_exception_icon": {},
+      "activity_state": {},
+      "activity_summary": {},
+      "activity_type_icon": {},
+      "activity_type_id": {
+        "fields": {
+          "display_name": {}
+        }
+      }
+    },
+    "offset": 0,
+    "order": "",
+    "limit": 80,
+    "context": {
+      "lang": "en_US",
+      "tz": "Europe/Brussels",
+      "uid": 2,
+      "allowed_company_ids": [
+        1
+      ],
+      "default_is_company": true
+    },
+    "count_limit": 10001,
+    "domain": []
+  }
+}

@@ -1,0 +1,19 @@
+// Stream H2 development config: `npx wrangler dev --config src/controllers/dev/wrangler.jsonc --port 8082 ...`
+// (see entry.ts). Same bindings as worker/wrangler.jsonc plus the static assets directory.
+{
+  "$schema": "../../../node_modules/wrangler/config-schema.json",
+  "name": "odoo-ts-h2-dev",
+  "main": "entry.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": { "SLOTS": "{}" },
+  "durable_objects": {
+    "bindings": [
+      { "name": "SESSION", "class_name": "SessionStore" },
+      { "name": "BUS", "class_name": "BusDispatcher" }
+    ]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["SessionStore", "BusDispatcher"] }],
+  "r2_buckets": [{ "binding": "FILESTORE", "bucket_name": "odoo-ts-filestore" }],
+  "assets": { "directory": "../../../assets", "binding": "ASSETS", "run_worker_first": true }
+}

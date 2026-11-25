@@ -1,0 +1,964 @@
+{
+ "db": "dev_gen_poc_erp",
+ "models": {
+  "account.account": {
+   "auto": true,
+   "domain": "companies_parent_of",
+   "has_company_id": false,
+   "has_company_ids": true,
+   "property": [],
+   "regular": [
+    "tax_ids",
+    "parent_id"
+   ]
+  },
+  "account.accrued.orders.wizard": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id",
+    "account_id"
+   ]
+  },
+  "account.analytic.account": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "partner_id"
+   ]
+  },
+  "account.analytic.applicability": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "account.analytic.distribution.model": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id"
+   ]
+  },
+  "account.analytic.line": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "account_id",
+    "partner_id",
+    "product_id",
+    "general_account_id",
+    "journal_id",
+    "move_line_id"
+   ]
+  },
+  "account.automatic.entry.wizard": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id",
+    "expense_accrual_account",
+    "revenue_accrual_account",
+    "destination_account_id"
+   ]
+  },
+  "account.bank.statement": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id"
+   ]
+  },
+  "account.bank.statement.line": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "move_id",
+    "partner_id"
+   ]
+  },
+  "account.cash.rounding": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "account.fiscal.position": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "account.fiscal.position.account": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "account_src_id",
+    "account_dest_id"
+   ]
+  },
+  "account.journal": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "default_account_id",
+    "suspense_account_id",
+    "non_deductible_account_id",
+    "inbound_payment_method_line_ids",
+    "outbound_payment_method_line_ids",
+    "profit_account_id",
+    "loss_account_id",
+    "bank_account_id"
+   ]
+  },
+  "account.move": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id",
+    "origin_payment_id",
+    "statement_line_id",
+    "invoice_payment_term_id",
+    "partner_id",
+    "commercial_partner_id",
+    "partner_shipping_id",
+    "partner_bank_id",
+    "fiscal_position_id",
+    "reversed_entry_id",
+    "invoice_vendor_bill_id"
+   ]
+  },
+  "account.move.line": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "move_id",
+    "account_id",
+    "reconcile_model_id",
+    "tax_ids",
+    "group_tax_id",
+    "tax_repartition_line_id"
+   ]
+  },
+  "account.move.reversal": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id"
+   ]
+  },
+  "account.payment": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "move_id",
+    "journal_id",
+    "partner_bank_id",
+    "return_partner_bank_id",
+    "partner_id",
+    "commercial_partner_id",
+    "outstanding_account_id",
+    "destination_account_id"
+   ]
+  },
+  "account.payment.method.line": {
+   "auto": false,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "payment_account_id",
+    "journal_id"
+   ]
+  },
+  "account.payment.register": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id",
+    "writeoff_account_id"
+   ]
+  },
+  "account.payment.term": {
+   "auto": false,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "account.reconcile.model": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "match_journal_ids"
+   ]
+  },
+  "account.reconcile.model.line": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "account_id",
+    "tax_ids"
+   ]
+  },
+  "account.report.external.value": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "account.setup.bank.manual.config": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "linked_journal_id"
+   ]
+  },
+  "account.tax": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "children_tax_ids",
+    "cash_basis_transition_account_id",
+    "l10n_us_exempt_parent_tax_id",
+    "l10n_us_nontaxable_parent_tax_id"
+   ]
+  },
+  "account.tax.group": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "account.tax.repartition.line": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "account_id",
+    "tax_id"
+   ]
+  },
+  "analytic.plan.fields.mixin": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": false,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "account_id"
+   ]
+  },
+  "certificate.certificate": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "private_key_id",
+    "public_key_id",
+    "issuer_cert_id"
+   ]
+  },
+  "certificate.key": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "crm.lead": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "user_id",
+    "team_id",
+    "partner_id"
+   ]
+  },
+  "crm.team": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "user_id"
+   ]
+  },
+  "crm.team.member": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "user_id"
+   ]
+  },
+  "ir.sequence": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "mail.activity.plan.template": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "responsible_id"
+   ]
+  },
+  "payment.provider": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id"
+   ]
+  },
+  "payment.token": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "product.category": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [
+    "property_stock_valuation_account_id",
+    "property_price_difference_account_id",
+    "property_account_bills_to_receive_id",
+    "property_account_billed_not_received_id",
+    "property_account_invoices_to_issue_id",
+    "property_account_invoiced_not_delivered_id"
+   ],
+   "regular": []
+  },
+  "product.combo": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "product.combo.item": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id"
+   ]
+  },
+  "product.pricelist": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "product.pricelist.item": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "categ_id",
+    "product_tmpl_id",
+    "product_id",
+    "base_pricelist_id"
+   ]
+  },
+  "product.product": {
+   "auto": false,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "product.replenish": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "route_id",
+    "warehouse_id"
+   ]
+  },
+  "product.supplierinfo": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "partner_id",
+    "product_id",
+    "product_tmpl_id"
+   ]
+  },
+  "product.template": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [
+    "responsible_id",
+    "property_stock_production",
+    "property_stock_inventory"
+   ],
+   "regular": [
+    "combo_ids",
+    "categ_id",
+    "optional_product_ids"
+   ]
+  },
+  "project.project": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "account_id"
+   ]
+  },
+  "purchase.order": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "partner_id",
+    "dest_address_id",
+    "user_id"
+   ]
+  },
+  "quotation.document": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "quotation_template_ids"
+   ]
+  },
+  "res.company": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": false,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "transfer_account_id",
+    "default_cash_difference_income_account_id",
+    "default_cash_difference_expense_account_id",
+    "account_journal_suspense_account_id",
+    "account_journal_early_pay_discount_gain_account_id",
+    "account_journal_early_pay_discount_loss_account_id",
+    "account_sale_tax_id",
+    "account_purchase_tax_id",
+    "account_purchase_receipt_fiscal_position_id",
+    "income_currency_exchange_account_id",
+    "expense_currency_exchange_account_id",
+    "account_default_pos_receivable_account_id",
+    "expense_accrual_account_id",
+    "revenue_accrual_account_id",
+    "automatic_entry_default_journal_id",
+    "tax_cash_basis_journal_id",
+    "account_cash_basis_base_account_id",
+    "account_stock_valuation_id",
+    "account_stock_journal_id",
+    "internal_transit_location_id",
+    "scrap_location_id",
+    "default_stock_location_id",
+    "account_bills_to_receive_id",
+    "account_billed_not_received_id",
+    "account_production_wip_account_id",
+    "account_production_wip_overhead_account_id",
+    "account_invoices_to_issue_id",
+    "account_invoiced_not_delivered_id",
+    "sale_discount_product_id"
+   ]
+  },
+  "res.config.settings": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "currency_exchange_journal_id",
+    "income_currency_exchange_account_id",
+    "expense_currency_exchange_account_id",
+    "sale_tax_id",
+    "purchase_tax_id",
+    "account_journal_suspense_account_id",
+    "transfer_account_id",
+    "tax_cash_basis_journal_id",
+    "account_cash_basis_base_account_id",
+    "account_journal_early_pay_discount_loss_account_id",
+    "account_journal_early_pay_discount_gain_account_id",
+    "income_account_id",
+    "expense_account_id",
+    "cash_rounding_profit_account_id",
+    "cash_rounding_loss_account_id"
+   ]
+  },
+  "res.partner": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [
+    "property_account_payable_id",
+    "property_account_receivable_id",
+    "property_account_position_id",
+    "property_payment_term_id",
+    "property_supplier_payment_term_id",
+    "property_outbound_payment_method_line_id",
+    "property_inbound_payment_method_line_id",
+    "property_stock_customer",
+    "property_stock_supplier"
+   ],
+   "regular": []
+  },
+  "res.partner.bank": {
+   "auto": false,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "journal_id"
+   ]
+  },
+  "res.users": {
+   "auto": false,
+   "domain": "res.users",
+   "has_company_id": true,
+   "has_company_ids": true,
+   "property": [
+    "property_warehouse_id"
+   ],
+   "regular": [
+    "crm_team_ids"
+   ]
+  },
+  "resource.calendar": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "reference_calendar_id"
+   ]
+  },
+  "resource.calendar.leaves": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "calendar_id"
+   ]
+  },
+  "sale.order": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "partner_id",
+    "journal_id",
+    "partner_invoice_id",
+    "partner_shipping_id",
+    "fiscal_position_id",
+    "payment_term_id",
+    "preferred_payment_method_line_id",
+    "pricelist_id",
+    "team_id",
+    "opportunity_id",
+    "sale_order_template_id",
+    "quotation_document_ids"
+   ]
+  },
+  "sale.order.line": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "tax_ids"
+   ]
+  },
+  "sale.order.template": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [
+    "journal_id"
+   ],
+   "regular": [
+    "quotation_document_ids"
+   ]
+  },
+  "sale.order.template.line": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "tax_ids"
+   ]
+  },
+  "stock.location": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "location_id",
+    "storage_category_id"
+   ]
+  },
+  "stock.lot": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id"
+   ]
+  },
+  "stock.move": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "location_id",
+    "forecasted_location_id",
+    "picking_id",
+    "rule_id",
+    "picking_type_id",
+    "origin_returned_move_id",
+    "restrict_partner_id"
+   ]
+  },
+  "stock.move.line": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "picking_id",
+    "move_id",
+    "product_id",
+    "package_id",
+    "lot_id",
+    "result_package_id",
+    "owner_id",
+    "location_id",
+    "location_dest_id"
+   ]
+  },
+  "stock.package": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "stock.package.history": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "stock.package.type": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "sequence_id"
+   ]
+  },
+  "stock.picking": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "backorder_id",
+    "return_id",
+    "location_id",
+    "location_dest_id",
+    "partner_id",
+    "owner_id",
+    "batch_id"
+   ]
+  },
+  "stock.picking.batch": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "user_id",
+    "picking_ids",
+    "picking_type_id"
+   ]
+  },
+  "stock.picking.type": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "sequence_id",
+    "default_location_src_id",
+    "default_location_dest_id",
+    "allocated_location_id",
+    "return_picking_type_id",
+    "warehouse_id"
+   ]
+  },
+  "stock.putaway.rule": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "location_in_id",
+    "location_out_id",
+    "package_type_ids",
+    "storage_category_id"
+   ]
+  },
+  "stock.quant": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "lot_id",
+    "package_id",
+    "owner_id"
+   ]
+  },
+  "stock.replenish.mixin": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": false,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "route_id"
+   ]
+  },
+  "stock.route": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_ids"
+   ]
+  },
+  "stock.rule": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "location_dest_id",
+    "location_src_id",
+    "picking_type_id",
+    "partner_address_id",
+    "warehouse_id"
+   ]
+  },
+  "stock.storage.category": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "stock.storage.category.capacity": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "package_type_id"
+   ]
+  },
+  "stock.warehouse": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "partner_id",
+    "view_location_id",
+    "lot_stock_id",
+    "route_ids",
+    "wh_input_stock_loc_id",
+    "wh_qc_stock_loc_id",
+    "wh_output_stock_loc_id",
+    "wh_pack_stock_loc_id",
+    "pick_type_id",
+    "pack_type_id",
+    "out_type_id",
+    "in_type_id",
+    "int_type_id",
+    "qc_type_id",
+    "store_type_id",
+    "xdock_type_id"
+   ]
+  },
+  "stock.warehouse.orderpoint": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "warehouse_id",
+    "location_id",
+    "product_id",
+    "supplier_id"
+   ]
+  }
+ },
+ "odoo_commit": "dd5d371863dd96f640e4a4b970d8437bb9861cba"
+}

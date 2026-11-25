@@ -1,0 +1,160 @@
+{
+ "res.company": {
+  "account_opening_date": {
+   "expr": "fields.Date.today()",
+   "src": "odoo/addons/account/models/company.py:177"
+  },
+  "account_peppol_proxy_state": {
+   "const": "not_registered"
+  },
+  "account_price_include": {
+   "const": "tax_excluded"
+  },
+  "active": {
+   "const": true
+  },
+  "alias_domain_id": {
+   "expr": "self._default_alias_domain_id()",
+   "src": "odoo/addons/mail/models/res_company.py:15"
+  },
+  "annual_inventory_day": {
+   "const": 31
+  },
+  "annual_inventory_month": {
+   "const": "12"
+  },
+  "autopost_bills": {
+   "const": true
+  },
+  "cost_method": {
+   "const": "standard"
+  },
+  "currency_id": {
+   "expr": "self._default_currency_id()",
+   "src": "odoo/odoo/addons/base/models/res_company.py:109"
+  },
+  "display_invoice_tax_company_currency": {
+   "const": true
+  },
+  "email_primary_color": {
+   "const": "#FFFFFF"
+  },
+  "email_secondary_color": {
+   "const": "#875A7B"
+  },
+  "expects_chart_of_accounts": {
+   "const": true
+  },
+  "fiscalyear_last_day": {
+   "const": 31
+  },
+  "fiscalyear_last_month": {
+   "const": "12"
+  },
+  "font": {
+   "const": "Lato"
+  },
+  "horizon_days": {
+   "const": 365
+  },
+  "inventory_period": {
+   "const": "manual"
+  },
+  "inventory_valuation": {
+   "const": "periodic"
+  },
+  "logo": {
+   "callable": "odoo.addons.base.models.res_company.ResCompany._get_logo",
+   "src": "odoo/odoo/addons/base/models/res_company.py:73"
+  },
+  "nomenclature_id": {
+   "callable": "odoo.addons.barcodes.models.res_company.ResCompany._get_default_nomenclature",
+   "src": "odoo/addons/barcodes/models/res_company.py:9"
+  },
+  "paperformat_id": {
+   "expr": "self.env.ref('base.paperformat_euro', raise_if_not_found=False)",
+   "src": "odoo/odoo/addons/base/models/res_company.py:130"
+  },
+  "partnership_label": {
+   "expr": "self.env._('Members')",
+   "src": "odoo/addons/partnership/models/res_company.py:10"
+  },
+  "pay_later_label": {
+   "const": "Confirm"
+  },
+  "pay_now_label": {
+   "const": "Pay now"
+  },
+  "picking_policy": {
+   "const": "direct"
+  },
+  "po_double_validation": {
+   "const": "one_step"
+  },
+  "po_double_validation_amount": {
+   "const": 5000
+  },
+  "po_lock": {
+   "const": "edit"
+  },
+  "portal_confirmation_sign": {
+   "const": true
+  },
+  "prepayment_percent": {
+   "const": 1.0
+  },
+  "quick_edit_mode": {
+   "const": "out_and_in_invoices"
+  },
+  "quotation_validity_days": {
+   "const": 30
+  },
+  "report_tables_id": {
+   "const": "light"
+  },
+  "return_validity_days": {
+   "const": 14
+  },
+  "sale_invoice_policy": {
+   "const": "order"
+  },
+  "security_lead": {
+   "const": 0
+  },
+  "sequence": {
+   "const": 10
+  },
+  "stock_confirmation_type": {
+   "const": "sms"
+  },
+  "stock_mail_confirmation_template_id": {
+   "callable": "odoo.addons.stock.models.res_company.ResCompany._default_confirmation_mail_template",
+   "src": "odoo/addons/stock/models/res_company.py:10"
+  },
+  "stock_move_email_validation": {
+   "const": false
+  },
+  "stock_sms_confirmation_template_id": {
+   "callable": "odoo.addons.stock_sms.models.res_company.ResCompany._default_confirmation_sms_picking_template",
+   "src": "odoo/addons/stock_sms/models/res_company.py:10"
+  },
+  "tax_calculation_rounding_method": {
+   "const": "round_globally"
+  },
+  "terms_type": {
+   "const": "plain"
+  }
+ },
+ "res.partner.grade": {
+  "active": {
+   "const": true
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/partnership/models/res_partner_grade.py:14"
+  },
+  "sequence": {
+   "const": 10
+  }
+ }
+}

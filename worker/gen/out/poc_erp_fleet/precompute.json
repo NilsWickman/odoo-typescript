@@ -1,0 +1,18 @@
+{
+ "models": {
+  "fleet.vehicle": {
+   "fields": [
+    "vehicle_properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "fleet.vehicle.send.mail": {
+   "fields": [
+    "lang"
+   ],
+   "groups": [],
+   "sudo": []
+  }
+ }
+}

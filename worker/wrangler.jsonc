@@ -1,0 +1,64 @@
+// Odoo on Cloudflare: the hand port (docs/PHASE1.md section 5). One Worker, one DO namespace per concern,
+// one Hyperdrive config per slot database (D7: home Postgres via Tunnel; local dev connects directly).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "odoo-ts",
+  "main": "src/index.ts",
+  // The generated model metadata as its models.pack (gen/models_pack.py), a Data module read by src/gen_models.ts: a
+  // model is inflated from its chunk when first read. Bundled as JSON the files became an object literal whose
+  // evaluation took over half a second on an isolate's first use (C2c); as text they were 21.6 MB of the heap
+  "rules": [{ "type": "Data", "globs": ["**/gen/out/models.pack", "**/gen/out/poc_erp/models.pack"], "fallthrough": true }],
+  // Minified, here and not only at the deploy, so that the gates and the proofs run what the site runs. V8 keeps a
+  // script's source text for its whole life: 25.8 MB of the heap for the site's four builds, 15.8 MB minified
+  // (docs/infra-2026-11-13.md section 12). Names stay (wrangler's default keep_names: src/orm/sql.ts and keys.ts read
+  // a constructor's name). deploy.sh builds the source map beside the deploy and keeps it on this machine.
+  "minify": true,
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  // No source map upload (2026-11-08): the bundle's map passed Cloudflare's 60 MiB limit (61.9 MiB, error 10021) and
+  // the deploy failed. Stack traces in `wrangler tail` then point into the bundle, not the TypeScript sources.
+  "upload_source_maps": false,
+  // Workers Paid (2026-11-06): its default of 30 s CPU per invocation, explicit. A PDF took about 1.6 s and a login
+  // about 0.4 s (600,000 rounds of PBKDF2); Workers Free stops at 10 ms and refuses this setting.
+  "limits": { "cpu_ms": 30000 },
+  // deploy.sh: one custom domain behind Cloudflare Access, no public workers.dev address (wrangler dev ignores both)
+  "routes": [{ "pattern": "odoo-ts.example.com", "custom_domain": true }],
+  "workers_dev": false,
+  // next to the database: every SQL statement is a round trip, and a Worker at the visitor's edge (Stockholm) took 19 s
+  // for load_menus at about 30 ms per statement against Neon in Frankfurt (2026-11-03). Since 2026-11-06 the database
+  // is Postgres on the Hetzner VPS in Helsinki, whose tunnel connects to Cloudflare's HEL data center: GCP
+  // europe-north1 (Hamina, Finland) is the nearest cloud region placement knows.
+  "placement": { "region": "gcp:europe-north1" },
+  // PG_NET, the Workers VPC binding to the Cloudflare Tunnel "odoo-ts-pg" (your Cloudflare Tunnel UUID,
+  // cloudflared next to the VPS's Postgres container: raw TCP without a public database port, src/db.ts tunnelStream),
+  // is not declared here: `wrangler dev` then opens a remote preview session for it even with "remote": false, and
+  // wrangler's OAuth login lacks the connectivity:admin scope (2026-11-06). attach_pg_net.sh adds it to the deployed
+  // version after each deploy (scripts settings PATCH, the other bindings inherited).
+  "vars": {
+    // Slot database -> Hyperdrive binding. Local dev leaves this empty and uses PG_DSN_TEMPLATE (start.sh).
+    "SLOTS": "{}"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "SESSION", "class_name": "SessionStore" },
+      { "name": "BUS", "class_name": "BusDispatcher" },
+      // Files written at runtime (uploads, thumbnails): one object per database (src/do/filestore.ts).
+      { "name": "FILESTORE_DO", "class_name": "FilestoreObject" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["SessionStore", "BusDispatcher"] },
+    { "tag": "v2", "new_sqlite_classes": ["FilestoreObject"] }
+  ],
+  // S1's immutable filestore is packaged by gen/filestore.py. No R2 subscription.
+  "version_metadata": { "binding": "CF_VERSION_METADATA" },
+  "assets": { "directory": "./assets", "binding": "ASSETS", "run_worker_first": true },
+  // Every 15 minutes, not every minute (2026-11-06): each run queries odoo_db, and a run every minute keeps the Neon
+  // compute from suspending (its 5-minute idle timeout; estimated, not measured, as a cause of the free quota running out on 2026-11-06). The
+  // ported job (account autopost) is daily in Odoo, so 15 minutes of delay does not change its outcome.
+  "triggers": { "crons": ["*/15 * * * *"] },
+  // Browser Run: the PDF engine of /report/pdf (src/controllers/report.ts), used on request only (Workers Free:
+  // 10 browser minutes a day). Local development (start.sh LOCAL_DEV) has no engine, as the oracle.
+  "browser": { "binding": "BROWSER" }
+}

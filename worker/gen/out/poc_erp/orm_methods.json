@@ -1,0 +1,3656 @@
+{
+ "db": "dev_fix_gen",
+ "display_name_override": [
+  "account.account",
+  "account.account.tag",
+  "account.analytic.account",
+  "account.incoterms",
+  "account.journal",
+  "account.lock_exception",
+  "account.move",
+  "account.move.line",
+  "account.payment",
+  "account.payment.method.line",
+  "account.report",
+  "account.report.expression",
+  "account.tax",
+  "calendar.calendar",
+  "calendar.event",
+  "clearing.label",
+  "crm.iap.lead.industry",
+  "crm.iap.lead.role",
+  "crm.iap.lead.seniority",
+  "discuss.call.history",
+  "discuss.channel",
+  "discuss.channel.member",
+  "iap.service.pack",
+  "ir.actions.server.history",
+  "ir.embedded.actions",
+  "ir.model.data",
+  "ir.model.fields",
+  "ir.ui.menu",
+  "mail.activity",
+  "mail.alias",
+  "mail.followers",
+  "mail.guest",
+  "payment.token",
+  "privacy.lookup.wizard",
+  "product.attribute.value",
+  "product.category",
+  "product.pricelist",
+  "product.pricelist.item",
+  "product.product",
+  "product.supplierinfo",
+  "product.template",
+  "product.template.attribute.value",
+  "project.collaborator",
+  "project.milestone",
+  "project.task",
+  "properties.base.definition",
+  "purchase.bill.union",
+  "purchase.order",
+  "purchase.order.line",
+  "res.city",
+  "res.config.settings",
+  "res.country.state",
+  "res.partner",
+  "res.partner.bank",
+  "res.partner.category",
+  "res.session",
+  "res.users",
+  "res.users.settings.volumes",
+  "resource.calendar.attendance",
+  "sale.order",
+  "sale.order.line",
+  "stock.location",
+  "stock.move",
+  "stock.package",
+  "stock.package.type",
+  "stock.picking",
+  "stock.picking.batch",
+  "stock.picking.type",
+  "stock.quant",
+  "uom.uom"
+ ],
+ "models": {
+  "account.account.tag": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "account.accrued.orders.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.analytic.account": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.analytic.applicability": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.analytic.distribution.model": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.analytic.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.analytic.plan": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.automatic.entry.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.autopost.bills.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.bank.statement": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.bank.statement.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.cash.rounding": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.financial.year.op": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.fiscal.position": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.fiscal.position.account": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.full.reconcile": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "account.incoterms": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.journal": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.journal.group": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.lock_exception": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "account.merge.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.merge.wizard.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.move": [
+   "search",
+   "search_count",
+   "export_data",
+   "load"
+  ],
+  "account.move.line": [
+   "export_data"
+  ],
+  "account.move.reversal": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.move.send.batch.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.move.send.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.partial.reconcile": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "account.payment": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.payment.method": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "account.payment.method.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.payment.register": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.payment.term": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.payment.term.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.peppol.clarification": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.peppol.rejection.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.peppol.response": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.reconcile.model": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.reconcile.model.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.report": [
+   "read"
+  ],
+  "account.report.column": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.report.expression": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "account.report.external.value": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.report.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.resequence.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.secure.entries.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.setup.bank.manual.config": [
+   "read"
+  ],
+  "account.tax": [
+   "read",
+   "export_data"
+  ],
+  "account.tax.group": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account.tax.repartition.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "account_edi_proxy_client.user": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "auth.passkey.key": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "auth.passkey.key.create": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "auth.totp.rate.limit.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "auth_totp.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "barcode.nomenclature": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "barcode.rule": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.document.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "base.enable.profiling.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.import.module": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.language.export": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.language.import": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.language.install": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.module.install.request": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.module.install.review": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.module.uninstall": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.module.update": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.module.upgrade": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.partner.merge.automatic.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base.partner.merge.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base_import.import": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "base_import.mapping": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "bill.to.po.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "bus.bus": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "calendar.alarm": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "calendar.attendee": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "calendar.calendar": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "calendar.event": [
+   "search",
+   "search_count",
+   "load"
+  ],
+  "calendar.event.archive.or.unlink.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "calendar.event.multi.archive.or.unlink.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "calendar.event.type": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "calendar.filters": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "calendar.recurrence": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "calendar.user": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "certificate.certificate": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "certificate.key": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "change.password.own": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "change.password.user": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "change.password.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "clearing.label": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "confirm.stock.sms": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.iap.lead.helpers": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.iap.lead.industry": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.iap.lead.industry.division": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.iap.lead.mining.request": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.iap.lead.role": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.iap.lead.seniority": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.lead": [
+   "read",
+   "export_data"
+  ],
+  "crm.lead.lost": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.lead.pls.update": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.lead.scoring.frequency": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.lead.scoring.frequency.field": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.lead2opportunity.partner.mass": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.lost.reason": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.merge.opportunity": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.quotation.partner": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.recurring.plan": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.stage": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "crm.tag": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "crm.team": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "crm.team.member": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "customer.product.reference": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "decimal.precision": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "digest.digest": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "digest.test": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "digest.tip": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "discuss.call.history": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "discuss.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "discuss.channel": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "discuss.channel.last.interest.update": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "discuss.channel.member": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "discuss.channel.rtc.session": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "discuss.gif.favorite": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "discuss.voice.metadata": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "fetchmail.server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "html_editor.converter.test": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "html_editor.converter.test.sub": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "iap.account": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "iap.service": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "iap.service.pack": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.access": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.actions.act_url": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.actions.act_window": [
+   "search",
+   "search_count",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "ir.actions.act_window.view": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.actions.act_window_close": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.actions.actions": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.actions.client": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.actions.report": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.actions.server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.actions.server.history": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.actions.todo": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.asset": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.attachment": [
+   "read",
+   "export_data"
+  ],
+  "ir.config_parameter": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.cron": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.cron.progress": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.cron.trigger": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.default": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.demo": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.demo_failure": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.demo_failure.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.embedded.actions": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "ir.exports": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.exports.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.filters": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.logging": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.mail_server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "ir.model": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.model.constraint": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.model.data": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.model.fields": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.model.fields.selection": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.model.inherit": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.model.relation": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.module.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.module.module": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.module.module.dependency": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.module.module.exclusion": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.profile": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.profile.query": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "ir.sequence": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.sequence.date_range": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.ui.menu": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "ir.ui.view": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data"
+  ],
+  "ir.ui.view.custom": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "l10n_us.res.county": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "lot.label.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.activity": [
+   "read",
+   "export_data"
+  ],
+  "mail.activity.plan": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.activity.plan.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.activity.schedule": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.activity.schedule.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.activity.todo.create": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.activity.type": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "mail.alias": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.alias.domain": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.blacklist": [
+   "read",
+   "export_data"
+  ],
+  "mail.blacklist.remove": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.call.artifact": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.canned.response": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.compose.message": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.followers": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.followers.edit": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.gateway.allowed": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.guest": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.ice.server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.link.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.mail": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.message": [
+   "read"
+  ],
+  "mail.message.link.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.message.reaction": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.message.schedule": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "mail.message.subtype": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "mail.message.translation": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.notification": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.poll": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.poll.option": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "mail.poll.vote": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "mail.presence": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.push": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.push.device": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.scheduled.message": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "mail.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data"
+  ],
+  "mail.template.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "mail.template.reset": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "onboarding.onboarding": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "onboarding.onboarding.step": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "onboarding.progress": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "onboarding.progress.step": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "payment.capture.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "payment.data": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "payment.link.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "payment.method": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "payment.provider": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "payment.refund.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "payment.token": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "payment.transaction": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "peppol.registration": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "phone.blacklist": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "phone.blacklist.remove": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "picking.label.type": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "portal.entry": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "portal.share": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "portal.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "portal.wizard.user": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "privacy.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "privacy.lookup.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "privacy.lookup.wizard.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.attribute": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "product.attribute.custom.value": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.attribute.value": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "product.base.unit": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "product.combo": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.combo.item": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.document": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "product.label.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.pricelist": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "product.pricelist.item": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "product.product": [
+   "read",
+   "export_data"
+  ],
+  "product.removal": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.replenish": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.supplierinfo": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "product.tag": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data"
+  ],
+  "product.template.attribute.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "product.template.attribute.value": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "product.uom": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "product.value": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "project.collaborator": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "project.milestone": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "project.project": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "project.project.stage": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "project.project.stage.delete.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.role": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.share.collaborator.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.share.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "project.tags": [
+   "read",
+   "search",
+   "search_count",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.task": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data"
+  ],
+  "project.task.recurrence": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.task.stage.personal": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.task.type": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "project.task.type.delete.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.template.create.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.template.role.to.users.map": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "project.update": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "properties.base.definition": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "purchase.order": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "purchase.order.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "quotation.document": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "rating.rating": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "report.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "report.paperformat": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.city": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.company": [
+   "search",
+   "search_count",
+   "load"
+  ],
+  "res.config": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.config.settings": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "res.country": [
+   "search",
+   "search_count",
+   "load"
+  ],
+  "res.country.group": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "res.country.state": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.currency": [
+   "search",
+   "search_count",
+   "load"
+  ],
+  "res.currency.rate": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "res.device.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.groups": [
+   "read",
+   "export_data"
+  ],
+  "res.groups.privilege": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.lang": [
+   "search",
+   "search_count",
+   "load"
+  ],
+  "res.partner": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data"
+  ],
+  "res.partner.bank": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "res.partner.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.partner.industry": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.role": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.users": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "res.users.apikeys.description": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "res.users.deletion": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.users.identitycheck": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.users.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.users.settings": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "res.users.settings.embedded.action": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "res.users.settings.volumes": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "reset.view.arch.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "resource.calendar": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "resource.calendar.attendance": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "resource.calendar.leaves": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "resource.resource": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "return.reason": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sale.advance.payment.inv": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sale.mass.cancel.orders": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sale.order": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "sale.order.discount": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sale.order.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "sale.order.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sale.order.template.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "sale.pdf.form.field": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "server.action.history.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sms.account.code": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sms.account.phone": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sms.account.sender": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sms.composer": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sms.sms": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "sms.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data"
+  ],
+  "sms.template.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sms.template.reset": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "sms.tracker": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "spreadsheet.dashboard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "spreadsheet.dashboard.favorite.filters": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "spreadsheet.dashboard.group": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "spreadsheet.dashboard.share": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.add.to.wave": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.backorder.confirmation": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.backorder.confirmation.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.inventory.adjustment.name": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.inventory.conflict": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.inventory.warning": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.location": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.location.label.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.lot": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.move": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.move.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.orderpoint.snooze": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.orderpoint.suggest": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.package": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.package.destination": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.package.history": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.package.label.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.package.type": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.picking": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.picking.batch": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.picking.to.batch": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.picking.type": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.picking.type.label.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.put.in.pack": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.putaway.rule": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.quant": [
+   "read",
+   "export_data"
+  ],
+  "stock.quant.relocate": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.reference": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.replenishment.info": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.replenishment.option": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.request.count": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.route": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create"
+  ],
+  "stock.rule": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.rules.report": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.scrap.reason.tag": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.storage.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.storage.category.capacity": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.traceability.report": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.warehouse": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.warehouse.orderpoint": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "stock.warn.insufficient.qty.scrap": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "stock.zero.demand.confirmation": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "task.share.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "uom.uom": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load"
+  ],
+  "update.product.attribute.value": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "utm.campaign": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "utm.medium": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "utm.source": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "write"
+  ],
+  "utm.stage": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "utm.tag": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "validate.account.move": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "web_tour.tour": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "web_tour.tour.step": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ],
+  "website": [
+   "search",
+   "search_count",
+   "load",
+   "create",
+   "write"
+  ],
+  "wizard.ir.model.menu.create": [
+   "read",
+   "search",
+   "search_count",
+   "search_read",
+   "export_data",
+   "load",
+   "create",
+   "write"
+  ]
+ },
+ "odoo_commit": "dd5d371863dd96f640e4a4b970d8437bb9861cba"
+}

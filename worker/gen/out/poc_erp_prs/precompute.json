@@ -1,0 +1,22 @@
+{
+ "models": {
+  "purchase.requisition": {
+   "fields": [
+    "currency_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "currency_id"
+   ]
+  },
+  "purchase.requisition.line": {
+   "fields": [
+    "uom_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "uom_id"
+   ]
+  }
+ }
+}

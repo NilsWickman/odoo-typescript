@@ -1,0 +1,218 @@
+[
+  {
+    "fetch_params": [
+      [
+        "/mail/thread/messages",
+        {
+          "thread_id": 16,
+          "thread_model": "res.partner",
+          "fetch_params": {
+            "limit": 30
+          }
+        },
+        5
+      ],
+      [
+        "mail.thread",
+        {
+          "access_params": {},
+          "request_list": [
+            "activities",
+            "attachments",
+            "contact_fields",
+            "defaultSubject",
+            "followers",
+            "has_pinned_messages",
+            "scheduledMessages",
+            "showSubjectInSmallComposer",
+            "suggestedRecipients",
+            "suggestedSubject"
+          ],
+          "thread_id": 16,
+          "thread_model": "res.partner"
+        }
+      ]
+    ],
+    "context": {
+      "lang": "en_US",
+      "tz": "Europe/Brussels",
+      "uid": 2,
+      "allowed_company_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "fetch_params": [
+      [
+        "/mail/thread/messages",
+        {
+          "thread_id": 28,
+          "thread_model": "res.partner",
+          "fetch_params": {
+            "limit": 30
+          }
+        },
+        7
+      ],
+      [
+        "mail.thread",
+        {
+          "access_params": {},
+          "request_list": [
+            "activities",
+            "attachments",
+            "contact_fields",
+            "defaultSubject",
+            "followers",
+            "has_pinned_messages",
+            "scheduledMessages",
+            "showSubjectInSmallComposer",
+            "suggestedRecipients",
+            "suggestedSubject"
+          ],
+          "thread_id": 28,
+          "thread_model": "res.partner"
+        }
+      ]
+    ],
+    "context": {
+      "lang": "en_US",
+      "tz": "Europe/Brussels",
+      "uid": 2,
+      "allowed_company_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "fetch_params": [
+      [
+        "/mail/thread/messages",
+        {
+          "thread_id": 35,
+          "thread_model": "res.partner",
+          "fetch_params": {
+            "limit": 30
+          }
+        },
+        9
+      ],
+      [
+        "mail.thread",
+        {
+          "access_params": {},
+          "request_list": [
+            "activities",
+            "attachments",
+            "contact_fields",
+            "defaultSubject",
+            "followers",
+            "has_pinned_messages",
+            "scheduledMessages",
+            "showSubjectInSmallComposer",
+            "suggestedRecipients",
+            "suggestedSubject"
+          ],
+          "thread_id": 35,
+          "thread_model": "res.partner"
+        }
+      ]
+    ],
+    "context": {
+      "lang": "en_US",
+      "tz": "Europe/Brussels",
+      "uid": 2,
+      "allowed_company_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "fetch_params": [
+      [
+        "/mail/thread/messages",
+        {
+          "thread_id": 114,
+          "thread_model": "res.partner",
+          "fetch_params": {
+            "limit": 30
+          }
+        },
+        5
+      ],
+      [
+        "mail.thread",
+        {
+          "access_params": {},
+          "request_list": [
+            "activities",
+            "attachments",
+            "contact_fields",
+            "defaultSubject",
+            "followers",
+            "has_pinned_messages",
+            "scheduledMessages",
+            "showSubjectInSmallComposer",
+            "suggestedRecipients",
+            "suggestedSubject"
+          ],
+          "thread_id": 114,
+          "thread_model": "res.partner"
+        }
+      ]
+    ],
+    "context": {
+      "lang": "en_US",
+      "tz": "Europe/Brussels",
+      "uid": 2,
+      "allowed_company_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "fetch_params": [
+      [
+        "/mail/thread/messages",
+        {
+          "thread_id": 340,
+          "thread_model": "res.partner",
+          "fetch_params": {
+            "limit": 30
+          }
+        },
+        5
+      ],
+      [
+        "mail.thread",
+        {
+          "access_params": {},
+          "request_list": [
+            "activities",
+            "attachments",
+            "contact_fields",
+            "defaultSubject",
+            "followers",
+            "has_pinned_messages",
+            "scheduledMessages",
+            "showSubjectInSmallComposer",
+            "suggestedRecipients",
+            "suggestedSubject"
+          ],
+          "thread_id": 340,
+          "thread_model": "res.partner"
+        }
+      ]
+    ],
+    "context": {
+      "lang": "en_US",
+      "tz": "Europe/Brussels",
+      "uid": 2,
+      "allowed_company_ids": [
+        1,
+        2
+      ]
+    }
+  }
+]

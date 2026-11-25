@@ -1,0 +1,1070 @@
+{
+ "_doc": "Private methods of the hand port, as compiler/oc/build.py reads them for a module's compiled override (installs override.private keys of these, refuses the others). The methods the hand port runs itself, through a handle of src/orm/dispatch_gen.ts (callPrivate), are in src/orm/dispatch_map.json, with their returns, above, kwargs and default_of described here (compiler/dispatch.py checks them); this file keeps covered, unreached and unported. The override runs around the hand port's whole implementation, so a definition of another module above it in the MRO (run after it in Odoo) must be one that does nothing wherever the hand port gets that far: `above` names them, with the reason. returns: what super() gives the compiled override (self: the records it was called on). covered: methods the hand port implements for every Community definition of them at once, so that an override from one of `modules` needs no compiled code (`reason` says why the result is Odoo's for any module set; compiler/private_hooks_check.py checks it against the source). unreached: methods no flow of the port can run (the hand port has no code for the model, and every caller in Odoo is a method of that model): an override needs no compiled code, as nothing calls it; compiler/private_hooks_check.py checks both; a site build that compiles a caller reaches it as compiled code instead. unported: methods the hand port has no implementation of (no registration, no callPrivate: a call from a report template or over RPC refuses as not registered), so an override needs no compiled code; compiler/private_hooks_check.py checks that worker/src registers or hooks no method of that name. default_of: the method is a field's default function (`default=_default_x`, fields.py:545 calls that function, not the method by name): the hand port's default runs it through callPrivate, and compiler/private_hooks_check.py checks that no Community or OCA code calls it but super(), and that every class defining it redefines the field with it as default (else Odoo would not run that override, and the hook would). kwargs: the keyword arguments the hand implementation takes (src/orm/private_hooks.ts PrivateKwargs, the last of its args): a compiled super() passes those names to it as keywords; another keyword argument goes into its place among the positional ones (compiler/oc/build.py hand_params) or refuses. The hand port passes keyword arguments to a compiled override the same way, as a trailing PrivateKwargs.",
+ "res.groups._get_light_group_xmlids": {
+  "where": "src/session/user.ts LIGHT_GROUP_XMLIDS",
+  "covered": {
+   "reason": "every definition returns super() plus its own module's group xmlids; the hand port's list is their union, and an xmlid of a module that is not installed does not resolve (skipped)",
+   "modules": [
+    "account",
+    "analytic",
+    "crm",
+    "hr_attendance",
+    "hr_holidays",
+    "hr_recruitment",
+    "l10n_in",
+    "lunch",
+    "mail",
+    "mass_mailing",
+    "mrp",
+    "point_of_sale",
+    "product",
+    "product_expiry",
+    "project",
+    "purchase",
+    "sale",
+    "stock",
+    "stock_account",
+    "uom",
+    "website",
+    "website_sale"
+   ]
+  }
+ },
+ "res.partner._commercial_fields": {
+  "where": "src/models/res_partner_write.ts commercialFields",
+  "covered": {
+   "reason": "every definition returns super() plus fields its own module defines on res.partner; the hand port's list is their union filtered by the registry's fields, which a module's field is in only when it is installed",
+   "modules": [
+    "account",
+    "l10n_ar",
+    "l10n_cl",
+    "l10n_eg_edi_eta",
+    "l10n_hu_edi",
+    "l10n_in",
+    "l10n_ke_edi_tremol",
+    "l10n_kr",
+    "l10n_my_edi",
+    "l10n_my_ubl_pint",
+    "l10n_ph",
+    "l10n_ro",
+    "l10n_sa_edi",
+    "l10n_tw_edi_ecpay_website_sale"
+   ]
+  }
+ },
+ "digest.digest._get_kpi_custom_settings": {
+  "unreached": {
+   "reason": "called only by digest.digest._compute_kpis (digest.py:300), from the digest e-mail (_action_send_to_user, action_send, the digest cron): no digest.digest method is ported, so each of them refuses before an override could run",
+   "model": "digest.digest"
+  }
+ },
+ "publisher_warranty.contract._get_message": {
+  "unreached": {
+   "reason": "called only by publisher_warranty.contract._get_sys_logs (mail/models/update.py:76), from update_notification (the publisher warranty cron): not ported, refuses before an override could run",
+   "model": "publisher_warranty.contract"
+  }
+ },
+ "account.move.line._get_child_lines": {
+  "unported": {
+   "reason": "account_move_line.py:4026 renders a collapsed section's lines in report_invoice.xml; the hand port refuses such a section before (report_invoice.ts _get_move_lines_to_report) and registers no _get_child_lines, so any call refuses"
+  }
+ },
+ "stock.move._get_upstream_documents_and_responsibles": {
+  "unported": {
+   "reason": "stock stock_move.py:2572-2581, called only by `_log_activity_get_documents` with the stream 'UP' (stock_picking.py:1476-1489). The hand port's one such path is sale_stock's `_log_decrease_ordered_quantity`, which it runs only for moves without moves before them and without what the overrides read (src/orm/override_status.ts, refused otherwise: an agreement line pointing at the move for purchase_requisition_stock's, stock.py:40-46; created purchase lines or a purchase line for purchase_stock's, stock_move.py:126-133; a production for mrp's): there every override goes to stock's, which returns []"
+  }
+ },
+ "payment.transaction._extract_token_values": {
+  "unported": {
+   "reason": "payment payment_transaction.py:1060-1085, called only by `_tokenize`: the hand port creates no token (a transaction with tokenize refuses, src/models/payment_flow.ts)"
+  }
+ },
+ "payment.transaction._send_payment_request": {
+  "unported": {
+   "reason": "payment payment_transaction.py `_charge_with_token`, the token flow: refused (src/models/payment_flow.ts, flow 'token')"
+  }
+ },
+ "payment.transaction._send_capture_request": {
+  "unported": {
+   "reason": "called by `_capture` (manual capture from the backend, payment.capture.wizard): not ported, refuses"
+  }
+ },
+ "payment.transaction._send_void_request": {
+  "unported": {
+   "reason": "called by `_void` (voiding an authorized transaction from the backend): not ported, refuses"
+  }
+ },
+ "payment.transaction._send_refund_request": {
+  "unported": {
+   "reason": "called by `_refund` (payment.refund.wizard, account.payment's refund): not ported, refuses"
+  }
+ },
+ "payment.token._build_display_name": {
+  "unported": {
+   "reason": "payment payment_token.py:50-54 `_compute_display_name`: the hand port builds the name itself (src/models/display_names.ts) and refuses where a site has an override, whose super() passes keyword arguments (payment_demo: should_pad=False) the hooks cannot carry; the hand port creates no token"
+  }
+ },
+ "res.partner._deduce_country_code": {
+  "unported": {
+   "reason": "base res_partner.py:1853-1864, called by account_edi_ubl_cii `_get_suggested_ubl_cii_edi_format` (res_partner.py:289-304), l10n_dk and l10n_fr_pdp: the hand port implements none of them; the UBL/CII builders, the EDI sending formats and self-billing exports refuse (src/models/account_move_send.ts ediFormat), and the Peppol verification's `_get_peppol_edi_format` (src/models/account_buttons.ts checkPeppolPartnerEndpoint) does not depend on it: the suggestion is always a Peppol format"
+  }
+ },
+ "account.move._get_automatic_balancing_account": {
+  "unported": {
+   "reason": "account account_move.py:3255-3260, called only by `_sync_unbalanced_lines` (:3263-3303) for a draft move with taxes: the port refuses journal entry lines with tax_ids on create (src/models/account_move_create.ts, measured) and a write on a journal item of a draft entry with taxes (src/models/account_integrity.ts, measured: Odoo adds the tax line and the balancing line); invoices balance through their payment term lines"
+  }
+ },
+ "product.template._get_saleable_tracking_types": {
+  "unported": {
+   "reason": "sale product_template.py:292-297, called only by website_sale website.py:699-714 `sale_product_domain`'s user domain, which the port does not implement (website_sale is not in poc_erp)"
+  }
+ },
+ "res.partner.bank._check_for_qr_code_errors": {
+  "unported": {
+   "reason": "the QR code generation: res_partner_bank.py:176-275 `_build_qr_code_vals`, `build_qr_code_base64/url/value` and `_get_qr_code_url/base64` call it; the hand port generates no QR code: the invoice report with display_qr_code refuses (src/controllers/report.ts), account.payment and account.payment.register qr_code refuse (src/models/account_payment_register.ts), payment_custom and point_of_sale are not in the port, and build_qr_code_* is registered nowhere"
+  }
+ },
+ "res.partner.bank._get_error_messages_for_qr": {
+  "unported": {
+   "reason": "the QR code generation: res_partner_bank.py:176-275 `_build_qr_code_vals`, `build_qr_code_base64/url/value` and `_get_qr_code_url/base64` call it; the hand port generates no QR code: the invoice report with display_qr_code refuses (src/controllers/report.ts), account.payment and account.payment.register qr_code refuse (src/models/account_payment_register.ts), payment_custom and point_of_sale are not in the port, and build_qr_code_* is registered nowhere"
+  }
+ },
+ "res.partner.bank._get_qr_code_generation_params": {
+  "unported": {
+   "reason": "the QR code generation: res_partner_bank.py:176-275 `_build_qr_code_vals`, `build_qr_code_base64/url/value` and `_get_qr_code_url/base64` call it; the hand port generates no QR code: the invoice report with display_qr_code refuses (src/controllers/report.ts), account.payment and account.payment.register qr_code refuse (src/models/account_payment_register.ts), payment_custom and point_of_sale are not in the port, and build_qr_code_* is registered nowhere"
+  }
+ },
+ "res.partner.bank._get_qr_vals": {
+  "unported": {
+   "reason": "the QR code generation: res_partner_bank.py:176-275 `_build_qr_code_vals`, `build_qr_code_base64/url/value` and `_get_qr_code_url/base64` call it; the hand port generates no QR code: the invoice report with display_qr_code refuses (src/controllers/report.ts), account.payment and account.payment.register qr_code refuse (src/models/account_payment_register.ts), payment_custom and point_of_sale are not in the port, and build_qr_code_* is registered nowhere"
+  }
+ },
+ "account.move._catalog_prepare_new_line_vals": {
+  "unported": {
+   "reason": "product_catalog_mixin.py:233-239: called only by `_catalog_create_new_line`, from the product catalog's `_update_order_line_info` (route /product/catalog/update_order_line_info, product/controllers/catalog.py:36), which the port does not serve; no implementation in worker/src"
+  }
+ },
+ "maintenance.team._alias_get_creation_values": {
+  "unreached": {
+   "reason": "called by mail.alias.mixin(.optional) on the team (its create, write and alias sync, mail_alias_mixin_optional.py); the hand port has no code for maintenance.team: a site with maintenance compiles the team's create and write (override.create/override.write), whose chain calls it as compiled code",
+   "model": "maintenance.team",
+   "reviewed": {
+    "odoo/addons/crm/models/res_config_settings.py:147": "`team` is a crm.team record (self.env['crm.team'].search([]))"
+   }
+  }
+ },
+ "account_edi_proxy_client.user._peppol_get_participant_status": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py: called by `_cron_peppol_get_participant_status` and res.config.settings `_inverse_peppol_participation_role` (res_config_settings.py:66-75), both talking to the Peppol proxy over IAP: the hand port implements neither (no cron job of the module, the settings' Peppol fields refuse)"
+  }
+ },
+ "res.company._peppol_modules_document_types": {
+  "unported": {
+   "reason": "account_peppol res_company.py:253-276, read by `_peppol_supported_document_types` (:277-283) and account_edi_proxy_user.py `_peppol_auto_register_services` (:873), the Peppol registration and services over IAP: the hand port implements none of them"
+  }
+ },
+ "account.edi.xml.pint_sg._add_invoice_header_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_ubl.py), called only by the builder's own methods: the hand port builds no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the PINT SG builder"
+  }
+ },
+ "account.edi.xml.pint_sg._ubl_add_customization_id_node": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_ubl.py), called only by the builder's own methods: the hand port builds no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the PINT SG builder"
+  }
+ },
+ "account.edi.xml.pint_sg._export_invoice_filename": {
+  "unported": {
+   "reason": "the file name of a builder's export, read by account_edi_ubl_cii's account.move and account.move.send (the UBL file of a sent invoice, its attachment): the hand port builds no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts)"
+  }
+ },
+ "account.edi.xml.pint_sg._get_customization_id": {
+  "unported": {
+   "reason": "the CustomizationID of a builder's export, read by the builders and account_peppol res_partner.py (the Peppol verification of a partner over the proxy): the hand port builds no UBL document and does not verify Peppol participants"
+  }
+ },
+ "res.partner._get_edi_builder": {
+  "unported": {
+   "reason": "account_edi_ubl_cii res_partner.py: the builder of a partner's EDI format, read by the sending (account.move.send, account_peppol) and account.move's UBL export: the hand port builds no UBL or CII document (sending with an EDI format refuses)"
+  }
+ },
+ "account_edi_proxy_client.user._get_proxy_identification": {
+  "unported": {
+   "reason": "account_edi_proxy_client account_edi_proxy_user.py: the proxy users' identification, URLs and registration with the EDI proxies over IAP (Peppol, Nemhandel, PDP, SdI), from the registration wizards, settings and crons: the hand port registers no proxy user and calls no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._get_proxy_urls": {
+  "unported": {
+   "reason": "account_edi_proxy_client account_edi_proxy_user.py: the proxy users' identification, URLs and registration with the EDI proxies over IAP (Peppol, Nemhandel, PDP, SdI), from the registration wizards, settings and crons: the hand port registers no proxy user and calls no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._register_proxy_user": {
+  "unported": {
+   "reason": "account_edi_proxy_client account_edi_proxy_user.py: the proxy users' identification, URLs and registration with the EDI proxies over IAP (Peppol, Nemhandel, PDP, SdI), from the registration wizards, settings and crons: the hand port registers no proxy user and calls no proxy"
+  }
+ },
+ "account.move._need_ubl_cii_xml": {
+  "unported": {
+   "reason": "account_edi_ubl_cii account_move.py: whether a move's UBL/CII file is to be generated, read by the sending (account.move.send's EDI generation, account_peppol's and the national EDI's applicability): the hand port generates no UBL or CII file (sending with an EDI format refuses, src/models/account_move_send.ts)"
+  }
+ },
+ "account.edi.xml.oioubl_21._add_document_line_price_nodes": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._add_invoice_header_nodes": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._add_invoice_monetary_total_nodes": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._add_invoice_payment_means_nodes": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._add_invoice_payment_terms_nodes": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._get_address_node": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._get_currency_decimal_places": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._get_document_type_code_node": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._get_line_discount_allowance_charge_node": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._get_party_node": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._get_tax_category_node": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._get_tax_subtotal_node": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._retrieve_rebate_val": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._export_invoice_constraints": {
+  "unported": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii and the builders that extend it): the hand port has no UBL or CII builder (no method of the name: sending with an EDI format refuses, src/models/account_move_send.ts; no document is imported)"
+  }
+ },
+ "account.edi.xml.oioubl_21._export_invoice_filename": {
+  "unported": {
+   "reason": "the file name of a builder's export, read by account_edi_ubl_cii's account.move and account.move.send (the UBL file of a sent invoice): the hand port builds no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts)"
+  }
+ },
+ "account.move.send._hook_if_errors": {
+  "unported": {
+   "reason": "the hand port's send (src/models/account_move_send.ts action_send_and_print) records no generation error: an EDI format, a non-email method and a module's web service refuse before, and a missing PDF engine raises from the report itself (ir_actions_report.py:509-517), so account_move_send.py:774 and :872 never run"
+  }
+ },
+ "account.move.send.wizard._hook_if_errors": {
+  "unported": {
+   "reason": "the hand port's send (src/models/account_move_send.ts action_send_and_print) records no generation error: an EDI format, a non-email method and a module's web service refuse before, and a missing PDF engine raises from the report itself (ir_actions_report.py:509-517), so account_move_send.py:774 and :872 never run"
+  }
+ },
+ "account.move.send.batch.wizard._hook_if_errors": {
+  "unported": {
+   "reason": "the hand port's send (src/models/account_move_send.ts action_send_and_print) records no generation error: an EDI format, a non-email method and a module's web service refuse before, and a missing PDF engine raises from the report itself (ir_actions_report.py:509-517), so account_move_send.py:774 and :872 never run"
+  }
+ },
+ "account.move.send._get_default_invoice_edi_format": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._is_applicable_to_company": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._is_applicable_to_move": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._call_web_service_after_invoice_pdf_render": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._get_default_invoice_edi_format": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._is_applicable_to_company": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._is_applicable_to_move": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._call_web_service_after_invoice_pdf_render": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._get_alerts": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._get_all_extra_edis": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._hook_invoice_document_before_pdf_report_render": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._get_alerts": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._get_all_extra_edis": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._hook_invoice_document_before_pdf_report_render": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.edi.xml.ubl_ro._add_invoice_line_item_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._export_invoice_constraints": {
+  "unported": {
+   "reason": "a UBL builder's method (account_edi_ubl_cii), called by the builders and by account_edi_ubl_cii's sending and import on a builder: the hand port has no UBL or CII builder, and sending with an EDI format refuses (src/models/account_move_send.ts)"
+  }
+ },
+ "account.edi.xml.ubl_ro._export_invoice_filename": {
+  "unported": {
+   "reason": "a UBL builder's method (account_edi_ubl_cii), called by the builders and by account_edi_ubl_cii's sending and import on a builder: the hand port has no UBL or CII builder, and sending with an EDI format refuses (src/models/account_move_send.ts)"
+  }
+ },
+ "account.edi.xml.ubl_ro._get_document_type_code_node": {
+  "unported": {
+   "reason": "a UBL builder's method (account_edi_ubl_cii), called by the builders and by account_edi_ubl_cii's sending and import on a builder: the hand port has no UBL or CII builder, and sending with an EDI format refuses (src/models/account_move_send.ts)"
+  }
+ },
+ "account.edi.xml.ubl_ro._import_retrieve_partner_vals": {
+  "unported": {
+   "reason": "a UBL builder's method (account_edi_ubl_cii), called by the builders and by account_edi_ubl_cii's sending and import on a builder: the hand port has no UBL or CII builder, and sending with an EDI format refuses (src/models/account_move_send.ts)"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_accounting_customer_party_legal_entity_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_accounting_customer_party_tax_scheme_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_accounting_supplier_party_legal_entity_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_accounting_supplier_party_tax_scheme_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_customization_id_node": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_line_item_name_description_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_notes_nodes": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_add_tax_currency_code_node": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "account.edi.xml.ubl_ro._ubl_get_partner_address_node": {
+  "unreached": {
+   "reason": "a step of the UBL builders' export or import (account_edi_ubl_cii account_edi_xml_ubl_20.py / account_edi_xml_ubl_bis3.py / account_edi_common.py), called only by the builder's own methods: the hand port builds and reads no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and never names the CIUS-RO builder"
+  }
+ },
+ "payment.provider._remove_provider": {
+  "unported": {
+   "reason": "payment/__init__.py `reset_payment_provider`, called only by the provider modules' uninstall hooks: uninstalling a module with an uninstall hook refuses (src/modules/uninstall.ts)"
+  }
+ },
+ "payment.provider._get_removal_values": {
+  "unported": {
+   "reason": "called only by `_remove_provider` (payment_provider.py:1176-1190), unported: the provider modules' uninstall"
+  }
+ },
+ "account.payment.method._get_payment_method_information": {
+  "unported": {
+   "reason": "account account_payment_method.py: read by `_auto_link_payment_methods` at create (only the 'multi' mode links journals: account_payment's provider codes are 'electronic', account_payment_custom's wire_transfer 'unique'), `_get_payment_method_domain` and account_journal.py `_get_journals_payment_method_information` (the journals' available methods and their multiplicity check), none of which the hand port implements: a journal's method lines are its manual ones (src/models/account_journal_create.ts)"
+  }
+ },
+ "payment.transaction._log_received_message": {
+  "unported": {
+   "reason": "payment_transaction.py:1423-1443, called by the `_set_*` state methods: the hand port has none (src/models/payment_flow.ts process runs a provider's compiled `_apply_updates`, whose `_set_*` and their `_log_received_message` are compiled with the site's overrides)"
+  }
+ },
+ "payment.transaction._get_status_message": {
+  "unported": {
+   "reason": "payment_transaction.py:1534-1577, read by the template payment.state_header (the confirmation page, a portal document's last transaction): the hand port registers no method of that name, so a template calling it refuses"
+  }
+ },
+ "payment.transaction._requires_payment_instructions": {
+  "unported": {
+   "reason": "payment_transaction.py:1579-1585, read by payment_custom's payment.state_header extension: the hand port registers no method of that name, so the template calling it refuses"
+  }
+ },
+ "account.move.send._call_web_service_before_invoice_pdf_render": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._call_web_service_before_invoice_pdf_render": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move._need_cancel_request": {
+  "unported": {
+   "reason": "account_move.py:1976-1984, read only by `_compute_need_cancel_request` (:1986-1988): the hand port's compute is False and refuses with the EDI localizations that override the hook (src/models/invoicing_computes.ts), and a site that overrides the compute (l10n_hu_edi) runs it compiled with the hook's chain"
+  }
+ },
+ "account.move.send._display_attachments_widget": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._get_invoice_extra_attachments": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._hook_invoice_document_after_pdf_report_render": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._link_invoice_documents": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._display_attachments_widget": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._get_invoice_extra_attachments": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._hook_invoice_document_after_pdf_report_render": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._link_invoice_documents": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move._get_invoice_legal_documents": {
+  "unported": {
+   "reason": "account_move.py, read only by account/controllers/download_docs.py:49-70 `/account/download_invoice_documents`, a route the hand port does not have"
+  }
+ },
+ "account.report.expression._get_carryover_target_expression": {
+  "unported": {
+   "reason": "account_report.py:1018, the carryover of a report line, called by the report engine of account_reports (Enterprise): no caller in Community, and the hand port computes no report"
+  }
+ },
+ "account_edi_proxy_client.user._get_iap_params": {
+  "unported": {
+   "reason": "account_edi_proxy_client account_edi_proxy_user.py:197, the registration of an EDI proxy user over IAP (`_register_proxy_user`, unported): the hand port registers none"
+  }
+ },
+ "res.partner._get_frontend_writable_fields": {
+  "unported": {
+   "reason": "base res_partner.py, read by portal/controllers/portal.py:637 (the portal address form's submit) and point_of_sale controllers/main.py:235: routes the hand port does not have"
+  }
+ },
+ "account.edi.cii._cii_add_exchanged_document_context_node": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.cii._cii_constraints": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.cii._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.common._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.ubl_cen_en16931._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.ubl_cen_en16931._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.ubl_pint_eu._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.ubl_pint_eu._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.ubl_pint._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.ubl_pint._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.ubl._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.ubl._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.cii._cii_add_exchanged_document_context_node": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.cii._cii_constraints": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.cii._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.xml.cii._get_exchanged_document_vals": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_20._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.xml.ubl_20._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._add_invoice_header_nodes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._add_invoice_payment_means_nodes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._export_invoice_constraints": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._export_invoice_filename": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._get_default_notes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._ubl_add_line_price_node": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._ubl_add_party_identification_nodes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21_fr._ubl_add_party_legal_entity_nodes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_21._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.xml.ubl_21._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_a_nz._get_default_notes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_a_nz._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_bis3._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.xml.ubl_de._get_default_notes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_de._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_efff._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "account.edi.xml.ubl_efff._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_nl._get_default_notes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_nl._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_sg._get_default_notes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.edi.xml.ubl_sg._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "account.journal._get_onboarding_action_data": {
+  "unported": {
+   "reason": "account account_journal_dashboard.py:822, the sale journals' kanban_dashboard: the hand port computes it inline (src/models/account_journal_dashboard.ts onboardingActionData, account's and account_peppol's definitions; it refuses peppol's registration wizard and the batch with l10n_fr_pdp or l10n_pk installed), with no private method a compiled override could wrap"
+  }
+ },
+ "account.move.send.batch.wizard._get_default_sending_methods": {
+  "unported": {
+   "reason": "the batch send wizard: the hand port only opens it (src/models/account_buttons.ts actionSendAndPrint), and none of its computes or buttons is a hand method; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send.batch.wizard._get_peppol_attachments_linked_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.batch.wizard._get_peppol_document_params": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.batch.wizard._get_peppol_partner_want_peppol_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.batch.wizard._get_peppol_what_is_pdp_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.batch.wizard._get_peppol_what_is_peppol_alert": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.batch.wizard._get_peppol_what_is_peppol_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_attachments_linked_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_checkbox_addendum_disable_reason": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_checkbox_label": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_document_params": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_partner_want_peppol_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_what_is_pdp_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_what_is_peppol_alert": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send.wizard._get_peppol_what_is_peppol_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send._get_default_sending_methods": {
+  "unported": {
+   "reason": "the abstract model shared by the two send wizards: the hand port has no record of it; the hand port runs it on account.move.send.wizard only (its hook)",
+   "other_models": [
+    "account.move.send.wizard"
+   ]
+  }
+ },
+ "account.move.send._get_peppol_attachments_linked_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send._get_peppol_document_params": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send._get_peppol_partner_want_peppol_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send._get_peppol_what_is_pdp_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send._get_peppol_what_is_peppol_alert": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account.move.send._get_peppol_what_is_peppol_message": {
+  "unported": {
+   "reason": "account_peppol's Peppol sending and alerts (account_move_send.py, wizard): the hand port refuses every Peppol sending and every alert that would show it (src/models/account_move_send.ts refusePeppolOf, handAlerts), and has no checkbox of a Peppol method"
+  }
+ },
+ "account_edi_proxy_client.user._call_peppol_proxy": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._get_peppol_proxy_types": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._get_type_code": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._peppol_get_filetype": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._peppol_get_message_status_error_body": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._peppol_get_message_status_update_body": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._peppol_get_new_documents": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._peppol_process_messages_status": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._peppol_process_new_messages": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "account_edi_proxy_client.user._peppol_process_participant_status": {
+  "unported": {
+   "reason": "account_peppol account_edi_proxy_user.py, the Peppol proxy over IAP (the crons, the registration, the messages): the hand port talks to no proxy"
+  }
+ },
+ "pdp.flow.10.xml.builder._get_default_notes": {
+  "unported": {
+   "reason": "a method of the EDI builders (account_edi_ubl_cii, l10n_fr_pdp), called by the builders and by account_edi_ubl_cii's sending on a builder: the hand port exports no UBL or CII document (sending with an EDI format refuses, src/models/account_move_send.ts) and its BIS 3 import (src/models/ubl_import.ts) does not call it"
+  }
+ },
+ "purchase.edi.xml.ubl_bis3._get_default_notes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "purchase.edi.xml.ubl_bis3._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "res.company._get_einvoicing_identifier_name": {
+  "unported": {
+   "reason": "account_peppol res_company.py, read by the Peppol registration and settings, the proxy user and the Peppol sending's messages: the hand port refuses or does not have them"
+  }
+ },
+ "res.company._get_einvoicing_network_name": {
+  "unported": {
+   "reason": "account_peppol res_company.py, read by the Peppol registration and settings, the proxy user and the Peppol sending's messages: the hand port refuses or does not have them"
+  }
+ },
+ "res.company._peppol_allows_document_reception": {
+  "unported": {
+   "reason": "account_peppol res_company.py, read by the Peppol registration and settings, the proxy user and the Peppol sending's messages: the hand port refuses or does not have them"
+  }
+ },
+ "res.company._peppol_supported_document_types": {
+  "unported": {
+   "reason": "account_peppol res_company.py, read by the Peppol registration and settings, the proxy user and the Peppol sending's messages: the hand port refuses or does not have them"
+  }
+ },
+ "res.company._reset_peppol_configuration": {
+  "unported": {
+   "reason": "account_peppol res_company.py, read by the Peppol registration and settings, the proxy user and the Peppol sending's messages: the hand port refuses or does not have them"
+  }
+ },
+ "res.partner._get_identifier_fields": {
+  "unported": {
+   "reason": "base res_partner.py, read by partner_autocomplete res_partner.py:330-345 `_get_field_to_check`, the IAP enrichment: the hand port has none"
+  }
+ },
+ "sale.edi.xml.ubl_bis3._get_default_notes": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "sale.edi.xml.ubl_bis3._import_ubl_invoice_add_narration": {
+  "unreached": {
+   "reason": "a step of the EDI builders' export or import (account_edi_ubl_cii, l10n_fr_pdp), called only by the builders' own methods: the hand port exports no UBL or CII document and imports only BIS 3 through src/models/ubl_import.ts, whose steps it inlines (the narration's hook is account.edi.xml.ubl_bis3's)"
+  }
+ },
+ "controller|odoo.addons.l10n_ma.controllers.portal.L10nMAPortalAccount|_prepare_address_form_values": {
+  "unported": {
+   "reason": "portal/account controllers/portal.py `_prepare_address_form_values`, the values of the address form: rendered by /my/address and /my/account (and website_sale's /shop/address, point_of_sale's /pos/ticket/validate), routes the hand port does not serve"
+  }
+ },
+ "controller|odoo.addons.l10n_ma.controllers.portal.L10nMAPortalAccount|_get_checkout_additional_identifiers_metadata": {
+  "unported": {
+   "reason": "account controllers/portal.py:239-275 `_get_checkout_additional_identifiers_metadata`, the address form's identifiers: read by `_prepare_address_form_values` and /my/address/country_info, routes the hand port does not serve"
+  }
+ },
+ "account.move.line._get_extra_query_base_tax_line_mapping": {
+  "unported": {
+   "reason": "account_move_line_tax_details.py:35-224: called only by `_get_query_tax_details` (:37), which only `_get_query_tax_details_from_domain` (:231) calls, and no Community or OCA code calls that one (the tax reports of Enterprise do); the hand port implements neither and registers no _get_extra_query_base_tax_line_mapping, so an override (account_fleet, hr_expense) needs no compiled code"
+  }
+ },
+ "account.move.line._get_query_tax_details_aml_fields": {
+  "unported": {
+   "reason": "account_move_line_tax_details.py:35-224: called only by `_get_query_tax_details` (:37), which only `_get_query_tax_details_from_domain` (:231) calls, and no Community or OCA code calls that one (the tax reports of Enterprise do); the hand port implements neither and registers no _get_query_tax_details_aml_fields, so an override (account_fleet, hr_expense) needs no compiled code"
+  }
+ },
+ "account.automatic.entry.wizard._get_move_line_dict_vals_change_period": {
+  "unreached": {
+   "reason": "called only by the wizard's own _get_move_dict_vals_change_period (account_automatic_entry_wizard.py:356), its change of period: the hand port has no code for account.automatic.entry.wizard, so its actions refuse before an override (account_fleet) could run",
+   "model": "account.automatic.entry.wizard"
+  }
+ }
+}

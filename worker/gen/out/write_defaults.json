@@ -1,0 +1,1293 @@
+{
+"_unknown": {},
+"auth.passkey.key": {
+"sign_count": {
+"const": 0
+}
+},
+"auth.passkey.key.create": {},
+"auth.totp.rate.limit.log": {},
+"auth_totp.device": {},
+"auth_totp.wizard": {},
+"avatar.mixin": {},
+"base": {},
+"base.document.layout": {
+"company_details": {
+"callable": "odoo.addons.web.models.base_document_layout.BaseDocumentLayout._default_company_details",
+"src": "odoo/addons/web/models/base_document_layout.py:33"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/web/models/base_document_layout.py:39"
+},
+"report_footer": {
+"callable": "odoo.addons.web.models.base_document_layout.BaseDocumentLayout._default_report_footer",
+"src": "odoo/addons/web/models/base_document_layout.py:27"
+}
+},
+"base.enable.profiling.wizard": {},
+"base.import.module": {
+"state": {
+"const": "init"
+}
+},
+"base.language.export": {
+"domain": {
+"const": "[]"
+},
+"export_type": {
+"const": "module"
+},
+"format": {
+"const": "po"
+},
+"lang": {
+"const": "__new__"
+},
+"state": {
+"const": "choose"
+}
+},
+"base.language.import": {
+"overwrite": {
+"const": true
+}
+},
+"base.language.install": {
+"lang_ids": {
+"callable": "odoo.addons.base.wizard.base_language_install.BaseLanguageInstall._default_lang_ids",
+"src": "odoo/odoo/addons/base/wizard/base_language_install.py:10"
+},
+"overwrite": {
+"const": true
+}
+},
+"base.module.install.request": {
+"qweb_template_xmlid": {
+"const": "base_install_request.mail_installation_request_template"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/base_install_request/wizard/base_module_install_request.py:19"
+}
+},
+"base.module.install.review": {},
+"base.module.uninstall": {},
+"base.module.update": {
+"state": {
+"const": "init"
+}
+},
+"base.module.upgrade": {
+"module_info": {
+"callable": "odoo.addons.base.wizard.base_module_upgrade.BaseModuleUpgrade._default_module_info",
+"src": "odoo/odoo/addons/base/wizard/base_module_upgrade.py:17"
+}
+},
+"base.partner.merge.automatic.wizard": {
+"state": {
+"const": "option"
+}
+},
+"base.partner.merge.line": {},
+"base_import.import": {},
+"base_import.mapping": {},
+"bus.bus": {},
+"bus.listener.mixin": {},
+"bus.sync.mixin": {},
+"change.password.own": {},
+"change.password.user": {
+"new_passwd": {
+"const": ""
+}
+},
+"change.password.wizard": {
+"user_ids": {
+"callable": "odoo.addons.base.models.res_users.ChangePasswordWizard._default_user_ids",
+"src": "odoo/odoo/addons/base/models/res_users.py:1539"
+}
+},
+"clearing.label": {},
+"decimal.precision": {
+"digits": {
+"const": 2
+}
+},
+"discuss.call.history": {},
+"discuss.category": {
+"sequence": {
+"callable": "odoo.addons.mail.models.discuss.discuss_category.DiscussCategory._default_sequence",
+"src": "odoo/addons/mail/models/discuss/discuss_category.py:14"
+}
+},
+"discuss.channel": {
+"active": {
+"const": true
+},
+"channel_type": {
+"const": "channel"
+},
+"last_interest_dt": {
+"expr": "fields.Datetime.now() - timedelta(seconds=1)",
+"src": "odoo/addons/mail/models/discuss/discuss_channel.py:150"
+},
+"uuid": {
+"callable": "odoo.addons.mail.models.discuss.discuss_channel.DiscussChannel._generate_random_token",
+"src": "odoo/addons/mail/models/discuss/discuss_channel.py:95"
+}
+},
+"discuss.channel.last.interest.update": {},
+"discuss.channel.member": {
+"last_interest_dt": {
+"expr": "fields.Datetime.now() - timedelta(seconds=1)",
+"src": "odoo/addons/mail/models/discuss/discuss_channel_member.py:66"
+},
+"new_message_separator": {
+"const": 0
+}
+},
+"discuss.channel.rtc.session": {},
+"discuss.gif.favorite": {},
+"discuss.voice.metadata": {},
+"fetchmail.server": {
+"active": {
+"const": true
+},
+"attach": {
+"const": true
+},
+"priority": {
+"const": 5
+},
+"script": {
+"const": "/mail/static/scripts/odoo-mailgate.py"
+},
+"server_type": {
+"const": "imap"
+},
+"state": {
+"const": "draft"
+}
+},
+"format.address.mixin": {},
+"format.vat.label.mixin": {},
+"google.gmail.mixin": {
+"active": {
+"const": true
+}
+},
+"html.field.history.mixin": {},
+"html_editor.converter.test": {},
+"html_editor.converter.test.sub": {},
+"iap.account": {
+"account_token": {
+"expr": "uuid.uuid4().hex",
+"src": "odoo/addons/iap/models/iap_account.py:35"
+},
+"service_locked": {
+"const": false
+},
+"warning_threshold": {
+"const": 1.0
+}
+},
+"iap.autocomplete.api": {},
+"iap.enrich.api": {},
+"iap.service": {},
+"iap.service.pack": {},
+"image.mixin": {},
+"ir.access": {
+"active": {
+"const": true
+}
+},
+"ir.actions.act_url": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"target": {
+"const": "new"
+},
+"type": {
+"const": "ir.actions.act_url"
+}
+},
+"ir.actions.act_window": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"cache": {
+"const": true
+},
+"context": {
+"const": {}
+},
+"limit": {
+"const": 80
+},
+"mobile_view_mode": {
+"const": "kanban"
+},
+"target": {
+"const": "current"
+},
+"type": {
+"const": "ir.actions.act_window"
+},
+"view_mode": {
+"const": "list,form"
+}
+},
+"ir.actions.act_window.view": {},
+"ir.actions.act_window_close": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"type": {
+"const": "ir.actions.act_window_close"
+}
+},
+"ir.actions.actions": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+}
+},
+"ir.actions.client": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"context": {
+"const": "{}"
+},
+"target": {
+"const": "current"
+},
+"type": {
+"const": "ir.actions.client"
+}
+},
+"ir.actions.report": {
+"binding_type": {
+"const": "report"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"report_type": {
+"const": "qweb-pdf"
+},
+"type": {
+"const": "ir.actions.report"
+}
+},
+"ir.actions.server": {
+"binding_type": {
+"const": "action"
+},
+"binding_view_types": {
+"const": "list,form"
+},
+"evaluation_type": {
+"const": "value"
+},
+"sequence": {
+"const": 5
+},
+"subtype_ids": {
+"expr": "self.env.ref('mail.mt_comment').ids",
+"src": "odoo/addons/mail/models/ir_actions_server.py:63"
+},
+"type": {
+"const": "ir.actions.server"
+},
+"update_boolean_value": {
+"const": "true"
+},
+"update_m2m_operation": {
+"const": "add"
+},
+"update_path": {
+"callable": "odoo.addons.base.models.ir_actions.IrActionsServer._default_update_path",
+"src": "odoo/odoo/addons/base/models/ir_actions.py:572"
+},
+"usage": {
+"const": "ir_actions_server"
+}
+},
+"ir.actions.server.history": {},
+"ir.actions.todo": {
+"sequence": {
+"const": 10
+},
+"state": {
+"const": "open"
+}
+},
+"ir.asset": {
+"active": {
+"const": true
+},
+"directive": {
+"const": "append"
+},
+"sequence": {
+"const": 16
+}
+},
+"ir.attachment": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/odoo/addons/base/models/ir_attachment.py:596"
+},
+"type": {
+"const": "binary"
+}
+},
+"ir.autovacuum": {},
+"ir.binary": {},
+"ir.config_parameter": {},
+"ir.cron": {
+"active": {
+"const": true
+},
+"failure_count": {
+"const": 0
+},
+"interval_number": {
+"const": 1
+},
+"interval_type": {
+"const": "months"
+},
+"nextcall": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"priority": {
+"const": 5
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/odoo/addons/base/models/ir_cron.py:112"
+}
+},
+"ir.cron.progress": {
+"done": {
+"const": 0
+},
+"remaining": {
+"const": 0
+},
+"timed_out_counter": {
+"const": 0
+}
+},
+"ir.cron.trigger": {},
+"ir.default": {},
+"ir.demo": {},
+"ir.demo_failure": {},
+"ir.demo_failure.wizard": {},
+"ir.embedded.actions": {
+"context": {
+"const": "{}"
+},
+"domain": {
+"const": "[]"
+}
+},
+"ir.exports": {},
+"ir.exports.line": {
+"sequence": {
+"const": 10
+}
+},
+"ir.fields.converter": {},
+"ir.filters": {
+"active": {
+"const": true
+},
+"context": {
+"const": "{}"
+},
+"domain": {
+"const": "[]"
+},
+"sort": {
+"const": "[]"
+}
+},
+"ir.http": {},
+"ir.logging": {},
+"ir.mail_server": {
+"active": {
+"const": true
+},
+"sequence": {
+"const": 10
+},
+"smtp_authentication": {
+"const": "login"
+},
+"smtp_encryption": {
+"const": "none"
+},
+"smtp_port": {
+"const": 25
+}
+},
+"ir.model": {
+"field_id": {
+"callable": "odoo.addons.base.models.ir_model.IrModel._default_field_id",
+"src": "odoo/odoo/addons/base/models/ir_model.py:233"
+},
+"is_mail_activity": {
+"const": false
+},
+"is_mail_blacklist": {
+"const": false
+},
+"is_mail_thread": {
+"const": false
+},
+"is_mail_thread_sms": {
+"const": false
+},
+"model": {
+"const": "x_"
+},
+"order": {
+"const": "id"
+},
+"state": {
+"const": "manual"
+}
+},
+"ir.model.constraint": {},
+"ir.model.data": {
+"module": {
+"const": ""
+},
+"noupdate": {
+"const": false
+}
+},
+"ir.model.fields": {
+"domain": {
+"const": "[]"
+},
+"field_description": {
+"const": ""
+},
+"name": {
+"const": "x_"
+},
+"on_delete": {
+"const": "set null"
+},
+"sanitize": {
+"const": true
+},
+"sanitize_attributes": {
+"const": true
+},
+"sanitize_form": {
+"const": true
+},
+"sanitize_overridable": {
+"const": false
+},
+"sanitize_style": {
+"const": false
+},
+"sanitize_tags": {
+"const": true
+},
+"selectable": {
+"const": true
+},
+"state": {
+"const": "manual"
+},
+"store": {
+"const": true
+},
+"strip_classes": {
+"const": false
+},
+"strip_style": {
+"const": false
+}
+},
+"ir.model.fields.selection": {
+"sequence": {
+"const": 1000
+}
+},
+"ir.model.inherit": {},
+"ir.model.relation": {},
+"ir.module.category": {
+"visible": {
+"const": true
+}
+},
+"ir.module.module": {
+"demo": {
+"const": false
+},
+"license": {
+"const": "LGPL-3"
+},
+"module_type": {
+"const": "official"
+},
+"sequence": {
+"const": 100
+},
+"state": {
+"const": "uninstallable"
+},
+"test_data": {
+"const": false
+},
+"to_buy": {
+"const": false
+}
+},
+"ir.module.module.dependency": {
+"auto_install_required": {
+"const": true
+}
+},
+"ir.module.module.exclusion": {},
+"ir.profile": {},
+"ir.profile.query": {},
+"ir.qweb": {},
+"ir.qweb.field": {},
+"ir.qweb.field.barcode": {},
+"ir.qweb.field.contact": {},
+"ir.qweb.field.date": {},
+"ir.qweb.field.datetime": {},
+"ir.qweb.field.duration": {},
+"ir.qweb.field.float": {},
+"ir.qweb.field.float_time": {},
+"ir.qweb.field.html": {},
+"ir.qweb.field.image": {},
+"ir.qweb.field.image_url": {},
+"ir.qweb.field.integer": {},
+"ir.qweb.field.many2many": {},
+"ir.qweb.field.many2one": {},
+"ir.qweb.field.monetary": {},
+"ir.qweb.field.one2many": {},
+"ir.qweb.field.qweb": {},
+"ir.qweb.field.relative": {},
+"ir.qweb.field.selection": {},
+"ir.qweb.field.text": {},
+"ir.qweb.field.time": {},
+"ir.sequence": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/odoo/addons/base/models/ir_sequence.py:150"
+},
+"implementation": {
+"const": "standard"
+},
+"number_increment": {
+"const": 1
+},
+"number_next": {
+"const": 1
+},
+"padding": {
+"const": 0
+}
+},
+"ir.sequence.date_range": {
+"number_next": {
+"const": 1
+}
+},
+"ir.ui.menu": {
+"active": {
+"const": true
+},
+"sequence": {
+"const": 10
+}
+},
+"ir.ui.view": {
+"active": {
+"const": true
+},
+"mode": {
+"const": "primary"
+},
+"priority": {
+"const": 16
+}
+},
+"ir.ui.view.custom": {},
+"ir.websocket": {},
+"kpi.provider": {},
+"mail.activity": {
+"active": {
+"const": true
+},
+"activity_type_id": {
+"callable": "odoo.addons.mail.models.mail_activity.MailActivity._default_activity_type",
+"src": "odoo/addons/mail/models/mail_activity.py:43"
+},
+"technical_usage": {
+"const": "none"
+}
+},
+"mail.activity.mixin": {},
+"mail.activity.plan": {
+"active": {
+"const": true
+}
+},
+"mail.activity.plan.template": {
+"activity_type_id": {
+"expr": "self.env.ref('mail.mail_activity_data_todo')",
+"src": "odoo/addons/mail/models/mail_activity_plan_template.py:24"
+},
+"delay_count": {
+"const": 0
+},
+"delay_from": {
+"const": "before_plan_date"
+},
+"delay_unit": {
+"const": "days"
+},
+"responsible_type": {
+"const": "on_demand"
+},
+"sequence": {
+"const": 10
+}
+},
+"mail.activity.schedule": {
+"plan_on_demand_user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/mail/wizard/mail_activity_schedule.py:63"
+}
+},
+"mail.activity.schedule.line": {},
+"mail.activity.type": {
+"active": {
+"const": true
+},
+"category": {
+"const": "default"
+},
+"delay_count": {
+"const": 0
+},
+"delay_from": {
+"const": "previous_activity"
+},
+"delay_unit": {
+"const": "days"
+},
+"kpi_provider_visibility": {
+"const": "own"
+},
+"res_model_change": {
+"const": false
+},
+"sequence": {
+"const": 10
+}
+},
+"mail.alias": {
+"alias_contact": {
+"const": "everyone"
+},
+"alias_defaults": {
+"const": "{}"
+},
+"alias_domain_id": {
+"expr": "self.env.company.alias_domain_id",
+"src": "odoo/addons/mail/models/mail_alias.py:45"
+},
+"alias_incoming_local": {
+"const": false
+}
+},
+"mail.alias.domain": {
+"bounce_alias": {
+"const": "bounce"
+},
+"catchall_alias": {
+"const": "catchall"
+},
+"default_from": {
+"const": "notifications"
+},
+"sequence": {
+"const": 10
+}
+},
+"mail.alias.mixin": {},
+"mail.alias.mixin.optional": {},
+"mail.blacklist": {
+"active": {
+"const": true
+}
+},
+"mail.blacklist.remove": {},
+"mail.bot": {},
+"mail.call.artifact": {
+"end_ms": {
+"const": 0
+},
+"start_ms": {
+"const": 0
+}
+},
+"mail.canned.response": {},
+"mail.compose.message": {
+"composition_mode": {
+"const": "comment"
+},
+"email_notification_allow_header": {
+"const": true
+},
+"message_type": {
+"const": "comment"
+},
+"use_exclusion_list": {
+"const": true
+}
+},
+"mail.composer.mixin": {},
+"mail.followers": {},
+"mail.followers.edit": {
+"notify": {
+"const": false
+},
+"operation": {
+"const": "add"
+}
+},
+"mail.gateway.allowed": {},
+"mail.guest": {
+"access_token": {
+"expr": "str(uuid.uuid4())",
+"src": "odoo/addons/mail/models/discuss/mail_guest.py:31"
+}
+},
+"mail.ice.server": {
+"server_type": {
+"const": "stun"
+}
+},
+"mail.link.preview": {},
+"mail.mail": {
+"message_type": {
+"const": "email_outgoing"
+},
+"state": {
+"const": "outgoing"
+}
+},
+"mail.message": {
+"body": {
+"const": ""
+},
+"date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"email_add_signature": {
+"const": true
+},
+"message_type": {
+"const": "comment"
+}
+},
+"mail.message.link.preview": {},
+"mail.message.reaction": {},
+"mail.message.schedule": {},
+"mail.message.subtype": {
+"default": {
+"const": true
+},
+"sequence": {
+"const": 1
+}
+},
+"mail.message.translation": {},
+"mail.notification": {
+"notification_status": {
+"const": "ready"
+},
+"notification_type": {
+"const": "inbox"
+}
+},
+"mail.poll": {},
+"mail.poll.option": {},
+"mail.poll.vote": {},
+"mail.presence": {
+"last_poll": {
+"expr": "fields.Datetime.now()",
+"src": "odoo/addons/mail/models/mail_presence.py:29"
+},
+"last_presence": {
+"expr": "fields.Datetime.now()",
+"src": "odoo/addons/mail/models/mail_presence.py:30"
+},
+"status": {
+"const": "offline"
+}
+},
+"mail.push": {},
+"mail.push.device": {
+"partner_id": {
+"expr": "self.env.user.partner_id",
+"src": "odoo/addons/mail/models/mail_push_device.py:19"
+}
+},
+"mail.render.mixin": {},
+"mail.scheduled.message": {
+"is_note": {
+"const": false
+},
+"send_method": {
+"const": "email"
+}
+},
+"mail.template": {
+"active": {
+"const": true
+},
+"auto_delete": {
+"const": true
+},
+"email_layout_force_footer": {
+"const": false
+},
+"email_layout_force_header": {
+"const": false
+},
+"use_default_to": {
+"const": true
+}
+},
+"mail.template.preview": {
+"lang": {
+"expr": "self.env.user.lang",
+"src": "odoo/addons/mail/wizard/mail_template_preview.py:42"
+}
+},
+"mail.template.reset": {},
+"mail.thread": {},
+"mail.thread.blacklist": {
+"message_bounce": {
+"const": 0
+}
+},
+"mail.thread.main.attachment": {},
+"mail.thread.phone": {},
+"mail.thread.subject.suggested": {},
+"mail.track.mixin": {},
+"mail.tracking.duration.mixin": {},
+"microsoft.outlook.mixin": {
+"active": {
+"const": true
+}
+},
+"mysubscription.mysubscription": {},
+"phone.blacklist": {
+"active": {
+"const": true
+}
+},
+"phone.blacklist.remove": {},
+"privacy.log": {
+"date": {
+"callable": "odoo.orm.fields_temporal.Datetime.now",
+"src": "odoo/odoo/orm/fields_temporal.py:211"
+},
+"user_id": {
+"expr": "self.env.user",
+"src": "odoo/addons/privacy_lookup/models/privacy_log.py:18"
+}
+},
+"privacy.lookup.wizard": {},
+"privacy.lookup.wizard.line": {
+"execution_details": {
+"const": ""
+}
+},
+"properties.base.definition": {},
+"properties.base.definition.mixin": {},
+"publisher_warranty.contract": {},
+"report.base.report_irmodulereference": {},
+"report.layout": {
+"sequence": {
+"const": 50
+}
+},
+"report.paperformat": {
+"css_margins": {
+"const": false
+},
+"dpi": {
+"const": 90
+},
+"format": {
+"const": "A4"
+},
+"header_line": {
+"const": false
+},
+"header_spacing": {
+"const": 35
+},
+"margin_bottom": {
+"const": 20
+},
+"margin_left": {
+"const": 7
+},
+"margin_right": {
+"const": 7
+},
+"margin_top": {
+"const": 40
+},
+"orientation": {
+"const": "Landscape"
+},
+"page_height": {
+"const": false
+},
+"page_width": {
+"const": false
+}
+},
+"res.city": {},
+"res.company": {
+"active": {
+"const": true
+},
+"alias_domain_id": {
+"expr": "self._default_alias_domain_id()",
+"src": "odoo/addons/mail/models/res_company.py:15"
+},
+"currency_id": {
+"expr": "self._default_currency_id()",
+"src": "odoo/odoo/addons/base/models/res_company.py:109"
+},
+"email_primary_color": {
+"const": "#FFFFFF"
+},
+"email_secondary_color": {
+"const": "#875A7B"
+},
+"font": {
+"const": "Lato"
+},
+"logo": {
+"callable": "odoo.addons.base.models.res_company.ResCompany._get_logo",
+"src": "odoo/odoo/addons/base/models/res_company.py:73"
+},
+"paperformat_id": {
+"expr": "self.env.ref('base.paperformat_euro', raise_if_not_found=False)",
+"src": "odoo/odoo/addons/base/models/res_company.py:130"
+},
+"report_tables_id": {
+"const": "light"
+},
+"sequence": {
+"const": 10
+}
+},
+"res.config": {},
+"res.config.settings": {
+"auth_signup_uninvited": {
+"const": "b2c"
+},
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/addons/base_setup/models/res_config_settings.py:12"
+}
+},
+"res.country": {
+"address_format": {
+"const": "%(street)s\n%(street2)s\n%(city)s %(state_code)s %(zip)s\n%(country_name)s"
+},
+"name_position": {
+"const": "before"
+},
+"state_required": {
+"const": false
+},
+"zip_applicability": {
+"const": "required"
+}
+},
+"res.country.group": {},
+"res.country.state": {},
+"res.currency": {
+"active": {
+"const": true
+},
+"position": {
+"const": "after"
+},
+"rounding": {
+"const": 0.01
+}
+},
+"res.currency.rate": {
+"company_id": {
+"expr": "self.env.company.root_id",
+"src": "odoo/odoo/addons/base/models/res_currency.py:427"
+},
+"name": {
+"callable": "odoo.orm.fields_temporal.Date.context_today",
+"src": "odoo/odoo/orm/fields_temporal.py:140"
+}
+},
+"res.device": {},
+"res.device.log": {},
+"res.groups": {},
+"res.groups.privilege": {
+"placeholder": {
+"expr": "self.env._('No')",
+"src": "odoo/odoo/addons/base/models/res_groups_privilege.py:11"
+},
+"sequence": {
+"const": 100
+}
+},
+"res.lang": {
+"date_format": {
+"const": "%m/%d/%Y"
+},
+"decimal_point": {
+"const": "."
+},
+"direction": {
+"const": "ltr"
+},
+"grouping": {
+"const": "[3,0]"
+},
+"thousands_sep": {
+"const": ","
+},
+"time_format": {
+"const": "%H:%M:%S"
+},
+"week_start": {
+"const": "7"
+}
+},
+"res.partner": {
+"active": {
+"const": true
+},
+"category_id": {
+"callable": "odoo.addons.base.models.res_partner.ResPartner._default_category",
+"src": "odoo/odoo/addons/base/models/res_partner.py:281"
+},
+"color": {
+"const": 0
+},
+"is_company": {
+"const": false
+},
+"message_bounce": {
+"const": 0
+},
+"type": {
+"const": "contact"
+},
+"tz": {
+"expr": "self.env.context.get('tz')",
+"src": "odoo/odoo/addons/base/models/res_partner.py:308"
+}
+},
+"res.partner.bank": {
+"active": {
+"const": true
+},
+"allow_out_payment": {
+"const": false
+},
+"sequence": {
+"const": 10
+}
+},
+"res.partner.category": {
+"active": {
+"const": true
+},
+"color": {
+"callable": "odoo.addons.base.models.res_partner.ResPartnerCategory._get_default_color",
+"src": "odoo/odoo/addons/base/models/res_partner.py:233"
+}
+},
+"res.partner.industry": {
+"active": {
+"const": true
+}
+},
+"res.role": {
+"active": {
+"const": true
+}
+},
+"res.session": {},
+"res.users": {
+"active": {
+"const": true
+},
+"company_id": {
+"expr": "self.env.company.id",
+"src": "odoo/odoo/addons/base/models/res_users.py:236"
+},
+"company_ids": {
+"expr": "self.env.company.ids",
+"src": "odoo/odoo/addons/base/models/res_users.py:239"
+},
+"group_ids": {
+"expr": "self._default_groups()",
+"src": "odoo/odoo/addons/base/models/res_users.py:251"
+},
+"notification_type": {
+"const": "email"
+},
+"outgoing_mail_server_type": {
+"const": "default"
+},
+"view_group_hierarchy": {
+"callable": "odoo.addons.base.models.res_users.ResUsers._default_view_group_hierarchy",
+"src": "odoo/odoo/addons/base/models/res_users.py:260"
+}
+},
+"res.users.apikeys": {},
+"res.users.apikeys.description": {
+"duration": {
+"callable": "odoo.addons.base.models.res_users.ResUsersApikeysDescription._default_duration",
+"src": "odoo/odoo/addons/base/models/res_users.py:1862"
+},
+"scope": {
+"const": "rpc"
+}
+},
+"res.users.apikeys.show": {},
+"res.users.deletion": {
+"state": {
+"const": "todo"
+}
+},
+"res.users.identitycheck": {
+"auth_method": {
+"expr": "self._get_default_auth_method()",
+"src": "odoo/odoo/addons/base/models/res_users.py:1500"
+}
+},
+"res.users.log": {},
+"res.users.settings": {},
+"res.users.settings.embedded.action": {},
+"res.users.settings.volumes": {
+"volume": {
+"const": 0.5
+}
+},
+"reset.view.arch.wizard": {
+"reset_mode": {
+"const": "soft"
+}
+},
+"server.action.history.wizard": {
+"revision": {
+"callable": "odoo.addons.base.models.ir_actions.ServerActionHistoryWizard._default_revision",
+"src": "odoo/odoo/addons/base/models/ir_actions.py:448"
+}
+},
+"sms.account.code": {},
+"sms.account.phone": {},
+"sms.account.sender": {},
+"sms.composer": {
+"mass_force_send": {
+"const": false
+},
+"mass_keep_log": {
+"const": true
+},
+"use_exclusion_list": {
+"const": true
+}
+},
+"sms.sms": {
+"state": {
+"const": "outgoing"
+},
+"to_delete": {
+"const": false
+},
+"uuid": {
+"expr": "uuid4().hex",
+"src": "odoo/addons/sms/models/sms_sms.py:41"
+}
+},
+"sms.template": {},
+"sms.template.preview": {},
+"sms.template.reset": {},
+"sms.tracker": {},
+"template.reset.mixin": {},
+"web_tour.tour": {
+"active": {
+"const": true
+},
+"rainbow_man_message": {
+"const": "<b>Good job!</b> You went through all steps of this tour."
+},
+"sequence": {
+"const": 1000
+},
+"url": {
+"const": "/odoo"
+}
+},
+"web_tour.tour.step": {
+"tooltip_position": {
+"const": "bottom"
+}
+},
+"website": {
+"company_id": {
+"expr": "self.env.company",
+"src": "odoo/odoo/addons/base/models/website.py:43"
+},
+"sequence": {
+"const": 10
+}
+},
+"wizard.ir.model.menu.create": {}
+}

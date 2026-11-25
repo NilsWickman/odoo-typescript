@@ -1,0 +1,800 @@
+{
+ "db": "dev_gen_poc_erp",
+ "models": {
+  "account.account": {
+   "fields": [
+    "account_type",
+    "reconcile",
+    "tag_ids"
+   ],
+   "groups": [],
+   "sudo": [
+    "account_type",
+    "reconcile",
+    "tag_ids"
+   ]
+  },
+  "account.accrued.orders.wizard": {
+   "fields": [
+    "journal_id",
+    "reversal_date"
+   ],
+   "groups": [],
+   "sudo": [
+    "journal_id",
+    "reversal_date"
+   ]
+  },
+  "account.bank.statement.line": {
+   "fields": [
+    "journal_id",
+    "company_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "journal_id",
+    "company_id"
+   ]
+  },
+  "account.journal": {
+   "fields": [
+    "code",
+    "payment_sequence"
+   ],
+   "groups": [],
+   "sudo": [
+    "code",
+    "payment_sequence"
+   ]
+  },
+  "account.move": {
+   "fields": [
+    "date",
+    "journal_id",
+    "company_id",
+    "delivery_date",
+    "taxable_supply_date",
+    "invoice_payment_term_id",
+    "partner_shipping_id",
+    "fiscal_position_id",
+    "currency_id",
+    "invoice_currency_rate",
+    "document_tax_mode"
+   ],
+   "groups": [],
+   "sudo": [
+    "date",
+    "journal_id",
+    "company_id",
+    "delivery_date",
+    "taxable_supply_date",
+    "invoice_payment_term_id",
+    "partner_shipping_id",
+    "fiscal_position_id",
+    "currency_id",
+    "invoice_currency_rate",
+    "document_tax_mode"
+   ]
+  },
+  "account.move.line": {
+   "fields": [
+    "journal_id",
+    "company_id",
+    "company_currency_id",
+    "is_storno",
+    "sequence",
+    "account_id",
+    "name",
+    "debit",
+    "credit",
+    "balance",
+    "amount_currency",
+    "currency_id",
+    "partner_id",
+    "tax_ids",
+    "tax_line_id",
+    "tax_group_id",
+    "display_type",
+    "product_uom_id",
+    "quantity",
+    "price_unit"
+   ],
+   "groups": [
+    [
+     "debit",
+     "credit"
+    ]
+   ],
+   "sudo": [
+    "journal_id",
+    "company_id",
+    "company_currency_id",
+    "is_storno",
+    "sequence",
+    "account_id",
+    "name",
+    "debit",
+    "credit",
+    "balance",
+    "amount_currency",
+    "currency_id",
+    "partner_id",
+    "tax_ids",
+    "tax_line_id",
+    "tax_group_id",
+    "display_type",
+    "product_uom_id",
+    "quantity",
+    "price_unit"
+   ]
+  },
+  "account.move.send.wizard": {
+   "fields": [
+    "sending_method_checkboxes",
+    "extra_edi_checkboxes"
+   ],
+   "groups": [],
+   "sudo": [
+    "sending_method_checkboxes",
+    "extra_edi_checkboxes"
+   ]
+  },
+  "account.partial.reconcile": {
+   "fields": [
+    "debit_currency_id",
+    "credit_currency_id",
+    "company_id",
+    "max_date"
+   ],
+   "groups": [],
+   "sudo": [
+    "debit_currency_id",
+    "credit_currency_id",
+    "company_id",
+    "max_date"
+   ]
+  },
+  "account.payment": {
+   "fields": [
+    "journal_id",
+    "company_id",
+    "currency_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "journal_id",
+    "company_id",
+    "currency_id"
+   ]
+  },
+  "account.payment.register": {
+   "fields": [
+    "currency_id",
+    "journal_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "currency_id",
+    "journal_id"
+   ]
+  },
+  "account.reconcile.model": {
+   "fields": [
+    "trigger"
+   ],
+   "groups": [],
+   "sudo": [
+    "trigger"
+   ]
+  },
+  "account.report": {
+   "fields": [
+    "user_groupby",
+    "only_tax_exigible",
+    "allow_foreign_vat",
+    "default_opening_date_filter",
+    "use_fiscal_periods",
+    "currency_translation",
+    "enable_snapshots",
+    "filter_multi_company",
+    "filter_date_range",
+    "filter_show_draft",
+    "filter_unreconciled",
+    "filter_unfold_all",
+    "filter_hide_0_lines",
+    "filter_period_comparison",
+    "filter_growth_comparison",
+    "filter_line_comparison",
+    "filter_journals",
+    "filter_hierarchy",
+    "filter_account_type",
+    "filter_partner",
+    "filter_aml_ir_filters",
+    "filter_budgets"
+   ],
+   "groups": [],
+   "sudo": [
+    "user_groupby",
+    "only_tax_exigible",
+    "allow_foreign_vat",
+    "default_opening_date_filter",
+    "use_fiscal_periods",
+    "currency_translation",
+    "enable_snapshots",
+    "filter_multi_company",
+    "filter_date_range",
+    "filter_show_draft",
+    "filter_unreconciled",
+    "filter_unfold_all",
+    "filter_hide_0_lines",
+    "filter_period_comparison",
+    "filter_growth_comparison",
+    "filter_line_comparison",
+    "filter_journals",
+    "filter_hierarchy",
+    "filter_account_type",
+    "filter_partner",
+    "filter_aml_ir_filters",
+    "filter_budgets"
+   ]
+  },
+  "account.report.line": {
+   "fields": [
+    "report_id",
+    "hierarchy_level",
+    "user_groupby"
+   ],
+   "groups": [],
+   "sudo": [
+    "report_id",
+    "hierarchy_level",
+    "user_groupby"
+   ]
+  },
+  "account.tax": {
+   "fields": [
+    "is_domestic",
+    "tax_group_id",
+    "country_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "is_domestic",
+    "tax_group_id",
+    "country_id"
+   ]
+  },
+  "account.tax.group": {
+   "fields": [
+    "country_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "country_id"
+   ]
+  },
+  "account.tax.repartition.line": {
+   "fields": [
+    "use_in_tax_closing"
+   ],
+   "groups": [],
+   "sudo": [
+    "use_in_tax_closing"
+   ]
+  },
+  "calendar.event.archive.or.unlink.wizard": {
+   "fields": [
+    "lang"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "crm.lead": {
+   "fields": [
+    "team_id",
+    "lead_properties"
+   ],
+   "groups": [],
+   "sudo": [
+    "team_id"
+   ]
+  },
+  "discuss.channel": {
+   "fields": [
+    "member_indices"
+   ],
+   "groups": [],
+   "sudo": [
+    "member_indices"
+   ]
+  },
+  "mail.activity": {
+   "fields": [
+    "res_model",
+    "summary",
+    "note",
+    "date_deadline",
+    "user_id",
+    "role_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "res_model",
+    "summary",
+    "note",
+    "date_deadline",
+    "user_id",
+    "role_id"
+   ]
+  },
+  "mail.activity.plan": {
+   "fields": [
+    "res_model_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "res_model_id"
+   ]
+  },
+  "mail.activity.schedule": {
+   "fields": [
+    "res_model_id",
+    "res_ids"
+   ],
+   "groups": [],
+   "sudo": [
+    "res_model_id",
+    "res_ids"
+   ]
+  },
+  "mail.compose.message": {
+   "fields": [
+    "lang"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "mail.composer.mixin": {
+   "fields": [
+    "lang"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "product.combo.item": {
+   "fields": [
+    "company_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "company_id"
+   ]
+  },
+  "product.pricelist.item": {
+   "fields": [
+    "applied_on"
+   ],
+   "groups": [],
+   "sudo": [
+    "applied_on"
+   ]
+  },
+  "product.product": {
+   "fields": [
+    "product_properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "product.replenish": {
+   "fields": [
+    "date_planned"
+   ],
+   "groups": [],
+   "sudo": [
+    "date_planned"
+   ]
+  },
+  "product.supplierinfo": {
+   "fields": [
+    "uom_id",
+    "product_id",
+    "product_tmpl_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "uom_id",
+    "product_id",
+    "product_tmpl_id"
+   ]
+  },
+  "product.template": {
+   "fields": [
+    "is_storable",
+    "product_properties",
+    "tracking",
+    "purchase_method",
+    "service_type",
+    "invoice_policy"
+   ],
+   "groups": [],
+   "sudo": [
+    "is_storable",
+    "tracking",
+    "purchase_method",
+    "service_type",
+    "invoice_policy"
+   ]
+  },
+  "product.value": {
+   "fields": [
+    "company_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "company_id"
+   ]
+  },
+  "project.task": {
+   "fields": [
+    "project_id",
+    "task_properties"
+   ],
+   "groups": [],
+   "sudo": [
+    "project_id"
+   ]
+  },
+  "project.task.stage.report": {
+   "fields": [
+    "task_properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "properties.base.definition.mixin": {
+   "fields": [
+    "properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "purchase.order": {
+   "fields": [
+    "currency_id",
+    "document_tax_mode",
+    "currency_rate"
+   ],
+   "groups": [],
+   "sudo": [
+    "currency_id",
+    "document_tax_mode",
+    "currency_rate"
+   ]
+  },
+  "res.partner": {
+   "fields": [
+    "properties",
+    "user_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "user_id"
+   ]
+  },
+  "res.partner.bank": {
+   "fields": [
+    "country_id",
+    "clearing_label_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "country_id",
+    "clearing_label_id"
+   ]
+  },
+  "res.users": {
+   "fields": [
+    "properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "resource.calendar": {
+   "fields": [
+    "attendance_ids"
+   ],
+   "groups": [],
+   "sudo": [
+    "attendance_ids"
+   ]
+  },
+  "resource.calendar.attendance": {
+   "fields": [
+    "hour_from",
+    "hour_to",
+    "duration_based",
+    "dayofweek",
+    "recurrency_until"
+   ],
+   "groups": [
+    [
+     "hour_from",
+     "hour_to"
+    ]
+   ],
+   "sudo": [
+    "hour_from",
+    "hour_to",
+    "duration_based",
+    "dayofweek",
+    "recurrency_until"
+   ]
+  },
+  "resource.mixin": {
+   "fields": [
+    "company_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "company_id"
+   ]
+  },
+  "sale.order": {
+   "fields": [
+    "require_signature",
+    "prepayment_percent",
+    "validity_date",
+    "journal_id",
+    "document_tax_mode",
+    "note",
+    "partner_invoice_id",
+    "partner_shipping_id",
+    "fiscal_position_id",
+    "payment_term_id",
+    "preferred_payment_method_line_id",
+    "pricelist_id",
+    "currency_id",
+    "currency_rate",
+    "user_id",
+    "team_id",
+    "incoterm",
+    "incoterm_location",
+    "warehouse_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "require_signature",
+    "prepayment_percent",
+    "validity_date",
+    "journal_id",
+    "document_tax_mode",
+    "note",
+    "partner_invoice_id",
+    "partner_shipping_id",
+    "fiscal_position_id",
+    "payment_term_id",
+    "preferred_payment_method_line_id",
+    "pricelist_id",
+    "currency_id",
+    "currency_rate",
+    "user_id",
+    "team_id",
+    "incoterm",
+    "incoterm_location",
+    "warehouse_id"
+   ]
+  },
+  "sale.order.line": {
+   "fields": [
+    "company_id",
+    "currency_id",
+    "order_partner_id",
+    "salesman_id",
+    "state",
+    "product_custom_attribute_value_ids",
+    "product_no_variant_attribute_value_ids",
+    "name",
+    "product_uom_qty",
+    "product_uom_id",
+    "tax_ids",
+    "price_unit",
+    "discount",
+    "price_subtotal",
+    "price_tax",
+    "price_total",
+    "price_reduce_taxexcl",
+    "price_reduce_taxinc",
+    "customer_lead",
+    "qty_delivered_method",
+    "section_qty",
+    "section_uom_id",
+    "margin",
+    "margin_percent",
+    "purchase_price"
+   ],
+   "groups": [
+    [
+     "price_subtotal",
+     "price_tax",
+     "price_total"
+    ]
+   ],
+   "sudo": [
+    "company_id",
+    "currency_id",
+    "order_partner_id",
+    "salesman_id",
+    "state",
+    "product_custom_attribute_value_ids",
+    "product_no_variant_attribute_value_ids",
+    "name",
+    "product_uom_qty",
+    "product_uom_id",
+    "tax_ids",
+    "price_unit",
+    "discount",
+    "price_subtotal",
+    "price_tax",
+    "price_total",
+    "price_reduce_taxexcl",
+    "price_reduce_taxinc",
+    "customer_lead",
+    "qty_delivered_method",
+    "section_qty",
+    "section_uom_id",
+    "margin",
+    "margin_percent",
+    "purchase_price"
+   ]
+  },
+  "sale.order.template.line": {
+   "fields": [
+    "product_custom_attribute_value_ids",
+    "product_no_variant_attribute_value_ids",
+    "name",
+    "product_uom_id",
+    "section_qty",
+    "section_uom_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "product_custom_attribute_value_ids",
+    "product_no_variant_attribute_value_ids",
+    "name",
+    "product_uom_id",
+    "section_qty",
+    "section_uom_id"
+   ]
+  },
+  "sms.composer": {
+   "fields": [
+    "composition_mode",
+    "body"
+   ],
+   "groups": [],
+   "sudo": [
+    "composition_mode",
+    "body"
+   ]
+  },
+  "spreadsheet.dashboard.share": {
+   "fields": [
+    "name"
+   ],
+   "groups": [],
+   "sudo": [
+    "name"
+   ]
+  },
+  "stock.lot": {
+   "fields": [
+    "name",
+    "lot_properties"
+   ],
+   "groups": [],
+   "sudo": [
+    "name"
+   ]
+  },
+  "stock.move": {
+   "fields": [
+    "uom_id",
+    "location_id",
+    "location_dest_id",
+    "packaging_uom_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "uom_id",
+    "location_id",
+    "location_dest_id",
+    "packaging_uom_id"
+   ]
+  },
+  "stock.move.line": {
+   "fields": [
+    "uom_id",
+    "location_id",
+    "location_dest_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "uom_id",
+    "location_id",
+    "location_dest_id"
+   ]
+  },
+  "stock.picking": {
+   "fields": [
+    "move_type",
+    "location_id",
+    "location_dest_id",
+    "picking_properties"
+   ],
+   "groups": [],
+   "sudo": [
+    "move_type",
+    "location_id",
+    "location_dest_id"
+   ]
+  },
+  "stock.picking.batch": {
+   "fields": [
+    "properties"
+   ],
+   "groups": [],
+   "sudo": []
+  },
+  "stock.picking.type": {
+   "fields": [
+    "default_location_src_id",
+    "default_location_dest_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "default_location_src_id",
+    "default_location_dest_id"
+   ]
+  },
+  "stock.quant": {
+   "fields": [
+    "lot_properties"
+   ],
+   "groups": [],
+   "sudo": [
+    "lot_properties"
+   ]
+  },
+  "stock.warehouse.orderpoint": {
+   "fields": [
+    "warehouse_id",
+    "location_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "warehouse_id",
+    "location_id"
+   ]
+  },
+  "uom.uom": {
+   "fields": [
+    "sequence"
+   ],
+   "groups": [],
+   "sudo": [
+    "sequence"
+   ]
+  },
+  "utm.campaign": {
+   "fields": [
+    "name"
+   ],
+   "groups": [],
+   "sudo": [
+    "name"
+   ]
+  }
+ },
+ "odoo_commit": "dd5d371863dd96f640e4a4b970d8437bb9861cba"
+}

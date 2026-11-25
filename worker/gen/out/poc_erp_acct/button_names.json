@@ -1,0 +1,45 @@
+{
+ "models": {
+  "accounting.assert.test": {
+   "private": [
+    "_active_name",
+    "_allow_sudo_commands",
+    "_auto",
+    "_check_inherits_access",
+    "_inherit_module",
+    "_log_access",
+    "_rec_name",
+    "_translate",
+    "exists",
+    "filtered_domain",
+    "flush_model",
+    "flush_recordset",
+    "init",
+    "invalidate_model",
+    "invalidate_recordset",
+    "new",
+    "search_fetch"
+   ]
+  },
+  "report.account_test.report_accounttest": {
+   "private": [
+    "_abstract",
+    "_allow_sudo_commands",
+    "_check_inherits_access",
+    "_execute_code",
+    "_get_report_values",
+    "_inherit_module",
+    "_translate",
+    "exists",
+    "filtered_domain",
+    "flush_model",
+    "flush_recordset",
+    "init",
+    "invalidate_model",
+    "invalidate_recordset",
+    "new",
+    "search_fetch"
+   ]
+  }
+ }
+}

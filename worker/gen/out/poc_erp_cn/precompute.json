@@ -1,0 +1,13 @@
+{
+ "models": {
+  "l10n_cn.balance.deduction": {
+   "fields": [
+    "company_id"
+   ],
+   "groups": [],
+   "sudo": [
+    "company_id"
+   ]
+  }
+ }
+}

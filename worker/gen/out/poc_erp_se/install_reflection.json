@@ -1,0 +1,1082 @@
+{
+ "base": "poc_erp",
+ "columns": [
+  {
+   "column": "l10n_se_invoice_ocr_length",
+   "comment": "OCR Number Length",
+   "init": "6",
+   "nullable": true,
+   "table": "account_journal",
+   "type": "int4"
+  },
+  {
+   "column": "l10n_se_default_vendor_payment_ref",
+   "comment": "Default Vendor Payment Ref",
+   "init": null,
+   "nullable": true,
+   "table": "res_partner",
+   "type": "varchar"
+  },
+  {
+   "column": "l10n_se_check_vendor_ocr",
+   "comment": "Check Vendor OCR",
+   "init": null,
+   "nullable": true,
+   "table": "res_partner",
+   "type": "bool"
+  }
+ ],
+ "concerned": [
+  "account.journal",
+  "res.company",
+  "res.partner",
+  "res.users"
+ ],
+ "constraints": [],
+ "fields": [
+  {
+   "added": true,
+   "key": [
+    "res.company",
+    "org_number"
+   ],
+   "offset": 0,
+   "values": {
+    "column1": null,
+    "column2": null,
+    "company_dependent": false,
+    "compute": null,
+    "copied": false,
+    "currency_field": null,
+    "depends": null,
+    "domain": null,
+    "field_description": {
+     "en_US": "Org Number"
+    },
+    "group_expand": null,
+    "help": null,
+    "index": null,
+    "model": "res.company",
+    "model_id": "res.company",
+    "name": "org_number",
+    "on_delete": null,
+    "readonly": true,
+    "related": null,
+    "related_field_id": null,
+    "relation": null,
+    "relation_field": null,
+    "relation_field_id": null,
+    "relation_model_field": null,
+    "relation_table": null,
+    "required": false,
+    "sanitize": null,
+    "sanitize_attributes": null,
+    "sanitize_form": null,
+    "sanitize_overridable": null,
+    "sanitize_style": null,
+    "sanitize_tags": null,
+    "selectable": false,
+    "size": null,
+    "state": "base",
+    "store": false,
+    "strip_classes": null,
+    "strip_style": null,
+    "tracking": null,
+    "translate": null,
+    "ttype": "char"
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "account.journal",
+    "l10n_se_invoice_ocr_length"
+   ],
+   "offset": 1,
+   "values": {
+    "column1": null,
+    "column2": null,
+    "company_dependent": false,
+    "compute": null,
+    "copied": true,
+    "currency_field": null,
+    "depends": null,
+    "domain": null,
+    "field_description": {
+     "en_US": "OCR Number Length"
+    },
+    "group_expand": null,
+    "help": {
+     "en_US": "Total length of OCR Reference Number including checksum."
+    },
+    "index": null,
+    "model": "account.journal",
+    "model_id": "account.journal",
+    "name": "l10n_se_invoice_ocr_length",
+    "on_delete": null,
+    "readonly": false,
+    "related": null,
+    "related_field_id": null,
+    "relation": null,
+    "relation_field": null,
+    "relation_field_id": null,
+    "relation_model_field": null,
+    "relation_table": null,
+    "required": false,
+    "sanitize": null,
+    "sanitize_attributes": null,
+    "sanitize_form": null,
+    "sanitize_overridable": null,
+    "sanitize_style": null,
+    "sanitize_tags": null,
+    "selectable": true,
+    "size": null,
+    "state": "base",
+    "store": true,
+    "strip_classes": null,
+    "strip_style": null,
+    "tracking": null,
+    "translate": null,
+    "ttype": "integer"
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "res.partner",
+    "l10n_se_check_vendor_ocr"
+   ],
+   "offset": 2,
+   "values": {
+    "column1": null,
+    "column2": null,
+    "company_dependent": false,
+    "compute": null,
+    "copied": true,
+    "currency_field": null,
+    "depends": null,
+    "domain": null,
+    "field_description": {
+     "en_US": "Check Vendor OCR"
+    },
+    "group_expand": null,
+    "help": {
+     "en_US": "This Vendor uses OCR Number on their Vendor Bills."
+    },
+    "index": null,
+    "model": "res.partner",
+    "model_id": "res.partner",
+    "name": "l10n_se_check_vendor_ocr",
+    "on_delete": null,
+    "readonly": false,
+    "related": null,
+    "related_field_id": null,
+    "relation": null,
+    "relation_field": null,
+    "relation_field_id": null,
+    "relation_model_field": null,
+    "relation_table": null,
+    "required": false,
+    "sanitize": null,
+    "sanitize_attributes": null,
+    "sanitize_form": null,
+    "sanitize_overridable": null,
+    "sanitize_style": null,
+    "sanitize_tags": null,
+    "selectable": true,
+    "size": null,
+    "state": "base",
+    "store": true,
+    "strip_classes": null,
+    "strip_style": null,
+    "tracking": null,
+    "translate": null,
+    "ttype": "boolean"
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "res.partner",
+    "l10n_se_default_vendor_payment_ref"
+   ],
+   "offset": 3,
+   "values": {
+    "column1": null,
+    "column2": null,
+    "company_dependent": false,
+    "compute": null,
+    "copied": true,
+    "currency_field": null,
+    "depends": null,
+    "domain": null,
+    "field_description": {
+     "en_US": "Default Vendor Payment Ref"
+    },
+    "group_expand": null,
+    "help": {
+     "en_US": "If set, the vendor uses the same Default Payment Reference or OCR Number on all their Vendor Bills."
+    },
+    "index": null,
+    "model": "res.partner",
+    "model_id": "res.partner",
+    "name": "l10n_se_default_vendor_payment_ref",
+    "on_delete": null,
+    "readonly": false,
+    "related": null,
+    "related_field_id": null,
+    "relation": null,
+    "relation_field": null,
+    "relation_field_id": null,
+    "relation_model_field": null,
+    "relation_table": null,
+    "required": false,
+    "sanitize": null,
+    "sanitize_attributes": null,
+    "sanitize_form": null,
+    "sanitize_overridable": null,
+    "sanitize_style": null,
+    "sanitize_tags": null,
+    "selectable": true,
+    "size": null,
+    "state": "base",
+    "store": true,
+    "strip_classes": null,
+    "strip_style": null,
+    "tracking": null,
+    "translate": null,
+    "ttype": "char"
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "res.users",
+    "l10n_se_check_vendor_ocr"
+   ],
+   "offset": 4,
+   "values": {
+    "column1": null,
+    "column2": null,
+    "company_dependent": false,
+    "compute": null,
+    "copied": true,
+    "currency_field": null,
+    "depends": null,
+    "domain": null,
+    "field_description": {
+     "en_US": "Check Vendor OCR"
+    },
+    "group_expand": null,
+    "help": {
+     "en_US": "This Vendor uses OCR Number on their Vendor Bills."
+    },
+    "index": null,
+    "model": "res.users",
+    "model_id": "res.users",
+    "name": "l10n_se_check_vendor_ocr",
+    "on_delete": null,
+    "readonly": false,
+    "related": "partner_id.l10n_se_check_vendor_ocr",
+    "related_field_id": null,
+    "relation": null,
+    "relation_field": null,
+    "relation_field_id": null,
+    "relation_model_field": null,
+    "relation_table": null,
+    "required": false,
+    "sanitize": null,
+    "sanitize_attributes": null,
+    "sanitize_form": null,
+    "sanitize_overridable": null,
+    "sanitize_style": null,
+    "sanitize_tags": null,
+    "selectable": true,
+    "size": null,
+    "state": "base",
+    "store": false,
+    "strip_classes": null,
+    "strip_style": null,
+    "tracking": null,
+    "translate": null,
+    "ttype": "boolean"
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "res.users",
+    "l10n_se_default_vendor_payment_ref"
+   ],
+   "offset": 5,
+   "values": {
+    "column1": null,
+    "column2": null,
+    "company_dependent": false,
+    "compute": null,
+    "copied": true,
+    "currency_field": null,
+    "depends": null,
+    "domain": null,
+    "field_description": {
+     "en_US": "Default Vendor Payment Ref"
+    },
+    "group_expand": null,
+    "help": {
+     "en_US": "If set, the vendor uses the same Default Payment Reference or OCR Number on all their Vendor Bills."
+    },
+    "index": null,
+    "model": "res.users",
+    "model_id": "res.users",
+    "name": "l10n_se_default_vendor_payment_ref",
+    "on_delete": null,
+    "readonly": false,
+    "related": "partner_id.l10n_se_default_vendor_payment_ref",
+    "related_field_id": null,
+    "relation": null,
+    "relation_field": null,
+    "relation_field_id": null,
+    "relation_model_field": null,
+    "relation_table": null,
+    "required": false,
+    "sanitize": null,
+    "sanitize_attributes": null,
+    "sanitize_form": null,
+    "sanitize_overridable": null,
+    "sanitize_style": null,
+    "sanitize_tags": null,
+    "selectable": true,
+    "size": null,
+    "state": "base",
+    "store": false,
+    "strip_classes": null,
+    "strip_style": null,
+    "tracking": null,
+    "translate": null,
+    "ttype": "char"
+   }
+  }
+ ],
+ "fingerprint": "f5ad2eba7a393b39ad015d126b996ee0",
+ "indexes": [],
+ "models": [],
+ "selections": [
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/UTC"
+   ],
+   "values": {
+    "sequence": 488
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+9"
+   ],
+   "values": {
+    "sequence": 469
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/Greenwich"
+   ],
+   "values": {
+    "sequence": 463
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/Universal"
+   ],
+   "values": {
+    "sequence": 468
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+12"
+   ],
+   "values": {
+    "sequence": 487
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+7"
+   ],
+   "values": {
+    "sequence": 473
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+5"
+   ],
+   "values": {
+    "sequence": 478
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/Zulu"
+   ],
+   "values": {
+    "sequence": 461
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+1"
+   ],
+   "values": {
+    "sequence": 464
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-5"
+   ],
+   "values": {
+    "sequence": 465
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+11"
+   ],
+   "values": {
+    "sequence": 494
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-9"
+   ],
+   "values": {
+    "sequence": 467
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-1"
+   ],
+   "values": {
+    "sequence": 475
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-13"
+   ],
+   "values": {
+    "sequence": 482
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+4"
+   ],
+   "values": {
+    "sequence": 490
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-0"
+   ],
+   "values": {
+    "sequence": 480
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+6"
+   ],
+   "values": {
+    "sequence": 471
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/UCT"
+   ],
+   "values": {
+    "sequence": 484
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-10"
+   ],
+   "values": {
+    "sequence": 474
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT"
+   ],
+   "values": {
+    "sequence": 486
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-4"
+   ],
+   "values": {
+    "sequence": 479
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+10"
+   ],
+   "values": {
+    "sequence": 493
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+2"
+   ],
+   "values": {
+    "sequence": 491
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+8"
+   ],
+   "values": {
+    "sequence": 470
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-2"
+   ],
+   "values": {
+    "sequence": 485
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-7"
+   ],
+   "values": {
+    "sequence": 489
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-6"
+   ],
+   "values": {
+    "sequence": 466
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-11"
+   ],
+   "values": {
+    "sequence": 483
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-3"
+   ],
+   "values": {
+    "sequence": 495
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-14"
+   ],
+   "values": {
+    "sequence": 476
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT0"
+   ],
+   "values": {
+    "sequence": 472
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-12"
+   ],
+   "values": {
+    "sequence": 462
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+0"
+   ],
+   "values": {
+    "sequence": 477
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT-8"
+   ],
+   "values": {
+    "sequence": 481
+   }
+  },
+  {
+   "added": false,
+   "key": [
+    "res.partner",
+    "tz",
+    "Etc/GMT+3"
+   ],
+   "values": {
+    "sequence": 492
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "account.journal",
+    "invoice_reference_model",
+    "se_ocr2"
+   ],
+   "offset": 0,
+   "values": {
+    "name": {
+     "en_US": "Sweden OCR Level 1 & 2 (1255)"
+    },
+    "sequence": 4,
+    "value": "se_ocr2"
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "account.journal",
+    "invoice_reference_model",
+    "se_ocr3"
+   ],
+   "offset": 1,
+   "values": {
+    "name": {
+     "en_US": "Sweden OCR Level 3 (12658)"
+    },
+    "sequence": 5,
+    "value": "se_ocr3"
+   }
+  },
+  {
+   "added": true,
+   "key": [
+    "account.journal",
+    "invoice_reference_model",
+    "se_ocr4"
+   ],
+   "offset": 2,
+   "values": {
+    "name": {
+     "en_US": "Sweden OCR Level 4 (001271)"
+    },
+    "sequence": 6,
+    "value": "se_ocr4"
+   }
+  }
+ ],
+ "sequences": {
+  "ir_model": 3,
+  "ir_model_data": 916,
+  "ir_model_fields": 6,
+  "ir_model_fields_selection": 38
+ },
+ "tail": {
+  "ir_model_data": 18
+ },
+ "xmlids": [
+  {
+   "key": [
+    "res.company"
+   ],
+   "model": "ir.model",
+   "module": "l10n_se",
+   "name": "model_res_company",
+   "noupdate": false,
+   "offset": 0
+  },
+  {
+   "key": [
+    "account.move"
+   ],
+   "model": "ir.model",
+   "module": "l10n_se",
+   "name": "model_account_move",
+   "noupdate": false,
+   "offset": 1
+  },
+  {
+   "key": [
+    "res.partner"
+   ],
+   "model": "ir.model",
+   "module": "l10n_se",
+   "name": "model_res_partner",
+   "noupdate": false,
+   "offset": 2
+  },
+  {
+   "key": [
+    "account.journal"
+   ],
+   "model": "ir.model",
+   "module": "l10n_se",
+   "name": "model_account_journal",
+   "noupdate": false,
+   "offset": 3
+  },
+  {
+   "key": [
+    "account.chart.template"
+   ],
+   "model": "ir.model",
+   "module": "l10n_se",
+   "name": "model_account_chart_template",
+   "noupdate": false,
+   "offset": 4
+  },
+  {
+   "key": [
+    "account.move",
+    "id"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_move__id",
+   "noupdate": false,
+   "offset": 5
+  },
+  {
+   "key": [
+    "res.partner",
+    "display_name"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_partner__display_name",
+   "noupdate": false,
+   "offset": 6
+  },
+  {
+   "key": [
+    "account.move",
+    "display_name"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_move__display_name",
+   "noupdate": false,
+   "offset": 7
+  },
+  {
+   "key": [
+    "account.journal",
+    "id"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_journal__id",
+   "noupdate": false,
+   "offset": 8
+  },
+  {
+   "key": [
+    "account.chart.template",
+    "id"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_chart_template__id",
+   "noupdate": false,
+   "offset": 9
+  },
+  {
+   "key": [
+    "res.company",
+    "id"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_company__id",
+   "noupdate": false,
+   "offset": 10
+  },
+  {
+   "key": [
+    "res.partner",
+    "id"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_partner__id",
+   "noupdate": false,
+   "offset": 11
+  },
+  {
+   "key": [
+    "res.company",
+    "display_name"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_company__display_name",
+   "noupdate": false,
+   "offset": 12
+  },
+  {
+   "key": [
+    "account.journal",
+    "display_name"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_journal__display_name",
+   "noupdate": false,
+   "offset": 13
+  },
+  {
+   "key": [
+    "account.chart.template",
+    "display_name"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_chart_template__display_name",
+   "noupdate": false,
+   "offset": 14
+  },
+  {
+   "key": [
+    "account.journal",
+    "invoice_reference_model"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_journal__invoice_reference_model",
+   "noupdate": false,
+   "offset": 15
+  },
+  {
+   "key": [
+    "res.company",
+    "org_number"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_company__org_number",
+   "noupdate": false,
+   "offset": 16
+  },
+  {
+   "key": [
+    "account.journal",
+    "l10n_se_invoice_ocr_length"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_account_journal__l10n_se_invoice_ocr_length",
+   "noupdate": false,
+   "offset": 17
+  },
+  {
+   "key": [
+    "res.partner",
+    "l10n_se_check_vendor_ocr"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_partner__l10n_se_check_vendor_ocr",
+   "noupdate": false,
+   "offset": 18
+  },
+  {
+   "key": [
+    "res.partner",
+    "l10n_se_default_vendor_payment_ref"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_partner__l10n_se_default_vendor_payment_ref",
+   "noupdate": false,
+   "offset": 19
+  },
+  {
+   "key": [
+    "res.users",
+    "l10n_se_check_vendor_ocr"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_users__l10n_se_check_vendor_ocr",
+   "noupdate": false,
+   "offset": 20
+  },
+  {
+   "key": [
+    "res.users",
+    "l10n_se_default_vendor_payment_ref"
+   ],
+   "model": "ir.model.fields",
+   "module": "l10n_se",
+   "name": "field_res_users__l10n_se_default_vendor_payment_ref",
+   "noupdate": false,
+   "offset": 21
+  },
+  {
+   "key": [
+    "account.journal",
+    "invoice_reference_model",
+    "se_ocr2"
+   ],
+   "model": "ir.model.fields.selection",
+   "module": "l10n_se",
+   "name": "selection__account_journal__invoice_reference_model__se_ocr2",
+   "noupdate": false,
+   "offset": 172
+  },
+  {
+   "key": [
+    "account.journal",
+    "invoice_reference_model",
+    "se_ocr3"
+   ],
+   "model": "ir.model.fields.selection",
+   "module": "l10n_se",
+   "name": "selection__account_journal__invoice_reference_model__se_ocr3",
+   "noupdate": false,
+   "offset": 173
+  },
+  {
+   "key": [
+    "account.journal",
+    "invoice_reference_model",
+    "se_ocr4"
+   ],
+   "model": "ir.model.fields.selection",
+   "module": "l10n_se",
+   "name": "selection__account_journal__invoice_reference_model__se_ocr4",
+   "noupdate": false,
+   "offset": 174
+  }
+ ]
+}

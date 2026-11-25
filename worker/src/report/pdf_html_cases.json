@@ -1,0 +1,25 @@
+[
+ {
+  "html": "<!DOCTYPE html><html data-report-margin-top=\"10\"><head><meta charset=\"utf-8\"/></head><body><main>\n <div class=\"x header y\">H<br/>h</div> tail1\n<div class=\"article\" data-oe-model=\"m\" data-oe-id=\"3\">A &amp; &lt;b&gt; \"q\" 's'<img src=\"/a b.png\" alt=\"x&quot;y\"/><table>\n<tr>\n<td>1</td></tr></table></div>\n <div class=\"footer\">F</div></main></body></html>",
+  "articles": [
+   "<div class=\"article\" data-oe-model=\"m\" data-oe-id=\"3\">A &amp; &lt;b&gt; \"q\" 's'<img src=\"/a%20b.png\" alt='x\"y'><table>\n<tr>\n<td>1</td></tr></table></div>\n "
+  ],
+  "bodyFallback": null,
+  "header": "<div id=\"minimal_layout_report_headers\"><div class=\"x header y\">H<br>h</div> tail1\n</div>",
+  "footer": "<div id=\"minimal_layout_report_footers\"><div class=\"footer\">F</div></div>",
+  "args": [
+   [
+    "data-report-margin-top",
+    "10"
+   ]
+  ]
+ },
+ {
+  "html": "<!DOCTYPE html><html><head></head><body><main><p>only <span title=\"a'b&quot;c\">t</span></p>\n<!-- c --><div>x</div> z</main></body></html>",
+  "articles": [],
+  "bodyFallback": "<p>only <span title=\"a'b&quot;c\">t</span></p>\n<!-- c --><div>x</div> z",
+  "header": "<div id=\"minimal_layout_report_headers\"></div>",
+  "footer": "<div id=\"minimal_layout_report_footers\"></div>",
+  "args": []
+ }
+]

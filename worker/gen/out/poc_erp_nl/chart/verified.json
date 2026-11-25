@@ -1,0 +1,10 @@
+{
+ "nl": {
+  "commit": "5446af0d",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_nl",
+  "result": "results/evidence/poc_erp_nl-nl-vagb_chart_nl-20261125-020345.txt",
+  "sha256": "bd69d48887a88308e80539fe4e04ed158981fff4849c777fc7ac167103831500",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

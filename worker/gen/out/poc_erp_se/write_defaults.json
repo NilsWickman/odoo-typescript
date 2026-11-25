@@ -1,0 +1,36 @@
+{
+ "account.journal": {
+  "active": {
+   "const": true
+  },
+  "bank_statements_source": {
+   "const": "undefined"
+  },
+  "color": {
+   "const": 0
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/account/models/account_journal.py:164"
+  },
+  "invoice_reference_model": {
+   "callable": "odoo.addons.account.models.account_journal.AccountJournal._default_invoice_reference_model",
+   "src": "odoo/addons/account/models/account_journal.py:60"
+  },
+  "invoice_reference_type": {
+   "const": "invoice"
+  },
+  "is_peppol_journal": {
+   "const": false
+  },
+  "l10n_se_invoice_ocr_length": {
+   "const": 6
+  },
+  "sequence": {
+   "const": 10
+  },
+  "show_on_dashboard": {
+   "const": true
+  }
+ }
+}

@@ -1,0 +1,17 @@
+// Stream B development config: `npx wrangler dev --config src/bus/dev/wrangler.jsonc --port 8083 ...` (see entry.ts).
+{
+  "$schema": "../../../node_modules/wrangler/config-schema.json",
+  "name": "odoo-ts-bus-dev",
+  "main": "entry.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": { "SLOTS": "{}" },
+  "durable_objects": {
+    "bindings": [
+      { "name": "SESSION", "class_name": "SessionStore" },
+      { "name": "BUS", "class_name": "BusDispatcher" }
+    ]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["SessionStore", "BusDispatcher"] }],
+  "r2_buckets": [{ "binding": "FILESTORE", "bucket_name": "odoo-ts-filestore" }]
+}

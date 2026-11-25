@@ -1,0 +1,1025 @@
+{
+ "db": "dev_fix_genc",
+ "display_name_override": [
+  "clearing.label",
+  "discuss.call.history",
+  "discuss.channel",
+  "discuss.channel.member",
+  "iap.service.pack",
+  "ir.actions.server.history",
+  "ir.embedded.actions",
+  "ir.model.data",
+  "ir.model.fields",
+  "ir.ui.menu",
+  "mail.activity",
+  "mail.alias",
+  "mail.followers",
+  "mail.guest",
+  "privacy.lookup.wizard",
+  "properties.base.definition",
+  "res.city",
+  "res.config.settings",
+  "res.country.state",
+  "res.partner",
+  "res.partner.bank",
+  "res.partner.category",
+  "res.session",
+  "res.users.settings.volumes"
+ ],
+ "models": {
+  "auth.passkey.key": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "auth.passkey.key.create": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "auth.totp.rate.limit.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "auth_totp.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.document.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.enable.profiling.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.import.module": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.language.export": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.language.import": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.language.install": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.module.install.request": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.module.install.review": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.module.uninstall": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.module.update": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.module.upgrade": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.partner.merge.automatic.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base.partner.merge.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base_import.import": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "base_import.mapping": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "bus.bus": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "change.password.own": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "change.password.user": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "change.password.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "clearing.label": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "decimal.precision": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.call.history": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.channel": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.channel.last.interest.update": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.channel.member": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.channel.rtc.session": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.gif.favorite": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "discuss.voice.metadata": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "fetchmail.server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "html_editor.converter.test": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "html_editor.converter.test.sub": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "iap.account": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "iap.service": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "iap.service.pack": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.access": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.act_url": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.act_window": [
+   "search",
+   "search_count"
+  ],
+  "ir.actions.act_window.view": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.act_window_close": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.actions": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.client": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.report": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.server.history": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.actions.todo": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.asset": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.attachment": [
+   "read"
+  ],
+  "ir.config_parameter": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.cron": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.cron.progress": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.cron.trigger": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.default": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.demo": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.demo_failure": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.demo_failure.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.embedded.actions": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.exports": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.exports.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.filters": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.logging": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.mail_server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.model": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.model.constraint": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.model.data": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.model.fields": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.model.fields.selection": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.model.inherit": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.model.relation": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.module.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.module.module": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.module.module.dependency": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.module.module.exclusion": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.profile": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.profile.query": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.sequence": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.sequence.date_range": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.ui.menu": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.ui.view": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "ir.ui.view.custom": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.activity": [
+   "read"
+  ],
+  "mail.activity.plan": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.activity.plan.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.activity.schedule": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.activity.schedule.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.activity.type": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.alias": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.alias.domain": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.blacklist": [
+   "read"
+  ],
+  "mail.blacklist.remove": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.call.artifact": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.canned.response": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.compose.message": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.followers": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.followers.edit": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.gateway.allowed": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.guest": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.ice.server": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.link.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.mail": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.message": [
+   "read"
+  ],
+  "mail.message.link.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.message.reaction": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.message.schedule": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.message.subtype": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.message.translation": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.notification": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.poll": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.poll.option": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.poll.vote": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.presence": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.push": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.push.device": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.scheduled.message": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.template.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "mail.template.reset": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "phone.blacklist": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "phone.blacklist.remove": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "privacy.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "privacy.lookup.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "privacy.lookup.wizard.line": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "properties.base.definition": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "report.layout": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "report.paperformat": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.city": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.company": [
+   "search",
+   "search_count"
+  ],
+  "res.config": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.config.settings": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.country": [
+   "search",
+   "search_count"
+  ],
+  "res.country.group": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.country.state": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.currency": [
+   "search",
+   "search_count"
+  ],
+  "res.currency.rate": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.device.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.groups": [
+   "read"
+  ],
+  "res.groups.privilege": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.lang": [
+   "search",
+   "search_count"
+  ],
+  "res.partner": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.partner.bank": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.partner.category": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.partner.industry": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.role": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users.apikeys.description": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users.deletion": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users.identitycheck": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users.log": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users.settings": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users.settings.embedded.action": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "res.users.settings.volumes": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "reset.view.arch.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "server.action.history.wizard": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.account.code": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.account.phone": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.account.sender": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.composer": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.sms": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.template": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.template.preview": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.template.reset": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "sms.tracker": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "web_tour.tour": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "web_tour.tour.step": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ],
+  "website": [
+   "search",
+   "search_count"
+  ],
+  "wizard.ir.model.menu.create": [
+   "read",
+   "search",
+   "search_count",
+   "search_read"
+  ]
+ },
+ "odoo_commit": "dd5d371863dd96f640e4a4b970d8437bb9861cba"
+}

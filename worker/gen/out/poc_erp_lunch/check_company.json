@@ -1,0 +1,32 @@
+{
+ "models": {
+  "lunch.product": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "category_id",
+    "supplier_id",
+    "favorite_user_ids"
+   ]
+  },
+  "lunch.product.category": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  },
+  "lunch.supplier": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": []
+  }
+ }
+}

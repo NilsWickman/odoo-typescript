@@ -1,0 +1,16 @@
+{
+ "base.document.layout": {
+  "company_details": {
+   "callable": "odoo.addons.l10n_ma.models.base_document_layout.BaseDocumentLayout._default_company_details",
+   "src": "odoo/addons/l10n_ma/models/base_document_layout.py:10"
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/web/models/base_document_layout.py:39"
+  },
+  "report_footer": {
+   "callable": "odoo.addons.web.models.base_document_layout.BaseDocumentLayout._default_report_footer",
+   "src": "odoo/addons/web/models/base_document_layout.py:27"
+  }
+ }
+}

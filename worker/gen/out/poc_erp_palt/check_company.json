@@ -1,0 +1,17 @@
+{
+ "models": {
+  "purchase.order": {
+   "auto": false,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "partner_id",
+    "dest_address_id",
+    "user_id",
+    "alternative_po_ids"
+   ]
+  }
+ }
+}

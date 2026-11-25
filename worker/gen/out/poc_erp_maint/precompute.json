@@ -1,0 +1,11 @@
+{
+ "models": {
+  "maintenance.equipment": {
+   "fields": [
+    "equipment_properties"
+   ],
+   "groups": [],
+   "sudo": []
+  }
+ }
+}

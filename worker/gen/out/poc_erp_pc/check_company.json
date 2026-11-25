@@ -1,0 +1,15 @@
+{
+ "models": {
+  "payment.provider": {
+   "auto": true,
+   "domain": "parent_of",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "partner_bank_id",
+    "journal_id"
+   ]
+  }
+ }
+}

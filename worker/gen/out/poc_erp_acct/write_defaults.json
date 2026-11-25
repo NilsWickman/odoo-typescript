@@ -1,0 +1,14 @@
+{
+ "accounting.assert.test": {
+  "active": {
+   "const": true
+  },
+  "code_exec": {
+   "const": "res = []\ncr.execute(\"select id, code from account_journal\")\nfor record in cr.dictfetchall():\n    res.append(record['code'])\nresult = res\n"
+  },
+  "sequence": {
+   "const": 10
+  }
+ },
+ "report.account_test.report_accounttest": {}
+}

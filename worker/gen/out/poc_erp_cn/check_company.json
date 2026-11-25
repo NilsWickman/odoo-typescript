@@ -1,0 +1,35 @@
+{
+ "models": {
+  "account.move.line": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "product_id",
+    "move_id",
+    "account_id",
+    "reconcile_model_id",
+    "tax_ids",
+    "group_tax_id",
+    "tax_repartition_line_id",
+    "l10n_cn_output_vat_offset_account_id",
+    "l10n_cn_balance_deduction_ids",
+    "l10n_cn_output_vat_offset_move_id"
+   ]
+  },
+  "l10n_cn.balance.deduction": {
+   "auto": true,
+   "domain": "default",
+   "has_company_id": true,
+   "has_company_ids": false,
+   "property": [],
+   "regular": [
+    "expense_account_id",
+    "output_vat_offset_move_id",
+    "product_id"
+   ]
+  }
+ }
+}

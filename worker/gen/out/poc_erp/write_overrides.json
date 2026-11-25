@@ -1,0 +1,7507 @@
+{
+ "_source": "worker/gen/write_overrides.py",
+ "classes": {
+  "odoo.addons.account.models.account_account:AccountAccount": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_account.py:1011"
+   },
+   "ondelete": {
+    "_unlink_except_contains_journal_items": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_account.py:1155"
+    },
+    "_unlink_except_linked_to_fiscal_position": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_account.py:1160"
+    },
+    "_unlink_except_linked_to_tax_repartition_line": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_account.py:1165"
+    }
+   },
+   "write": {
+    "keys": [
+     "code",
+     "code_mapping_ids",
+     "company_ids",
+     "currency_id"
+    ],
+    "src": "addons/account/models/account_account.py:1055"
+   }
+  },
+  "odoo.addons.account.models.account_account_tag:AccountAccountTag": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_account_tag.py:69"
+   },
+   "ondelete": {
+    "_unlink_except_master_tags": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_account_tag.py:109"
+    }
+   }
+  },
+  "odoo.addons.account.models.account_analytic_line:AccountAnalyticLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_analytic_line.py:166"
+   },
+   "unlink": {
+    "src": "addons/account/models/account_analytic_line.py:181"
+   },
+   "write": {
+    "keys": [
+     "move_line_id"
+    ],
+    "src": "addons/account/models/account_analytic_line.py:172"
+   }
+  },
+  "odoo.addons.account.models.account_bank_statement:AccountBankStatement": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_bank_statement.py:468"
+   },
+   "write": {
+    "keys": [
+     "attachment_ids"
+    ],
+    "src": "addons/account/models/account_bank_statement.py:479"
+   }
+  },
+  "odoo.addons.account.models.account_bank_statement_line:AccountBankStatementLine": {
+   "create": {
+    "keys": [
+     "amount",
+     "amount_currency",
+     "foreign_currency_id",
+     "journal_id",
+     "move_type",
+     "statement_id"
+    ],
+    "src": "addons/account/models/account_bank_statement_line.py:363"
+   },
+   "ondelete": {
+    "_check_allow_unlink": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_bank_statement_line.py:493"
+    }
+   },
+   "unlink": {
+    "src": "addons/account/models/account_bank_statement_line.py:430"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/account/models/account_bank_statement_line.py:423"
+   }
+  },
+  "odoo.addons.account.models.account_code_mapping:AccountCodeMapping": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_code_mapping.py:38"
+   }
+  },
+  "odoo.addons.account.models.account_full_reconcile:AccountFullReconcile": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_full_reconcile.py:14"
+   },
+   "unlink": {
+    "src": "addons/account/models/account_full_reconcile.py:49"
+   }
+  },
+  "odoo.addons.account.models.account_journal:AccountJournal": {
+   "create": {
+    "keys": [
+     "bank_account_number",
+     "bank_bic",
+     "code"
+    ],
+    "src": "addons/account/models/account_journal.py:1057"
+   },
+   "unlink": {
+    "src": "addons/account/models/account_journal.py:734"
+   },
+   "write": {
+    "keys": [
+     "alias_name",
+     "bank_account_id",
+     "bank_account_number",
+     "bank_bic",
+     "code",
+     "company_id",
+     "currency_id",
+     "name",
+     "restrict_mode_hash_table",
+     "type"
+    ],
+    "src": "addons/account/models/account_journal.py:775"
+   }
+  },
+  "odoo.addons.account.models.account_lock_exception:AccountLock_Exception": {
+   "create": {
+    "keys": [
+     "company_id",
+     "company_lock_date",
+     "lock_date",
+     "lock_date_field"
+    ],
+    "src": "addons/account/models/account_lock_exception.py:164"
+   }
+  },
+  "odoo.addons.account.models.account_move:AccountMove": {
+   "create": {
+    "keys": [
+     "state",
+     "tax_totals"
+    ],
+    "src": "addons/account/models/account_move.py:3975"
+   },
+   "ondelete": {
+    "_unlink_account_audit_trail_except_once_post": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_move.py:4189"
+    },
+    "_unlink_forbid_parts_of_chain": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_move.py:4169"
+    }
+   },
+   "unlink": {
+    "src": "addons/account/models/account_move.py:4200"
+   },
+   "write": {
+    "keys": [
+     "auto_post",
+     "date",
+     "inalterable_hash",
+     "is_manually_modified",
+     "journal_id",
+     "name",
+     "sequence_number",
+     "sequence_prefix",
+     "state",
+     "tax_totals"
+    ],
+    "src": "addons/account/models/account_move.py:3995"
+   }
+  },
+  "odoo.addons.account.models.account_move_line:AccountMoveLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_move_line.py:2152"
+   },
+   "ondelete": {
+    "_except_hashed_entry_lines": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_move_line.py:2327"
+    },
+    "_prevent_automatic_line_deletion": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_move_line.py:2313"
+    },
+    "_unlink_except_posted": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_move_line.py:2304"
+    }
+   },
+   "unlink": {
+    "src": "addons/account/models/account_move_line.py:2336"
+   },
+   "write": {
+    "keys": [
+     "account_id",
+     "analytic_line_ids"
+    ],
+    "src": "addons/account/models/account_move_line.py:2186"
+   }
+  },
+  "odoo.addons.account.models.account_partial_reconcile:AccountPartialReconcile": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_partial_reconcile.py:155"
+   },
+   "unlink": {
+    "src": "addons/account/models/account_partial_reconcile.py:107"
+   }
+  },
+  "odoo.addons.account.models.account_payment:AccountPayment": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_payment.py:964"
+   },
+   "unlink": {
+    "src": "addons/account/models/account_payment.py:1033"
+   },
+   "write": {
+    "keys": [
+     "move_id",
+     "state"
+    ],
+    "src": "addons/account/models/account_payment.py:1023"
+   }
+  },
+  "odoo.addons.account.models.account_payment_method:AccountPaymentMethod": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_payment_method.py:20"
+   },
+   "unlink": {
+    "src": "addons/account/models/account_payment_method.py:90"
+   }
+  },
+  "odoo.addons.account.models.account_payment_method:AccountPaymentMethodLine": {
+   "unlink": {
+    "src": "addons/account/models/account_payment_method.py:153"
+   }
+  },
+  "odoo.addons.account.models.account_payment_term:AccountPaymentTerm": {
+   "ondelete": {
+    "_unlink_except_referenced_terms": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_payment_term.py:256"
+    }
+   }
+  },
+  "odoo.addons.account.models.account_report:AccountReport": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_report.py:304"
+   },
+   "ondelete": {
+    "_unlink_if_no_variant": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_report.py:391"
+    }
+   },
+   "write": {
+    "keys": [
+     "country_id"
+    ],
+    "src": "addons/account/models/account_report.py:322"
+   }
+  },
+  "odoo.addons.account.models.account_report:AccountReportExpression": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_report.py:811"
+   },
+   "ondelete": {
+    "_unlink_archive_used_tags": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_report.py:871"
+    }
+   },
+   "write": {
+    "keys": [
+     "engine",
+     "formula"
+    ],
+    "src": "addons/account/models/account_report.py:826"
+   }
+  },
+  "odoo.addons.account.models.account_report:AccountReportLine": {
+   "ondelete": {
+    "_unlink_child_expressions": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_report.py:653"
+    }
+   }
+  },
+  "odoo.addons.account.models.account_tax:AccountTax": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/account_tax.py:613"
+   },
+   "ondelete": {
+    "unlink_except_tax_used": {
+     "at_uninstall": false,
+     "src": "addons/account/models/account_tax.py:5007"
+    }
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/account/models/account_tax.py:626"
+   }
+  },
+  "odoo.addons.account.models.company:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/company.py:630"
+   },
+   "write": {
+    "keys": [
+     "bank_account_code_prefix",
+     "cash_account_code_prefix",
+     "currency_id",
+     "fiscalyear_last_day",
+     "fiscalyear_last_month"
+    ],
+    "src": "addons/account/models/company.py:883"
+   }
+  },
+  "odoo.addons.account.models.ir_actions_report:IrActionsReport": {
+   "ondelete": {
+    "_unlink_except_master_tags": {
+     "at_uninstall": false,
+     "src": "addons/account/models/ir_actions_report.py:76"
+    }
+   }
+  },
+  "odoo.addons.account.models.ir_attachment:IrAttachment": {
+   "ondelete": {
+    "_except_audit_trail": {
+     "at_uninstall": true,
+     "src": "addons/account/models/ir_attachment.py:20"
+    }
+   },
+   "unlink": {
+    "src": "addons/account/models/ir_attachment.py:55"
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "db_datas",
+     "raw",
+     "res_id",
+     "res_model",
+     "store_fname"
+    ],
+    "src": "addons/account/models/ir_attachment.py:40"
+   }
+  },
+  "odoo.addons.account.models.ir_module:IrModuleModule": {
+   "write": {
+    "keys": [],
+    "src": "addons/account/models/ir_module.py:72"
+   }
+  },
+  "odoo.addons.account.models.mail_message:MailMessage": {
+   "ondelete": {
+    "_except_audit_log": {
+     "at_uninstall": false,
+     "src": "addons/account/models/mail_message.py:142"
+    }
+   },
+   "write": {
+    "keys": [
+     "body",
+     "message_type",
+     "res_id",
+     "subject",
+     "subtype_id"
+    ],
+    "src": "addons/account/models/mail_message.py:152"
+   }
+  },
+  "odoo.addons.account.models.mail_template:MailTemplate": {
+   "ondelete": {
+    "_unlink_except_master_mail_template": {
+     "at_uninstall": false,
+     "src": "addons/account/models/mail_template.py:8"
+    }
+   }
+  },
+  "odoo.addons.account.models.partner:AccountFiscalPosition": {
+   "create": {
+    "keys": [
+     "zip_from",
+     "zip_to"
+    ],
+    "src": "addons/account/models/partner.py:203"
+   },
+   "write": {
+    "keys": [
+     "zip_from",
+     "zip_to"
+    ],
+    "src": "addons/account/models/partner.py:212"
+   }
+  },
+  "odoo.addons.account.models.partner:ResPartner": {
+   "create": {
+    "keys": [
+     "customer_rank",
+     "supplier_rank"
+    ],
+    "src": "addons/account/models/partner.py:864"
+   },
+   "ondelete": {
+    "_unlink_if_partner_in_account_move": {
+     "at_uninstall": false,
+     "src": "addons/account/models/partner.py:877"
+    }
+   },
+   "write": {
+    "keys": [
+     "parent_id"
+    ],
+    "src": "addons/account/models/partner.py:840"
+   }
+  },
+  "odoo.addons.account.models.product:ProductTemplate": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/product.py:295"
+   },
+   "write": {
+    "keys": [
+     "type"
+    ],
+    "src": "addons/account/models/product.py:307"
+   }
+  },
+  "odoo.addons.account.models.res_currency:ResCurrency": {
+   "write": {
+    "keys": [
+     "rounding"
+    ],
+    "src": "addons/account/models/res_currency.py:28"
+   }
+  },
+  "odoo.addons.account.models.res_currency:ResCurrencyRate": {
+   "create": {
+    "keys": [],
+    "src": "addons/account/models/res_currency.py:136"
+   },
+   "ondelete": {
+    "_unlink_clear_company_rate_cache": {
+     "at_uninstall": false,
+     "src": "addons/account/models/res_currency.py:141"
+    }
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/account/models/res_currency.py:145"
+   }
+  },
+  "odoo.addons.account.models.res_partner_bank:ResPartnerBank": {
+   "create": {
+    "keys": [
+     "account_number",
+     "allow_out_payment",
+     "partner_id"
+    ],
+    "src": "addons/account/models/res_partner_bank.py:332"
+   },
+   "write": {
+    "keys": [
+     "account_number",
+     "allow_out_payment",
+     "partner_id"
+    ],
+    "src": "addons/account/models/res_partner_bank.py:359"
+   }
+  },
+  "odoo.addons.account.models.sequence_mixin:SequenceMixin": {
+   "write": {
+    "keys": [],
+    "src": "addons/account/models/sequence_mixin.py:115"
+   }
+  },
+  "odoo.addons.account.wizard.base_document_layout:BaseDocumentLayout": {
+   "create": {
+    "keys": [
+     "company_id"
+    ],
+    "src": "addons/account/wizard/base_document_layout.py:200"
+   },
+   "write": {
+    "keys": [
+     "company_id"
+    ],
+    "src": "addons/account/wizard/base_document_layout.py:228"
+   }
+  },
+  "odoo.addons.account.wizard.setup_wizards:AccountFinancialYearOp": {
+   "create": {
+    "keys": [
+     "company_id"
+    ],
+    "src": "addons/account/wizard/setup_wizards.py:65"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/account/wizard/setup_wizards.py:78"
+   }
+  },
+  "odoo.addons.account.wizard.setup_wizards:AccountSetupBankManualConfig": {
+   "create": {
+    "keys": [
+     "account_number",
+     "new_journal_name",
+     "partner_id"
+    ],
+    "src": "addons/account/wizard/setup_wizards.py:124"
+   }
+  },
+  "odoo.addons.account_edi_ubl_cii.models.res_partner:ResPartner": {
+   "create": {
+    "keys": [],
+    "src": "addons/account_edi_ubl_cii/models/res_partner.py:186"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/account_edi_ubl_cii/models/res_partner.py:192"
+   }
+  },
+  "odoo.addons.account_edi_ubl_cii.models.uom_uom:UomUom": {
+   "create": {
+    "keys": [],
+    "src": "addons/account_edi_ubl_cii/models/uom_uom.py:24"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/account_edi_ubl_cii/models/uom_uom.py:28"
+   }
+  },
+  "odoo.addons.account_payment.models.account_journal:AccountJournal": {
+   "ondelete": {
+    "_unlink_except_linked_to_payment_provider": {
+     "at_uninstall": false,
+     "src": "addons/account_payment/models/account_journal.py:10"
+    }
+   }
+  },
+  "odoo.addons.account_payment.models.account_payment_method_line:AccountPaymentMethodLine": {
+   "ondelete": {
+    "_unlink_except_installed_payment_provider": {
+     "at_uninstall": false,
+     "src": "addons/account_payment/models/account_payment_method_line.py:61"
+    }
+   }
+  },
+  "odoo.addons.account_peppol.models.res_partner:ResPartner": {
+   "create": {
+    "keys": [],
+    "src": "addons/account_peppol/models/res_partner.py:218"
+   }
+  },
+  "odoo.addons.analytic.models.analytic_account:AccountAnalyticAccount": {
+   "write": {
+    "keys": [
+     "plan_id"
+    ],
+    "src": "addons/analytic/models/analytic_account.py:229"
+   }
+  },
+  "odoo.addons.analytic.models.analytic_line:AccountAnalyticLine": {
+   "write": {
+    "keys": [],
+    "src": "addons/analytic/models/analytic_line.py:240"
+   }
+  },
+  "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin": {
+   "create": {
+    "keys": [],
+    "src": "addons/analytic/models/analytic_mixin.py:175"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/analytic/models/analytic_mixin.py:169"
+   }
+  },
+  "odoo.addons.analytic.models.analytic_plan:AccountAnalyticApplicability": {
+   "create": {
+    "keys": [],
+    "src": "addons/analytic/models/analytic_plan.py:434"
+   },
+   "ondelete": {
+    "_unlink_clear_cache": {
+     "at_uninstall": false,
+     "src": "addons/analytic/models/analytic_plan.py:443"
+    }
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/analytic/models/analytic_plan.py:439"
+   }
+  },
+  "odoo.addons.analytic.models.analytic_plan:AccountAnalyticPlan": {
+   "create": {
+    "keys": [],
+    "src": "addons/analytic/models/analytic_plan.py:374"
+   },
+   "unlink": {
+    "src": "addons/analytic/models/analytic_plan.py:268"
+   },
+   "write": {
+    "keys": [
+     "default_applicability",
+     "parent_id"
+    ],
+    "src": "addons/analytic/models/analytic_plan.py:379"
+   }
+  },
+  "odoo.addons.analytic.models.ir_config_parameter:IrConfigParameter": {
+   "write": {
+    "keys": [
+     "value"
+    ],
+    "src": "addons/analytic/models/ir_config_parameter.py:11"
+   }
+  },
+  "odoo.addons.auth_passkey.models.auth_passkey_key:AuthPasskeyKey": {
+   "unlink": {
+    "src": "addons/auth_passkey/models/auth_passkey_key.py:42"
+   }
+  },
+  "odoo.addons.auth_signup.models.res_users:ResUsers": {
+   "create": {
+    "keys": [],
+    "src": "addons/auth_signup/models/res_users.py:303"
+   },
+   "ondelete": {
+    "_ondelete_signup_cancel": {
+     "at_uninstall": false,
+     "src": "addons/auth_signup/models/res_users.py:321"
+    }
+   },
+   "write": {
+    "keys": [
+     "active"
+    ],
+    "src": "addons/auth_signup/models/res_users.py:316"
+   }
+  },
+  "odoo.addons.auth_totp_mail.models.auth_totp_device:Auth_TotpDevice": {
+   "unlink": {
+    "src": "addons/auth_totp_mail/models/auth_totp_device.py:10"
+   }
+  },
+  "odoo.addons.auth_totp_mail.models.res_users:ResUsers": {
+   "write": {
+    "keys": [
+     "totp_secret"
+    ],
+    "src": "addons/auth_totp_mail/models/res_users.py:21"
+   }
+  },
+  "odoo.addons.barcodes.models.barcode_nomenclature:BarcodeNomenclature": {
+   "ondelete": {
+    "_unlink_except_default": {
+     "at_uninstall": false,
+     "src": "addons/barcodes/models/barcode_nomenclature.py:208"
+    }
+   }
+  },
+  "odoo.addons.base.models.ir_access:IrAccess": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_access.py:217"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_access.py:244"
+   },
+   "write": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_access.py:236"
+   }
+  },
+  "odoo.addons.base.models.ir_actions:IrActionsAct_Window": {
+   "create": {
+    "keys": [
+     "name",
+     "res_model"
+    ],
+    "src": "odoo/addons/base/models/ir_actions.py:341"
+   }
+  },
+  "odoo.addons.base.models.ir_actions:IrActionsActions": {
+   "ondelete": {
+    "_unlink_check_home_action": {
+     "at_uninstall": true,
+     "src": "odoo/addons/base/models/ir_actions.py:120"
+    }
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_actions.py:111"
+   }
+  },
+  "odoo.addons.base.models.ir_actions:IrActionsServer": {
+   "create": {
+    "keys": [
+     "code",
+     "group_ids",
+     "model_id",
+     "parent_id"
+    ],
+    "src": "odoo/addons/base/models/ir_actions.py:695"
+   },
+   "write": {
+    "keys": [
+     "code"
+    ],
+    "src": "odoo/addons/base/models/ir_actions.py:714"
+   }
+  },
+  "odoo.addons.base.models.ir_actions:IrActionsTodo": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_actions.py:1399"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_actions.py:1419"
+   },
+   "write": {
+    "keys": [
+     "state"
+    ],
+    "src": "odoo/addons/base/models/ir_actions.py:1407"
+   }
+  },
+  "odoo.addons.base.models.ir_attachment:IrAttachment": {
+   "create": {
+    "keys": [
+     "mimetype",
+     "raw",
+     "res_id",
+     "res_model",
+     "store_fname"
+    ],
+    "src": "odoo/addons/base/models/ir_attachment.py:920"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_attachment.py:908"
+   },
+   "write": {
+    "keys": [
+     "mimetype",
+     "raw",
+     "res_id",
+     "res_model",
+     "type",
+     "url"
+    ],
+    "src": "odoo/addons/base/models/ir_attachment.py:878"
+   }
+  },
+  "odoo.addons.base.models.ir_config_parameter:IrConfig_Parameter": {
+   "ondelete": {
+    "unlink_default_parameters": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/ir_config_parameter.py:170"
+    }
+   },
+   "write": {
+    "keys": [
+     "key"
+    ],
+    "src": "odoo/addons/base/models/ir_config_parameter.py:163"
+   }
+  },
+  "odoo.addons.base.models.ir_cron:IrCron": {
+   "create": {
+    "keys": [
+     "usage"
+    ],
+    "src": "odoo/addons/base/models/ir_cron.py:136"
+   },
+   "ondelete": {
+    "_unlink_unless_running": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/ir_cron.py:725"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "nextcall"
+    ],
+    "src": "odoo/addons/base/models/ir_cron.py:712"
+   }
+  },
+  "odoo.addons.base.models.ir_default:IrDefault": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_default.py:55"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_default.py:72"
+   },
+   "write": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_default.py:63"
+   }
+  },
+  "odoo.addons.base.models.ir_embedded_actions:IrEmbeddedActions": {
+   "create": {
+    "keys": [
+     "action_id",
+     "name",
+     "python_method"
+    ],
+    "src": "odoo/addons/base/models/ir_embedded_actions.py:43"
+   },
+   "ondelete": {
+    "_unlink_if_action_deletable": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/ir_embedded_actions.py:99"
+    }
+   }
+  },
+  "odoo.addons.base.models.ir_filters:IrFilters": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_filters.py:70"
+   },
+   "write": {
+    "keys": [
+     "context",
+     "user_ids"
+    ],
+    "src": "odoo/addons/base/models/ir_filters.py:76"
+   }
+  },
+  "odoo.addons.base.models.ir_mail_server:IrMail_Server": {
+   "write": {
+    "keys": [
+     "active"
+    ],
+    "src": "odoo/addons/base/models/ir_mail_server.py:213"
+   }
+  },
+  "odoo.addons.base.models.ir_model:IrModel": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_model.py:454"
+   },
+   "ondelete": {
+    "_unlink_if_manual": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/ir_model.py:366"
+    },
+    "_unlink_related_attachments": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/ir_model.py:375"
+    }
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_model.py:402"
+   },
+   "write": {
+    "keys": [
+     "access_ids",
+     "field_id",
+     "fold_name",
+     "order"
+    ],
+    "src": "odoo/addons/base/models/ir_model.py:433"
+   }
+  },
+  "odoo.addons.base.models.ir_model:IrModelConstraint": {
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_model.py:2103"
+   }
+  },
+  "odoo.addons.base.models.ir_model:IrModelData": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_model.py:2397"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_model.py:2411"
+   },
+   "write": {
+    "keys": [
+     "model"
+    ],
+    "src": "odoo/addons/base/models/ir_model.py:2404"
+   }
+  },
+  "odoo.addons.base.models.ir_model:IrModelFields": {
+   "create": {
+    "keys": [
+     "index",
+     "model",
+     "model_id",
+     "related",
+     "relation",
+     "relation_field",
+     "state",
+     "store",
+     "translate",
+     "ttype"
+    ],
+    "src": "odoo/addons/base/models/ir_model.py:1162"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_model.py:1116"
+   },
+   "write": {
+    "keys": [
+     "index",
+     "model_id",
+     "name",
+     "translate",
+     "ttype"
+    ],
+    "src": "odoo/addons/base/models/ir_model.py:1220"
+   }
+  },
+  "odoo.addons.base.models.ir_model:IrModelFieldsSelection": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_model.py:1886"
+   },
+   "ondelete": {
+    "_unlink_if_manual": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/ir_model.py:1951"
+    }
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_model.py:1964"
+   },
+   "write": {
+    "keys": [
+     "value"
+    ],
+    "src": "odoo/addons/base/models/ir_model.py:1910"
+   }
+  },
+  "odoo.addons.base.models.ir_module:IrModuleModule": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_module.py:780"
+   },
+   "ondelete": {
+    "_unlink_except_installed": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/ir_module.py:339"
+    }
+   }
+  },
+  "odoo.addons.base.models.ir_sequence:IrSequence": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_sequence.py:171"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_sequence.py:181"
+   },
+   "write": {
+    "keys": [
+     "implementation",
+     "number_increment",
+     "number_next"
+    ],
+    "src": "odoo/addons/base/models/ir_sequence.py:185"
+   }
+  },
+  "odoo.addons.base.models.ir_sequence:IrSequenceDate_Range": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/ir_sequence.py:365"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_sequence.py:376"
+   },
+   "write": {
+    "keys": [
+     "number_next"
+    ],
+    "src": "odoo/addons/base/models/ir_sequence.py:380"
+   }
+  },
+  "odoo.addons.base.models.ir_ui_menu:IrUiMenu": {
+   "create": {
+    "keys": [
+     "web_icon",
+     "web_icon_data"
+    ],
+    "src": "odoo/addons/base/models/ir_ui_menu.py:147"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_ui_menu.py:174"
+   },
+   "write": {
+    "keys": [
+     "web_icon",
+     "web_icon_data"
+    ],
+    "src": "odoo/addons/base/models/ir_ui_menu.py:154"
+   }
+  },
+  "odoo.addons.base.models.ir_ui_view:IrUiView": {
+   "create": {
+    "keys": [
+     "arch",
+     "arch_base",
+     "arch_db",
+     "arch_fs",
+     "arch_prev",
+     "arch_updated",
+     "inherit_id",
+     "key",
+     "model",
+     "name",
+     "type"
+    ],
+    "src": "odoo/addons/base/models/ir_ui_view.py:605"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/ir_ui_view.py:679"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "arch",
+     "arch_base",
+     "arch_db",
+     "arch_prev",
+     "arch_updated",
+     "inherit_id"
+    ],
+    "src": "odoo/addons/base/models/ir_ui_view.py:656"
+   }
+  },
+  "odoo.addons.base.models.properties_base_definition:PropertiesBaseDefinition": {
+   "write": {
+    "keys": [
+     "properties_field_id"
+    ],
+    "src": "odoo/addons/base/models/properties_base_definition.py:42"
+   }
+  },
+  "odoo.addons.base.models.properties_base_definition_mixin:PropertiesBaseDefinitionMixin": {
+   "create": {
+    "keys": [
+     "properties_base_definition_id"
+    ],
+    "src": "odoo/addons/base/models/properties_base_definition_mixin.py:47"
+   }
+  },
+  "odoo.addons.base.models.res_company:ResCompany": {
+   "create": {
+    "keys": [
+     "country_id",
+     "email",
+     "logo",
+     "name",
+     "parent_id",
+     "partner_id",
+     "phone",
+     "vat",
+     "website"
+    ],
+    "src": "odoo/addons/base/models/res_company.py:347"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "country_id",
+     "currency_id",
+     "parent_id"
+    ],
+    "src": "odoo/addons/base/models/res_company.py:398"
+   }
+  },
+  "odoo.addons.base.models.res_config:ResConfigSettings": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_config.py:518"
+   }
+  },
+  "odoo.addons.base.models.res_country:ResCountry": {
+   "create": {
+    "keys": [
+     "code"
+    ],
+    "src": "odoo/addons/base/models/res_country.py:147"
+   },
+   "write": {
+    "keys": [
+     "address_view_id",
+     "code"
+    ],
+    "src": "odoo/addons/base/models/res_country.py:154"
+   }
+  },
+  "odoo.addons.base.models.res_country:ResCountryGroup": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_country.py:216"
+   },
+   "write": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_country.py:220"
+   }
+  },
+  "odoo.addons.base.models.res_currency:ResCurrency": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_currency.py:93"
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/res_currency.py:99"
+   },
+   "write": {
+    "keys": [
+     "active"
+    ],
+    "src": "odoo/addons/base/models/res_currency.py:104"
+   }
+  },
+  "odoo.addons.base.models.res_currency:ResCurrencyRate": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_currency.py:454"
+   },
+   "ondelete": {
+    "_invalidate_rates": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/res_currency.py:459"
+    }
+   },
+   "write": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_currency.py:450"
+   }
+  },
+  "odoo.addons.base.models.res_groups:ResGroups": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_groups.py:275"
+   },
+   "ondelete": {
+    "_unlink_except_settings_group": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/res_groups.py:160"
+    }
+   },
+   "unlink": {
+    "src": "odoo/addons/base/models/res_groups.py:284"
+   },
+   "write": {
+    "keys": [
+     "name",
+     "user_ids"
+    ],
+    "src": "odoo/addons/base/models/res_groups.py:223"
+   }
+  },
+  "odoo.addons.base.models.res_lang:ResLang": {
+   "create": {
+    "keys": [
+     "code",
+     "iso_code",
+     "url_code"
+    ],
+    "src": "odoo/addons/base/models/res_lang.py:386"
+   },
+   "ondelete": {
+    "_unlink_except_default_lang": {
+     "at_uninstall": true,
+     "src": "odoo/addons/base/models/res_lang.py:431"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "code"
+    ],
+    "src": "odoo/addons/base/models/res_lang.py:393"
+   }
+  },
+  "odoo.addons.base.models.res_partner:ResPartner": {
+   "create": {
+    "keys": [
+     "website"
+    ],
+    "src": "odoo/addons/base/models/res_partner.py:1027"
+   },
+   "ondelete": {
+    "_unlink_except_user": {
+     "at_uninstall": false,
+     "src": "odoo/addons/base/models/res_partner.py:1056"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "company_id",
+     "name",
+     "website"
+    ],
+    "src": "odoo/addons/base/models/res_partner.py:963"
+   }
+  },
+  "odoo.addons.base.models.res_partner_bank:ResPartnerBank": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_partner_bank.py:190"
+   },
+   "write": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_partner_bank.py:196"
+   }
+  },
+  "odoo.addons.base.models.res_users:ResUsers": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_users.py:663"
+   },
+   "ondelete": {
+    "_unlink_except_master_data": {
+     "at_uninstall": true,
+     "src": "odoo/addons/base/models/res_users.py:744"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "company_id",
+     "company_ids",
+     "group_ids",
+     "tz"
+    ],
+    "src": "odoo/addons/base/models/res_users.py:682"
+   }
+  },
+  "odoo.addons.base.models.res_users:ResUsersApikeysDescription": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_users.py:1915"
+   }
+  },
+  "odoo.addons.base.models.res_users:UsersMultiCompany": {
+   "create": {
+    "keys": [],
+    "src": "odoo/addons/base/models/res_users.py:1439"
+   },
+   "write": {
+    "keys": [
+     "company_ids"
+    ],
+    "src": "odoo/addons/base/models/res_users.py:1453"
+   }
+  },
+  "odoo.addons.calendar.models.calendar_attendee:CalendarAttendee": {
+   "create": {
+    "keys": [
+     "common_name",
+     "email",
+     "partner_id",
+     "state"
+    ],
+    "src": "addons/calendar/models/calendar_attendee.py:55"
+   },
+   "unlink": {
+    "src": "addons/calendar/models/calendar_attendee.py:76"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/calendar/models/calendar_attendee.py:71"
+   }
+  },
+  "odoo.addons.calendar.models.calendar_calendar:CalendarCalendar": {
+   "ondelete": {
+    "_unlink_except_primary": {
+     "at_uninstall": false,
+     "src": "addons/calendar/models/calendar_calendar.py:126"
+    }
+   },
+   "unlink": {
+    "src": "addons/calendar/models/calendar_calendar.py:135"
+   },
+   "write": {
+    "keys": [
+     "calendar_default_privacy"
+    ],
+    "src": "addons/calendar/models/calendar_calendar.py:59"
+   }
+  },
+  "odoo.addons.calendar.models.calendar_event:CalendarEvent": {
+   "create": {
+    "keys": [
+     "allday",
+     "attendee_ids",
+     "description",
+     "follow_recurrence",
+     "is_draft",
+     "meeting_activity_ids",
+     "name",
+     "partner_ids",
+     "recurrency",
+     "res_id",
+     "res_model",
+     "res_model_id",
+     "start",
+     "user_id"
+    ],
+    "src": "addons/calendar/models/calendar_event.py:809"
+   },
+   "unlink": {
+    "src": "addons/calendar/models/calendar_event.py:1186"
+   },
+   "write": {
+    "keys": [
+     "access_token",
+     "active",
+     "alarm_ids",
+     "attendee_ids",
+     "follow_recurrence",
+     "is_draft",
+     "name",
+     "partner_ids",
+     "recurrence_update",
+     "recurrency",
+     "start",
+     "videocall_channel_id",
+     "videocall_location"
+    ],
+    "src": "addons/calendar/models/calendar_event.py:1000"
+   }
+  },
+  "odoo.addons.calendar.models.calendar_user:CalendarUser": {
+   "unlink": {
+    "src": "addons/calendar/models/calendar_user.py:42"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/calendar/models/calendar_user.py:35"
+   }
+  },
+  "odoo.addons.calendar.models.mail_activity:MailActivity": {
+   "write": {
+    "keys": [
+     "date_deadline"
+    ],
+    "src": "addons/calendar/models/mail_activity.py:14"
+   }
+  },
+  "odoo.addons.calendar.models.res_users:ResUsers": {
+   "create": {
+    "keys": [],
+    "src": "addons/calendar/models/res_users.py:80"
+   },
+   "unlink": {
+    "src": "addons/calendar/models/res_users.py:86"
+   }
+  },
+  "odoo.addons.certificate.models.certificate:CertificateCertificate": {
+   "create": {
+    "keys": [],
+    "src": "addons/certificate/models/certificate.py:423"
+   },
+   "write": {
+    "keys": [
+     "content",
+     "pkcs12_password"
+    ],
+    "src": "addons/certificate/models/certificate.py:434"
+   }
+  },
+  "odoo.addons.crm.models.calendar:CalendarEvent": {
+   "create": {
+    "keys": [],
+    "src": "addons/crm/models/calendar.py:38"
+   }
+  },
+  "odoo.addons.crm.models.crm_lead:CrmLead": {
+   "create": {
+    "keys": [
+     "website"
+    ],
+    "src": "addons/crm/models/crm_lead.py:728"
+   },
+   "unlink": {
+    "src": "addons/crm/models/crm_lead.py:971"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "date_closed",
+     "date_last_stage_update",
+     "date_open",
+     "probability",
+     "stage_id",
+     "user_id",
+     "website"
+    ],
+    "src": "addons/crm/models/crm_lead.py:760"
+   }
+  },
+  "odoo.addons.crm.models.crm_stage:CrmStage": {
+   "write": {
+    "keys": [
+     "is_won"
+    ],
+    "src": "addons/crm/models/crm_stage.py:70"
+   }
+  },
+  "odoo.addons.crm.models.crm_team:CrmTeam": {
+   "unlink": {
+    "src": "addons/crm/models/crm_team.py:131"
+   },
+   "write": {
+    "keys": [
+     "use_leads",
+     "use_opportunities"
+    ],
+    "src": "addons/crm/models/crm_team.py:120"
+   }
+  },
+  "odoo.addons.crm.models.ir_config_parameter:IrConfig_Parameter": {
+   "create": {
+    "keys": [],
+    "src": "addons/crm/models/ir_config_parameter.py:17"
+   },
+   "unlink": {
+    "src": "addons/crm/models/ir_config_parameter.py:25"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/crm/models/ir_config_parameter.py:10"
+   }
+  },
+  "odoo.addons.crm_iap_enrich.models.crm_lead:CrmLead": {
+   "create": {
+    "keys": [],
+    "src": "addons/crm_iap_enrich/models/crm_lead.py:41"
+   }
+  },
+  "odoo.addons.crm_sale_project.models.sale_order:SaleOrder": {
+   "create": {
+    "keys": [],
+    "src": "addons/crm_sale_project/models/sale_order.py:7"
+   }
+  },
+  "odoo.addons.digest.models.digest:DigestDigest": {
+   "create": {
+    "keys": [],
+    "src": "addons/digest/models/digest.py:104"
+   }
+  },
+  "odoo.addons.digest.models.res_users:ResUsers": {
+   "create": {
+    "keys": [],
+    "src": "addons/digest/models/res_users.py:9"
+   }
+  },
+  "odoo.addons.html_editor.models.html_field_history_mixin:HtmlFieldHistoryMixin": {
+   "create": {
+    "keys": [
+     "html_field_history"
+    ],
+    "src": "addons/html_editor/models/html_field_history_mixin.py:42"
+   },
+   "write": {
+    "keys": [
+     "html_field_history"
+    ],
+    "src": "addons/html_editor/models/html_field_history_mixin.py:48"
+   }
+  },
+  "odoo.addons.iap.models.iap_account:IapAccount": {
+   "create": {
+    "keys": [],
+    "src": "addons/iap/models/iap_account.py:163"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/iap/models/iap_account.py:82"
+   }
+  },
+  "odoo.addons.mail.models.discuss.bus_sync_mixin:BusSyncMixin": {
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/discuss/bus_sync_mixin.py:26"
+   }
+  },
+  "odoo.addons.mail.models.discuss.discuss_call_history:DiscussCallHistory": {
+   "ondelete": {
+    "_unlink_cleanup_artifacts_attachments": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/discuss/discuss_call_history.py:37"
+    }
+   }
+  },
+  "odoo.addons.mail.models.discuss.discuss_category:DiscussCategory": {
+   "ondelete": {
+    "_unlink_sync_to_channel": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/discuss/discuss_category.py:29"
+    }
+   }
+  },
+  "odoo.addons.mail.models.discuss.discuss_channel:DiscussChannel": {
+   "create": {
+    "keys": [
+     "channel_member_ids",
+     "channel_partner_ids",
+     "channel_type"
+    ],
+    "src": "addons/mail/models/discuss/discuss_channel.py:522"
+   },
+   "ondelete": {
+    "_unlink_channel": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/discuss/discuss_channel.py:590"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "channel_type",
+     "default_display_mode",
+     "description",
+     "from_message_id",
+     "group_ids",
+     "group_public_id",
+     "image_128",
+     "is_readonly",
+     "member_indices",
+     "name",
+     "parent_channel_id"
+    ],
+    "src": "addons/mail/models/discuss/discuss_channel.py:596"
+   }
+  },
+  "odoo.addons.mail.models.discuss.discuss_channel_member:DiscussChannelMember": {
+   "create": {
+    "keys": [
+     "channel_id",
+     "guest_id",
+     "partner_id"
+    ],
+    "src": "addons/mail/models/discuss/discuss_channel_member.py:258"
+   },
+   "ondelete": {
+    "_unlink_notify_channel_left": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/discuss/discuss_channel_member.py:337"
+    }
+   },
+   "unlink": {
+    "src": "addons/mail/models/discuss/discuss_channel_member.py:360"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/discuss/discuss_channel_member.py:304"
+   }
+  },
+  "odoo.addons.mail.models.discuss.discuss_channel_rtc_session:DiscussChannelRtcSession": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/discuss/discuss_channel_rtc_session.py:40"
+   },
+   "unlink": {
+    "src": "addons/mail/models/discuss/discuss_channel_rtc_session.py:69"
+   }
+  },
+  "odoo.addons.mail.models.discuss.res_groups:ResGroups": {
+   "write": {
+    "keys": [
+     "user_ids"
+    ],
+    "src": "addons/mail/models/discuss/res_groups.py:9"
+   }
+  },
+  "odoo.addons.mail.models.discuss.res_users:ResUsers": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/discuss/res_users.py:13"
+   },
+   "unlink": {
+    "src": "addons/mail/models/discuss/res_users.py:31"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "group_ids"
+    ],
+    "src": "addons/mail/models/discuss/res_users.py:19"
+   }
+  },
+  "odoo.addons.mail.models.fetchmail:FetchmailServer": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/fetchmail.py:159"
+   },
+   "unlink": {
+    "src": "addons/mail/models/fetchmail.py:170"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/fetchmail.py:165"
+   }
+  },
+  "odoo.addons.mail.models.ir_config_parameter:IrConfig_Parameter": {
+   "create": {
+    "keys": [
+     "key",
+     "value"
+    ],
+    "src": "addons/mail/models/ir_config_parameter.py:116"
+   },
+   "write": {
+    "keys": [
+     "key",
+     "value"
+    ],
+    "src": "addons/mail/models/ir_config_parameter.py:123"
+   }
+  },
+  "odoo.addons.mail.models.ir_model:IrModel": {
+   "ondelete": {
+    "_unlink_related_mail_data": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/ir_model.py:22"
+    }
+   },
+   "write": {
+    "keys": [
+     "is_mail_activity",
+     "is_mail_blacklist",
+     "is_mail_thread"
+    ],
+    "src": "addons/mail/models/ir_model.py:42"
+   }
+  },
+  "odoo.addons.mail.models.mail_activity:MailActivity": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_activity.py:323"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_activity.py:408"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "date_deadline",
+     "user_id"
+    ],
+    "src": "addons/mail/models/mail_activity.py:362"
+   }
+  },
+  "odoo.addons.mail.models.mail_activity_type:MailActivityType": {
+   "ondelete": {
+    "_unlink_except_todo": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/mail_activity_type.py:127"
+    }
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_activity_type.py:145"
+   },
+   "write": {
+    "keys": [
+     "res_model"
+    ],
+    "src": "addons/mail/models/mail_activity_type.py:106"
+   }
+  },
+  "odoo.addons.mail.models.mail_alias:MailAlias": {
+   "create": {
+    "keys": [
+     "alias_domain_id",
+     "alias_name"
+    ],
+    "src": "addons/mail/models/mail_alias.py:246"
+   },
+   "write": {
+    "keys": [
+     "alias_domain_id",
+     "alias_name"
+    ],
+    "src": "addons/mail/models/mail_alias.py:265"
+   }
+  },
+  "odoo.addons.mail.models.mail_alias_domain:MailAliasDomain": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_alias_domain.py:144"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/mail_alias_domain.py:169"
+   }
+  },
+  "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional": {
+   "create": {
+    "keys": [
+     "alias_name"
+    ],
+    "src": "addons/mail/models/mail_alias_mixin_optional.py:51"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_alias_mixin_optional.py:143"
+   },
+   "write": {
+    "keys": [
+     "alias_name"
+    ],
+    "src": "addons/mail/models/mail_alias_mixin_optional.py:108"
+   }
+  },
+  "odoo.addons.mail.models.mail_blacklist:MailBlacklist": {
+   "create": {
+    "keys": [
+     "email"
+    ],
+    "src": "addons/mail/models/mail_blacklist.py:24"
+   },
+   "write": {
+    "keys": [
+     "email"
+    ],
+    "src": "addons/mail/models/mail_blacklist.py:53"
+   }
+  },
+  "odoo.addons.mail.models.mail_call_artifact:MailCallArtifact": {
+   "ondelete": {
+    "_unlink_cleanup_media_attachment": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/mail_call_artifact.py:159"
+    }
+   }
+  },
+  "odoo.addons.mail.models.mail_canned_response:MailCannedResponse": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_canned_response.py:61"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_canned_response.py:72"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/mail_canned_response.py:67"
+   }
+  },
+  "odoo.addons.mail.models.mail_mail:MailMail": {
+   "create": {
+    "keys": [
+     "attachment_ids",
+     "is_notification",
+     "mail_message_id",
+     "scheduled_date"
+    ],
+    "src": "addons/mail/models/mail_mail.py:152"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_mail.py:183"
+   },
+   "write": {
+    "keys": [
+     "attachment_ids",
+     "scheduled_date"
+    ],
+    "src": "addons/mail/models/mail_mail.py:174"
+   }
+  },
+  "odoo.addons.mail.models.mail_message:MailMessage": {
+   "create": {
+    "keys": [
+     "attachment_ids",
+     "author_id",
+     "body",
+     "email_from",
+     "message_id",
+     "model",
+     "reply_to",
+     "res_id"
+    ],
+    "src": "addons/mail/models/mail_message.py:768"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_message.py:874"
+   },
+   "write": {
+    "keys": [
+     "attachment_ids",
+     "author_id",
+     "email_from",
+     "message_type",
+     "model",
+     "notification_ids",
+     "res_id"
+    ],
+    "src": "addons/mail/models/mail_message.py:858"
+   }
+  },
+  "odoo.addons.mail.models.mail_message_schedule:MailMessageSchedule": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_message_schedule.py:35"
+   }
+  },
+  "odoo.addons.mail.models.mail_message_subtype:MailMessageSubtype": {
+   "ondelete": {
+    "_unlink_except_protected": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/mail_message_subtype.py:124"
+    }
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/mail_message_subtype.py:101"
+   }
+  },
+  "odoo.addons.mail.models.mail_notification:MailNotification": {
+   "create": {
+    "keys": [
+     "is_read",
+     "mail_message_id",
+     "read_date"
+    ],
+    "src": "addons/mail/models/mail_notification.py:76"
+   },
+   "write": {
+    "keys": [
+     "is_read",
+     "mail_message_id",
+     "read_date",
+     "res_partner_id"
+    ],
+    "src": "addons/mail/models/mail_notification.py:85"
+   }
+  },
+  "odoo.addons.mail.models.mail_poll:MailPoll": {
+   "ondelete": {
+    "_poll_on_delete": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/mail_poll.py:67"
+    }
+   }
+  },
+  "odoo.addons.mail.models.mail_poll_option:MailPollOption": {
+   "write": {
+    "keys": [
+     "poll_id"
+    ],
+    "src": "addons/mail/models/mail_poll_option.py:26"
+   }
+  },
+  "odoo.addons.mail.models.mail_poll_vote:MailPollVote": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_poll_vote.py:29"
+   }
+  },
+  "odoo.addons.mail.models.mail_presence:MailPresence": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_presence.py:45"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_presence.py:58"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/mail_presence.py:51"
+   }
+  },
+  "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_render_mixin.py:109"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/mail_render_mixin.py:125"
+   }
+  },
+  "odoo.addons.mail.models.mail_scheduled_message:MailScheduledMessage": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_scheduled_message.py:84"
+   },
+   "write": {
+    "keys": [
+     "model",
+     "res_id",
+     "scheduled_date"
+    ],
+    "src": "addons/mail/models/mail_scheduled_message.py:141"
+   }
+  },
+  "odoo.addons.mail.models.mail_template:MailTemplate": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_template.py:259"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_template.py:274"
+   },
+   "write": {
+    "keys": [
+     "model",
+     "model_id"
+    ],
+    "src": "addons/mail/models/mail_template.py:267"
+   }
+  },
+  "odoo.addons.mail.models.mail_thread:MailThread": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/mail_thread.py:345"
+   },
+   "unlink": {
+    "src": "addons/mail/models/mail_thread.py:424"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/mail_thread.py:415"
+   }
+  },
+  "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin": {
+   "write": {
+    "keys": [],
+    "src": "addons/mail/models/mail_track_mixin.py:29"
+   }
+  },
+  "odoo.addons.mail.models.models:Base": {
+   "unlink": {
+    "src": "addons/mail/models/models.py:48"
+   }
+  },
+  "odoo.addons.mail.models.res_partner:ResPartner": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/res_partner.py:64"
+   }
+  },
+  "odoo.addons.mail.models.res_role:ResRole": {
+   "ondelete": {
+    "_unlink_except_linked_activities": {
+     "at_uninstall": false,
+     "src": "addons/mail/models/res_role.py:32"
+    }
+   }
+  },
+  "odoo.addons.mail.models.res_users:ResUsers": {
+   "create": {
+    "keys": [],
+    "src": "addons/mail/models/res_users.py:191"
+   },
+   "write": {
+    "keys": [
+     "email",
+     "group_ids",
+     "login",
+     "notification_type",
+     "password"
+    ],
+    "src": "addons/mail/models/res_users.py:209"
+   }
+  },
+  "odoo.addons.mail.models.template_reset_mixin:TemplateResetMixin": {
+   "create": {
+    "keys": [
+     "template_fs"
+    ],
+    "src": "addons/mail/models/template_reset_mixin.py:28"
+   }
+  },
+  "odoo.addons.onboarding.models.onboarding_onboarding:OnboardingOnboarding": {
+   "write": {
+    "keys": [],
+    "src": "addons/onboarding/models/onboarding_onboarding.py:71"
+   }
+  },
+  "odoo.addons.onboarding.models.onboarding_onboarding_step:OnboardingOnboardingStep": {
+   "write": {
+    "keys": [
+     "is_per_company"
+    ],
+    "src": "addons/onboarding/models/onboarding_onboarding_step.py:74"
+   }
+  },
+  "odoo.addons.partner_autocomplete.models.res_company:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/partner_autocomplete/models/res_company.py:17"
+   }
+  },
+  "odoo.addons.payment.models.payment_method:PaymentMethod": {
+   "ondelete": {
+    "_unlink_if_not_default_payment_method": {
+     "at_uninstall": false,
+     "src": "addons/payment/models/payment_method.py:205"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "support_tokenization"
+    ],
+    "src": "addons/payment/models/payment_method.py:188"
+   }
+  },
+  "odoo.addons.payment.models.payment_provider:PaymentProvider": {
+   "create": {
+    "keys": [],
+    "src": "addons/payment/models/payment_provider.py:451"
+   },
+   "ondelete": {
+    "_unlink_except_master_data": {
+     "at_uninstall": false,
+     "src": "addons/payment/models/payment_provider.py:561"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "is_live"
+    ],
+    "src": "addons/payment/models/payment_provider.py:457"
+   }
+  },
+  "odoo.addons.payment.models.payment_token:PaymentToken": {
+   "create": {
+    "keys": [
+     "provider_id"
+    ],
+    "src": "addons/payment/models/payment_token.py:58"
+   },
+   "write": {
+    "keys": [
+     "active"
+    ],
+    "src": "addons/payment/models/payment_token.py:86"
+   }
+  },
+  "odoo.addons.payment.models.payment_transaction:PaymentTransaction": {
+   "create": {
+    "keys": [
+     "is_live",
+     "partner_id",
+     "provider_id",
+     "reference"
+    ],
+    "src": "addons/payment/models/payment_transaction.py:241"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/payment/models/payment_transaction.py:301"
+   }
+  },
+  "odoo.addons.payment.models.res_company:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/payment/models/res_company.py:44"
+   }
+  },
+  "odoo.addons.phone_validation.models.phone_blacklist:PhoneBlacklist": {
+   "create": {
+    "keys": [
+     "number"
+    ],
+    "src": "addons/phone_validation/models/phone_blacklist.py:23"
+   },
+   "write": {
+    "keys": [
+     "number"
+    ],
+    "src": "addons/phone_validation/models/phone_blacklist.py:61"
+   }
+  },
+  "odoo.addons.portal_rating.models.rating_rating:RatingRating": {
+   "create": {
+    "keys": [],
+    "src": "addons/portal_rating/models/rating_rating.py:14"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/portal_rating/models/rating_rating.py:23"
+   }
+  },
+  "odoo.addons.privacy_lookup.models.privacy_log:PrivacyLog": {
+   "create": {
+    "keys": [
+     "anonymized_email",
+     "anonymized_name"
+    ],
+    "src": "addons/privacy_lookup/models/privacy_log.py:23"
+   }
+  },
+  "odoo.addons.product.models.ir_attachment:IrAttachment": {
+   "create": {
+    "keys": [],
+    "src": "addons/product/models/ir_attachment.py:9"
+   }
+  },
+  "odoo.addons.product.models.product_attribute:ProductAttribute": {
+   "ondelete": {
+    "_unlink_except_used_on_product": {
+     "at_uninstall": false,
+     "src": "addons/product/models/product_attribute.py:134"
+    }
+   },
+   "write": {
+    "keys": [
+     "create_variant",
+     "sequence"
+    ],
+    "src": "addons/product/models/product_attribute.py:108"
+   }
+  },
+  "odoo.addons.product.models.product_attribute_value:ProductAttributeValue": {
+   "ondelete": {
+    "_unlink_except_used_on_product": {
+     "at_uninstall": false,
+     "src": "addons/product/models/product_attribute_value.py:127"
+    }
+   },
+   "unlink": {
+    "src": "addons/product/models/product_attribute_value.py:132"
+   },
+   "write": {
+    "keys": [
+     "attribute_id",
+     "sequence"
+    ],
+    "src": "addons/product/models/product_attribute_value.py:97"
+   }
+  },
+  "odoo.addons.product.models.product_document:ProductDocument": {
+   "create": {
+    "keys": [],
+    "src": "addons/product/models/product_document.py:52"
+   },
+   "unlink": {
+    "src": "addons/product/models/product_document.py:72"
+   }
+  },
+  "odoo.addons.product.models.product_pricelist:ProductPricelist": {
+   "ondelete": {
+    "_unlink_except_used_as_rule_base": {
+     "at_uninstall": false,
+     "src": "addons/product/models/product_pricelist.py:478"
+    }
+   },
+   "write": {
+    "keys": [
+     "company_id"
+    ],
+    "src": "addons/product/models/product_pricelist.py:70"
+   }
+  },
+  "odoo.addons.product.models.product_pricelist_item:ProductPricelistItem": {
+   "create": {
+    "keys": [
+     "product_id",
+     "product_tmpl_id"
+    ],
+    "src": "addons/product/models/product_pricelist_item.py:469"
+   }
+  },
+  "odoo.addons.product.models.product_product:ProductProduct": {
+   "create": {
+    "keys": [],
+    "src": "addons/product/models/product_product.py:884"
+   },
+   "unlink": {
+    "src": "addons/product/models/product_product.py:925"
+   },
+   "write": {
+    "keys": [
+     "barcode",
+     "company_id"
+    ],
+    "src": "addons/product/models/product_product.py:895"
+   }
+  },
+  "odoo.addons.product.models.product_supplierinfo:ProductSupplierinfo": {
+   "create": {
+    "keys": [],
+    "src": "addons/product/models/product_supplierinfo.py:133"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/product/models/product_supplierinfo.py:139"
+   }
+  },
+  "odoo.addons.product.models.product_template:ProductTemplate": {
+   "create": {
+    "keys": [],
+    "src": "addons/product/models/product_template.py:815"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "attribute_line_ids",
+     "barcode",
+     "company_id",
+     "image_1920",
+     "type",
+     "uom_id"
+    ],
+    "src": "addons/product/models/product_template.py:836"
+   }
+  },
+  "odoo.addons.product.models.product_template_attribute_line:ProductTemplateAttributeLine": {
+   "create": {
+    "keys": [
+     "active"
+    ],
+    "src": "addons/product/models/product_template_attribute_line.py:80"
+   },
+   "unlink": {
+    "src": "addons/product/models/product_template_attribute_line.py:160"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "attribute_id",
+     "product_tmpl_id",
+     "value_ids"
+    ],
+    "src": "addons/product/models/product_template_attribute_line.py:117"
+   }
+  },
+  "odoo.addons.product.models.product_template_attribute_value:ProductTemplateAttributeValue": {
+   "create": {
+    "keys": [],
+    "src": "addons/product/models/product_template_attribute_value.py:92"
+   },
+   "unlink": {
+    "src": "addons/product/models/product_template_attribute_value.py:127"
+   },
+   "write": {
+    "keys": [
+     "excluded_value_ids",
+     "product_attribute_value_id",
+     "product_tmpl_id",
+     "ptav_product_variant_ids"
+    ],
+    "src": "addons/product/models/product_template_attribute_value.py:100"
+   }
+  },
+  "odoo.addons.product.models.res_company:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/product/models/res_company.py:9"
+   },
+   "write": {
+    "keys": [
+     "currency_id"
+    ],
+    "src": "addons/product/models/res_company.py:53"
+   }
+  },
+  "odoo.addons.product.models.res_currency:ResCurrency": {
+   "write": {
+    "keys": [
+     "active"
+    ],
+    "src": "addons/product/models/res_currency.py:18"
+   }
+  },
+  "odoo.addons.project.models.account_analytic_account:AccountAnalyticAccount": {
+   "ondelete": {
+    "_unlink_except_existing_tasks": {
+     "at_uninstall": false,
+     "src": "addons/project/models/account_analytic_account.py:22"
+    }
+   }
+  },
+  "odoo.addons.project.models.project_collaborator:ProjectCollaborator": {
+   "create": {
+    "keys": [],
+    "src": "addons/project/models/project_collaborator.py:28"
+   },
+   "unlink": {
+    "src": "addons/project/models/project_collaborator.py:36"
+   }
+  },
+  "odoo.addons.project.models.project_project:ProjectProject": {
+   "create": {
+    "keys": [
+     "company_id",
+     "favorite_user_ids",
+     "is_favorite",
+     "label_tasks",
+     "stage_id"
+    ],
+    "src": "addons/project/models/project_project.py:649"
+   },
+   "ondelete": {
+    "_check_project_group_at_removal": {
+     "at_uninstall": false,
+     "src": "addons/project/models/project_project.py:815"
+    }
+   },
+   "unlink": {
+    "src": "addons/project/models/project_project.py:799"
+   },
+   "write": {
+    "keys": [
+     "access_token",
+     "active",
+     "allow_recurring_tasks",
+     "allow_task_dependencies",
+     "company_id",
+     "date",
+     "date_last_stage_update",
+     "date_start",
+     "is_favorite",
+     "last_update_status",
+     "name",
+     "partner_id",
+     "privacy_visibility",
+     "stage_id"
+    ],
+    "src": "addons/project/models/project_project.py:694"
+   }
+  },
+  "odoo.addons.project.models.project_project_stage:ProjectProjectStage": {
+   "write": {
+    "keys": [
+     "active",
+     "company_id"
+    ],
+    "src": "addons/project/models/project_project_stage.py:40"
+   }
+  },
+  "odoo.addons.project.models.project_task:ProjectTask": {
+   "create": {
+    "keys": [],
+    "src": "addons/project/models/project_task.py:1169"
+   },
+   "unlink": {
+    "src": "addons/project/models/project_task.py:1471"
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "date_assign",
+     "description",
+     "milestone_id",
+     "parent_id",
+     "personal_stage_type_id",
+     "project_id",
+     "recurring_task",
+     "stage_id",
+     "state",
+     "user_ids"
+    ],
+    "src": "addons/project/models/project_task.py:1274"
+   }
+  },
+  "odoo.addons.project.models.project_task_type:ProjectTaskType": {
+   "ondelete": {
+    "_unlink_if_remaining_personal_stages": {
+     "at_uninstall": false,
+     "src": "addons/project/models/project_task_type.py:123"
+    }
+   },
+   "write": {
+    "keys": [
+     "active",
+     "rating_active"
+    ],
+    "src": "addons/project/models/project_task_type.py:109"
+   }
+  },
+  "odoo.addons.project.models.project_update:ProjectUpdate": {
+   "create": {
+    "keys": [],
+    "src": "addons/project/models/project_update.py:87"
+   },
+   "unlink": {
+    "src": "addons/project/models/project_update.py:99"
+   }
+  },
+  "odoo.addons.project.models.res_users:ResUsers": {
+   "create": {
+    "keys": [],
+    "src": "addons/project/models/res_users.py:20"
+   }
+  },
+  "odoo.addons.project.wizard.project_share_wizard:ProjectShareWizard": {
+   "create": {
+    "keys": [],
+    "src": "addons/project/wizard/project_share_wizard.py:63"
+   }
+  },
+  "odoo.addons.project_purchase.models.purchase_order_line:PurchaseOrderLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/project_purchase/models/purchase_order_line.py:31"
+   }
+  },
+  "odoo.addons.project_sms.models.project_project:ProjectProject": {
+   "create": {
+    "keys": [],
+    "src": "addons/project_sms/models/project_project.py:18"
+   },
+   "write": {
+    "keys": [
+     "stage_id"
+    ],
+    "src": "addons/project_sms/models/project_project.py:24"
+   }
+  },
+  "odoo.addons.project_sms.models.project_task:ProjectTask": {
+   "create": {
+    "keys": [],
+    "src": "addons/project_sms/models/project_task.py:18"
+   },
+   "write": {
+    "keys": [
+     "stage_id"
+    ],
+    "src": "addons/project_sms/models/project_task.py:24"
+   }
+  },
+  "odoo.addons.project_todo.models.project_task:ProjectTask": {
+   "create": {
+    "keys": [
+     "description",
+     "name",
+     "parent_id",
+     "project_id"
+    ],
+    "src": "addons/project_todo/models/project_task.py:11"
+   }
+  },
+  "odoo.addons.purchase.models.account_invoice:AccountMove": {
+   "create": {
+    "keys": [],
+    "src": "addons/purchase/models/account_invoice.py:259"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/purchase/models/account_invoice.py:274"
+   }
+  },
+  "odoo.addons.purchase.models.purchase_order:PurchaseOrder": {
+   "create": {
+    "keys": [
+     "company_id",
+     "date_order",
+     "name"
+    ],
+    "src": "addons/purchase/models/purchase_order.py:454"
+   },
+   "ondelete": {
+    "_unlink_if_cancelled": {
+     "at_uninstall": false,
+     "src": "addons/purchase/models/purchase_order.py:469"
+    }
+   }
+  },
+  "odoo.addons.purchase.models.purchase_order_line:PurchaseOrderLine": {
+   "create": {
+    "keys": [
+     "display_type",
+     "price_unit",
+     "technical_price_unit"
+    ],
+    "src": "addons/purchase/models/purchase_order_line.py:413"
+   },
+   "ondelete": {
+    "_unlink_except_purchase": {
+     "at_uninstall": false,
+     "src": "addons/purchase/models/purchase_order_line.py:466"
+    }
+   },
+   "write": {
+    "keys": [
+     "display_type",
+     "price_unit",
+     "product_qty",
+     "qty_received"
+    ],
+    "src": "addons/purchase/models/purchase_order_line.py:433"
+   }
+  },
+  "odoo.addons.purchase.models.res_partner:ResPartner": {
+   "write": {
+    "keys": [
+     "property_purchase_currency_id"
+    ],
+    "src": "addons/purchase/models/res_partner.py:63"
+   }
+  },
+  "odoo.addons.purchase_stock.models.purchase_order:PurchaseOrder": {
+   "write": {
+    "keys": [
+     "order_line",
+     "priority"
+    ],
+    "src": "addons/purchase_stock/models/purchase_order.py:116"
+   }
+  },
+  "odoo.addons.purchase_stock.models.purchase_order_line:PurchaseOrderLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/purchase_stock/models/purchase_order_line.py:101"
+   },
+   "unlink": {
+    "src": "addons/purchase_stock/models/purchase_order_line.py:150"
+   },
+   "write": {
+    "keys": [
+     "date_planned",
+     "date_promised",
+     "price_unit",
+     "product_qty"
+    ],
+    "src": "addons/purchase_stock/models/purchase_order_line.py:110"
+   }
+  },
+  "odoo.addons.purchase_stock.models.stock_move:StockMove": {
+   "write": {
+    "keys": [
+     "date",
+     "state"
+    ],
+    "src": "addons/purchase_stock/models/stock_move.py:67"
+   }
+  },
+  "odoo.addons.rating.models.mail_thread:MailThread": {
+   "unlink": {
+    "src": "addons/rating/models/mail_thread.py:18"
+   }
+  },
+  "odoo.addons.rating.models.rating:RatingRating": {
+   "create": {
+    "keys": [
+     "feedback",
+     "rated_on",
+     "rating",
+     "res_id",
+     "res_model_id"
+    ],
+    "src": "addons/rating/models/rating.py:124"
+   },
+   "unlink": {
+    "src": "addons/rating/models/rating.py:140"
+   },
+   "write": {
+    "keys": [
+     "feedback",
+     "rated_on",
+     "rating",
+     "res_id",
+     "res_model_id"
+    ],
+    "src": "addons/rating/models/rating.py:133"
+   }
+  },
+  "odoo.addons.rating.models.rating_mixin:RatingMixin": {
+   "write": {
+    "keys": [],
+    "src": "addons/rating/models/rating_mixin.py:99"
+   }
+  },
+  "odoo.addons.resource.models.res_company:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/resource/models/res_company.py:49"
+   }
+  },
+  "odoo.addons.resource.models.resource_calendar:ResourceCalendar": {
+   "create": {
+    "keys": [],
+    "src": "addons/resource/models/resource_calendar.py:272"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/resource/models/resource_calendar.py:278"
+   }
+  },
+  "odoo.addons.resource.models.resource_mixin:ResourceMixin": {
+   "create": {
+    "keys": [
+     "company_id",
+     "resource_id",
+     "tz"
+    ],
+    "src": "addons/resource/models/resource_mixin.py:29"
+   }
+  },
+  "odoo.addons.resource.models.resource_resource:ResourceResource": {
+   "create": {
+    "keys": [
+     "calendar_id",
+     "company_id",
+     "tz",
+     "user_id"
+    ],
+    "src": "addons/resource/models/resource_resource.py:77"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/resource/models/resource_resource.py:89"
+   }
+  },
+  "odoo.addons.sale.models.account_analytic_line:AccountAnalyticLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale/models/account_analytic_line.py:48"
+   },
+   "ondelete": {
+    "_unlink_so_lines_except_invoiced": {
+     "at_uninstall": false,
+     "src": "addons/sale/models/account_analytic_line.py:113"
+    }
+   },
+   "write": {
+    "keys": [
+     "amount",
+     "order_id",
+     "product_id",
+     "unit_amount"
+    ],
+    "src": "addons/sale/models/account_analytic_line.py:61"
+   }
+  },
+  "odoo.addons.sale.models.account_move:AccountMove": {
+   "unlink": {
+    "src": "addons/sale/models/account_move.py:36"
+   }
+  },
+  "odoo.addons.sale.models.crm_team:CrmTeam": {
+   "ondelete": {
+    "_unlink_except_used_for_sales": {
+     "at_uninstall": false,
+     "src": "addons/sale/models/crm_team.py:35"
+    }
+   }
+  },
+  "odoo.addons.sale.models.ir_config_parameter:IrConfigParameter": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale/models/ir_config_parameter.py:12"
+   },
+   "unlink": {
+    "src": "addons/sale/models/ir_config_parameter.py:23"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/sale/models/ir_config_parameter.py:18"
+   }
+  },
+  "odoo.addons.sale.models.res_company:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale/models/res_company.py:106"
+   },
+   "write": {
+    "keys": [
+     "sale_automatic_invoice"
+    ],
+    "src": "addons/sale/models/res_company.py:112"
+   }
+  },
+  "odoo.addons.sale.models.sale_order:SaleOrder": {
+   "create": {
+    "keys": [
+     "company_id",
+     "date_order",
+     "name"
+    ],
+    "src": "addons/sale/models/sale_order.py:1452"
+   },
+   "ondelete": {
+    "_unlink_except_draft_or_cancel": {
+     "at_uninstall": false,
+     "src": "addons/sale/models/sale_order.py:1486"
+    }
+   },
+   "write": {
+    "keys": [
+     "pricelist_id"
+    ],
+    "src": "addons/sale/models/sale_order.py:1497"
+   }
+  },
+  "odoo.addons.sale.models.sale_order_line:SaleOrderLine": {
+   "create": {
+    "keys": [
+     "combo_item_id",
+     "display_type",
+     "price_unit",
+     "product_uom_qty",
+     "technical_price_unit"
+    ],
+    "src": "addons/sale/models/sale_order_line.py:1784"
+   },
+   "ondelete": {
+    "_unlink_except_confirmed": {
+     "at_uninstall": false,
+     "src": "addons/sale/models/sale_order_line.py:1967"
+    }
+   },
+   "write": {
+    "keys": [
+     "display_type",
+     "price_unit",
+     "product_id",
+     "product_uom_qty",
+     "technical_price_unit"
+    ],
+    "src": "addons/sale/models/sale_order_line.py:1831"
+   }
+  },
+  "odoo.addons.sale_management.models.sale_order_template_line:SaleOrderTemplateLine": {
+   "create": {
+    "keys": [
+     "display_type"
+    ],
+    "src": "addons/sale_management/models/sale_order_template_line.py:329"
+   },
+   "write": {
+    "keys": [
+     "display_type"
+    ],
+    "src": "addons/sale_management/models/sale_order_template_line.py:336"
+   }
+  },
+  "odoo.addons.sale_pdf_quote_builder.models.quotation_document:QuotationDocument": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale_pdf_quote_builder/models/quotation_document.py:105"
+   }
+  },
+  "odoo.addons.sale_project.models.product_product:ProductProduct": {
+   "write": {
+    "keys": [
+     "type"
+    ],
+    "src": "addons/sale_project/models/product_product.py:25"
+   }
+  },
+  "odoo.addons.sale_project.models.product_template:ProductTemplate": {
+   "write": {
+    "keys": [
+     "type"
+    ],
+    "src": "addons/sale_project/models/product_template.py:139"
+   }
+  },
+  "odoo.addons.sale_project.models.project_project:ProjectProject": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale_project/models/project_project.py:230"
+   },
+   "write": {
+    "keys": [
+     "allow_billable"
+    ],
+    "src": "addons/sale_project/models/project_project.py:240"
+   }
+  },
+  "odoo.addons.sale_project.models.sale_order:SaleOrder": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale_project/models/sale_order.py:286"
+   },
+   "write": {
+    "keys": [
+     "state"
+    ],
+    "src": "addons/sale_project/models/sale_order.py:302"
+   }
+  },
+  "odoo.addons.sale_project.models.sale_order_line:SaleOrderLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale_project/models/sale_order_line.py:118"
+   },
+   "write": {
+    "keys": [
+     "product_uom_qty"
+    ],
+    "src": "addons/sale_project/models/sale_order_line.py:143"
+   }
+  },
+  "odoo.addons.sale_purchase.models.product_template:ProductTemplate": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale_purchase/models/product_template.py:29"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/sale_purchase/models/product_template.py:36"
+   }
+  },
+  "odoo.addons.sale_purchase.models.sale_order_line:SaleOrderLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale_purchase/models/sale_order_line.py:42"
+   },
+   "write": {
+    "keys": [
+     "product_uom_qty"
+    ],
+    "src": "addons/sale_purchase/models/sale_order_line.py:51"
+   }
+  },
+  "odoo.addons.sale_stock.models.sale_order:SaleOrder": {
+   "write": {
+    "keys": [
+     "commitment_date",
+     "order_line",
+     "partner_shipping_id"
+    ],
+    "src": "addons/sale_stock/models/sale_order.py:146"
+   }
+  },
+  "odoo.addons.sale_stock.models.sale_order_line:SaleOrderLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/sale_stock/models/sale_order_line.py:239"
+   },
+   "write": {
+    "keys": [
+     "product_uom_qty"
+    ],
+    "src": "addons/sale_stock/models/sale_order_line.py:247"
+   }
+  },
+  "odoo.addons.sale_stock.models.stock:StockMove": {
+   "write": {
+    "keys": [
+     "product_id"
+    ],
+    "src": "addons/sale_stock/models/stock.py:188"
+   }
+  },
+  "odoo.addons.sales_team.models.crm_team:CrmTeam": {
+   "create": {
+    "keys": [],
+    "src": "addons/sales_team/models/crm_team.py:224"
+   },
+   "ondelete": {
+    "_unlink_except_default": {
+     "at_uninstall": false,
+     "src": "addons/sales_team/models/crm_team.py:240"
+    }
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "member_ids"
+    ],
+    "src": "addons/sales_team/models/crm_team.py:230"
+   }
+  },
+  "odoo.addons.sales_team.models.crm_team_member:CrmTeamMember": {
+   "create": {
+    "keys": [],
+    "src": "addons/sales_team/models/crm_team_member.py:153"
+   },
+   "write": {
+    "keys": [
+     "active"
+    ],
+    "src": "addons/sales_team/models/crm_team_member.py:173"
+   }
+  },
+  "odoo.addons.sms.models.sms_sms:SmsSms": {
+   "create": {
+    "keys": [],
+    "src": "addons/sms/models/sms_sms.py:85"
+   }
+  },
+  "odoo.addons.sms.models.sms_template:SmsTemplate": {
+   "unlink": {
+    "src": "addons/sms/models/sms_template.py:43"
+   }
+  },
+  "odoo.addons.spreadsheet_dashboard.models.spreadsheet_dashboard_group:SpreadsheetDashboardGroup": {
+   "ondelete": {
+    "_unlink_except_spreadsheet_data": {
+     "at_uninstall": false,
+     "src": "addons/spreadsheet_dashboard/models/spreadsheet_dashboard_group.py:15"
+    }
+   }
+  },
+  "odoo.addons.stock.models.product:ProductProduct": {
+   "write": {
+    "keys": [
+     "active"
+    ],
+    "src": "addons/stock/models/product.py:697"
+   }
+  },
+  "odoo.addons.stock.models.product:ProductTemplate": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock/models/product.py:1091"
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "is_storable"
+    ],
+    "src": "addons/stock/models/product.py:1105"
+   }
+  },
+  "odoo.addons.stock.models.product:UomUom": {
+   "write": {
+    "keys": [
+     "relative_uom_id"
+    ],
+    "src": "addons/stock/models/product.py:1349"
+   }
+  },
+  "odoo.addons.stock.models.product_strategy:StockPutawayRule": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock/models/product_strategy.py:102"
+   },
+   "write": {
+    "keys": [
+     "company_id"
+    ],
+    "src": "addons/stock/models/product_strategy.py:107"
+   }
+  },
+  "odoo.addons.stock.models.res_company:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock/models/res_company.py:195"
+   }
+  },
+  "odoo.addons.stock.models.res_partner:ResPartner": {
+   "write": {
+    "keys": [
+     "company_id"
+    ],
+    "src": "addons/stock/models/res_partner.py:31"
+   }
+  },
+  "odoo.addons.stock.models.stock_location:StockLocation": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock/models/stock_location.py:287"
+   },
+   "ondelete": {
+    "_unlink_except_master_data": {
+     "at_uninstall": false,
+     "src": "addons/stock/models/stock_location.py:206"
+    }
+   },
+   "unlink": {
+    "src": "addons/stock/models/stock_location.py:270"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "company_id",
+     "usage"
+    ],
+    "src": "addons/stock/models/stock_location.py:225"
+   }
+  },
+  "odoo.addons.stock.models.stock_location:StockRoute": {
+   "write": {
+    "keys": [
+     "active",
+     "company_id",
+     "warehouse_ids",
+     "warehouse_selectable"
+    ],
+    "src": "addons/stock/models/stock_location.py:548"
+   }
+  },
+  "odoo.addons.stock.models.stock_lot:StockLot": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock/models/stock_lot.py:192"
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "product_id"
+    ],
+    "src": "addons/stock/models/stock_lot.py:198"
+   }
+  },
+  "odoo.addons.stock.models.stock_move:StockMove": {
+   "create": {
+    "keys": [
+     "description_picking",
+     "lot_ids",
+     "move_line_ids",
+     "picked",
+     "picking_id",
+     "product_id",
+     "state"
+    ],
+    "src": "addons/stock/models/stock_move.py:852"
+   },
+   "ondelete": {
+    "_unlink_if_draft_or_cancel": {
+     "at_uninstall": false,
+     "src": "addons/stock/models/stock_move.py:2458"
+    }
+   },
+   "unlink": {
+    "src": "addons/stock/models/stock_move.py:2463"
+   },
+   "write": {
+    "keys": [
+     "date",
+     "date_deadline",
+     "location_dest_id",
+     "location_id",
+     "move_line_ids",
+     "move_orig_ids",
+     "picking_id",
+     "product_id",
+     "product_uom_qty",
+     "quantity",
+     "state",
+     "uom_id"
+    ],
+    "src": "addons/stock/models/stock_move.py:872"
+   }
+  },
+  "odoo.addons.stock.models.stock_move_line:StockMoveLine": {
+   "create": {
+    "keys": [
+     "company_id",
+     "move_id",
+     "picked",
+     "picking_id",
+     "quant_id"
+    ],
+    "src": "addons/stock/models/stock_move_line.py:348"
+   },
+   "ondelete": {
+    "_unlink_except_done_or_cancel": {
+     "at_uninstall": false,
+     "src": "addons/stock/models/stock_move_line.py:552"
+    }
+   },
+   "unlink": {
+    "src": "addons/stock/models/stock_move_line.py:562"
+   },
+   "write": {
+    "keys": [
+     "lot_id",
+     "product_id",
+     "quant_id",
+     "quantity",
+     "result_package_id",
+     "state",
+     "uom_id"
+    ],
+    "src": "addons/stock/models/stock_move_line.py:435"
+   }
+  },
+  "odoo.addons.stock.models.stock_orderpoint:StockWarehouseOrderpoint": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock/models/stock_orderpoint.py:330"
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "snoozed_until"
+    ],
+    "src": "addons/stock/models/stock_orderpoint.py:336"
+   }
+  },
+  "odoo.addons.stock.models.stock_package:StockPackage": {
+   "create": {
+    "keys": [
+     "complete_name",
+     "name",
+     "package_type_id"
+    ],
+    "src": "addons/stock/models/stock_package.py:277"
+   },
+   "write": {
+    "keys": [
+     "location_id",
+     "name",
+     "package_dest_id",
+     "package_type_id"
+    ],
+    "src": "addons/stock/models/stock_package.py:289"
+   }
+  },
+  "odoo.addons.stock.models.stock_package_type:StockPackageType": {
+   "create": {
+    "keys": [
+     "company_id",
+     "sequence_code",
+     "sequence_id"
+    ],
+    "src": "addons/stock/models/stock_package_type.py:89"
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "sequence_code"
+    ],
+    "src": "addons/stock/models/stock_package_type.py:101"
+   }
+  },
+  "odoo.addons.stock.models.stock_picking:StockPicking": {
+   "create": {
+    "keys": [
+     "batch_id",
+     "name",
+     "picking_type_id",
+     "scheduled_date"
+    ],
+    "src": "addons/stock/models/stock_picking.py:654"
+   },
+   "unlink": {
+    "src": "addons/stock/models/stock_picking.py:724"
+   },
+   "write": {
+    "keys": [
+     "batch_id",
+     "date_done",
+     "location_dest_id",
+     "location_id",
+     "move_ids",
+     "partner_id",
+     "picking_type_id",
+     "signature"
+    ],
+    "src": "addons/stock/models/stock_picking.py:683"
+   }
+  },
+  "odoo.addons.stock.models.stock_picking_batch:StockPickingBatch": {
+   "create": {
+    "keys": [
+     "company_id",
+     "name",
+     "picking_type_id"
+    ],
+    "src": "addons/stock/models/stock_picking_batch.py:191"
+   },
+   "ondelete": {
+    "_unlink_if_not_done": {
+     "at_uninstall": false,
+     "src": "addons/stock/models/stock_picking_batch.py:222"
+    }
+   },
+   "write": {
+    "keys": [
+     "picking_ids",
+     "picking_type_id",
+     "user_id"
+    ],
+    "src": "addons/stock/models/stock_picking_batch.py:201"
+   }
+  },
+  "odoo.addons.stock.models.stock_picking_type:StockPickingType": {
+   "create": {
+    "keys": [
+     "company_id",
+     "sequence_code",
+     "sequence_id",
+     "warehouse_id"
+    ],
+    "src": "addons/stock/models/stock_picking_type.py:276"
+   },
+   "write": {
+    "keys": [
+     "company_id",
+     "reservation_days_before",
+     "reservation_days_before_priority",
+     "reservation_method",
+     "sequence_code",
+     "sequence_id"
+    ],
+    "src": "addons/stock/models/stock_picking_type.py:303"
+   }
+  },
+  "odoo.addons.stock.models.stock_quant:StockQuant": {
+   "create": {
+    "keys": [
+     "inventory_quantity",
+     "inventory_quantity_auto_apply",
+     "inventory_quantity_set",
+     "location_id",
+     "lot_id",
+     "owner_id",
+     "package_id",
+     "product_id",
+     "user_id"
+    ],
+    "src": "addons/stock/models/stock_quant.py:285"
+   },
+   "ondelete": {
+    "_unlink_except_wrong_permission": {
+     "at_uninstall": false,
+     "src": "addons/stock/models/stock_quant.py:395"
+    }
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/stock/models/stock_quant.py:384"
+   }
+  },
+  "odoo.addons.stock.models.stock_warehouse:StockWarehouse": {
+   "create": {
+    "keys": [
+     "code",
+     "company_id",
+     "name",
+     "partner_id",
+     "view_location_id"
+    ],
+    "src": "addons/stock/models/stock_warehouse.py:113"
+   },
+   "unlink": {
+    "src": "addons/stock/models/stock_warehouse.py:303"
+   },
+   "write": {
+    "keys": [
+     "active",
+     "code",
+     "company_id",
+     "delivery_steps",
+     "name",
+     "partner_id",
+     "reception_steps",
+     "resupply_route_ids",
+     "resupply_wh_ids"
+    ],
+    "src": "addons/stock/models/stock_warehouse.py:174"
+   }
+  },
+  "odoo.addons.stock_account.models.product:ProductCategory": {
+   "write": {
+    "keys": [
+     "property_cost_method"
+    ],
+    "src": "addons/stock_account/models/product.py:765"
+   }
+  },
+  "odoo.addons.stock_account.models.product:ProductProduct": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock_account/models/product.py:191"
+   },
+   "write": {
+    "keys": [
+     "lot_valuated",
+     "standard_price"
+    ],
+    "src": "addons/stock_account/models/product.py:197"
+   }
+  },
+  "odoo.addons.stock_account.models.product:ProductTemplate": {
+   "write": {
+    "keys": [
+     "categ_id",
+     "lot_valuated"
+    ],
+    "src": "addons/stock_account/models/product.py:36"
+   }
+  },
+  "odoo.addons.stock_account.models.product_value:ProductValue": {
+   "create": {
+    "keys": [
+     "date",
+     "description",
+     "move_id",
+     "new_cost",
+     "new_value",
+     "old_cost",
+     "old_value",
+     "product_id",
+     "quantity",
+     "value"
+    ],
+    "src": "addons/stock_account/models/product_value.py:89"
+   }
+  },
+  "odoo.addons.stock_account.models.res_company:ResCompany": {
+   "write": {
+    "keys": [
+     "cost_method"
+    ],
+    "src": "addons/stock_account/models/res_company.py:18"
+   }
+  },
+  "odoo.addons.stock_account.models.stock_lot:StockLot": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock_account/models/stock_lot.py:48"
+   },
+   "write": {
+    "keys": [
+     "standard_price"
+    ],
+    "src": "addons/stock_account/models/stock_lot.py:58"
+   }
+  },
+  "odoo.addons.stock_account.models.stock_move:StockMove": {
+   "write": {
+    "keys": [
+     "date",
+     "value"
+    ],
+    "src": "addons/stock_account/models/stock_move.py:181"
+   }
+  },
+  "odoo.addons.stock_account.models.stock_move_line:StockMoveLine": {
+   "create": {
+    "keys": [],
+    "src": "addons/stock_account/models/stock_move_line.py:7"
+   },
+   "unlink": {
+    "src": "addons/stock_account/models/stock_move_line.py:33"
+   },
+   "write": {
+    "keys": [
+     "move_id",
+     "quantity"
+    ],
+    "src": "addons/stock_account/models/stock_move_line.py:15"
+   }
+  },
+  "odoo.addons.uom.models.uom_uom:UomUom": {
+   "ondelete": {
+    "_unlink_except_master_data": {
+     "at_uninstall": false,
+     "src": "addons/uom/models/uom_uom.py:97"
+    }
+   }
+  },
+  "odoo.addons.utm.models.utm_campaign:UtmCampaign": {
+   "create": {
+    "keys": [
+     "name",
+     "title"
+    ],
+    "src": "addons/utm/models/utm_campaign.py:44"
+   }
+  },
+  "odoo.addons.utm.models.utm_medium:UtmMedium": {
+   "create": {
+    "keys": [],
+    "src": "addons/utm/models/utm_medium.py:22"
+   },
+   "ondelete": {
+    "_unlink_except_utm_medium_record": {
+     "at_uninstall": false,
+     "src": "addons/utm/models/utm_medium.py:29"
+    }
+   }
+  },
+  "odoo.addons.utm.models.utm_source:UtmSource": {
+   "create": {
+    "keys": [],
+    "src": "addons/utm/models/utm_source.py:18"
+   },
+   "ondelete": {
+    "_unlink_except_utm_source_record": {
+     "at_uninstall": false,
+     "src": "addons/utm/models/utm_source.py:43"
+    }
+   }
+  },
+  "odoo.addons.web.models.models:ResCompany": {
+   "create": {
+    "keys": [],
+    "src": "addons/web/models/models.py:2429"
+   },
+   "write": {
+    "keys": [],
+    "src": "addons/web/models/models.py:2437"
+   }
+  }
+ },
+ "models": {
+  "_unknown": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.account": {
+   "create": [
+    "odoo.addons.account.models.account_account:AccountAccount",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_account:AccountAccount._unlink_except_contains_journal_items",
+    "odoo.addons.account.models.account_account:AccountAccount._unlink_except_linked_to_fiscal_position",
+    "odoo.addons.account.models.account_account:AccountAccount._unlink_except_linked_to_tax_repartition_line"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_account:AccountAccount",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "account.account.tag": {
+   "create": [
+    "odoo.addons.account.models.account_account_tag:AccountAccountTag"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_account_tag:AccountAccountTag._unlink_except_master_tags"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.accrued.orders.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.analytic.account": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.project.models.account_analytic_account:AccountAnalyticAccount._unlink_except_existing_tasks"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.analytic.models.analytic_account:AccountAnalyticAccount",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "account.analytic.applicability": {
+   "create": [
+    "odoo.addons.analytic.models.analytic_plan:AccountAnalyticApplicability"
+   ],
+   "ondelete": [
+    "odoo.addons.analytic.models.analytic_plan:AccountAnalyticApplicability._unlink_clear_cache"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.analytic.models.analytic_plan:AccountAnalyticApplicability"
+   ]
+  },
+  "account.analytic.distribution.model": {
+   "create": [
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ]
+  },
+  "account.analytic.line": {
+   "create": [
+    "odoo.addons.sale.models.account_analytic_line:AccountAnalyticLine",
+    "odoo.addons.account.models.account_analytic_line:AccountAnalyticLine"
+   ],
+   "ondelete": [
+    "odoo.addons.sale.models.account_analytic_line:AccountAnalyticLine._unlink_so_lines_except_invoiced"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_analytic_line:AccountAnalyticLine",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale.models.account_analytic_line:AccountAnalyticLine",
+    "odoo.addons.account.models.account_analytic_line:AccountAnalyticLine",
+    "odoo.addons.analytic.models.analytic_line:AccountAnalyticLine"
+   ]
+  },
+  "account.analytic.plan": {
+   "create": [
+    "odoo.addons.analytic.models.analytic_plan:AccountAnalyticPlan"
+   ],
+   "unlink": [
+    "odoo.addons.analytic.models.analytic_plan:AccountAnalyticPlan",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.analytic.models.analytic_plan:AccountAnalyticPlan"
+   ]
+  },
+  "account.automatic.entry.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.autopost.bills.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.bank.statement": {
+   "create": [
+    "odoo.addons.account.models.account_bank_statement:AccountBankStatement"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_bank_statement:AccountBankStatement"
+   ]
+  },
+  "account.bank.statement.line": {
+   "create": [
+    "odoo.addons.account.models.account_bank_statement_line:AccountBankStatementLine"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_bank_statement_line:AccountBankStatementLine._check_allow_unlink"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_bank_statement_line:AccountBankStatementLine",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_bank_statement_line:AccountBankStatementLine"
+   ]
+  },
+  "account.cash.rounding": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.chart.template": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.code.mapping": {
+   "create": [
+    "odoo.addons.account.models.account_code_mapping:AccountCodeMapping"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.document.import.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.cii": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.common": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.ubl": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.ubl_cen_en16931": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.ubl_pint": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.ubl_pint_eu": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.cii": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_20": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_21": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_a_nz": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_bis3": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_de": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_efff": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_nl": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.edi.xml.ubl_sg": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.financial.year.op": {
+   "create": [
+    "odoo.addons.account.wizard.setup_wizards:AccountFinancialYearOp"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.wizard.setup_wizards:AccountFinancialYearOp"
+   ]
+  },
+  "account.fiscal.position": {
+   "create": [
+    "odoo.addons.account.models.partner:AccountFiscalPosition"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.partner:AccountFiscalPosition"
+   ]
+  },
+  "account.fiscal.position.account": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.full.reconcile": {
+   "create": [
+    "odoo.addons.account.models.account_full_reconcile:AccountFullReconcile"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_full_reconcile:AccountFullReconcile",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.incoterms": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.invoice.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.journal": {
+   "create": [
+    "odoo.addons.account.models.account_journal:AccountJournal",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.account_payment.models.account_journal:AccountJournal._unlink_except_linked_to_payment_provider"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_journal:AccountJournal",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_journal:AccountJournal",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "account.journal.group": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.lock_exception": {
+   "create": [
+    "odoo.addons.account.models.account_lock_exception:AccountLock_Exception"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.merge.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.merge.wizard.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.move": {
+   "create": [
+    "odoo.addons.purchase.models.account_invoice:AccountMove",
+    "odoo.addons.account.models.account_move:AccountMove",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_move:AccountMove._unlink_account_audit_trail_except_once_post",
+    "odoo.addons.account.models.account_move:AccountMove._unlink_forbid_parts_of_chain"
+   ],
+   "unlink": [
+    "odoo.addons.sale.models.account_move:AccountMove",
+    "odoo.addons.account.models.account_move:AccountMove",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.purchase.models.account_invoice:AccountMove",
+    "odoo.addons.account.models.account_move:AccountMove",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin",
+    "odoo.addons.account.models.sequence_mixin:SequenceMixin"
+   ]
+  },
+  "account.move.line": {
+   "create": [
+    "odoo.addons.account.models.account_move_line:AccountMoveLine",
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_move_line:AccountMoveLine._except_hashed_entry_lines",
+    "odoo.addons.account.models.account_move_line:AccountMoveLine._prevent_automatic_line_deletion",
+    "odoo.addons.account.models.account_move_line:AccountMoveLine._unlink_except_posted"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_move_line:AccountMoveLine",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_move_line:AccountMoveLine",
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "account.move.reversal": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.move.send": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.move.send.batch.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.move.send.wizard": {
+   "create": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ]
+  },
+  "account.partial.reconcile": {
+   "create": [
+    "odoo.addons.account.models.account_partial_reconcile:AccountPartialReconcile"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_partial_reconcile:AccountPartialReconcile",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.payment": {
+   "create": [
+    "odoo.addons.account.models.account_payment:AccountPayment",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_payment:AccountPayment",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_payment:AccountPayment",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "account.payment.method": {
+   "create": [
+    "odoo.addons.account.models.account_payment_method:AccountPaymentMethod"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_payment_method:AccountPaymentMethod",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.payment.method.line": {
+   "ondelete": [
+    "odoo.addons.account_payment.models.account_payment_method_line:AccountPaymentMethodLine._unlink_except_installed_payment_provider"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.account_payment_method:AccountPaymentMethodLine",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.payment.register": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.payment.term": {
+   "ondelete": [
+    "odoo.addons.account.models.account_payment_term:AccountPaymentTerm._unlink_except_referenced_terms"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.payment.term.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.peppol.clarification": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.peppol.rejection.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.peppol.response": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.reconcile.model": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "account.reconcile.model.line": {
+   "create": [
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ]
+  },
+  "account.report": {
+   "create": [
+    "odoo.addons.account.models.account_report:AccountReport"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_report:AccountReport._unlink_if_no_variant"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_report:AccountReport"
+   ]
+  },
+  "account.report.column": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.report.expression": {
+   "create": [
+    "odoo.addons.account.models.account_report:AccountReportExpression"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_report:AccountReportExpression._unlink_archive_used_tags"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_report:AccountReportExpression"
+   ]
+  },
+  "account.report.external.value": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.report.line": {
+   "ondelete": [
+    "odoo.addons.account.models.account_report:AccountReportLine._unlink_child_expressions"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.resequence.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.root": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.secure.entries.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.setup.bank.manual.config": {
+   "create": [
+    "odoo.addons.account.wizard.setup_wizards:AccountSetupBankManualConfig"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.stock.valuation.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.tax": {
+   "create": [
+    "odoo.addons.account.models.account_tax:AccountTax",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.account_tax:AccountTax.unlink_except_tax_used"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.account_tax:AccountTax",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "account.tax.group": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account.tax.repartition.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "account_edi_proxy_client.user": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "analytic.mixin": {
+   "create": [
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ]
+  },
+  "analytic.plan.fields.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "auth.passkey.key": {
+   "unlink": [
+    "odoo.addons.auth_passkey.models.auth_passkey_key:AuthPasskeyKey",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "auth.passkey.key.create": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "auth.totp.rate.limit.log": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "auth_totp.device": {
+   "unlink": [
+    "odoo.addons.auth_totp_mail.models.auth_totp_device:Auth_TotpDevice",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "auth_totp.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "avatar.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "barcode.nomenclature": {
+   "ondelete": [
+    "odoo.addons.barcodes.models.barcode_nomenclature:BarcodeNomenclature._unlink_except_default"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "barcode.rule": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.document.layout": {
+   "create": [
+    "odoo.addons.account.wizard.base_document_layout:BaseDocumentLayout"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.wizard.base_document_layout:BaseDocumentLayout"
+   ]
+  },
+  "base.enable.profiling.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.import.module": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.language.export": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.language.import": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.language.install": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.module.install.request": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.module.install.review": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.module.uninstall": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.module.update": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.module.upgrade": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.partner.merge.automatic.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base.partner.merge.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base_import.import": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "base_import.mapping": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "bill.to.po.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "bus.bus": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "bus.listener.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "bus.sync.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.discuss.bus_sync_mixin:BusSyncMixin"
+   ]
+  },
+  "calendar.alarm": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "calendar.alarm_manager": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "calendar.attendee": {
+   "create": [
+    "odoo.addons.calendar.models.calendar_attendee:CalendarAttendee"
+   ],
+   "unlink": [
+    "odoo.addons.calendar.models.calendar_attendee:CalendarAttendee",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.calendar.models.calendar_attendee:CalendarAttendee"
+   ]
+  },
+  "calendar.calendar": {
+   "ondelete": [
+    "odoo.addons.calendar.models.calendar_calendar:CalendarCalendar._unlink_except_primary"
+   ],
+   "unlink": [
+    "odoo.addons.calendar.models.calendar_calendar:CalendarCalendar",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.calendar.models.calendar_calendar:CalendarCalendar"
+   ]
+  },
+  "calendar.event": {
+   "create": [
+    "odoo.addons.crm.models.calendar:CalendarEvent",
+    "odoo.addons.calendar.models.calendar_event:CalendarEvent",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.calendar.models.calendar_event:CalendarEvent",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.calendar.models.calendar_event:CalendarEvent",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "calendar.event.archive.or.unlink.wizard": {
+   "create": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ]
+  },
+  "calendar.event.multi.archive.or.unlink.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "calendar.event.type": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "calendar.filters": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "calendar.recurrence": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "calendar.user": {
+   "unlink": [
+    "odoo.addons.calendar.models.calendar_user:CalendarUser",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.calendar.models.calendar_user:CalendarUser"
+   ]
+  },
+  "certificate.certificate": {
+   "create": [
+    "odoo.addons.certificate.models.certificate:CertificateCertificate"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.certificate.models.certificate:CertificateCertificate"
+   ]
+  },
+  "certificate.key": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "change.password.own": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "change.password.user": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "change.password.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "clearing.label": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "confirm.stock.sms": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.activity.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.iap.lead.helpers": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.iap.lead.industry": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.iap.lead.industry.division": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.iap.lead.mining.request": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.iap.lead.role": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.iap.lead.seniority": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.lead": {
+   "create": [
+    "odoo.addons.crm_iap_enrich.models.crm_lead:CrmLead",
+    "odoo.addons.crm.models.crm_lead:CrmLead",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.crm.models.crm_lead:CrmLead",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.crm.models.crm_lead:CrmLead",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "crm.lead.lost": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.lead.pls.update": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.lead.scoring.frequency": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.lead.scoring.frequency.field": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.lead2opportunity.partner.mass": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.lost.reason": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.merge.opportunity": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.quotation.partner": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.recurring.plan": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.stage": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.crm.models.crm_stage:CrmStage"
+   ]
+  },
+  "crm.tag": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "crm.team": {
+   "create": [
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.sales_team.models.crm_team:CrmTeam",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.sale.models.crm_team:CrmTeam._unlink_except_used_for_sales",
+    "odoo.addons.sales_team.models.crm_team:CrmTeam._unlink_except_default"
+   ],
+   "unlink": [
+    "odoo.addons.crm.models.crm_team:CrmTeam",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.crm.models.crm_team:CrmTeam",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.sales_team.models.crm_team:CrmTeam",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "crm.team.member": {
+   "create": [
+    "odoo.addons.sales_team.models.crm_team_member:CrmTeamMember",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sales_team.models.crm_team_member:CrmTeamMember",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "customer.product.reference": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "decimal.precision": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "digest.digest": {
+   "create": [
+    "odoo.addons.digest.models.digest:DigestDigest"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "digest.test": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "digest.tip": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "discuss.call.history": {
+   "ondelete": [
+    "odoo.addons.mail.models.discuss.discuss_call_history:DiscussCallHistory._unlink_cleanup_artifacts_attachments"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "discuss.category": {
+   "ondelete": [
+    "odoo.addons.mail.models.discuss.discuss_category:DiscussCategory._unlink_sync_to_channel"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.discuss.bus_sync_mixin:BusSyncMixin"
+   ]
+  },
+  "discuss.channel": {
+   "create": [
+    "odoo.addons.mail.models.discuss.discuss_channel:DiscussChannel",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.mail.models.discuss.discuss_channel:DiscussChannel._unlink_channel"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.discuss.discuss_channel:DiscussChannel",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin",
+    "odoo.addons.mail.models.discuss.bus_sync_mixin:BusSyncMixin"
+   ]
+  },
+  "discuss.channel.last.interest.update": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "discuss.channel.member": {
+   "create": [
+    "odoo.addons.mail.models.discuss.discuss_channel_member:DiscussChannelMember"
+   ],
+   "ondelete": [
+    "odoo.addons.mail.models.discuss.discuss_channel_member:DiscussChannelMember._unlink_notify_channel_left"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.discuss.discuss_channel_member:DiscussChannelMember",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.discuss.discuss_channel_member:DiscussChannelMember",
+    "odoo.addons.mail.models.discuss.bus_sync_mixin:BusSyncMixin"
+   ]
+  },
+  "discuss.channel.rtc.session": {
+   "create": [
+    "odoo.addons.mail.models.discuss.discuss_channel_rtc_session:DiscussChannelRtcSession"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.discuss.discuss_channel_rtc_session:DiscussChannelRtcSession",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "discuss.gif.favorite": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "discuss.voice.metadata": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "fetchmail.server": {
+   "create": [
+    "odoo.addons.mail.models.fetchmail:FetchmailServer"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.fetchmail:FetchmailServer",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.fetchmail:FetchmailServer"
+   ]
+  },
+  "format.address.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "format.vat.label.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "google.gmail.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "html.field.history.mixin": {
+   "create": [
+    "odoo.addons.html_editor.models.html_field_history_mixin:HtmlFieldHistoryMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.html_editor.models.html_field_history_mixin:HtmlFieldHistoryMixin"
+   ]
+  },
+  "html_editor.converter.test": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "html_editor.converter.test.sub": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "iap.account": {
+   "create": [
+    "odoo.addons.iap.models.iap_account:IapAccount",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.iap.models.iap_account:IapAccount",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "iap.autocomplete.api": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "iap.enrich.api": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "iap.service": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "iap.service.pack": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "image.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.access": {
+   "create": [
+    "odoo.addons.base.models.ir_access:IrAccess",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_access:IrAccess",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_access:IrAccess",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "ir.actions.act_url": {
+   "ondelete": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions._unlink_check_home_action"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.act_window": {
+   "create": [
+    "odoo.addons.base.models.ir_actions:IrActionsAct_Window"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions._unlink_check_home_action"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.act_window.view": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.act_window_close": {
+   "ondelete": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions._unlink_check_home_action"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.actions": {
+   "ondelete": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions._unlink_check_home_action"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.client": {
+   "ondelete": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions._unlink_check_home_action"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.report": {
+   "ondelete": [
+    "odoo.addons.account.models.ir_actions_report:IrActionsReport._unlink_except_master_tags",
+    "odoo.addons.base.models.ir_actions:IrActionsActions._unlink_check_home_action"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.server": {
+   "create": [
+    "odoo.addons.base.models.ir_actions:IrActionsServer",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions._unlink_check_home_action"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsActions",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_actions:IrActionsServer",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "ir.actions.server.history": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.actions.todo": {
+   "create": [
+    "odoo.addons.base.models.ir_actions:IrActionsTodo"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_actions:IrActionsTodo",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_actions:IrActionsTodo"
+   ]
+  },
+  "ir.asset": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.attachment": {
+   "create": [
+    "odoo.addons.product.models.ir_attachment:IrAttachment",
+    "odoo.addons.base.models.ir_attachment:IrAttachment"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.ir_attachment:IrAttachment._except_audit_trail"
+   ],
+   "unlink": [
+    "odoo.addons.account.models.ir_attachment:IrAttachment",
+    "odoo.addons.base.models.ir_attachment:IrAttachment",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.ir_attachment:IrAttachment",
+    "odoo.addons.base.models.ir_attachment:IrAttachment"
+   ]
+  },
+  "ir.autovacuum": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.binary": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.config_parameter": {
+   "create": [
+    "odoo.addons.sale.models.ir_config_parameter:IrConfigParameter",
+    "odoo.addons.crm.models.ir_config_parameter:IrConfig_Parameter",
+    "odoo.addons.mail.models.ir_config_parameter:IrConfig_Parameter"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_config_parameter:IrConfig_Parameter.unlink_default_parameters"
+   ],
+   "unlink": [
+    "odoo.addons.sale.models.ir_config_parameter:IrConfigParameter",
+    "odoo.addons.crm.models.ir_config_parameter:IrConfig_Parameter",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale.models.ir_config_parameter:IrConfigParameter",
+    "odoo.addons.crm.models.ir_config_parameter:IrConfig_Parameter",
+    "odoo.addons.analytic.models.ir_config_parameter:IrConfigParameter",
+    "odoo.addons.mail.models.ir_config_parameter:IrConfig_Parameter",
+    "odoo.addons.base.models.ir_config_parameter:IrConfig_Parameter"
+   ]
+  },
+  "ir.cron": {
+   "create": [
+    "odoo.addons.base.models.ir_cron:IrCron",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_cron:IrCron._unlink_unless_running"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_cron:IrCron",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "ir.cron.progress": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.cron.trigger": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.default": {
+   "create": [
+    "odoo.addons.base.models.ir_default:IrDefault"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_default:IrDefault",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_default:IrDefault"
+   ]
+  },
+  "ir.demo": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.demo_failure": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.demo_failure.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.embedded.actions": {
+   "create": [
+    "odoo.addons.base.models.ir_embedded_actions:IrEmbeddedActions"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_embedded_actions:IrEmbeddedActions._unlink_if_action_deletable"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.exports": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.exports.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.fields.converter": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.filters": {
+   "create": [
+    "odoo.addons.base.models.ir_filters:IrFilters"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_filters:IrFilters"
+   ]
+  },
+  "ir.http": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.logging": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.mail_server": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_mail_server:IrMail_Server"
+   ]
+  },
+  "ir.model": {
+   "create": [
+    "odoo.addons.base.models.ir_model:IrModel"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_model:IrModel._unlink_if_manual",
+    "odoo.addons.base.models.ir_model:IrModel._unlink_related_attachments",
+    "odoo.addons.mail.models.ir_model:IrModel._unlink_related_mail_data"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_model:IrModel",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.ir_model:IrModel",
+    "odoo.addons.base.models.ir_model:IrModel"
+   ]
+  },
+  "ir.model.constraint": {
+   "unlink": [
+    "odoo.addons.base.models.ir_model:IrModelConstraint",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.model.data": {
+   "create": [
+    "odoo.addons.base.models.ir_model:IrModelData"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_model:IrModelData",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_model:IrModelData"
+   ]
+  },
+  "ir.model.fields": {
+   "create": [
+    "odoo.addons.base.models.ir_model:IrModelFields"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_model:IrModelFields",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_model:IrModelFields"
+   ]
+  },
+  "ir.model.fields.selection": {
+   "create": [
+    "odoo.addons.base.models.ir_model:IrModelFieldsSelection"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_model:IrModelFieldsSelection._unlink_if_manual"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_model:IrModelFieldsSelection",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_model:IrModelFieldsSelection"
+   ]
+  },
+  "ir.model.inherit": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.model.relation": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.module.category": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.module.module": {
+   "create": [
+    "odoo.addons.base.models.ir_module:IrModuleModule"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.ir_module:IrModuleModule._unlink_except_installed"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.ir_module:IrModuleModule"
+   ]
+  },
+  "ir.module.module.dependency": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.module.module.exclusion": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.profile": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.profile.query": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.barcode": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.contact": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.date": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.datetime": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.duration": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.float": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.float_time": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.html": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.image": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.image_url": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.integer": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.many2many": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.many2one": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.monetary": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.one2many": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.qweb": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.relative": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.selection": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.text": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.qweb.field.time": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.sequence": {
+   "create": [
+    "odoo.addons.base.models.ir_sequence:IrSequence"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_sequence:IrSequence",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_sequence:IrSequence"
+   ]
+  },
+  "ir.sequence.date_range": {
+   "create": [
+    "odoo.addons.base.models.ir_sequence:IrSequenceDate_Range"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_sequence:IrSequenceDate_Range",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_sequence:IrSequenceDate_Range"
+   ]
+  },
+  "ir.ui.menu": {
+   "create": [
+    "odoo.addons.base.models.ir_ui_menu:IrUiMenu"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_ui_menu:IrUiMenu",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_ui_menu:IrUiMenu"
+   ]
+  },
+  "ir.ui.view": {
+   "create": [
+    "odoo.addons.base.models.ir_ui_view:IrUiView"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.ir_ui_view:IrUiView",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.ir_ui_view:IrUiView"
+   ]
+  },
+  "ir.ui.view.custom": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "ir.websocket": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "kpi.provider": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "l10n_us.res.county": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "lot.label.layout": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.activity": {
+   "create": [
+    "odoo.addons.mail.models.mail_activity:MailActivity"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_activity:MailActivity",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.calendar.models.mail_activity:MailActivity",
+    "odoo.addons.mail.models.mail_activity:MailActivity"
+   ]
+  },
+  "mail.activity.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.activity.plan": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.activity.plan.template": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.activity.schedule": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.activity.schedule.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.activity.todo.create": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.activity.type": {
+   "ondelete": [
+    "odoo.addons.mail.models.mail_activity_type:MailActivityType._unlink_except_todo"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_activity_type:MailActivityType",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_activity_type:MailActivityType"
+   ]
+  },
+  "mail.alias": {
+   "create": [
+    "odoo.addons.mail.models.mail_alias:MailAlias"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_alias:MailAlias"
+   ]
+  },
+  "mail.alias.domain": {
+   "create": [
+    "odoo.addons.mail.models.mail_alias_domain:MailAliasDomain"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_alias_domain:MailAliasDomain"
+   ]
+  },
+  "mail.alias.mixin": {
+   "create": [
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional"
+   ]
+  },
+  "mail.alias.mixin.optional": {
+   "create": [
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional"
+   ]
+  },
+  "mail.blacklist": {
+   "create": [
+    "odoo.addons.mail.models.mail_blacklist:MailBlacklist",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_blacklist:MailBlacklist",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "mail.blacklist.remove": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.bot": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.call.artifact": {
+   "ondelete": [
+    "odoo.addons.mail.models.mail_call_artifact:MailCallArtifact._unlink_cleanup_media_attachment"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.canned.response": {
+   "create": [
+    "odoo.addons.mail.models.mail_canned_response:MailCannedResponse"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_canned_response:MailCannedResponse",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_canned_response:MailCannedResponse"
+   ]
+  },
+  "mail.compose.message": {
+   "create": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ]
+  },
+  "mail.composer.mixin": {
+   "create": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ]
+  },
+  "mail.followers": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.followers.edit": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.gateway.allowed": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.guest": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.ice.server": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.link.preview": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.mail": {
+   "create": [
+    "odoo.addons.mail.models.mail_mail:MailMail"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_mail:MailMail",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_mail:MailMail"
+   ]
+  },
+  "mail.message": {
+   "create": [
+    "odoo.addons.mail.models.mail_message:MailMessage"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.mail_message:MailMessage._except_audit_log"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_message:MailMessage",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.mail_message:MailMessage",
+    "odoo.addons.mail.models.mail_message:MailMessage"
+   ]
+  },
+  "mail.message.link.preview": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.message.reaction": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.message.schedule": {
+   "create": [
+    "odoo.addons.mail.models.mail_message_schedule:MailMessageSchedule"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.message.subtype": {
+   "ondelete": [
+    "odoo.addons.mail.models.mail_message_subtype:MailMessageSubtype._unlink_except_protected"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_message_subtype:MailMessageSubtype"
+   ]
+  },
+  "mail.message.translation": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.notification": {
+   "create": [
+    "odoo.addons.mail.models.mail_notification:MailNotification"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_notification:MailNotification"
+   ]
+  },
+  "mail.poll": {
+   "ondelete": [
+    "odoo.addons.mail.models.mail_poll:MailPoll._poll_on_delete"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.poll.option": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_poll_option:MailPollOption"
+   ]
+  },
+  "mail.poll.vote": {
+   "create": [
+    "odoo.addons.mail.models.mail_poll_vote:MailPollVote"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.presence": {
+   "create": [
+    "odoo.addons.mail.models.mail_presence:MailPresence"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_presence:MailPresence",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_presence:MailPresence"
+   ]
+  },
+  "mail.push": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.push.device": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.render.mixin": {
+   "create": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ]
+  },
+  "mail.scheduled.message": {
+   "create": [
+    "odoo.addons.mail.models.mail_scheduled_message:MailScheduledMessage"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_scheduled_message:MailScheduledMessage"
+   ]
+  },
+  "mail.template": {
+   "create": [
+    "odoo.addons.mail.models.mail_template:MailTemplate",
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin",
+    "odoo.addons.mail.models.template_reset_mixin:TemplateResetMixin"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.mail_template:MailTemplate._unlink_except_master_mail_template"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.mail_template:MailTemplate",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_template:MailTemplate",
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ]
+  },
+  "mail.template.preview": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.template.reset": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mail.thread": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "mail.thread.blacklist": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "mail.thread.main.attachment": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "mail.thread.phone": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "mail.thread.subject.suggested": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "mail.track.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "mail.tracking.duration.mixin": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "microsoft.outlook.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "mysubscription.mysubscription": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "onboarding.onboarding": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.onboarding.models.onboarding_onboarding:OnboardingOnboarding"
+   ]
+  },
+  "onboarding.onboarding.step": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.onboarding.models.onboarding_onboarding_step:OnboardingOnboardingStep"
+   ]
+  },
+  "onboarding.progress": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "onboarding.progress.step": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "payment.capture.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "payment.data": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "payment.link.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "payment.method": {
+   "ondelete": [
+    "odoo.addons.payment.models.payment_method:PaymentMethod._unlink_if_not_default_payment_method"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.payment.models.payment_method:PaymentMethod"
+   ]
+  },
+  "payment.provider": {
+   "create": [
+    "odoo.addons.payment.models.payment_provider:PaymentProvider"
+   ],
+   "ondelete": [
+    "odoo.addons.payment.models.payment_provider:PaymentProvider._unlink_except_master_data"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.payment.models.payment_provider:PaymentProvider"
+   ]
+  },
+  "payment.refund.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "payment.token": {
+   "create": [
+    "odoo.addons.payment.models.payment_token:PaymentToken"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.payment.models.payment_token:PaymentToken"
+   ]
+  },
+  "payment.transaction": {
+   "create": [
+    "odoo.addons.payment.models.payment_transaction:PaymentTransaction"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.payment.models.payment_transaction:PaymentTransaction"
+   ]
+  },
+  "peppol.registration": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "phone.blacklist": {
+   "create": [
+    "odoo.addons.phone_validation.models.phone_blacklist:PhoneBlacklist",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.phone_validation.models.phone_blacklist:PhoneBlacklist",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "phone.blacklist.remove": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "picking.label.type": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "portal.entry": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "portal.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "portal.share": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "portal.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "portal.wizard.user": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "privacy.log": {
+   "create": [
+    "odoo.addons.privacy_lookup.models.privacy_log:PrivacyLog"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "privacy.lookup.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "privacy.lookup.wizard.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.attribute": {
+   "ondelete": [
+    "odoo.addons.product.models.product_attribute:ProductAttribute._unlink_except_used_on_product"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.product.models.product_attribute:ProductAttribute"
+   ]
+  },
+  "product.attribute.custom.value": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.attribute.value": {
+   "ondelete": [
+    "odoo.addons.product.models.product_attribute_value:ProductAttributeValue._unlink_except_used_on_product"
+   ],
+   "unlink": [
+    "odoo.addons.product.models.product_attribute_value:ProductAttributeValue",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.product.models.product_attribute_value:ProductAttributeValue"
+   ]
+  },
+  "product.base.unit": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.catalog.line.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.catalog.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.category": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock_account.models.product:ProductCategory",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "product.combo": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.combo.item": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.document": {
+   "create": [
+    "odoo.addons.product.models.product_document:ProductDocument"
+   ],
+   "unlink": [
+    "odoo.addons.product.models.product_document:ProductDocument",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.label.layout": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.pricelist": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.product.models.product_pricelist:ProductPricelist._unlink_except_used_as_rule_base"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.product.models.product_pricelist:ProductPricelist",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "product.pricelist.item": {
+   "create": [
+    "odoo.addons.product.models.product_pricelist_item:ProductPricelistItem"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.product": {
+   "create": [
+    "odoo.addons.stock_account.models.product:ProductProduct",
+    "odoo.addons.product.models.product_product:ProductProduct",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.product.models.product_product:ProductProduct",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale_project.models.product_product:ProductProduct",
+    "odoo.addons.stock_account.models.product:ProductProduct",
+    "odoo.addons.stock.models.product:ProductProduct",
+    "odoo.addons.product.models.product_product:ProductProduct",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "product.removal": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.replenish": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.supplierinfo": {
+   "create": [
+    "odoo.addons.product.models.product_supplierinfo:ProductSupplierinfo"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.product.models.product_supplierinfo:ProductSupplierinfo"
+   ]
+  },
+  "product.tag": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.template": {
+   "create": [
+    "odoo.addons.sale_purchase.models.product_template:ProductTemplate",
+    "odoo.addons.stock.models.product:ProductTemplate",
+    "odoo.addons.account.models.product:ProductTemplate",
+    "odoo.addons.product.models.product_template:ProductTemplate",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale_project.models.product_template:ProductTemplate",
+    "odoo.addons.sale_purchase.models.product_template:ProductTemplate",
+    "odoo.addons.stock_account.models.product:ProductTemplate",
+    "odoo.addons.stock.models.product:ProductTemplate",
+    "odoo.addons.account.models.product:ProductTemplate",
+    "odoo.addons.product.models.product_template:ProductTemplate",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "product.template.attribute.line": {
+   "create": [
+    "odoo.addons.product.models.product_template_attribute_line:ProductTemplateAttributeLine"
+   ],
+   "unlink": [
+    "odoo.addons.product.models.product_template_attribute_line:ProductTemplateAttributeLine",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.product.models.product_template_attribute_line:ProductTemplateAttributeLine"
+   ]
+  },
+  "product.template.attribute.value": {
+   "create": [
+    "odoo.addons.product.models.product_template_attribute_value:ProductTemplateAttributeValue"
+   ],
+   "unlink": [
+    "odoo.addons.product.models.product_template_attribute_value:ProductTemplateAttributeValue",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.product.models.product_template_attribute_value:ProductTemplateAttributeValue"
+   ]
+  },
+  "product.uom": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "product.value": {
+   "create": [
+    "odoo.addons.stock_account.models.product_value:ProductValue"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.collaborator": {
+   "create": [
+    "odoo.addons.project.models.project_collaborator:ProjectCollaborator"
+   ],
+   "unlink": [
+    "odoo.addons.project.models.project_collaborator:ProjectCollaborator",
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.milestone": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "project.project": {
+   "create": [
+    "odoo.addons.sale_project.models.project_project:ProjectProject",
+    "odoo.addons.project_sms.models.project_project:ProjectProject",
+    "odoo.addons.project.models.project_project:ProjectProject",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.project.models.project_project:ProjectProject._check_project_group_at_removal"
+   ],
+   "unlink": [
+    "odoo.addons.project.models.project_project:ProjectProject",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale_project.models.project_project:ProjectProject",
+    "odoo.addons.project_sms.models.project_project:ProjectProject",
+    "odoo.addons.project.models.project_project:ProjectProject",
+    "odoo.addons.mail.models.mail_alias_mixin_optional:MailAliasMixinOptional",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "project.project.stage": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.project.models.project_project_stage:ProjectProjectStage"
+   ]
+  },
+  "project.project.stage.delete.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.role": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.share.collaborator.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.share.wizard": {
+   "create": [
+    "odoo.addons.project.wizard.project_share_wizard:ProjectShareWizard"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.tags": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.task": {
+   "create": [
+    "odoo.addons.project_todo.models.project_task:ProjectTask",
+    "odoo.addons.project_sms.models.project_task:ProjectTask",
+    "odoo.addons.project.models.project_task:ProjectTask",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.html_editor.models.html_field_history_mixin:HtmlFieldHistoryMixin"
+   ],
+   "unlink": [
+    "odoo.addons.project.models.project_task:ProjectTask",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.project_sms.models.project_task:ProjectTask",
+    "odoo.addons.project.models.project_task:ProjectTask",
+    "odoo.addons.rating.models.rating_mixin:RatingMixin",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin",
+    "odoo.addons.html_editor.models.html_field_history_mixin:HtmlFieldHistoryMixin"
+   ]
+  },
+  "project.task.burndown.chart.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.task.recurrence": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.task.stage.personal": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.task.stage.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.task.type": {
+   "ondelete": [
+    "odoo.addons.project.models.project_task_type:ProjectTaskType._unlink_if_remaining_personal_stages"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.project.models.project_task_type:ProjectTaskType"
+   ]
+  },
+  "project.task.type.delete.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.template.create.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.template.role.to.users.map": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "project.update": {
+   "create": [
+    "odoo.addons.project.models.project_update:ProjectUpdate",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.project.models.project_update:ProjectUpdate",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "properties.base.definition": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.properties_base_definition:PropertiesBaseDefinition"
+   ]
+  },
+  "properties.base.definition.mixin": {
+   "create": [
+    "odoo.addons.base.models.properties_base_definition_mixin:PropertiesBaseDefinitionMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "publisher_warranty.contract": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "purchase.bill.line.match": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "purchase.bill.union": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "purchase.edi.xml.ubl_bis3": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "purchase.order": {
+   "create": [
+    "odoo.addons.purchase.models.purchase_order:PurchaseOrder",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.purchase.models.purchase_order:PurchaseOrder._unlink_if_cancelled"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.purchase_stock.models.purchase_order:PurchaseOrder",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "purchase.order.line": {
+   "create": [
+    "odoo.addons.purchase_stock.models.purchase_order_line:PurchaseOrderLine",
+    "odoo.addons.project_purchase.models.purchase_order_line:PurchaseOrderLine",
+    "odoo.addons.purchase.models.purchase_order_line:PurchaseOrderLine",
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ],
+   "ondelete": [
+    "odoo.addons.purchase.models.purchase_order_line:PurchaseOrderLine._unlink_except_purchase"
+   ],
+   "unlink": [
+    "odoo.addons.purchase_stock.models.purchase_order_line:PurchaseOrderLine",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.purchase_stock.models.purchase_order_line:PurchaseOrderLine",
+    "odoo.addons.purchase.models.purchase_order_line:PurchaseOrderLine",
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ]
+  },
+  "purchase.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "quotation.document": {
+   "create": [
+    "odoo.addons.sale_pdf_quote_builder.models.quotation_document:QuotationDocument"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "rating.mixin": {
+   "create": [
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.rating.models.rating_mixin:RatingMixin",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "rating.parent.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "rating.rating": {
+   "create": [
+    "odoo.addons.portal_rating.models.rating_rating:RatingRating",
+    "odoo.addons.rating.models.rating:RatingRating"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.rating:RatingRating",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.portal_rating.models.rating_rating:RatingRating",
+    "odoo.addons.rating.models.rating:RatingRating"
+   ]
+  },
+  "report.account.report_hash_integrity": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.account.report_invoice": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.account.report_invoice_with_payments": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.base.report_irmodulereference": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.layout": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.paperformat": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.product.label.base": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.product.report_pricelist": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.product.report_product_label_dymo": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.product.report_product_label_pdf": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.product.report_product_label_zpl": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.project.task.user": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.stock.quantity": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "report.stock.report_stock_rule": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.city": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.company": {
+   "create": [
+    "odoo.addons.sale.models.res_company:ResCompany",
+    "odoo.addons.stock.models.res_company:ResCompany",
+    "odoo.addons.account.models.company:ResCompany",
+    "odoo.addons.payment.models.res_company:ResCompany",
+    "odoo.addons.partner_autocomplete.models.res_company:ResCompany",
+    "odoo.addons.product.models.res_company:ResCompany",
+    "odoo.addons.resource.models.res_company:ResCompany",
+    "odoo.addons.web.models.models:ResCompany",
+    "odoo.addons.base.models.res_company:ResCompany",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale.models.res_company:ResCompany",
+    "odoo.addons.stock_account.models.res_company:ResCompany",
+    "odoo.addons.account.models.company:ResCompany",
+    "odoo.addons.product.models.res_company:ResCompany",
+    "odoo.addons.web.models.models:ResCompany",
+    "odoo.addons.base.models.res_company:ResCompany",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "res.config": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.config.settings": {
+   "create": [
+    "odoo.addons.base.models.res_config:ResConfigSettings"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.country": {
+   "create": [
+    "odoo.addons.base.models.res_country:ResCountry"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.res_country:ResCountry"
+   ]
+  },
+  "res.country.group": {
+   "create": [
+    "odoo.addons.base.models.res_country:ResCountryGroup"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.res_country:ResCountryGroup"
+   ]
+  },
+  "res.country.state": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.currency": {
+   "create": [
+    "odoo.addons.base.models.res_currency:ResCurrency"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.res_currency:ResCurrency",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.res_currency:ResCurrency",
+    "odoo.addons.product.models.res_currency:ResCurrency",
+    "odoo.addons.base.models.res_currency:ResCurrency"
+   ]
+  },
+  "res.currency.rate": {
+   "create": [
+    "odoo.addons.account.models.res_currency:ResCurrencyRate",
+    "odoo.addons.base.models.res_currency:ResCurrencyRate"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.res_currency:ResCurrencyRate._unlink_clear_company_rate_cache",
+    "odoo.addons.base.models.res_currency:ResCurrencyRate._invalidate_rates"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.res_currency:ResCurrencyRate",
+    "odoo.addons.base.models.res_currency:ResCurrencyRate"
+   ]
+  },
+  "res.currency.rate.consolidation.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.device": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.device.log": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.groups": {
+   "create": [
+    "odoo.addons.base.models.res_groups:ResGroups"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.res_groups:ResGroups._unlink_except_settings_group"
+   ],
+   "unlink": [
+    "odoo.addons.base.models.res_groups:ResGroups",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.discuss.res_groups:ResGroups",
+    "odoo.addons.base.models.res_groups:ResGroups"
+   ]
+  },
+  "res.groups.privilege": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.lang": {
+   "create": [
+    "odoo.addons.base.models.res_lang:ResLang"
+   ],
+   "ondelete": [
+    "odoo.addons.base.models.res_lang:ResLang._unlink_except_default_lang"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.base.models.res_lang:ResLang"
+   ]
+  },
+  "res.partner": {
+   "create": [
+    "odoo.addons.account_peppol.models.res_partner:ResPartner",
+    "odoo.addons.account_edi_ubl_cii.models.res_partner:ResPartner",
+    "odoo.addons.account.models.partner:ResPartner",
+    "odoo.addons.mail.models.res_partner:ResPartner",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.base.models.res_partner:ResPartner",
+    "odoo.addons.base.models.properties_base_definition_mixin:PropertiesBaseDefinitionMixin"
+   ],
+   "ondelete": [
+    "odoo.addons.account.models.partner:ResPartner._unlink_if_partner_in_account_move",
+    "odoo.addons.base.models.res_partner:ResPartner._unlink_except_user"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.purchase.models.res_partner:ResPartner",
+    "odoo.addons.account_edi_ubl_cii.models.res_partner:ResPartner",
+    "odoo.addons.stock.models.res_partner:ResPartner",
+    "odoo.addons.account.models.partner:ResPartner",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.base.models.res_partner:ResPartner",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "res.partner.bank": {
+   "create": [
+    "odoo.addons.account.models.res_partner_bank:ResPartnerBank",
+    "odoo.addons.base.models.res_partner_bank:ResPartnerBank",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.res_partner_bank:ResPartnerBank",
+    "odoo.addons.base.models.res_partner_bank:ResPartnerBank",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "res.partner.category": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.partner.industry": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.role": {
+   "ondelete": [
+    "odoo.addons.mail.models.res_role:ResRole._unlink_except_linked_activities"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.session": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users": {
+   "create": [
+    "odoo.addons.project.models.res_users:ResUsers",
+    "odoo.addons.digest.models.res_users:ResUsers",
+    "odoo.addons.calendar.models.res_users:ResUsers",
+    "odoo.addons.auth_signup.models.res_users:ResUsers",
+    "odoo.addons.mail.models.discuss.res_users:ResUsers",
+    "odoo.addons.mail.models.res_users:ResUsers",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.base.models.res_users:UsersMultiCompany",
+    "odoo.addons.base.models.res_users:ResUsers"
+   ],
+   "ondelete": [
+    "odoo.addons.auth_signup.models.res_users:ResUsers._ondelete_signup_cancel",
+    "odoo.addons.base.models.res_users:ResUsers._unlink_except_master_data"
+   ],
+   "unlink": [
+    "odoo.addons.calendar.models.res_users:ResUsers",
+    "odoo.addons.mail.models.discuss.res_users:ResUsers",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.auth_totp_mail.models.res_users:ResUsers",
+    "odoo.addons.auth_signup.models.res_users:ResUsers",
+    "odoo.addons.mail.models.discuss.res_users:ResUsers",
+    "odoo.addons.mail.models.res_users:ResUsers",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.base.models.res_users:UsersMultiCompany",
+    "odoo.addons.base.models.res_users:ResUsers",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "res.users.apikeys": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users.apikeys.description": {
+   "create": [
+    "odoo.addons.base.models.res_users:ResUsersApikeysDescription"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users.apikeys.show": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users.deletion": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users.identitycheck": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users.log": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users.settings": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.discuss.bus_sync_mixin:BusSyncMixin"
+   ]
+  },
+  "res.users.settings.embedded.action": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "res.users.settings.volumes": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.discuss.bus_sync_mixin:BusSyncMixin"
+   ]
+  },
+  "reset.view.arch.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "resource.calendar": {
+   "create": [
+    "odoo.addons.resource.models.resource_calendar:ResourceCalendar"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.resource.models.resource_calendar:ResourceCalendar"
+   ]
+  },
+  "resource.calendar.attendance": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "resource.calendar.leaves": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "resource.mixin": {
+   "create": [
+    "odoo.addons.resource.models.resource_mixin:ResourceMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "resource.resource": {
+   "create": [
+    "odoo.addons.resource.models.resource_resource:ResourceResource"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.resource.models.resource_resource:ResourceResource"
+   ]
+  },
+  "return.reason": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sale.advance.payment.inv": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sale.edi.xml.ubl_bis3": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sale.mass.cancel.orders": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sale.order": {
+   "create": [
+    "odoo.addons.crm_sale_project.models.sale_order:SaleOrder",
+    "odoo.addons.sale_project.models.sale_order:SaleOrder",
+    "odoo.addons.sale.models.sale_order:SaleOrder",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.sale.models.sale_order:SaleOrder._unlink_except_draft_or_cancel"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale_project.models.sale_order:SaleOrder",
+    "odoo.addons.sale_stock.models.sale_order:SaleOrder",
+    "odoo.addons.sale.models.sale_order:SaleOrder",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "sale.order.discount": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sale.order.line": {
+   "create": [
+    "odoo.addons.sale_project.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.sale_stock.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.sale_purchase.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.sale.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ],
+   "ondelete": [
+    "odoo.addons.sale.models.sale_order_line:SaleOrderLine._unlink_except_confirmed"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale_project.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.sale_stock.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.sale_purchase.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.sale.models.sale_order_line:SaleOrderLine",
+    "odoo.addons.analytic.models.analytic_mixin:AnalyticMixin"
+   ]
+  },
+  "sale.order.template": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sale.order.template.line": {
+   "create": [
+    "odoo.addons.sale_management.models.sale_order_template_line:SaleOrderTemplateLine"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale_management.models.sale_order_template_line:SaleOrderTemplateLine"
+   ]
+  },
+  "sale.pdf.form.field": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sale.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sequence.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account.models.sequence_mixin:SequenceMixin"
+   ]
+  },
+  "server.action.history.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.account.code": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.account.phone": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.account.sender": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.composer": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.sms": {
+   "create": [
+    "odoo.addons.sms.models.sms_sms:SmsSms"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.template": {
+   "create": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin",
+    "odoo.addons.mail.models.template_reset_mixin:TemplateResetMixin"
+   ],
+   "unlink": [
+    "odoo.addons.sms.models.sms_template:SmsTemplate",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.mail.models.mail_render_mixin:MailRenderMixin"
+   ]
+  },
+  "sms.template.preview": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.template.reset": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "sms.tracker": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "spreadsheet.dashboard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "spreadsheet.dashboard.favorite.filters": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "spreadsheet.dashboard.group": {
+   "ondelete": [
+    "odoo.addons.spreadsheet_dashboard.models.spreadsheet_dashboard_group:SpreadsheetDashboardGroup._unlink_except_spreadsheet_data"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "spreadsheet.dashboard.share": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "spreadsheet.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.add.to.wave": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.allocation.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.avco.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.backorder.confirmation": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.backorder.confirmation.line": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.forecasted_product_product": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.forecasted_product_template": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.inventory.adjustment.name": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.inventory.conflict": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.inventory.warning": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.location": {
+   "create": [
+    "odoo.addons.stock.models.stock_location:StockLocation"
+   ],
+   "ondelete": [
+    "odoo.addons.stock.models.stock_location:StockLocation._unlink_except_master_data"
+   ],
+   "unlink": [
+    "odoo.addons.stock.models.stock_location:StockLocation",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_location:StockLocation"
+   ]
+  },
+  "stock.location.label.layout": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.lot": {
+   "create": [
+    "odoo.addons.stock_account.models.stock_lot:StockLot",
+    "odoo.addons.stock.models.stock_lot:StockLot",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock_account.models.stock_lot:StockLot",
+    "odoo.addons.stock.models.stock_lot:StockLot",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "stock.move": {
+   "create": [
+    "odoo.addons.stock.models.stock_move:StockMove"
+   ],
+   "ondelete": [
+    "odoo.addons.stock.models.stock_move:StockMove._unlink_if_draft_or_cancel"
+   ],
+   "unlink": [
+    "odoo.addons.stock.models.stock_move:StockMove",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.sale_stock.models.stock:StockMove",
+    "odoo.addons.purchase_stock.models.stock_move:StockMove",
+    "odoo.addons.stock_account.models.stock_move:StockMove",
+    "odoo.addons.stock.models.stock_move:StockMove"
+   ]
+  },
+  "stock.move.line": {
+   "create": [
+    "odoo.addons.stock_account.models.stock_move_line:StockMoveLine",
+    "odoo.addons.stock.models.stock_move_line:StockMoveLine"
+   ],
+   "ondelete": [
+    "odoo.addons.stock.models.stock_move_line:StockMoveLine._unlink_except_done_or_cancel"
+   ],
+   "unlink": [
+    "odoo.addons.stock_account.models.stock_move_line:StockMoveLine",
+    "odoo.addons.stock.models.stock_move_line:StockMoveLine",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock_account.models.stock_move_line:StockMoveLine",
+    "odoo.addons.stock.models.stock_move_line:StockMoveLine"
+   ]
+  },
+  "stock.orderpoint.snooze": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.orderpoint.suggest": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.package": {
+   "create": [
+    "odoo.addons.stock.models.stock_package:StockPackage"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_package:StockPackage"
+   ]
+  },
+  "stock.package.destination": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.package.history": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.package.label.layout": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.package.type": {
+   "create": [
+    "odoo.addons.stock.models.stock_package_type:StockPackageType"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_package_type:StockPackageType"
+   ]
+  },
+  "stock.picking": {
+   "create": [
+    "odoo.addons.stock.models.stock_picking:StockPicking",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "unlink": [
+    "odoo.addons.stock.models.stock_picking:StockPicking",
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_picking:StockPicking",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "stock.picking.batch": {
+   "create": [
+    "odoo.addons.stock.models.stock_picking_batch:StockPickingBatch",
+    "odoo.addons.mail.models.mail_thread:MailThread"
+   ],
+   "ondelete": [
+    "odoo.addons.stock.models.stock_picking_batch:StockPickingBatch._unlink_if_not_done"
+   ],
+   "unlink": [
+    "odoo.addons.rating.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_picking_batch:StockPickingBatch",
+    "odoo.addons.mail.models.mail_thread:MailThread",
+    "odoo.addons.mail.models.mail_track_mixin:MailTrackMixin"
+   ]
+  },
+  "stock.picking.to.batch": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.picking.type": {
+   "create": [
+    "odoo.addons.stock.models.stock_picking_type:StockPickingType"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_picking_type:StockPickingType"
+   ]
+  },
+  "stock.picking.type.label.layout": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.put.in.pack": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.putaway.rule": {
+   "create": [
+    "odoo.addons.stock.models.product_strategy:StockPutawayRule"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.product_strategy:StockPutawayRule"
+   ]
+  },
+  "stock.quant": {
+   "create": [
+    "odoo.addons.stock.models.stock_quant:StockQuant"
+   ],
+   "ondelete": [
+    "odoo.addons.stock.models.stock_quant:StockQuant._unlink_except_wrong_permission"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_quant:StockQuant"
+   ]
+  },
+  "stock.quant.relocate": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.reference": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.replenish.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.replenishment.info": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.replenishment.option": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.request.count": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.route": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_location:StockRoute"
+   ]
+  },
+  "stock.rule": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.rules.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.scrap.reason.tag": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.storage.category": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.storage.category.capacity": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.traceability.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.warehouse": {
+   "create": [
+    "odoo.addons.stock.models.stock_warehouse:StockWarehouse"
+   ],
+   "unlink": [
+    "odoo.addons.stock.models.stock_warehouse:StockWarehouse",
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_warehouse:StockWarehouse"
+   ]
+  },
+  "stock.warehouse.orderpoint": {
+   "create": [
+    "odoo.addons.stock.models.stock_orderpoint:StockWarehouseOrderpoint"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.stock.models.stock_orderpoint:StockWarehouseOrderpoint"
+   ]
+  },
+  "stock.warn.insufficient.qty": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.warn.insufficient.qty.scrap": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "stock.zero.demand.confirmation": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "task.share.wizard": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "template.reset.mixin": {
+   "create": [
+    "odoo.addons.mail.models.template_reset_mixin:TemplateResetMixin"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "uom.uom": {
+   "create": [
+    "odoo.addons.account_edi_ubl_cii.models.uom_uom:UomUom"
+   ],
+   "ondelete": [
+    "odoo.addons.uom.models.uom_uom:UomUom._unlink_except_master_data"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ],
+   "write": [
+    "odoo.addons.account_edi_ubl_cii.models.uom_uom:UomUom",
+    "odoo.addons.stock.models.product:UomUom"
+   ]
+  },
+  "update.product.attribute.value": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "utm.campaign": {
+   "create": [
+    "odoo.addons.utm.models.utm_campaign:UtmCampaign"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "utm.medium": {
+   "create": [
+    "odoo.addons.utm.models.utm_medium:UtmMedium"
+   ],
+   "ondelete": [
+    "odoo.addons.utm.models.utm_medium:UtmMedium._unlink_except_utm_medium_record"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "utm.mixin": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "utm.source": {
+   "create": [
+    "odoo.addons.utm.models.utm_source:UtmSource"
+   ],
+   "ondelete": [
+    "odoo.addons.utm.models.utm_source:UtmSource._unlink_except_utm_source_record"
+   ],
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "utm.stage": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "utm.tag": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "validate.account.move": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "vendor.delay.report": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "web_tour.tour": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "web_tour.tour.step": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "website": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  },
+  "wizard.ir.model.menu.create": {
+   "unlink": [
+    "odoo.addons.mail.models.models:Base"
+   ]
+  }
+ },
+ "odoo_commit": "dd5d371863dd96f640e4a4b970d8437bb9861cba"
+}

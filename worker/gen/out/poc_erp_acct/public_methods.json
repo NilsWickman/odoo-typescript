@@ -1,0 +1,6 @@
+{
+ "models": {
+  "accounting.assert.test": [],
+  "report.account_test.report_accounttest": []
+ }
+}

@@ -1,0 +1,1199 @@
+{
+ "babel_path": ".venv/lib/python3.12/site-packages/babel",
+ "babel_version": "2.10.3",
+ "locales": {
+  "en_US": {
+   "date_formats": {
+    "full": "EEEE, MMMM d, y",
+    "long": "MMMM d, y",
+    "medium": "MMM d, y",
+    "short": "M/d/yy"
+   },
+   "datetime_formats": {
+    "full": "{1} 'at' {0}",
+    "long": "{1} 'at' {0}",
+    "medium": "{1}, {0}",
+    "short": "{1}, {0}"
+   },
+   "day_periods": {
+    "format": {
+     "abbreviated": {
+      "afternoon1": "in the afternoon",
+      "am": "AM",
+      "evening1": "in the evening",
+      "midnight": "midnight",
+      "morning1": "in the morning",
+      "night1": "at night",
+      "noon": "noon",
+      "pm": "PM"
+     },
+     "narrow": {
+      "afternoon1": "in the afternoon",
+      "am": "a",
+      "evening1": "in the evening",
+      "midnight": "mi",
+      "morning1": "in the morning",
+      "night1": "at night",
+      "noon": "n",
+      "pm": "p"
+     },
+     "wide": {
+      "afternoon1": "in the afternoon",
+      "am": "AM",
+      "evening1": "in the evening",
+      "midnight": "midnight",
+      "morning1": "in the morning",
+      "night1": "at night",
+      "noon": "noon",
+      "pm": "PM"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "afternoon1": "afternoon",
+      "am": "AM",
+      "evening1": "evening",
+      "midnight": "midnight",
+      "morning1": "morning",
+      "night1": "night",
+      "noon": "noon",
+      "pm": "PM"
+     },
+     "narrow": {},
+     "wide": {
+      "afternoon1": "afternoon",
+      "am": "AM",
+      "evening1": "evening",
+      "midnight": "midnight",
+      "morning1": "morning",
+      "night1": "night",
+      "noon": "noon",
+      "pm": "PM"
+     }
+    }
+   },
+   "days": {
+    "format": {
+     "abbreviated": {
+      "0": "Mon",
+      "1": "Tue",
+      "2": "Wed",
+      "3": "Thu",
+      "4": "Fri",
+      "5": "Sat",
+      "6": "Sun"
+     },
+     "narrow": {
+      "0": "M",
+      "1": "T",
+      "2": "W",
+      "3": "T",
+      "4": "F",
+      "5": "S",
+      "6": "S"
+     },
+     "short": {
+      "0": "Mo",
+      "1": "Tu",
+      "2": "We",
+      "3": "Th",
+      "4": "Fr",
+      "5": "Sa",
+      "6": "Su"
+     },
+     "wide": {
+      "0": "Monday",
+      "1": "Tuesday",
+      "2": "Wednesday",
+      "3": "Thursday",
+      "4": "Friday",
+      "5": "Saturday",
+      "6": "Sunday"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "0": "Mon",
+      "1": "Tue",
+      "2": "Wed",
+      "3": "Thu",
+      "4": "Fri",
+      "5": "Sat",
+      "6": "Sun"
+     },
+     "narrow": {
+      "0": "M",
+      "1": "T",
+      "2": "W",
+      "3": "T",
+      "4": "F",
+      "5": "S",
+      "6": "S"
+     },
+     "short": {
+      "0": "Mo",
+      "1": "Tu",
+      "2": "We",
+      "3": "Th",
+      "4": "Fr",
+      "5": "Sa",
+      "6": "Su"
+     },
+     "wide": {
+      "0": "Monday",
+      "1": "Tuesday",
+      "2": "Wednesday",
+      "3": "Thursday",
+      "4": "Friday",
+      "5": "Saturday",
+      "6": "Sunday"
+     }
+    }
+   },
+   "list_patterns": {
+    "standard": {
+     "2": "{0} and {1}",
+     "end": "{0}, and {1}",
+     "middle": "{0}, {1}",
+     "start": "{0}, {1}"
+    }
+   },
+   "months": {
+    "format": {
+     "abbreviated": {
+      "1": "Jan",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec",
+      "2": "Feb",
+      "3": "Mar",
+      "4": "Apr",
+      "5": "May",
+      "6": "Jun",
+      "7": "Jul",
+      "8": "Aug",
+      "9": "Sep"
+     },
+     "narrow": {
+      "1": "J",
+      "10": "O",
+      "11": "N",
+      "12": "D",
+      "2": "F",
+      "3": "M",
+      "4": "A",
+      "5": "M",
+      "6": "J",
+      "7": "J",
+      "8": "A",
+      "9": "S"
+     },
+     "wide": {
+      "1": "January",
+      "10": "October",
+      "11": "November",
+      "12": "December",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "1": "Jan",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec",
+      "2": "Feb",
+      "3": "Mar",
+      "4": "Apr",
+      "5": "May",
+      "6": "Jun",
+      "7": "Jul",
+      "8": "Aug",
+      "9": "Sep"
+     },
+     "narrow": {
+      "1": "J",
+      "10": "O",
+      "11": "N",
+      "12": "D",
+      "2": "F",
+      "3": "M",
+      "4": "A",
+      "5": "M",
+      "6": "J",
+      "7": "J",
+      "8": "A",
+      "9": "S"
+     },
+     "wide": {
+      "1": "January",
+      "10": "October",
+      "11": "November",
+      "12": "December",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September"
+     }
+    }
+   },
+   "posix_to_ldml": {
+    "date_format": "MM/dd/yyyy",
+    "time_format": "hh:mm:ss a"
+   },
+   "quarters": {
+    "format": {
+     "abbreviated": {
+      "1": "Q1",
+      "2": "Q2",
+      "3": "Q3",
+      "4": "Q4"
+     },
+     "narrow": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+     },
+     "wide": {
+      "1": "1st quarter",
+      "2": "2nd quarter",
+      "3": "3rd quarter",
+      "4": "4th quarter"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "1": "Q1",
+      "2": "Q2",
+      "3": "Q3",
+      "4": "Q4"
+     },
+     "narrow": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+     },
+     "wide": {
+      "1": "1st quarter",
+      "2": "2nd quarter",
+      "3": "3rd quarter",
+      "4": "4th quarter"
+     }
+    }
+   },
+   "read_group_display_format": {
+    "day": "dd MMM yyyy",
+    "hour": "HH:00 dd MMM",
+    "month": "MMMM yyyy",
+    "quarter": "QQQ yyyy",
+    "week": "'W'w YYYY",
+    "year": "yyyy"
+   },
+   "samples": {
+    "2025-12-29 00:00:00": {
+     "date_format": "12/29/2025",
+     "read_group:day:date": "29 Dec 2025",
+     "read_group:day:datetime": "29 Dec 2025",
+     "read_group:hour:datetime": "00:00 29 Dec",
+     "read_group:month:date": "December 2025",
+     "read_group:month:datetime": "December 2025",
+     "read_group:quarter:date": "Q4 2025",
+     "read_group:quarter:datetime": "Q4 2025",
+     "read_group:week:date": "W53 2026",
+     "read_group:week:datetime": "W53 2026",
+     "read_group:week:label": "W1 2026",
+     "read_group:year:date": "2025",
+     "read_group:year:datetime": "2025",
+     "time_format": "12:00:00 AM"
+    },
+    "2026-01-01 00:00:00": {
+     "date_format": "01/01/2026",
+     "read_group:day:date": "01 Jan 2026",
+     "read_group:day:datetime": "01 Jan 2026",
+     "read_group:hour:datetime": "00:00 01 Jan",
+     "read_group:month:date": "January 2026",
+     "read_group:month:datetime": "January 2026",
+     "read_group:quarter:date": "Q1 2026",
+     "read_group:quarter:datetime": "Q1 2026",
+     "read_group:week:date": "W1 2026",
+     "read_group:week:datetime": "W1 2026",
+     "read_group:week:label": "W1 2026",
+     "read_group:year:date": "2026",
+     "read_group:year:datetime": "2026",
+     "time_format": "12:00:00 AM"
+    },
+    "2026-10-28 13:05:09": {
+     "date_format": "10/28/2026",
+     "read_group:day:date": "28 Oct 2026",
+     "read_group:day:datetime": "28 Oct 2026",
+     "read_group:hour:datetime": "13:00 28 Oct",
+     "read_group:month:date": "October 2026",
+     "read_group:month:datetime": "October 2026",
+     "read_group:quarter:date": "Q4 2026",
+     "read_group:quarter:datetime": "Q4 2026",
+     "read_group:week:date": "W44 2026",
+     "read_group:week:datetime": "W44 2026",
+     "read_group:week:label": "W44 2026",
+     "read_group:year:date": "2026",
+     "read_group:year:datetime": "2026",
+     "time_format": "01:05:09 PM"
+    }
+   },
+   "source": [
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/en_US.dat",
+     "sha256": "254ed74652b24413650cd6c60da6ee20158ffed7ee15a8450543432f5e9c13c2"
+    },
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/en.dat",
+     "sha256": "a99b854cdd597dc2fb99df8e3a83265ff4f9047c3aa1502dedb986a992dd09a5"
+    },
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/root.dat",
+     "sha256": "fd311e450a4f6f98dd4f765fe1ddc9fb5c0de09eb9113803326dd64cc8e8fa76"
+    }
+   ],
+   "time_formats": {
+    "full": "h:mm:ss a zzzz",
+    "long": "h:mm:ss a z",
+    "medium": "h:mm:ss a",
+    "short": "h:mm a"
+   },
+   "week": {
+    "first_week_day": 6,
+    "min_week_days": 1,
+    "weekend_end": 6,
+    "weekend_start": 5
+   }
+  },
+  "fr_FR": {
+   "date_formats": {
+    "full": "EEEE d MMMM y",
+    "long": "d MMMM y",
+    "medium": "d MMM y",
+    "short": "dd/MM/y"
+   },
+   "datetime_formats": {
+    "full": "{1} 'à' {0}",
+    "long": "{1} 'à' {0}",
+    "medium": "{1}, {0}",
+    "short": "{1} {0}"
+   },
+   "day_periods": {
+    "format": {
+     "abbreviated": {
+      "afternoon1": "ap.m.",
+      "am": "AM",
+      "evening1": "soir",
+      "midnight": "minuit",
+      "morning1": "mat.",
+      "night1": "nuit",
+      "noon": "midi",
+      "pm": "PM"
+     },
+     "narrow": {
+      "afternoon1": "ap.m.",
+      "am": "AM",
+      "evening1": "soir",
+      "midnight": "minuit",
+      "morning1": "mat.",
+      "night1": "nuit",
+      "noon": "midi",
+      "pm": "PM"
+     },
+     "wide": {
+      "afternoon1": "de l’après-midi",
+      "am": "AM",
+      "evening1": "du soir",
+      "midnight": "minuit",
+      "morning1": "du matin",
+      "night1": "du matin",
+      "noon": "midi",
+      "pm": "PM"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "afternoon1": "ap.m.",
+      "am": "AM",
+      "evening1": "soir",
+      "midnight": "minuit",
+      "morning1": "mat.",
+      "night1": "nuit",
+      "noon": "midi",
+      "pm": "PM"
+     },
+     "narrow": {
+      "afternoon1": "ap.m.",
+      "am": "AM",
+      "evening1": "soir",
+      "midnight": "minuit",
+      "morning1": "mat.",
+      "night1": "nuit",
+      "noon": "midi",
+      "pm": "PM"
+     },
+     "wide": {
+      "afternoon1": "après-midi",
+      "am": "AM",
+      "evening1": "soir",
+      "midnight": "minuit",
+      "morning1": "matin",
+      "night1": "nuit",
+      "noon": "midi",
+      "pm": "PM"
+     }
+    }
+   },
+   "days": {
+    "format": {
+     "abbreviated": {
+      "0": "lun.",
+      "1": "mar.",
+      "2": "mer.",
+      "3": "jeu.",
+      "4": "ven.",
+      "5": "sam.",
+      "6": "dim."
+     },
+     "narrow": {
+      "0": "L",
+      "1": "M",
+      "2": "M",
+      "3": "J",
+      "4": "V",
+      "5": "S",
+      "6": "D"
+     },
+     "short": {
+      "0": "lu",
+      "1": "ma",
+      "2": "me",
+      "3": "je",
+      "4": "ve",
+      "5": "sa",
+      "6": "di"
+     },
+     "wide": {
+      "0": "lundi",
+      "1": "mardi",
+      "2": "mercredi",
+      "3": "jeudi",
+      "4": "vendredi",
+      "5": "samedi",
+      "6": "dimanche"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "0": "lun.",
+      "1": "mar.",
+      "2": "mer.",
+      "3": "jeu.",
+      "4": "ven.",
+      "5": "sam.",
+      "6": "dim."
+     },
+     "narrow": {
+      "0": "L",
+      "1": "M",
+      "2": "M",
+      "3": "J",
+      "4": "V",
+      "5": "S",
+      "6": "D"
+     },
+     "short": {
+      "0": "lu",
+      "1": "ma",
+      "2": "me",
+      "3": "je",
+      "4": "ve",
+      "5": "sa",
+      "6": "di"
+     },
+     "wide": {
+      "0": "lundi",
+      "1": "mardi",
+      "2": "mercredi",
+      "3": "jeudi",
+      "4": "vendredi",
+      "5": "samedi",
+      "6": "dimanche"
+     }
+    }
+   },
+   "list_patterns": {
+    "standard": {
+     "2": "{0} et {1}",
+     "end": "{0} et {1}",
+     "middle": "{0}, {1}",
+     "start": "{0}, {1}"
+    }
+   },
+   "months": {
+    "format": {
+     "abbreviated": {
+      "1": "janv.",
+      "10": "oct.",
+      "11": "nov.",
+      "12": "déc.",
+      "2": "févr.",
+      "3": "mars",
+      "4": "avr.",
+      "5": "mai",
+      "6": "juin",
+      "7": "juil.",
+      "8": "août",
+      "9": "sept."
+     },
+     "narrow": {
+      "1": "J",
+      "10": "O",
+      "11": "N",
+      "12": "D",
+      "2": "F",
+      "3": "M",
+      "4": "A",
+      "5": "M",
+      "6": "J",
+      "7": "J",
+      "8": "A",
+      "9": "S"
+     },
+     "wide": {
+      "1": "janvier",
+      "10": "octobre",
+      "11": "novembre",
+      "12": "décembre",
+      "2": "février",
+      "3": "mars",
+      "4": "avril",
+      "5": "mai",
+      "6": "juin",
+      "7": "juillet",
+      "8": "août",
+      "9": "septembre"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "1": "janv.",
+      "10": "oct.",
+      "11": "nov.",
+      "12": "déc.",
+      "2": "févr.",
+      "3": "mars",
+      "4": "avr.",
+      "5": "mai",
+      "6": "juin",
+      "7": "juil.",
+      "8": "août",
+      "9": "sept."
+     },
+     "narrow": {
+      "1": "J",
+      "10": "O",
+      "11": "N",
+      "12": "D",
+      "2": "F",
+      "3": "M",
+      "4": "A",
+      "5": "M",
+      "6": "J",
+      "7": "J",
+      "8": "A",
+      "9": "S"
+     },
+     "wide": {
+      "1": "janvier",
+      "10": "octobre",
+      "11": "novembre",
+      "12": "décembre",
+      "2": "février",
+      "3": "mars",
+      "4": "avril",
+      "5": "mai",
+      "6": "juin",
+      "7": "juillet",
+      "8": "août",
+      "9": "septembre"
+     }
+    }
+   },
+   "posix_to_ldml": {
+    "date_format": "dd/MM/yyyy",
+    "time_format": "HH:mm:ss"
+   },
+   "quarters": {
+    "format": {
+     "abbreviated": {
+      "1": "T1",
+      "2": "T2",
+      "3": "T3",
+      "4": "T4"
+     },
+     "narrow": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+     },
+     "wide": {
+      "1": "1er trimestre",
+      "2": "2e trimestre",
+      "3": "3e trimestre",
+      "4": "4e trimestre"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "1": "T1",
+      "2": "T2",
+      "3": "T3",
+      "4": "T4"
+     },
+     "narrow": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+     },
+     "wide": {
+      "1": "1er trimestre",
+      "2": "2e trimestre",
+      "3": "3e trimestre",
+      "4": "4e trimestre"
+     }
+    }
+   },
+   "read_group_display_format": {
+    "day": "dd MMM yyyy",
+    "hour": "HH:00 dd MMM",
+    "month": "MMMM yyyy",
+    "quarter": "QQQ yyyy",
+    "week": "'W'w YYYY",
+    "year": "yyyy"
+   },
+   "samples": {
+    "2025-12-29 00:00:00": {
+     "date_format": "29/12/2025",
+     "read_group:day:date": "29 déc. 2025",
+     "read_group:day:datetime": "29 déc. 2025",
+     "read_group:hour:datetime": "00:00 29 déc.",
+     "read_group:month:date": "décembre 2025",
+     "read_group:month:datetime": "décembre 2025",
+     "read_group:quarter:date": "T4 2025",
+     "read_group:quarter:datetime": "T4 2025",
+     "read_group:week:date": "W1 2026",
+     "read_group:week:datetime": "W1 2026",
+     "read_group:week:label": "W1 2026",
+     "read_group:year:date": "2025",
+     "read_group:year:datetime": "2025",
+     "time_format": "00:00:00"
+    },
+    "2026-01-01 00:00:00": {
+     "date_format": "01/01/2026",
+     "read_group:day:date": "01 janv. 2026",
+     "read_group:day:datetime": "01 janv. 2026",
+     "read_group:hour:datetime": "00:00 01 janv.",
+     "read_group:month:date": "janvier 2026",
+     "read_group:month:datetime": "janvier 2026",
+     "read_group:quarter:date": "T1 2026",
+     "read_group:quarter:datetime": "T1 2026",
+     "read_group:week:date": "W1 2026",
+     "read_group:week:datetime": "W1 2026",
+     "read_group:week:label": "W1 2026",
+     "read_group:year:date": "2026",
+     "read_group:year:datetime": "2026",
+     "time_format": "00:00:00"
+    },
+    "2026-10-28 13:05:09": {
+     "date_format": "28/10/2026",
+     "read_group:day:date": "28 oct. 2026",
+     "read_group:day:datetime": "28 oct. 2026",
+     "read_group:hour:datetime": "13:00 28 oct.",
+     "read_group:month:date": "octobre 2026",
+     "read_group:month:datetime": "octobre 2026",
+     "read_group:quarter:date": "T4 2026",
+     "read_group:quarter:datetime": "T4 2026",
+     "read_group:week:date": "W44 2026",
+     "read_group:week:datetime": "W44 2026",
+     "read_group:week:label": "W44 2026",
+     "read_group:year:date": "2026",
+     "read_group:year:datetime": "2026",
+     "time_format": "13:05:09"
+    }
+   },
+   "source": [
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/fr_FR.dat",
+     "sha256": "a2e7124154e2f209ef58d434ed624f9d88756104716d847a69f872f167766202"
+    },
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/fr.dat",
+     "sha256": "4702eaacf396bf01abb388587bd09fbff96b7930138defff38ed002a4101273a"
+    },
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/root.dat",
+     "sha256": "fd311e450a4f6f98dd4f765fe1ddc9fb5c0de09eb9113803326dd64cc8e8fa76"
+    }
+   ],
+   "time_formats": {
+    "full": "HH:mm:ss zzzz",
+    "long": "HH:mm:ss z",
+    "medium": "HH:mm:ss",
+    "short": "HH:mm"
+   },
+   "week": {
+    "first_week_day": 0,
+    "min_week_days": 4,
+    "weekend_end": 6,
+    "weekend_start": 5
+   }
+  },
+  "sv_SE": {
+   "date_formats": {
+    "full": "EEEE d MMMM y",
+    "long": "d MMMM y",
+    "medium": "d MMM y",
+    "short": "y-MM-dd"
+   },
+   "datetime_formats": {
+    "full": "{1} {0}",
+    "long": "{1} {0}",
+    "medium": "{1} {0}",
+    "short": "{1} {0}"
+   },
+   "day_periods": {
+    "format": {
+     "abbreviated": {
+      "afternoon1": "på efterm.",
+      "am": "fm",
+      "evening1": "på kvällen",
+      "midnight": "midnatt",
+      "morning1": "på morg.",
+      "morning2": "på förm.",
+      "night1": "på natten",
+      "pm": "em"
+     },
+     "narrow": {
+      "afternoon1": "på efterm.",
+      "am": "fm",
+      "evening1": "på kvällen",
+      "midnight": "midn.",
+      "morning1": "på morg.",
+      "morning2": "på förm.",
+      "night1": "på natten",
+      "pm": "em"
+     },
+     "wide": {
+      "afternoon1": "på eftermiddagen",
+      "am": "fm",
+      "evening1": "på kvällen",
+      "midnight": "midnatt",
+      "morning1": "på morgonen",
+      "morning2": "på förmiddagen",
+      "night1": "på natten",
+      "pm": "em"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "afternoon1": "efterm.",
+      "am": "f.m.",
+      "evening1": "kväll",
+      "midnight": "midnatt",
+      "morning1": "morgon",
+      "morning2": "förm.",
+      "night1": "natt",
+      "pm": "e.m."
+     },
+     "narrow": {
+      "afternoon1": "efterm.",
+      "am": "fm",
+      "evening1": "kväll",
+      "midnight": "midn.",
+      "morning1": "morg.",
+      "morning2": "förm.",
+      "night1": "natt",
+      "pm": "em"
+     },
+     "wide": {
+      "afternoon1": "eftermiddag",
+      "am": "förmiddag",
+      "evening1": "kväll",
+      "midnight": "midnatt",
+      "morning1": "morgon",
+      "morning2": "förmiddag",
+      "night1": "natt",
+      "pm": "eftermiddag"
+     }
+    }
+   },
+   "days": {
+    "format": {
+     "abbreviated": {
+      "0": "mån",
+      "1": "tis",
+      "2": "ons",
+      "3": "tors",
+      "4": "fre",
+      "5": "lör",
+      "6": "sön"
+     },
+     "narrow": {
+      "0": "M",
+      "1": "T",
+      "2": "O",
+      "3": "T",
+      "4": "F",
+      "5": "L",
+      "6": "S"
+     },
+     "short": {
+      "0": "må",
+      "1": "ti",
+      "2": "on",
+      "3": "to",
+      "4": "fr",
+      "5": "lö",
+      "6": "sö"
+     },
+     "wide": {
+      "0": "måndag",
+      "1": "tisdag",
+      "2": "onsdag",
+      "3": "torsdag",
+      "4": "fredag",
+      "5": "lördag",
+      "6": "söndag"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "0": "mån",
+      "1": "tis",
+      "2": "ons",
+      "3": "tors",
+      "4": "fre",
+      "5": "lör",
+      "6": "sön"
+     },
+     "narrow": {
+      "0": "M",
+      "1": "T",
+      "2": "O",
+      "3": "T",
+      "4": "F",
+      "5": "L",
+      "6": "S"
+     },
+     "short": {
+      "0": "må",
+      "1": "ti",
+      "2": "on",
+      "3": "to",
+      "4": "fr",
+      "5": "lö",
+      "6": "sö"
+     },
+     "wide": {
+      "0": "måndag",
+      "1": "tisdag",
+      "2": "onsdag",
+      "3": "torsdag",
+      "4": "fredag",
+      "5": "lördag",
+      "6": "söndag"
+     }
+    }
+   },
+   "list_patterns": {
+    "standard": {
+     "2": "{0} och {1}",
+     "end": "{0} och {1}",
+     "middle": "{0}, {1}",
+     "start": "{0}, {1}"
+    }
+   },
+   "months": {
+    "format": {
+     "abbreviated": {
+      "1": "jan.",
+      "10": "okt.",
+      "11": "nov.",
+      "12": "dec.",
+      "2": "feb.",
+      "3": "mars",
+      "4": "apr.",
+      "5": "maj",
+      "6": "juni",
+      "7": "juli",
+      "8": "aug.",
+      "9": "sep."
+     },
+     "narrow": {
+      "1": "J",
+      "10": "O",
+      "11": "N",
+      "12": "D",
+      "2": "F",
+      "3": "M",
+      "4": "A",
+      "5": "M",
+      "6": "J",
+      "7": "J",
+      "8": "A",
+      "9": "S"
+     },
+     "wide": {
+      "1": "januari",
+      "10": "oktober",
+      "11": "november",
+      "12": "december",
+      "2": "februari",
+      "3": "mars",
+      "4": "april",
+      "5": "maj",
+      "6": "juni",
+      "7": "juli",
+      "8": "augusti",
+      "9": "september"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "1": "jan.",
+      "10": "okt.",
+      "11": "nov.",
+      "12": "dec.",
+      "2": "feb.",
+      "3": "mars",
+      "4": "apr.",
+      "5": "maj",
+      "6": "juni",
+      "7": "juli",
+      "8": "aug.",
+      "9": "sep."
+     },
+     "narrow": {
+      "1": "J",
+      "10": "O",
+      "11": "N",
+      "12": "D",
+      "2": "F",
+      "3": "M",
+      "4": "A",
+      "5": "M",
+      "6": "J",
+      "7": "J",
+      "8": "A",
+      "9": "S"
+     },
+     "wide": {
+      "1": "januari",
+      "10": "oktober",
+      "11": "november",
+      "12": "december",
+      "2": "februari",
+      "3": "mars",
+      "4": "april",
+      "5": "maj",
+      "6": "juni",
+      "7": "juli",
+      "8": "augusti",
+      "9": "september"
+     }
+    }
+   },
+   "posix_to_ldml": {
+    "date_format": "yyyy-MM-dd",
+    "time_format": "HH:mm:ss"
+   },
+   "quarters": {
+    "format": {
+     "abbreviated": {
+      "1": "K1",
+      "2": "K2",
+      "3": "K3",
+      "4": "K4"
+     },
+     "narrow": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+     },
+     "wide": {
+      "1": "1:a kvartalet",
+      "2": "2:a kvartalet",
+      "3": "3:e kvartalet",
+      "4": "4:e kvartalet"
+     }
+    },
+    "stand-alone": {
+     "abbreviated": {
+      "1": "K1",
+      "2": "K2",
+      "3": "K3",
+      "4": "K4"
+     },
+     "narrow": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4"
+     },
+     "wide": {
+      "1": "1:a kvartalet",
+      "2": "2:a kvartalet",
+      "3": "3:e kvartalet",
+      "4": "4:e kvartalet"
+     }
+    }
+   },
+   "read_group_display_format": {
+    "day": "dd MMM yyyy",
+    "hour": "HH:00 dd MMM",
+    "month": "MMMM yyyy",
+    "quarter": "QQQ yyyy",
+    "week": "'W'w YYYY",
+    "year": "yyyy"
+   },
+   "samples": {
+    "2025-12-29 00:00:00": {
+     "date_format": "2025-12-29",
+     "read_group:day:date": "29 dec. 2025",
+     "read_group:day:datetime": "29 dec. 2025",
+     "read_group:hour:datetime": "00:00 29 dec.",
+     "read_group:month:date": "december 2025",
+     "read_group:month:datetime": "december 2025",
+     "read_group:quarter:date": "K4 2025",
+     "read_group:quarter:datetime": "K4 2025",
+     "read_group:week:date": "W1 2026",
+     "read_group:week:datetime": "W1 2026",
+     "read_group:week:label": "W1 2026",
+     "read_group:year:date": "2025",
+     "read_group:year:datetime": "2025",
+     "time_format": "00:00:00"
+    },
+    "2026-01-01 00:00:00": {
+     "date_format": "2026-01-01",
+     "read_group:day:date": "01 jan. 2026",
+     "read_group:day:datetime": "01 jan. 2026",
+     "read_group:hour:datetime": "00:00 01 jan.",
+     "read_group:month:date": "januari 2026",
+     "read_group:month:datetime": "januari 2026",
+     "read_group:quarter:date": "K1 2026",
+     "read_group:quarter:datetime": "K1 2026",
+     "read_group:week:date": "W1 2026",
+     "read_group:week:datetime": "W1 2026",
+     "read_group:week:label": "W1 2026",
+     "read_group:year:date": "2026",
+     "read_group:year:datetime": "2026",
+     "time_format": "00:00:00"
+    },
+    "2026-10-28 13:05:09": {
+     "date_format": "2026-10-28",
+     "read_group:day:date": "28 okt. 2026",
+     "read_group:day:datetime": "28 okt. 2026",
+     "read_group:hour:datetime": "13:00 28 okt.",
+     "read_group:month:date": "oktober 2026",
+     "read_group:month:datetime": "oktober 2026",
+     "read_group:quarter:date": "K4 2026",
+     "read_group:quarter:datetime": "K4 2026",
+     "read_group:week:date": "W44 2026",
+     "read_group:week:datetime": "W44 2026",
+     "read_group:week:label": "W44 2026",
+     "read_group:year:date": "2026",
+     "read_group:year:datetime": "2026",
+     "time_format": "13:05:09"
+    }
+   },
+   "source": [
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/sv_SE.dat",
+     "sha256": "3ad371805c541401f9998278c86aa9ff02cc9a732ef66c159ef279ec129438ab"
+    },
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/sv.dat",
+     "sha256": "b7140a2d701c99ba0c9487dbe566528f15aedb4d067da04e60601031b6132ffc"
+    },
+    {
+     "file": ".venv/lib/python3.12/site-packages/babel/locale-data/root.dat",
+     "sha256": "fd311e450a4f6f98dd4f765fe1ddc9fb5c0de09eb9113803326dd64cc8e8fa76"
+    }
+   ],
+   "time_formats": {
+    "full": "HH:mm:ss zzzz",
+    "long": "HH:mm:ss z",
+    "medium": "HH:mm:ss",
+    "short": "HH:mm"
+   },
+   "week": {
+    "first_week_day": 0,
+    "min_week_days": 4,
+    "weekend_end": 6,
+    "weekend_start": 5
+   }
+  }
+ },
+ "res_lang": {
+  "en_US": {
+   "active": true,
+   "code": "en_US",
+   "date_format": "%m/%d/%Y",
+   "decimal_point": ".",
+   "direction": "ltr",
+   "grouping": "[3,0]",
+   "iso_code": "en",
+   "name": "English (US)",
+   "thousands_sep": ",",
+   "time_format": "%I:%M:%S %p",
+   "url_code": "en",
+   "week_start": "7"
+  },
+  "fr_FR": {
+   "active": true,
+   "code": "fr_FR",
+   "date_format": "%d/%m/%Y",
+   "decimal_point": ",",
+   "direction": "ltr",
+   "grouping": "[3,0]",
+   "iso_code": "fr",
+   "name": "French / Français",
+   "thousands_sep": " ",
+   "time_format": "%H:%M:%S",
+   "url_code": "fr",
+   "week_start": "1"
+  },
+  "sv_SE": {
+   "active": null,
+   "code": "sv_SE",
+   "date_format": "%Y-%m-%d",
+   "decimal_point": ",",
+   "direction": "ltr",
+   "grouping": "[3,0]",
+   "iso_code": "sv",
+   "name": "Swedish / Svenska",
+   "thousands_sep": " ",
+   "time_format": "%H:%M:%S",
+   "url_code": "sv",
+   "week_start": "1"
+  }
+ }
+}

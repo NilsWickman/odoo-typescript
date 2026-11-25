@@ -1,0 +1,10 @@
+{
+ "hk": {
+  "commit": "5446af0d",
+  "date": "2026-11-25",
+  "proof": "vagb_chart_hk",
+  "result": "results/evidence/poc_erp_hk-hk-vagb_chart_hk-20261125-015518.txt",
+  "sha256": "af0085d9c2978757155ac7dd4e5800af6522acd0e09da6ed80b080811c2d7476",
+  "verdict": "RESULT IDENTICAL, database diff: same"
+ }
+}

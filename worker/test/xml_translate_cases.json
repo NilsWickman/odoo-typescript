@@ -1,0 +1,1385 @@
+[
+{
+"id": 114,
+"values": {
+"en_US": "<search>\n                <field name=\"query\"/>\n                <field name=\"full_query\"/>\n            </search>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 136,
+"values": {
+"en_US": "<list>\n                <field name=\"name\"/>\n                <field name=\"country_id\"/>\n            </list>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 183,
+"values": {
+"en_US": "<form string=\"Settings\" class=\"oe_form_configuration\" js_class=\"base_settings\">\n                </form>",
+"fr_FR": "<form string=\"Paramètres\" class=\"oe_form_configuration\" js_class=\"base_settings\">\n                </form>"
+},
+"terms": [
+"Settings"
+],
+"updates": {
+"fr_FR": {
+"Settings": "«Settings»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<form string=\"«Settings»\" class=\"oe_form_configuration\" js_class=\"base_settings\">\n                </form>"
+}
+]
+},
+{
+"id": 241,
+"values": {
+"en_US": "<list string=\"Barcode Nomenclatures\">\n                    <field name=\"name\"/>\n                </list>",
+"fr_FR": "<list string=\"Nomenclatures des codes-barres\">\n                    <field name=\"name\"/>\n                </list>"
+},
+"terms": [
+"Barcode Nomenclatures"
+],
+"updates": {
+"fr_FR": {
+"Barcode Nomenclatures": "«Barcode Nomenclatures»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<list string=\"«Barcode Nomenclatures»\">\n                    <field name=\"name\"/>\n                </list>"
+}
+]
+},
+{
+"id": 257,
+"values": {
+"en_US": "<t t-name=\"http_routing.error_message\">\n        <p t-if=\"error_message\">\n            <strong>Error message:</strong>\n            <pre t-out=\"error_message\"/>\n        </p>\n    </t>",
+"fr_FR": "<t t-name=\"http_routing.error_message\">\n        <p t-if=\"error_message\">\n            <strong>Message d'erreur :</strong>\n            <pre t-out=\"error_message\"/>\n        </p>\n    </t>"
+},
+"terms": [
+"<strong>Error message:</strong>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 305,
+"values": {
+"en_US": "<search string=\"Stages\">\n                <field name=\"name\"/>\n            </search>",
+"fr_FR": "<search string=\"Étapes\">\n                <field name=\"name\"/>\n            </search>"
+},
+"terms": [
+"Stages"
+],
+"updates": {
+"fr_FR": {
+"Stages": "«Stages»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<search string=\"«Stages»\">\n                <field name=\"name\"/>\n            </search>"
+}
+]
+},
+{
+"id": 308,
+"values": {
+"en_US": "<list string=\"Campaign Tags\" editable=\"top\">\n                <field name=\"name\"/>\n            </list>",
+"fr_FR": "<list string=\"Étiquettes de campagne\" editable=\"top\">\n                <field name=\"name\"/>\n            </list>"
+},
+"terms": [
+"Campaign Tags"
+],
+"updates": {
+"fr_FR": {
+"Campaign Tags": "«Campaign Tags»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<list string=\"«Campaign Tags»\" editable=\"top\">\n                <field name=\"name\"/>\n            </list>"
+}
+]
+},
+{
+"id": 311,
+"values": {
+"en_US": "<search string=\"Tip\">\n                <field name=\"name\"/>\n            </search>",
+"fr_FR": "<search string=\"Conseil\">\n                <field name=\"name\"/>\n            </search>"
+},
+"terms": [
+"Tip"
+],
+"updates": {
+"fr_FR": {
+"Tip": "«Tip»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<search string=\"«Tip»\">\n                <field name=\"name\"/>\n            </search>"
+}
+]
+},
+{
+"id": 349,
+"values": {
+"en_US": "<xpath expr=\"//sheet\" position=\"after\">\n                    <chatter/>\n                </xpath>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 367,
+"values": {
+"en_US": "<search string=\"Scheduled Messages\">\n                <field name=\"mail_message_id\"/>\n            </search>",
+"fr_FR": "<search string=\"Messages planifiés\">\n                <field name=\"mail_message_id\"/>\n            </search>"
+},
+"terms": [
+"Scheduled Messages"
+],
+"updates": {
+"fr_FR": {
+"Scheduled Messages": "«Scheduled Messages»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<search string=\"«Scheduled Messages»\">\n                <field name=\"mail_message_id\"/>\n            </search>"
+}
+]
+},
+{
+"id": 394,
+"values": {
+"en_US": "<list string=\"Groups\">\n                    <field name=\"name\"/>\n                </list>",
+"fr_FR": "<list string=\"Groupes\">\n                    <field name=\"name\"/>\n                </list>"
+},
+"terms": [
+"Groups"
+],
+"updates": {
+"fr_FR": {
+"Groups": "«Groups»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<list string=\"«Groups»\">\n                    <field name=\"name\"/>\n                </list>"
+}
+]
+},
+{
+"id": 435,
+"values": {
+"en_US": "<t t-name=\"mail.group_change_template\">\n<div class=\"o_mail_group_log\">\n    <t t-if=\"added\">\n        <span>Added groups:</span>\n        <ul>\n            <t t-foreach=\"added\" t-as=\"group\">\n                <li><a href=\"#\" data-oe-model=\"res.groups\" t-att-data-oe-id=\"group.id\" t-out=\"group.display_name\"/></li>\n            </t>\n        </ul>\n    </t>\n    <t t-if=\"removed\">\n        <span>Removed groups:</span>\n        <ul>\n            <t t-foreach=\"removed\" t-as=\"group\">\n                <li><a href=\"#\" data-oe-model=\"res.groups\" t-att-data-oe-id=\"group.id\" t-out=\"group.display_name\"/></li>\n            </t>\n        </ul>\n    </t>\n</div>\n        </t>"
+},
+"terms": [
+"<span>Added groups:</span>",
+"<span>Removed groups:</span>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 440,
+"values": {
+"en_US": "<t t-name=\"mail.message_notification_limit_email\">\n            <p>Dear Sender,</p>\n            <p>\n                The message below could not be accepted by the address <t t-out=\"email\"/> because you have\n                contacted it too many times in the last few minutes.\n                <br/>\n                Please try again later.\n            </p>\n            <p>Kind Regards</p>\n        </t>",
+"fr_FR": "<t t-name=\"mail.message_notification_limit_email\">\n            <p>Cher expéditeur,</p>\n            <p>\n                Le message ci-dessous n'a pas été accepté par l'adresse <t t-out=\"email\"/> parce que vous l'avez\n                contacté trop souvent au cours des dernières minutes.\n                <br/>\n                Veuillez réessayer plus tard.\n            </p>\n            <p>Cordialement</p>\n        </t>"
+},
+"terms": [
+"Dear Sender,",
+"The message below could not be accepted by the address",
+"because you have\n                contacted it too many times in the last few minutes.\n                <br/>\n                Please try again later.",
+"Kind Regards"
+],
+"updates": {
+"fr_FR": {
+"Dear Sender,": "«Dear Sender,»",
+"The message below could not be accepted by the address": "«The message below could not be accepted by the address»",
+"Kind Regards": "«Kind Regards»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<t t-name=\"mail.message_notification_limit_email\">\n            <p>«Dear Sender,»</p>\n            <p>\n                «The message below could not be accepted by the address» <t t-out=\"email\"/> parce que vous l'avez\n                contacté trop souvent au cours des dernières minutes.\n                <br/>\n                Veuillez réessayer plus tard.\n            </p>\n            <p>«Kind Regards»</p>\n        </t>"
+}
+]
+},
+{
+"id": 456,
+"values": {
+"en_US": "<search>\n                <field name=\"email\"/>\n            </search>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 489,
+"values": {
+"en_US": "<div id=\"web_unsplash_warning\" position=\"replace\">\n                <div invisible=\"not module_web_unsplash\">\n                    <a href=\"https://unsplash.com/join\" class=\"fw-bold\" target=\"_blank\">\n                        <i class=\"oi\" data-icon=\"east\"/> Create Unsplash Account\n                    </a>\n                    <div class=\"row mt16\">\n                        <label for=\"unsplash_access_key\" class=\"col-3 o_light_label mr8\"/>\n                        <field name=\"unsplash_access_key\"/>\n                    </div>\n                    <div class=\"row\">\n                        <label for=\"unsplash_app_id\" class=\"col-3 text-nowrap o_light_label mr8\"/>\n                        <field name=\"unsplash_app_id\"/>\n                    </div>\n                </div>\n            </div>"
+},
+"terms": [
+"<i class=\"oi\" data-icon=\"east\"/> Create Unsplash Account"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 514,
+"values": {
+"en_US": "<data>\n            <xpath expr=\"//div[hasclass('o_mail_account_security_suggestions')]\" position=\"after\">\n                <div t-if=\"suggest_2fa\">\n                    <span>Consider also</span>\n                    <a href=\"https://www.odoo.com/documentation/latest/applications/general/auth/2fa.html\">\n                        activating Two-factor Authentication\n                    </a>\n                </div>\n            </xpath>\n        </data>",
+"fr_FR": "<data>\n            <xpath expr=\"//div[hasclass('o_mail_account_security_suggestions')]\" position=\"after\">\n                <div t-if=\"suggest_2fa\">\n                    <span>À prendre en compte aussi</span>\n                    <a href=\"https://www.odoo.com/documentation/latest/applications/general/auth/2fa.html\">\n                        d'activer l'authentification à deux facteurs\n                    </a>\n                </div>\n            </xpath>\n        </data>"
+},
+"terms": [
+"<span>Consider also</span>",
+"activating Two-factor Authentication"
+],
+"updates": {
+"fr_FR": {
+"activating Two-factor Authentication": "«activating Two-factor Authentication»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<data>\n            <xpath expr=\"//div[hasclass('o_mail_account_security_suggestions')]\" position=\"after\">\n                <div t-if=\"suggest_2fa\">\n                    <span>À prendre en compte aussi</span>\n                    <a href=\"https://www.odoo.com/documentation/latest/applications/general/auth/2fa.html\">\n                        «activating Two-factor Authentication»\n                    </a>\n                </div>\n            </xpath>\n        </data>"
+}
+]
+},
+{
+"id": 544,
+"values": {
+"en_US": "<xpath expr=\"//field[@name='tz']\" position=\"after\">\n                    <span class=\"o_form_label fw-bold text-900\" invisible=\"share\">Calendar</span>\n                    <div class=\"o_row mb-1\" invisible=\"share\">\n                        <a name=\"179\" type=\"action\" class=\"oe_link cursor-pointer\">\n                            <i class=\"me-2 oi\" data-icon=\"arrow_forward\"/>Manage my calendars\n                        </a>\n                    </div>\n                </xpath>"
+},
+"terms": [
+"<span class=\"o_form_label fw-bold text-900\" invisible=\"share\">Calendar</span>",
+"<i class=\"me-2 oi\" data-icon=\"arrow_forward\"/>Manage my calendars"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 545,
+"values": {
+"en_US": "<xpath expr=\"//field[@name='tz']\" position=\"after\">\n                    <span class=\"o_form_label fw-bold text-900\" invisible=\"share or id != uid\">Calendar</span>\n                    <div class=\"o_row mb-1\" invisible=\"share or id != uid\">\n                        <a name=\"179\" type=\"action\" class=\"oe_link cursor-pointer\">\n                            <i class=\"me-2 oi\" data-icon=\"arrow_forward\"/>Manage my calendars\n                        </a>\n                    </div>\n                </xpath>"
+},
+"terms": [
+"<span class=\"o_form_label fw-bold text-900\" invisible=\"share or id != uid\">Calendar</span>",
+"<i class=\"me-2 oi\" data-icon=\"arrow_forward\"/>Manage my calendars"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 556,
+"values": {
+"en_US": "<xpath expr=\"//sheet\" position=\"after\">\n                    <chatter/>\n                </xpath>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 622,
+"values": {
+"en_US": "<kanban class=\"o_kanban_mobile\" sample=\"1\">\n                <templates>\n                    <t t-name=\"card\" class=\"flex-row fw-bolder\">\n                        <field name=\"name\"/>\n                        <div class=\"ms-auto align-items-center\">\n                            <i class=\"oi\" data-icon=\"payments\" role=\"img\" aria-label=\"Currency\" title=\"Currency\"/> <field name=\"currency_id\"/>\n                        </div>\n                    </t>\n                </templates>\n            </kanban>",
+"fr_FR": "<kanban class=\"o_kanban_mobile\" sample=\"1\">\n                <templates>\n                    <t t-name=\"card\" class=\"flex-row fw-bolder\">\n                        <field name=\"name\"/>\n                        <div class=\"ms-auto align-items-center\">\n                            <i class=\"oi\" data-icon=\"payments\" role=\"img\" aria-label=\"Monnaie\" title=\"Monnaie\"/> <field name=\"currency_id\"/>\n                        </div>\n                    </t>\n                </templates>\n            </kanban>"
+},
+"terms": [
+"<i class=\"oi\" data-icon=\"payments\" role=\"img\" aria-label=\"Currency\" title=\"Currency\"/>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 635,
+"values": {
+"en_US": "<group name=\"country_group\" position=\"after\">\n                <field name=\"pricelist_ids\"/>\n            </group>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 664,
+"values": {
+"en_US": "<t t-name=\"product.report_product_label_zpl\">\n    <t t-call=\"product.report_productlabel_zpl\"/>\n</t>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 688,
+"values": {
+"en_US": "<xpath expr=\"//field[@name='crm_team_id']\" position=\"replace\">\n            </xpath>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 690,
+"values": {
+"en_US": "<xpath expr=\"//a[@name='crm_team_id_field']\" position=\"replace\">\n            </xpath>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 712,
+"values": {
+"en_US": "<t name=\"Back to edit mode\" t-name=\"portal.portal_back_in_edit_mode\">\n        <div t-ignore=\"true\" class=\"text-center\">\n            <t t-if=\"custom_html\" t-out=\"custom_html\"/>\n            <t t-else=\"\">This is a preview of the customer portal.</t>\n            <a t-att-href=\"backend_url\" class=\"alert-link\"><i class=\"oi me-1\" data-icon=\"east\"/>Back to edit mode</a>\n        </div>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"/>\n    </t>",
+"fr_FR": "<t name=\"Back to edit mode\" t-name=\"portal.portal_back_in_edit_mode\">\n        <div t-ignore=\"true\" class=\"text-center\">\n            <t t-if=\"custom_html\" t-out=\"custom_html\"/>\n            <t t-else=\"\">Ceci est un aperçu du portail client.</t>\n            <a t-att-href=\"backend_url\" class=\"alert-link\"><i class=\"oi me-1\" data-icon=\"east\"/>Retour au mode édition</a>\n        </div>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Fermer\"/>\n    </t>"
+},
+"terms": [
+"This is a preview of the customer portal.",
+"<i class=\"oi me-1\" data-icon=\"east\"/>Back to edit mode",
+"Close"
+],
+"updates": {
+"fr_FR": {
+"This is a preview of the customer portal.": "«This is a preview of the customer portal.»",
+"Close": "«Close»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<t name=\"Back to edit mode\" t-name=\"portal.portal_back_in_edit_mode\">\n        <div t-ignore=\"true\" class=\"text-center\">\n            <t t-if=\"custom_html\" t-out=\"custom_html\"/>\n            <t t-else=\"\">«This is a preview of the customer portal.»</t>\n            <a t-att-href=\"backend_url\" class=\"alert-link\"><i class=\"oi me-1\" data-icon=\"east\"/>Retour au mode édition</a>\n        </div>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"«Close»\"/>\n    </t>"
+}
+]
+},
+{
+"id": 714,
+"values": {
+"en_US": "<t name=\"User Sign In Placeholder\" t-name=\"portal.placeholder_user_sign_in\"/>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 728,
+"values": {
+"en_US": "<data name=\"Link to frontend portal\">\n        <xpath expr=\"//*[@id='o_logout_divider']\" position=\"before\">\n            <a href=\"/my/home\" role=\"menuitem\" class=\"dropdown-item ps-3\">\n                <i class=\"oi oi-fw me-1 small text-primary-emphasis\" data-icon=\"badge\"/> My Account\n            </a>\n        </xpath>\n    </data>",
+"fr_FR": "<data name=\"Link to frontend portal\">\n        <xpath expr=\"//*[@id='o_logout_divider']\" position=\"before\">\n            <a href=\"/my/home\" role=\"menuitem\" class=\"dropdown-item ps-3\">\n                <i class=\"oi oi-fw me-1 small text-primary-emphasis\" data-icon=\"badge\"/> Mon compte\n            </a>\n        </xpath>\n    </data>"
+},
+"terms": [
+"<i class=\"oi oi-fw me-1 small text-primary-emphasis\" data-icon=\"badge\"/> My Account"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 780,
+"values": {
+"en_US": "<t name=\"Amount Input\" t-name=\"payment.amount_input\">\n        <!-- Parameters description:\n            - amount: The default amount to pay\n            - currency: The currency of the payment, as a `res.currency` record\n            - pm_sudo: The current payment method, as a sudoed `payment.method` recordset\n        -->\n        <div name=\"o_payment_amount\" class=\"w-100 mb-0 d-none position-relative z-1\">\n            <label t-attf-for=\"o_payment_amount_{{pm_sudo.id}}\" class=\"mt-0\">\n                <small>Amount</small>\n            </label>\n            <input type=\"number\" t-attf-name=\"o_payment_amount_{{pm_sudo.id}}\" t-attf-id=\"o_payment_amount_{{pm_sudo.id}}\" class=\"form-control\" t-att-value=\"amount\" t-att-max=\"amount\" t-att-data-decimals=\"currency.decimal_places\" placeholder=\"0\"/>\n        </div>\n    </t>"
+},
+"terms": [
+"<small>Amount</small>",
+"0"
+],
+"updates": {
+"fr_FR": {
+"0": "«0»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{
+"fr_FR": "<t name=\"Amount Input\" t-name=\"payment.amount_input\">\n        <!-- Parameters description:\n            - amount: The default amount to pay\n            - currency: The currency of the payment, as a `res.currency` record\n            - pm_sudo: The current payment method, as a sudoed `payment.method` recordset\n        -->\n        <div name=\"o_payment_amount\" class=\"w-100 mb-0 d-none position-relative z-1\">\n            <label t-attf-for=\"o_payment_amount_{{pm_sudo.id}}\" class=\"mt-0\">\n                <small>Amount</small>\n            </label>\n            <input type=\"number\" t-attf-name=\"o_payment_amount_{{pm_sudo.id}}\" t-attf-id=\"o_payment_amount_{{pm_sudo.id}}\" class=\"form-control\" t-att-value=\"amount\" t-att-max=\"amount\" t-att-data-decimals=\"currency.decimal_places\" placeholder=\"«0»\"/>\n        </div>\n    </t>"
+},
+{
+"fr_FR": "<t name=\"Amount Input\" t-name=\"payment.amount_input\">\n        <!-- Parameters description:\n            - amount: The default amount to pay\n            - currency: The currency of the payment, as a `res.currency` record\n            - pm_sudo: The current payment method, as a sudoed `payment.method` recordset\n        -->\n        <div name=\"o_payment_amount\" class=\"w-100 mb-0 d-none position-relative z-1\">\n            <label t-attf-for=\"o_payment_amount_{{pm_sudo.id}}\" class=\"mt-0\">\n                <small>Amount</small>\n            </label>\n            <input type=\"number\" t-attf-name=\"o_payment_amount_{{pm_sudo.id}}\" t-attf-id=\"o_payment_amount_{{pm_sudo.id}}\" class=\"form-control\" t-att-value=\"amount\" t-att-max=\"amount\" t-att-data-decimals=\"currency.decimal_places\" placeholder=\"«0»\"/>\n        </div>\n    </t>"
+}
+]
+},
+{
+"id": 839,
+"values": {
+"en_US": "<field name=\"date\" position=\"attributes\"><attribute name=\"optional\">hide</attribute></field>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 840,
+"values": {
+"en_US": "<field name=\"date\" position=\"attributes\"><attribute name=\"optional\">hide</attribute></field>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 923,
+"values": {
+"en_US": "<t name=\"Account Terms and Conditions Setting Banner\" t-name=\"account.account_terms_conditions_setting_banner\">\n        <div id=\"terms_conditions\" t-ignore=\"true\" class=\"text-center\">\n            <span>This is a preview of your Terms &amp; Conditions.</span>\n            <a t-att-href=\"backend_url\"><i class=\"oi me-1\" data-icon=\"east\"/>Back to settings</a>\n        </div>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"/>\n    </t>",
+"fr_FR": "<t name=\"Account Terms and Conditions Setting Banner\" t-name=\"account.account_terms_conditions_setting_banner\">\n        <div id=\"terms_conditions\" t-ignore=\"true\" class=\"text-center\">\n            <span>Ceci est un aperçu de vos conditions générales.</span>\n            <a t-att-href=\"backend_url\"><i class=\"oi me-1\" data-icon=\"east\"/>Retour aux paramètres</a>\n        </div>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Fermer\"/>\n    </t>"
+},
+"terms": [
+"<span>This is a preview of your Terms &amp; Conditions.</span>",
+"<i class=\"oi me-1\" data-icon=\"east\"/>Back to settings",
+"Close"
+],
+"updates": {
+"fr_FR": {
+"Close": "«Close»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<t name=\"Account Terms and Conditions Setting Banner\" t-name=\"account.account_terms_conditions_setting_banner\">\n        <div id=\"terms_conditions\" t-ignore=\"true\" class=\"text-center\">\n            <span>Ceci est un aperçu de vos conditions générales.</span>\n            <a t-att-href=\"backend_url\"><i class=\"oi me-1\" data-icon=\"east\"/>Retour aux paramètres</a>\n        </div>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"«Close»\"/>\n    </t>"
+}
+]
+},
+{
+"id": 1003,
+"values": {
+"en_US": "<data>\n        <xpath expr=\"//div[@id='payment_term']\" position=\"inside\">\n            <t t-if=\"qr_code\" t-call=\"account.report_invoice_qr_code_preview\"/>\n        </xpath>\n        <xpath expr=\"//div[@id='payment_term']//p[@name='payment_communication']\" position=\"inside\">\n            <t t-if=\"account_number\">\n                <br/> on this account: <span t-out=\"account_number\" class=\"fw-bold\"/>\n            </t>\n        </xpath>\n    </data>",
+"fr_FR": "<data>\n        <xpath expr=\"//div[@id='payment_term']\" position=\"inside\">\n            <t t-if=\"qr_code\" t-call=\"account.report_invoice_qr_code_preview\"/>\n        </xpath>\n        <xpath expr=\"//div[@id='payment_term']//p[@name='payment_communication']\" position=\"inside\">\n            <t t-if=\"account_number\">\n                <br/> sur ce compte : <span t-out=\"account_number\" class=\"fw-bold\"/>\n            </t>\n        </xpath>\n    </data>"
+},
+"terms": [
+"<br/> on this account:"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1007,
+"values": {
+"en_US": "<data>\n        <xpath expr=\"//a[@id='review_request_button']\" position=\"attributes\">\n            <attribute name=\"t-attf-href\">/odoo/users/{{user_id.id}}</attribute>\n        </xpath>\n    <xpath expr=\".\" position=\"attributes\"><attribute name=\"t-name\">crm.crm_module_access_request_template</attribute></xpath></data>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1017,
+"values": {
+"en_US": "<list string=\"Channel\" editable=\"bottom\">\n                <field name=\"name\"/>\n            </list>",
+"fr_FR": "<list string=\"Chaîne\" editable=\"bottom\">\n                <field name=\"name\"/>\n            </list>"
+},
+"terms": [
+"Channel"
+],
+"updates": {
+"fr_FR": {
+"Channel": "«Channel»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<list string=\"«Channel»\" editable=\"bottom\">\n                <field name=\"name\"/>\n            </list>"
+}
+]
+},
+{
+"id": 1115,
+"values": {
+"en_US": "<form position=\"attributes\">\n                    <attribute name=\"js_class\"/>\n                </form>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1117,
+"values": {
+"en_US": "<span name=\"partner_name\" position=\"replace\"/>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1154,
+"values": {
+"en_US": "<search string=\"Issue Version\">\n                    <field name=\"name\"/>\n                </search>",
+"fr_FR": "<search string=\"Version de l'incident\">\n                    <field name=\"name\"/>\n                </search>"
+},
+"terms": [
+"Issue Version"
+],
+"updates": {
+"fr_FR": {
+"Issue Version": "«Issue Version»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<search string=\"«Issue Version»\">\n                    <field name=\"name\"/>\n                </search>"
+}
+]
+},
+{
+"id": 1176,
+"values": {
+"en_US": "<t name=\"badge Widget Template\" t-name=\"project.portal_my_tasks_badge_widget_template\">\n        <span t-attf-class=\"badge rounded-pill o_tag o_badge_color_#{task.color}\" t-attf-title=\"#{task.stage_id.name}\" t-out=\"task.stage_id.name\"/>\n    </t>"
+},
+"terms": [
+"{{0}}"
+],
+"updates": {
+"fr_FR": {
+"{{0}}": "«{{0}}»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{
+"fr_FR": "<t name=\"badge Widget Template\" t-name=\"project.portal_my_tasks_badge_widget_template\">\n        <span t-attf-class=\"badge rounded-pill o_tag o_badge_color_#{task.color}\" t-attf-title=\"«#{task.stage_id.name}»\" t-out=\"task.stage_id.name\"/>\n    </t>"
+},
+{
+"fr_FR": "<t name=\"badge Widget Template\" t-name=\"project.portal_my_tasks_badge_widget_template\">\n        <span t-attf-class=\"badge rounded-pill o_tag o_badge_color_#{task.color}\" t-attf-title=\"«#{task.stage_id.name}»\" t-out=\"task.stage_id.name\"/>\n    </t>"
+}
+]
+},
+{
+"id": 1186,
+"values": {
+"en_US": "<pivot position=\"inside\"/>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1188,
+"values": {
+"en_US": "<graph position=\"inside\"/>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1193,
+"values": {
+"en_US": "<t t-name=\"project.project_message_user_assigned\">\n<div>\n    Dear <t t-out=\"assignee_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">You have been assigned to the <t t-out=\"model_description or 'document'\"/> <t t-out=\"object.display_name\"/>.</span>\n</div>\n        </t>",
+"fr_FR": "<t t-name=\"project.project_message_user_assigned\">\n<div>\n    Cher(e) <t t-out=\"assignee_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">Vous avez été assigné à <t t-out=\"model_description or 'document'\"/> <t t-out=\"object.display_name\"/>.</span>\n</div>\n        </t>"
+},
+"terms": [
+"Dear",
+",\n    <br/><br/>",
+"You have been assigned to the",
+"."
+],
+"updates": {
+"fr_FR": {
+"Dear": "«Dear»",
+"You have been assigned to the": "«You have been assigned to the»",
+".": "«.»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{
+"fr_FR": "<t t-name=\"project.project_message_user_assigned\">\n<div>\n    Cher(e) <t t-out=\"assignee_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">Vous avez été assigné à <t t-out=\"model_description or 'document'\"/> <t t-out=\"object.display_name\"/>«.»</span>\n</div>\n        </t>"
+},
+{
+"fr_FR": "<t t-name=\"project.project_message_user_assigned\">\n<div>\n    «Dear» <t t-out=\"assignee_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">«You have been assigned to the» <t t-out=\"model_description or 'document'\"/> <t t-out=\"object.display_name\"/>«.»</span>\n</div>\n        </t>"
+}
+]
+},
+{
+"id": 1194,
+"values": {
+"en_US": "<t t-name=\"project.task_invitation_follower\">\n<div>\n    Hello <t t-out=\"partner_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">You have been invited to follow Task Document : <t t-out=\"object.display_name\"/>.</span>\n</div>\n        </t>",
+"fr_FR": "<t t-name=\"project.task_invitation_follower\">\n<div>\n    Bonjour <t t-out=\"partner_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">Vous avez été invité à suivre les documents de la tâche : <t t-out=\"object.display_name\"/>.</span>\n</div>\n        </t>"
+},
+"terms": [
+"Hello",
+",\n    <br/><br/>",
+"You have been invited to follow Task Document :",
+"."
+],
+"updates": {
+"fr_FR": {
+"Hello": "«Hello»",
+"You have been invited to follow Task Document :": "«You have been invited to follow Task Document :»",
+".": "«.»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{
+"fr_FR": "<t t-name=\"project.task_invitation_follower\">\n<div>\n    Bonjour <t t-out=\"partner_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">Vous avez été invité à suivre les documents de la tâche : <t t-out=\"object.display_name\"/>«.»</span>\n</div>\n        </t>"
+},
+{
+"fr_FR": "<t t-name=\"project.task_invitation_follower\">\n<div>\n    «Hello» <t t-out=\"partner_name\"/>,\n    <br/><br/>\n    <span style=\"margin-top: 8px;\">«You have been invited to follow Task Document :» <t t-out=\"object.display_name\"/>«.»</span>\n</div>\n        </t>"
+}
+]
+},
+{
+"id": 1232,
+"values": {
+"en_US": "<t t-name=\"stock.stock_report_delivery_no_package_section_line\">\n        <tr class=\"o_line_section\">\n            <td colspan=\"99\" class=\"bg-300\" name=\"no_package_info\">\n                <span class=\"ms-1\">Products with no package assigned</span>\n            </td>\n        </tr>\n    </t>",
+"fr_FR": "<t t-name=\"stock.stock_report_delivery_no_package_section_line\">\n        <tr class=\"o_line_section\">\n            <td colspan=\"99\" class=\"bg-300\" name=\"no_package_info\">\n                <span class=\"ms-1\">Produits sans colis assigné</span>\n            </td>\n        </tr>\n    </t>"
+},
+"terms": [
+"<span class=\"ms-1\">Products with no package assigned</span>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1236,
+"values": {
+"en_US": "<t t-name=\"stock.report_stock_rule_line\">\n        <div class=\"o_report_stock_rule_line\">\n            <svg width=\"100%\" height=\"100%\" viewBox=\"0 0 100 10\" preserveAspectRatio=\"none\">\n                <line x1=\"0\" y1=\"5\" x2=\"100\" y2=\"5\" t-attf-style=\"stroke: #{color};\"/>\n            </svg>\n        </div>\n    </t>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1237,
+"values": {
+"en_US": "<t t-name=\"stock.report_stock_rule_vertical_bar\">\n        <div class=\"o_report_stock_rule_vertical_bar\">\n            <svg width=\"100%\" height=\"100%\" viewBox=\"0 0 1 1\">\n                <line y1=\"-12\" x2=\"0\" y2=\"12\" x1=\"0\" t-attf-style=\"stroke: #{color};\"/>\n            </svg>\n        </div>\n    </t>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1330,
+"values": {
+"en_US": "<kanban class=\"o_kanban_mobile oe_stock_picking_batch\" sample=\"1\" card_id=\"1329\"/>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1371,
+"values": {
+"en_US": "<t t-name=\"stock.message_head\">\n        <t t-if=\"move.state != 'done'\">\n            <strong>The initial demand has been updated.</strong>\n        </t>\n        <t t-if=\"move.state == 'done'\">\n            <strong>\n                The done move line has been corrected.\n            </strong>\n        </t>\n    </t>",
+"fr_FR": "<t t-name=\"stock.message_head\">\n        <t t-if=\"move.state != 'done'\">\n            <strong>La demande initiale a été mise à jour.</strong>\n        </t>\n        <t t-if=\"move.state == 'done'\">\n            <strong>\n                La ligne de mouvement \"terminé\" a été corrigée.\n            </strong>\n        </t>\n    </t>"
+},
+"terms": [
+"<strong>The initial demand has been updated.</strong>",
+"<strong>\n                The done move line has been corrected.\n            </strong>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1429,
+"values": {
+"en_US": "<xpath expr=\"//button[@name='530']\" position=\"replace\"/>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1502,
+"values": {
+"en_US": "<t t-name=\"purchase.track_po_line_qty_received_template\">\n        <div>\n            <strong>The received quantity has been updated.</strong>\n            <ul>\n                <li><t t-out=\"line.product_id.display_name\"/>:</li>\n                Received Quantity: <t t-out=\"line.qty_received\"/> -&gt; <t t-out=\"float(qty_received)\"/><br/>\n            </ul>\n        </div>\n    </t>",
+"fr_FR": "<t t-name=\"purchase.track_po_line_qty_received_template\">\n        <div>\n            <strong>La quantité reçue a été mise à jour.</strong>\n            <ul>\n                <li><t t-out=\"line.product_id.display_name\"/>:</li>\n                Quantité reçue : <t t-out=\"line.qty_received\"/> -&gt; <t t-out=\"float(qty_received)\"/><br/>\n            </ul>\n        </div>\n    </t>"
+},
+"terms": [
+"<strong>The received quantity has been updated.</strong>",
+":",
+"Received Quantity:",
+"-&gt;"
+],
+"updates": {
+"fr_FR": {
+":": "«:»",
+"Received Quantity:": "«Received Quantity:»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{
+"fr_FR": "<t t-name=\"purchase.track_po_line_qty_received_template\">\n        <div>\n            <strong>La quantité reçue a été mise à jour.</strong>\n            <ul>\n                <li><t t-out=\"line.product_id.display_name\"/>«:»</li>\n                Quantité reçue : <t t-out=\"line.qty_received\"/> -&gt; <t t-out=\"float(qty_received)\"/><br/>\n            </ul>\n        </div>\n    </t>"
+},
+{
+"fr_FR": "<t t-name=\"purchase.track_po_line_qty_received_template\">\n        <div>\n            <strong>La quantité reçue a été mise à jour.</strong>\n            <ul>\n                <li><t t-out=\"line.product_id.display_name\"/>«:»</li>\n                «Received Quantity:» <t t-out=\"line.qty_received\"/> -&gt; <t t-out=\"float(qty_received)\"/><br/>\n            </ul>\n        </div>\n    </t>"
+}
+]
+},
+{
+"id": 1517,
+"values": {
+"en_US": "<xpath expr=\"//div[@name='button_box']\" position=\"inside\">\n                <button name=\"action_show_product_value\" type=\"object\" class=\"oe_stat_button\" icon=\"build\" invisible=\"not product_value_id\" groups=\"account.group_account_manager\">\n                    <div class=\"o_field_widget o_stat_info\">\n                        <span class=\"o_stat_text\">Product Value</span>\n                    </div>\n                </button>\n            </xpath>"
+},
+"terms": [
+"<span class=\"o_stat_text\">Product Value</span>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1551,
+"values": {
+"en_US": "<t t-name=\"crm_iap_enrich.mail_message_lead_enrich_notfound\">\n        <p>Lead Enrichment (based on email address)</p>\n        <div style=\"padding:15px;padding-left:0px;\">\n            <span> No company data found based on the email address or email address is one of an email provider. No credit was consumed. </span>\n        </div>\n    </t>",
+"fr_FR": "<t t-name=\"crm_iap_enrich.mail_message_lead_enrich_notfound\">\n        <p>Enrichissement de pistes (basé sur l'adresse e-mail)</p>\n        <div style=\"padding:15px;padding-left:0px;\">\n            <span> Aucune donnée trouvée sur l'entreprise à partir de l'adresse e-mail ou l'adresse e-mail appartient à un fournisseur d'adresses e-mail. Aucun crédit n'a été consommé. </span>\n        </div>\n    </t>"
+},
+"terms": [
+"Lead Enrichment (based on email address)",
+"<span> No company data found based on the email address or email address is one of an email provider. No credit was consumed. </span>"
+],
+"updates": {
+"fr_FR": {
+"Lead Enrichment (based on email address)": "«Lead Enrichment (based on email address)»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<t t-name=\"crm_iap_enrich.mail_message_lead_enrich_notfound\">\n        <p>«Lead Enrichment (based on email address)»</p>\n        <div style=\"padding:15px;padding-left:0px;\">\n            <span> Aucune donnée trouvée sur l'entreprise à partir de l'adresse e-mail ou l'adresse e-mail appartient à un fournisseur d'adresses e-mail. Aucun crédit n'a été consommé. </span>\n        </div>\n    </t>"
+}
+]
+},
+{
+"id": 1552,
+"values": {
+"en_US": "<t t-name=\"crm_iap_enrich.mail_message_lead_enrich_no_email\">\n        <p>Lead Enrichment (based on email address)</p>\n        <div style=\"padding:15px;padding-left:0px;\">\n            <span>Enrichment could not be done because the email address does not look valid.</span>\n        </div>\n    </t>",
+"fr_FR": "<t t-name=\"crm_iap_enrich.mail_message_lead_enrich_no_email\">\n        <p>Enrichissement de pistes (basé sur l'adresse e-mail)</p>\n        <div style=\"padding:15px;padding-left:0px;\">\n            <span>L'enrichissement n'a pas pu être effectué, car l'adresse e-mail ne semble pas valide.</span>\n        </div>\n    </t>"
+},
+"terms": [
+"Lead Enrichment (based on email address)",
+"<span>Enrichment could not be done because the email address does not look valid.</span>"
+],
+"updates": {
+"fr_FR": {
+"Lead Enrichment (based on email address)": "«Lead Enrichment (based on email address)»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<t t-name=\"crm_iap_enrich.mail_message_lead_enrich_no_email\">\n        <p>«Lead Enrichment (based on email address)»</p>\n        <div style=\"padding:15px;padding-left:0px;\">\n            <span>L'enrichissement n'a pas pu être effectué, car l'adresse e-mail ne semble pas valide.</span>\n        </div>\n    </t>"
+}
+]
+},
+{
+"id": 1556,
+"values": {
+"en_US": "<list>\n                <field name=\"name\"/>\n                <field name=\"division_id\"/>\n            </list>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1579,
+"values": {
+"en_US": "<div id=\"purchase_po_lead\" position=\"replace\">\n\t\t\t\t<setting company_dependent=\"1\" help=\"Days needed to confirm a PO\">\n\t\t\t\t\t<field name=\"days_to_purchase\" class=\"oe_inline\"/><span> days</span>\n\t\t\t\t</setting>\n\t\t\t</div>",
+"fr_FR": "<div id=\"purchase_po_lead\" position=\"replace\">\n\t\t\t\t<setting company_dependent=\"1\" help=\"Jours nécessaires pour confirmer un bon de commande\">\n\t\t\t\t\t<field name=\"days_to_purchase\" class=\"oe_inline\"/><span> jours</span>\n\t\t\t\t</setting>\n\t\t\t</div>"
+},
+"terms": [
+"<span> days</span>",
+"Days needed to confirm a PO"
+],
+"updates": {
+"fr_FR": {
+"Days needed to confirm a PO": "«Days needed to confirm a PO»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<div id=\"purchase_po_lead\" position=\"replace\">\n\t\t\t\t<setting company_dependent=\"1\" help=\"«Days needed to confirm a PO»\">\n\t\t\t\t\t<field name=\"days_to_purchase\" class=\"oe_inline\"/><span> jours</span>\n\t\t\t\t</setting>\n\t\t\t</div>"
+}
+]
+},
+{
+"id": 1599,
+"values": {
+"en_US": "<t t-name=\"sale.report_saleorder\">\n    <t t-call=\"sale.report_saleorder_raw\"/>\n</t>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1605,
+"values": {
+"en_US": "<graph position=\"attributes\">\n                <attribute name=\"type\">pie</attribute>\n            </graph>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1624,
+"values": {
+"en_US": "<list position=\"attributes\">\n                <attribute name=\"string\">Quotations</attribute>\n            </list>",
+"fr_FR": "<list position=\"attributes\">\n                <attribute name=\"string\">Devis</attribute>\n            </list>"
+},
+"terms": [
+"Quotations"
+],
+"updates": {
+"fr_FR": {
+"Quotations": "«Quotations»"
+}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{
+"fr_FR": "<list position=\"attributes\">\n                <attribute name=\"string\">«Quotations»</attribute>\n            </list>"
+}
+]
+},
+{
+"id": 1643,
+"values": {
+"en_US": "<xpath expr=\"//main/field[@name='variant_attribute_value_ids']\" position=\"after\">\n                <div class=\"d-flex mt-2\">\n                    <span class=\"flex-shrink-0\">Accessible</span>\n                    <field name=\"attached_on_sale\" class=\"ms-2\" widget=\"selection\"/>\n                </div>\n            </xpath>"
+},
+"terms": [
+"<span class=\"flex-shrink-0\">Accessible</span>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1644,
+"values": {
+"en_US": "<field name=\"name\" position=\"after\">\n                <field name=\"attached_on_sale\"/>\n            </field>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1705,
+"values": {
+"en_US": "<data>\n        <div id=\"print_invoice_sidebar_button\" position=\"after\">\n            <t t-if=\"sale_order.with_user(env.user).sudo()._is_portal_return_allowed()\">\n                <button class=\"btn btn-light o_return_button\" t-att-data-sale-order-id=\"sale_order.id\" t-att-data-access-token=\"access_token\">\n                    <i class=\"oi me-2\" data-icon=\"reply\"/>Return\n                </button>\n            </t>\n        </div>\n        <t t-set=\"mobile_additional_action\" position=\"replace\">\n            <t t-set=\"mobile_additional_action\" t-value=\"sale_order.with_user(env.user).sudo()._is_portal_return_allowed()\"/>\n        </t>\n        <a id=\"mobile_feedback_button\" position=\"before\">\n            <button t-if=\"mobile_additional_action\" t-attf-class=\"btn btn-light o_return_button#{'' if mobile_has_primary_action else ' flex-grow-1'}\" t-att-data-sale-order-id=\"sale_order.id\" t-att-data-access-token=\"access_token\">\n                <i class=\"oi me-1\" data-icon=\"reply\"/>Return\n            </button>\n        </a>\n    </data>"
+},
+"terms": [
+"<i class=\"oi me-2\" data-icon=\"reply\"/>Return",
+"<i class=\"oi me-1\" data-icon=\"reply\"/>Return"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1723,
+"values": {
+"en_US": "<pivot position=\"inside\">\n                <field name=\"margin_percent\" invisible=\"1\"/>\n            </pivot>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1724,
+"values": {
+"en_US": "<graph position=\"inside\">\n                <field name=\"margin_percent\" invisible=\"1\"/>\n            </graph>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1767,
+"values": {
+"en_US": "<field name=\"sale_line_id\" position=\"replace\"/>"
+},
+"terms": [],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+},
+{
+"id": 1781,
+"values": {
+"en_US": "<xpath expr=\"//button[@name='action_customer_preview']\" position=\"after\">\n                <button name=\"action_view_lead\" icon=\"star\" icon_class=\"oi-filled\" type=\"object\" class=\"oe_stat_button\" invisible=\"not lead_id or not allow_billable\" groups=\"sales_team.group_sale_salesman_all_leads\">\n                    <div class=\"o_stat_info\">\n                        <span class=\"o_stat_text\">Opportunity</span>\n                    </div>\n                </button>\n            </xpath>",
+"fr_FR": "<xpath expr=\"//button[@name='action_customer_preview']\" position=\"after\">\n                <button name=\"action_view_lead\" icon=\"star\" icon_class=\"oi-filled\" type=\"object\" class=\"oe_stat_button\" invisible=\"not lead_id or not allow_billable\" groups=\"sales_team.group_sale_salesman_all_leads\">\n                    <div class=\"o_stat_info\">\n                        <span class=\"o_stat_text\">Opportunité</span>\n                    </div>\n                </button>\n            </xpath>"
+},
+"terms": [
+"<span class=\"o_stat_text\">Opportunity</span>"
+],
+"updates": {
+"fr_FR": {}
+},
+"active": [
+"en_US",
+"fr_FR"
+],
+"results": [
+{},
+{}
+]
+}
+]

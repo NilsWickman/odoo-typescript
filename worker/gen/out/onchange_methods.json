@@ -1,0 +1,683 @@
+{
+ "_source": "worker/gen/onchange_methods.py",
+ "models": {
+  "base.document.layout": {
+   "fields": {
+    "company_id": [
+     "_onchange_company_id"
+    ],
+    "custom_colors": [
+     "_onchange_custom_colors"
+    ],
+    "logo": [
+     "_onchange_logo"
+    ],
+    "report_layout_id": [
+     "_onchange_report_layout_id"
+    ]
+   },
+   "methods": {
+    "_onchange_company_id": {
+     "fields": [
+      "company_id"
+     ],
+     "source": "addons/web/models/base_document_layout.py:121"
+    },
+    "_onchange_custom_colors": {
+     "fields": [
+      "custom_colors"
+     ],
+     "source": "addons/web/models/base_document_layout.py:144"
+    },
+    "_onchange_logo": {
+     "fields": [
+      "logo"
+     ],
+     "source": "addons/web/models/base_document_layout.py:156"
+    },
+    "_onchange_report_layout_id": {
+     "fields": [
+      "report_layout_id"
+     ],
+     "source": "addons/web/models/base_document_layout.py:151"
+    }
+   }
+  },
+  "decimal.precision": {
+   "fields": {
+    "digits": [
+     "_onchange_digits_warning"
+    ]
+   },
+   "methods": {
+    "_onchange_digits_warning": {
+     "fields": [
+      "digits"
+     ],
+     "source": "odoo/addons/base/models/decimal_precision.py:30"
+    }
+   }
+  },
+  "fetchmail.server": {
+   "fields": {
+    "server_type": [
+     "onchange_server_type"
+    ]
+   },
+   "methods": {
+    "onchange_server_type": {
+     "fields": [
+      "server_type"
+     ],
+     "source": "addons/microsoft_outlook/models/fetchmail_server.py:32"
+    }
+   }
+  },
+  "ir.access": {
+   "fields": {
+    "for_create": [
+     "_inverse_for_operations"
+    ],
+    "for_read": [
+     "_inverse_for_operations"
+    ],
+    "for_unlink": [
+     "_inverse_for_operations"
+    ],
+    "for_write": [
+     "_inverse_for_operations"
+    ]
+   },
+   "methods": {
+    "_inverse_for_operations": {
+     "fields": [
+      "for_create",
+      "for_read",
+      "for_write",
+      "for_unlink"
+     ],
+     "source": "odoo/addons/base/models/ir_access.py:169"
+    }
+   }
+  },
+  "ir.actions.report": {
+   "fields": {
+    "model_id": [
+     "_onchange_model_id"
+    ],
+    "name": [
+     "_onchange_name"
+    ]
+   },
+   "methods": {
+    "_onchange_model_id": {
+     "fields": [
+      "model_id"
+     ],
+     "source": "odoo/addons/base/models/ir_actions_report.py:87"
+    },
+    "_onchange_name": {
+     "fields": [
+      "name"
+     ],
+     "source": "odoo/addons/base/models/ir_actions_report.py:92"
+    }
+   }
+  },
+  "ir.actions.server": {
+   "fields": {
+    "activity_plan_id": [
+     "_onchange_activity_plan_id"
+    ],
+    "activity_type_id": [
+     "_onchange_activity_type_id"
+    ],
+    "crud_model_id": [
+     "_set_crud_model_id"
+    ],
+    "evaluation_type": [
+     "<change_default>"
+    ],
+    "name": [
+     "_onchange_name"
+    ],
+    "property_selection": [
+     "_set_property_selection"
+    ],
+    "resource_ref": [
+     "_set_resource_ref"
+    ],
+    "selection_value": [
+     "_set_selection_value"
+    ]
+   },
+   "methods": {
+    "_onchange_activity_plan_id": {
+     "fields": [
+      "activity_plan_id"
+     ],
+     "source": "addons/mail/models/ir_actions_server.py:227"
+    },
+    "_onchange_activity_type_id": {
+     "fields": [
+      "activity_type_id"
+     ],
+     "source": "addons/mail/models/ir_actions_server.py:240"
+    },
+    "_onchange_name": {
+     "fields": [
+      "name"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:835"
+    },
+    "_set_crud_model_id": {
+     "fields": [
+      "crud_model_id"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1298"
+    },
+    "_set_property_selection": {
+     "fields": [
+      "property_selection"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1319"
+    },
+    "_set_resource_ref": {
+     "fields": [
+      "resource_ref"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1307"
+    },
+    "_set_selection_value": {
+     "fields": [
+      "selection_value"
+     ],
+     "source": "odoo/addons/base/models/ir_actions.py:1313"
+    }
+   }
+  },
+  "ir.attachment": {
+   "fields": {
+    "company_id": [
+     "<change_default>"
+    ],
+    "type": [
+     "<change_default>"
+    ]
+   },
+   "methods": {}
+  },
+  "ir.mail_server": {
+   "fields": {
+    "smtp_authentication": [
+     "_on_change_smtp_user_gmail",
+     "_on_change_smtp_user_outlook",
+     "_onchange_smtp_authentication_gmail",
+     "_onchange_smtp_authentication_outlook"
+    ],
+    "smtp_encryption": [
+     "_onchange_encryption"
+    ],
+    "smtp_user": [
+     "_on_change_smtp_user_gmail",
+     "_on_change_smtp_user_outlook"
+    ]
+   },
+   "methods": {
+    "_on_change_smtp_user_gmail": {
+     "fields": [
+      "smtp_user",
+      "smtp_authentication"
+     ],
+     "source": "addons/google_gmail/models/ir_mail_server.py:46"
+    },
+    "_on_change_smtp_user_outlook": {
+     "fields": [
+      "smtp_user",
+      "smtp_authentication"
+     ],
+     "source": "addons/microsoft_outlook/models/ir_mail_server.py:68"
+    },
+    "_onchange_encryption": {
+     "fields": [
+      "smtp_encryption"
+     ],
+     "source": "addons/microsoft_outlook/models/ir_mail_server.py:49"
+    },
+    "_onchange_smtp_authentication_gmail": {
+     "fields": [
+      "smtp_authentication"
+     ],
+     "source": "addons/google_gmail/models/ir_mail_server.py:35"
+    },
+    "_onchange_smtp_authentication_outlook": {
+     "fields": [
+      "smtp_authentication"
+     ],
+     "source": "addons/microsoft_outlook/models/ir_mail_server.py:57"
+    }
+   }
+  },
+  "ir.model.fields": {
+   "fields": {
+    "company_dependent": [
+     "_onchange_index"
+    ],
+    "compute": [
+     "_onchange_compute"
+    ],
+    "model_id": [
+     "_onchange_ttype"
+    ],
+    "related": [
+     "_onchange_related"
+    ],
+    "relation": [
+     "_onchange_relation",
+     "_onchange_ttype"
+    ],
+    "relation_table": [
+     "_onchange_relation_table"
+    ],
+    "store": [
+     "_onchange_index"
+    ],
+    "translate": [
+     "_onchange_index"
+    ],
+    "ttype": [
+     "_onchange_index",
+     "_onchange_ttype"
+    ]
+   },
+   "methods": {
+    "_onchange_compute": {
+     "fields": [
+      "compute"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:884"
+    },
+    "_onchange_index": {
+     "fields": [
+      "store",
+      "ttype",
+      "translate",
+      "company_dependent"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:721"
+    },
+    "_onchange_related": {
+     "fields": [
+      "related"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:830"
+    },
+    "_onchange_relation": {
+     "fields": [
+      "relation"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:841"
+    },
+    "_onchange_relation_table": {
+     "fields": [
+      "relation_table"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:951"
+    },
+    "_onchange_ttype": {
+     "fields": [
+      "ttype",
+      "model_id",
+      "relation"
+     ],
+     "source": "odoo/addons/base/models/ir_model.py:939"
+    }
+   }
+  },
+  "ir.sequence": {
+   "fields": {
+    "prefix": [
+     "_onchange_prefix_suffix_ascii"
+    ],
+    "suffix": [
+     "_onchange_prefix_suffix_ascii"
+    ]
+   },
+   "methods": {
+    "_onchange_prefix_suffix_ascii": {
+     "fields": [
+      "prefix",
+      "suffix"
+     ],
+     "source": "odoo/addons/base/models/ir_sequence.py:154"
+    }
+   }
+  },
+  "mail.activity.schedule": {
+   "fields": {
+    "activity_type_id": [
+     "_onchange_activity_type_id",
+     "_onchange_activity_user_id"
+    ],
+    "activity_user_id": [
+     "_onchange_activity_user_id"
+    ],
+    "plan_id": [
+     "_onchange_plan_id"
+    ]
+   },
+   "methods": {
+    "_onchange_activity_type_id": {
+     "fields": [
+      "activity_type_id"
+     ],
+     "source": "addons/mail/wizard/mail_activity_schedule.py:265"
+    },
+    "_onchange_activity_user_id": {
+     "fields": [
+      "activity_user_id",
+      "activity_type_id"
+     ],
+     "source": "addons/mail/wizard/mail_activity_schedule.py:510"
+    },
+    "_onchange_plan_id": {
+     "fields": [
+      "plan_id"
+     ],
+     "source": "addons/mail/wizard/mail_activity_schedule.py:193"
+    }
+   }
+  },
+  "mail.activity.type": {
+   "fields": {
+    "res_model": [
+     "_onchange_res_model"
+    ]
+   },
+   "methods": {
+    "_onchange_res_model": {
+     "fields": [
+      "res_model"
+     ],
+     "source": "addons/mail/models/mail_activity_type.py:89"
+    }
+   }
+  },
+  "mail.template": {
+   "fields": {
+    "model": [
+     "_onchange_model"
+    ]
+   },
+   "methods": {
+    "_onchange_model": {
+     "fields": [
+      "model"
+     ],
+     "source": "addons/mail/models/mail_template.py:193"
+    }
+   }
+  },
+  "privacy.lookup.wizard.line": {
+   "fields": {
+    "is_active": [
+     "_onchange_is_active"
+    ]
+   },
+   "methods": {
+    "_onchange_is_active": {
+     "fields": [
+      "is_active"
+     ],
+     "source": "addons/privacy_lookup/wizard/privacy_lookup_wizard.py:290"
+    }
+   }
+  },
+  "res.company": {
+   "fields": {
+    "country_id": [
+     "_onchange_country_id"
+    ],
+    "parent_id": [
+     "_onchange_parent_id"
+    ],
+    "state_id": [
+     "_onchange_state"
+    ]
+   },
+   "methods": {
+    "_onchange_country_id": {
+     "fields": [
+      "country_id"
+     ],
+     "source": "odoo/addons/base/models/res_company.py:252"
+    },
+    "_onchange_parent_id": {
+     "fields": [
+      "parent_id"
+     ],
+     "source": "odoo/addons/base/models/res_company.py:257"
+    },
+    "_onchange_state": {
+     "fields": [
+      "state_id"
+     ],
+     "source": "odoo/addons/base/models/res_company.py:247"
+    }
+   }
+  },
+  "res.config.settings": {
+   "fields": {
+    "auth_totp_enforce": [
+     "_onchange_auth_totp_enforce"
+    ]
+   },
+   "methods": {
+    "_onchange_auth_totp_enforce": {
+     "fields": [
+      "auth_totp_enforce"
+     ],
+     "source": "addons/auth_totp_mail/models/res_config_settings.py:20"
+    }
+   }
+  },
+  "res.currency.rate": {
+   "fields": {
+    "company_rate": [
+     "_inverse_company_rate",
+     "_onchange_rate_warning"
+    ],
+    "inverse_company_rate": [
+     "_inverse_inverse_company_rate"
+    ]
+   },
+   "methods": {
+    "_inverse_company_rate": {
+     "fields": [
+      "company_rate"
+     ],
+     "source": "odoo/addons/base/models/res_currency.py:491"
+    },
+    "_inverse_inverse_company_rate": {
+     "fields": [
+      "inverse_company_rate"
+     ],
+     "source": "odoo/addons/base/models/res_currency.py:511"
+    },
+    "_onchange_rate_warning": {
+     "fields": [
+      "company_rate"
+     ],
+     "source": "odoo/addons/base/models/res_currency.py:518"
+    }
+   }
+  },
+  "res.lang": {
+   "fields": {
+    "date_format": [
+     "_onchange_format"
+    ],
+    "time_format": [
+     "_onchange_format"
+    ]
+   },
+   "methods": {
+    "_onchange_format": {
+     "fields": [
+      "time_format",
+      "date_format"
+     ],
+     "source": "odoo/addons/base/models/res_lang.py:170"
+    }
+   }
+  },
+  "res.partner": {
+   "fields": {
+    "city_id": [
+     "_onchange_city_id"
+    ],
+    "company_id": [
+     "_onchange_company_id"
+    ],
+    "country_id": [
+     "_onchange_country_id",
+     "_onchange_vat"
+    ],
+    "parent_id": [
+     "_onchange_company_id",
+     "onchange_parent_id"
+    ],
+    "state_id": [
+     "_onchange_state"
+    ],
+    "vat": [
+     "_onchange_vat"
+    ],
+    "zip": [
+     "<change_default>"
+    ]
+   },
+   "methods": {
+    "_onchange_city_id": {
+     "fields": [
+      "city_id"
+     ],
+     "source": "addons/base_address_extended/models/res_partner.py:47"
+    },
+    "_onchange_company_id": {
+     "fields": [
+      "parent_id",
+      "company_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:649"
+    },
+    "_onchange_country_id": {
+     "fields": [
+      "country_id"
+     ],
+     "source": "addons/base_address_extended/models/res_partner.py:60"
+    },
+    "_onchange_state": {
+     "fields": [
+      "state_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:644"
+    },
+    "_onchange_vat": {
+     "fields": [
+      "vat",
+      "country_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:1387"
+    },
+    "onchange_parent_id": {
+     "fields": [
+      "parent_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner.py:624"
+    }
+   }
+  },
+  "res.partner.bank": {
+   "fields": {
+    "country_id": [
+     "_onchange_country_id"
+    ],
+    "state_id": [
+     "_onchange_state_id"
+    ]
+   },
+   "methods": {
+    "_onchange_country_id": {
+     "fields": [
+      "country_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner_bank.py:200"
+    },
+    "_onchange_state_id": {
+     "fields": [
+      "state_id"
+     ],
+     "source": "odoo/addons/base/models/res_partner_bank.py:205"
+    }
+   }
+  },
+  "res.users": {
+   "fields": {
+    "login": [
+     "on_change_login"
+    ],
+    "out_of_office_from": [
+     "_onchange_out_of_office_from"
+    ],
+    "parent_id": [
+     "onchange_parent_id"
+    ],
+    "role": [
+     "_onchange_role"
+    ]
+   },
+   "methods": {
+    "_onchange_out_of_office_from": {
+     "fields": [
+      "out_of_office_from"
+     ],
+     "source": "addons/mail/models/res_users.py:182"
+    },
+    "_onchange_role": {
+     "fields": [
+      "role"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:447"
+    },
+    "on_change_login": {
+     "fields": [
+      "login"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:586"
+    },
+    "onchange_parent_id": {
+     "fields": [
+      "parent_id"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:591"
+    }
+   }
+  },
+  "res.users.apikeys.description": {
+   "fields": {
+    "expiration_date": [
+     "_onchange_expiration_date"
+    ]
+   },
+   "methods": {
+    "_onchange_expiration_date": {
+     "fields": [
+      "expiration_date"
+     ],
+     "source": "odoo/addons/base/models/res_users.py:1903"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "overrides": [
+  {
+   "class": "odoo.addons.l10n_ma.controllers.portal.L10nMAPortalAccount",
+   "method": "_get_checkout_additional_identifiers_metadata",
+   "module": "l10n_ma",
+   "overrides": [
+    "odoo.addons.account.controllers.portal.PortalAccount"
+   ],
+   "route": false
+  },
+  {
+   "class": "odoo.addons.l10n_ma.controllers.portal.L10nMAPortalAccount",
+   "method": "_prepare_address_form_values",
+   "module": "l10n_ma",
+   "overrides": [
+    "odoo.addons.account.controllers.portal.PortalAccount",
+    "odoo.addons.portal.controllers.portal.CustomerPortal"
+   ],
+   "route": false
+  }
+ ]
+}

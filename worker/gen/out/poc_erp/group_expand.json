@@ -1,0 +1,30 @@
+{
+ "crm.lead": {
+  "stage_id": "_read_group_stage_ids"
+ },
+ "crm.team.member": {
+  "crm_team_id": "full"
+ },
+ "product.template": {
+  "categ_id": "_read_group_categ_id"
+ },
+ "project.project": {
+  "stage_id": "full"
+ },
+ "project.task": {
+  "personal_stage_id": "_read_group_personal_stage_type_ids",
+  "personal_stage_type_id": "_read_group_personal_stage_type_ids",
+  "personal_stage_type_ids": "_read_group_personal_stage_type_ids",
+  "sale_order_id": "_group_expand_sales_order",
+  "stage_id": "_read_group_stage_ids"
+ },
+ "sale.order": {
+  "state": "_default_group_expand"
+ },
+ "stock.lot": {
+  "location_id": "_read_group_location_id"
+ },
+ "utm.campaign": {
+  "stage_id": "_group_expand_stage_ids"
+ }
+}

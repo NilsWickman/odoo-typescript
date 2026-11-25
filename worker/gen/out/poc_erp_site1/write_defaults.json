@@ -1,0 +1,90 @@
+{
+ "maintenance.equipment": {
+  "active": {
+   "const": true
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/maintenance/models/maintenance.py:75"
+  },
+  "effective_date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  }
+ },
+ "maintenance.equipment.category": {
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/maintenance/models/maintenance.py:37"
+  },
+  "technician_user_id": {
+   "expr": "self.env.uid",
+   "src": "odoo/addons/maintenance/models/maintenance.py:38"
+  }
+ },
+ "maintenance.mixin": {
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/maintenance/models/maintenance.py:75"
+  },
+  "effective_date": {
+   "callable": "odoo.orm.fields_temporal.Date.context_today",
+   "src": "odoo/odoo/orm/fields_temporal.py:140"
+  }
+ },
+ "maintenance.request": {
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/maintenance/models/maintenance.py:280"
+  },
+  "maintenance_team_id": {
+   "callable": "odoo.addons.maintenance.models.maintenance.MaintenanceRequest._get_default_team_id",
+   "src": "odoo/addons/maintenance/models/maintenance.py:260"
+  },
+  "maintenance_type": {
+   "const": "corrective"
+  },
+  "owner_user_id": {
+   "expr": "self.env.uid",
+   "src": "odoo/addons/maintenance/models/maintenance.py:282"
+  },
+  "repeat_interval": {
+   "const": 1
+  },
+  "repeat_type": {
+   "const": "forever"
+  },
+  "repeat_unit": {
+   "const": "week"
+  },
+  "schedule_date": {
+   "callable": "odoo.orm.fields_temporal.Datetime.now",
+   "src": "odoo/odoo/orm/fields_temporal.py:211"
+  },
+  "state": {
+   "const": "normal"
+  }
+ },
+ "maintenance.stage": {
+  "sequence": {
+   "const": 20
+  }
+ },
+ "maintenance.team": {
+  "active": {
+   "const": true
+  },
+  "color": {
+   "const": 0
+  },
+  "company_id": {
+   "expr": "self.env.company",
+   "src": "odoo/addons/maintenance/models/maintenance.py:513"
+  }
+ },
+ "res.partner.title": {
+  "active": {
+   "const": true
+  }
+ }
+}
